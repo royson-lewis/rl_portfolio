@@ -1,0 +1,19 @@
+{
+  "name": "rj_portfolio_frontend",
+  "version": "0.1.0",
+  "description": "A portfolio showing \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DThe Frontend \u001b[D\u001b[Cof portfolio showing skills, works and exerience of Royson Lewis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/lewisroysonj/Royson_Lewis_Portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "royson"
+  ],
+  "author": "Royson J lewis",
+  "license": "ISC"
+}
