@@ -1,1 +1,63 @@
 /** @format */
+
+.homePage {
+  .heroSection {
+    --heightW: 20vw;
+    height: calc(100vh - var(--heightW));
+    min-height: 50rem;
+    width: 100vw;
+    display: grid;
+    grid-template: 50% 50% / 1fr;
+    padding: 3vw;
+    grid-template-areas:
+      "art"
+      "info";
+
+    .heroArt {
+      grid-area: art;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        height: 90vw;
+        width: 90vw;
+      }
+    }
+
+    .heroInfo {
+      padding: 0vw 4vw;
+      grid-area: info;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        margin: 1vw 0vw;
+
+        span {
+          font-weight: 700;
+        }
+      }
+      h1 {
+        margin: 7vw 0vw;
+      }
+
+      button {
+        padding: 1.5vw 3vw;
+        margin-top: 3vw;
+        margin-right: 2vw;
+      }
+
+      .socialLink {
+        margin-top: 5vw;
+
+        svg {
+          margin-right: 6vw;
+          height: 9vw;
+          width: 9vw;
+        }
+      }
+    }
+  }
+}

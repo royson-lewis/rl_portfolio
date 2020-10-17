@@ -1,0 +1,115 @@
+/** @format */
+$primaryColor: #ffffff;
+$secondaryColor: #34314d;
+$primaryBGColor: #fcfcfc;
+$secondaryBGColor: #f7f7f7;
+$primaryAccentColor: #6c63ff;
+$secondaryAccentColor: #fed200;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 20vw;
+  margin: 0 auto;
+  box-shadow: 0px 0px 3px #00000085;
+
+  .burgerButton {
+    margin-right: 2vw;
+    cursor: pointer;
+    svg {
+      height: 6.5vw;
+      width: 6.5vw;
+    }
+  }
+
+  h3 {
+    font-size: 4.5vw;
+  }
+
+  .logo {
+    svg {
+      width: 9vw;
+      height: 9vw;
+    }
+  }
+
+  .hireMeButton {
+    border: 4px solid $secondaryAccentColor;
+    background-color: transparent;
+    color: $secondaryColor;
+    font-size: 4vw;
+    margin-left: 6vw;
+    padding: 1vw 3vw;
+  }
+}
+
+.burgerMenuOpen {
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  left: -100vw;
+  background-color: $primaryBGColor;
+  width: 80vw;
+  height: 100vh;
+  transition: all 0.3s ease;
+
+  .navHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    width: 100%;
+    padding-right: 18vw;
+    box-shadow: 0px 0px 3px #00000085;
+
+    .closeNav {
+      margin-right: 4.2vw;
+      height: 5vw;
+      width: 5vw;
+      cursor: pointer;
+    }
+
+    .logoMenu {
+      width: 9vw;
+      height: 9vw;
+      margin-right: 3vw;
+    }
+
+    h3 {
+      font-size: 4.5vw;
+    }
+  }
+  ul {
+    margin-top: 6vw;
+    margin-left: -5vw;
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8vw;
+      font-weight: 500;
+      cursor: pointer;
+      a {
+        color: $secondaryColor;
+      }
+      svg {
+        margin-right: 3vw;
+        margin-bottom: 1vw;
+      }
+    }
+  }
+}
+
+.menuBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(32, 32, 32, 0.356);
+  position: fixed;
+  top: 0vw;
+  z-index: 90;
+  pointer-events: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}

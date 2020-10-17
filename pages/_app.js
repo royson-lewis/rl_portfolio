@@ -2,6 +2,7 @@
 
 import "../styles/globals.scss";
 import Head from "next/head";
+import Header from "../components/header";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;750;800&display=swap' rel='stylesheet'></link>
       </Head>
+      <Header />
       <Component {...pageProps} />;
     </>
   );
