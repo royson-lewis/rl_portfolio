@@ -1,6 +1,6 @@
 {
   "name": "rj_portfolio_frontend",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "The Frontend of a portfolio showing skills, works and exerience of Royson Lewis",
   "main": "index.js",
   "repository": {
@@ -10,7 +10,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 8080",
+    "gcp-build": "npm run build",
+    "deploy": "gcloud config set project royson-lewis && gcloud app deploy app.yml --version=0-0-1"
   },
   "dependencies": {
     "next": "9.5.4",

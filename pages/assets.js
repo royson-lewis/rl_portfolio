@@ -43,12 +43,12 @@ export default function Assets() {
         <ol>
           <li>Ordered List</li>
         </ol>
-        {/* <div className='progress'>
+        <div className='progress'>
           <div className='bar'></div>
         </div>
         <div className='spinnerHolderFull'>
           <div className='spinner'></div>
-        </div> */}
+        </div>
       </main>
     </>
   );

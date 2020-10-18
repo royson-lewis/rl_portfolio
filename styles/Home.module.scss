@@ -1,63 +1,150 @@
 /** @format */
+$primaryColor: #ffffff;
+$secondaryColor: #34314d;
+$primaryBGColor: #fcfcfc;
+$secondaryBGColor: #f1f1f1;
+$primaryAccentColor: #6c63ff;
+$secondaryAccentColor: #fed200;
 
 .homePage {
+  min-width: 30rem;
+
   .heroSection {
     --heightW: 20vw;
-    height: calc(100vh - var(--heightW));
+    height: fit-content;
     min-height: 50rem;
     width: 100vw;
+    min-height: 86vh;
+    margin-bottom: 3rem;
     display: grid;
-    grid-template: 50% 50% / 1fr;
-    padding: 3vw;
+    grid-template: auto auto / 1fr;
+    place-items: center;
     grid-template-areas:
       "art"
       "info";
 
     .heroArt {
+      height: fit-content;
+      margin: 3rem 0;
       grid-area: art;
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
 
       svg {
-        height: 90vw;
-        width: 90vw;
+        height: 80%;
+        width: 80%;
       }
     }
 
     .heroInfo {
-      padding: 0vw 4vw;
+      padding-left: 2.4rem;
       grid-area: info;
+      place-self: start;
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       h3 {
-        margin: 1vw 0vw;
+        margin: 0.6rem 0;
+        font-weight: 500;
 
         span {
           font-weight: 700;
         }
       }
       h1 {
-        margin: 7vw 0vw;
+        margin: 1rem 0;
       }
 
-      button {
-        padding: 1.5vw 3vw;
-        margin-top: 3vw;
-        margin-right: 2vw;
+      div {
+        width: 100%;
+
+        button {
+          padding: 3% 3%;
+          margin-top: 1.5rem;
+          font-size: 4vw;
+          margin-right: 1rem;
+        }
       }
 
       .socialLink {
         margin-top: 5vw;
 
         svg {
-          margin-right: 6vw;
-          height: 9vw;
-          width: 9vw;
+          margin-right: 3rem;
+          height: 4rem;
+          width: 4rem;
         }
       }
     }
+  }
+  .serviceSection {
+    height: fit-content;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    background-color: $secondaryBGColor;
+    grid-template: auto 1fr 1fr 1fr 0.1fr / 1fr;
+    grid-template-areas:
+      "head"
+      "UI"
+      "frontend"
+      "backend"
+      "null";
+
+    h2 {
+      font-weight: 700;
+      grid-area: head;
+      justify-self: center;
+    }
+
+    section {
+      justify-self: center;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgb(160, 160, 160);
+      width: fit-content;
+
+      svg {
+        width: 90%;
+        height: 90%;
+      }
+
+      h3 {
+        margin: 6vw 0vw;
+      }
+
+      p {
+        margin: 0vw;
+        width: 25rem;
+        font-size: 1.55rem;
+        margin-bottom: 4vw;
+        text-align: center;
+      }
+      button {
+        padding: 0.6rem 1.4rem;
+        font-size: 2rem;
+        background-color: $secondaryColor;
+      }
+    }
+
+    .backEndSection {
+      svg {
+        height: 65%;
+        width: 65%;
+      }
+    }
+  }
+
+  .workSection {
+    display: grid;
+    background-color: $secondaryColor;
+    height: 10vw;
   }
 }
