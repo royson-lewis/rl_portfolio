@@ -1,7 +1,9 @@
 /** @format */
 
+import ContactSection from "../components/contactSection";
 import HeroSection from "../components/HeroSection";
 import ServiceSection from "../components/serviceSection";
+import SkillSection from "../components/skillSection";
 import WorkSection from "../components/workSection";
 import styles from "../styles/Home.module.scss";
 
@@ -12,6 +14,8 @@ export default function Home() {
         <HeroSection />
         <ServiceSection />
         <WorkSection />
+        <SkillSection />
+        <ContactSection />
       </main>
     </>
   );
