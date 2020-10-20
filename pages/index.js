@@ -1,7 +1,7 @@
 /** @format */
 
 import ContactSection from "../components/contactSection";
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../components/heroSection";
 import ServiceSection from "../components/serviceSection";
 import SkillSection from "../components/skillSection";
 import WorkSection from "../components/workSection";

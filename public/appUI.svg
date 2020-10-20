@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19.818" viewBox="0 0 19 19.818">
+  <g id="appUI" transform="translate(5 2.5)">
+    <rect id="Rectangle_272" data-name="Rectangle 272" width="19" height="19" transform="translate(-5 -2.182)" fill="rgba(255,255,255,0)"/>
+    <path id="Icon_awesome-mobile-alt" data-name="Icon awesome-mobile-alt" d="M8.951,0H1.577C.308,0,0,.05,0,1.764V17.053c-.02,1.864.163,1.764,1.58,1.764H8.951c1.7,0,1.58-.489,1.58-1.764V1.764C10.531.31,10.3,0,9.3,0,9.261,0,9.109,0,8.951,0Z" transform="translate(-0.878 -2)" fill="none" stroke="#6ed681" stroke-width="1"/>
+    <line id="Line_1" data-name="Line 1" x2="4.092" transform="translate(2.524 14.044)" fill="none" stroke="#6ed681" stroke-width="1"/>
+  </g>
+</svg>

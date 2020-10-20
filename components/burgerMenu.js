@@ -7,6 +7,7 @@ export default function BurgerMenu(props) {
   const [nav, setNav] = useState({
     open: false,
   });
+
   useEffect(() => {
     setNav({ open: props.open });
   }, [props]);
@@ -63,8 +64,8 @@ export default function BurgerMenu(props) {
             <svg xmlns='http://www.w3.org/2000/svg' width='21.244' height='25.493' viewBox='0 0 21.244 25.493'>
               <path id='contacts' data-name='contacts' d='M22.12,0h-17V2.124h17Zm-17,25.493h17V23.369h-17Zm17-21.244h-17A2.131,2.131,0,0,0,3,6.373V19.12a2.131,2.131,0,0,0,2.124,2.124h17a2.131,2.131,0,0,0,2.124-2.124V6.373A2.131,2.131,0,0,0,22.12,4.249Zm-8.5,2.921a2.39,2.39,0,1,1-2.39,2.39A2.394,2.394,0,0,1,13.622,7.17Zm5.311,10.888H8.311V16.464c0-1.774,3.537-2.656,5.311-2.656s5.311.882,5.311,2.656Z' transform='translate(-3)' fill='#3f3d56' />
             </svg>
-            <Link href='/contacts'>
-              <a onClick={props.toggleBurger}>Contacts</a>
+            <Link href='/contact'>
+              <a onClick={props.toggleBurger}>Contact</a>
             </Link>
           </li>
           <li>

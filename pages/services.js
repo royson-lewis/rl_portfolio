@@ -1,6 +1,7 @@
 /** @format */
 import { useState } from "react";
 import ServiceDetails from "../components/serviceDetails";
+import ServiceSection from "../components/serviceSection";
 import styles from "../styles/services.module.scss";
 
 export default function services() {
@@ -31,7 +32,7 @@ export default function services() {
           Backend Development
         </div>
       </section>
-      <section className={styles.serviceSections}>{service.current ? <ServiceDetails currentSection={service.current} /> : null}</section>
+      {service.current ? <ServiceDetails currentSection={service.current} /> : null}
     </main>
   );
 }

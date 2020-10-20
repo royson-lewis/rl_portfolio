@@ -9,22 +9,21 @@ $secondaryAccentColor: #fed200;
 
 .services {
   display: grid;
-  grid-template: repeat(auto, 5) / 1fr;
+  grid-template: repeat(auto, 4) / 1fr;
   justify-items: center;
   grid-template-areas:
     "head"
     "tabs"
     "details"
-    "list"
-    "other";
+    "list";
 
   .tabs {
     display: flex;
-    width: 100vw;
+    width: 99vw;
     justify-content: center;
     color: $primaryBGColor;
     height: auto;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     align-items: center;
     padding: 1rem 1rem;
@@ -33,6 +32,12 @@ $secondaryAccentColor: #fed200;
       flex: 1;
       margin: 0 0.1rem;
       padding: 1rem;
+      height: 7rem;
+      display: flex;
+      min-width: 10rem;
+      align-items: center;
+      justify-content: center;
+      max-height: fit-content;
       cursor: pointer;
       background-color: $secondaryColor;
       transition: background-color 0.2s ease-in;
@@ -45,38 +50,107 @@ $secondaryAccentColor: #fed200;
       border-bottom: 2px solid $secondaryAccentColor;
     }
   }
+  .details {
+    grid-area: details;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
-  .serviceSections {
-    font-size: 2rem;
+    h4 {
+      font-weight: 600;
+      margin: 3rem 0 1.5rem 0;
+    }
 
-    .section {
-      .details {
-        width: 100vw;
+    p {
+      font-size: 1.6rem;
+      width: 85%;
+      margin: 0;
+      margin-bottom: 3rem;
+    }
+
+    .imageContainer {
+      width: 100%;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      margin-top: 4rem;
+
+      .backDrop {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background-color: $secondaryColor;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        text-align: center;
+        justify-content: center;
+        animation: background-color 0.2s ease-in;
 
-        .imageContainer {
-          width: 100%;
+        img {
+          width: 155%;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  .offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: $secondaryBGColor;
+    padding: 4rem 0;
+    margin: 3rem 0;
+
+    h3 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+
+      svg {
+        position: absolute;
+        width: 92%;
+        height: auto;
+      }
+
+      div {
+        background-color: #fff;
+        position: relative;
+        width: 55%;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 4px 1px #b5b5b566;
+
+        ul {
           display: flex;
-          position: relative;
-          justify-content: center;
-          margin-top: 4rem;
+          flex-direction: column;
+          align-items: flex-start;
+          text-align: left;
+          padding: 0;
+          margin: 6vw 8vw;
 
-          .backDrop {
-            width: 20rem;
-            height: 20rem;
-            border-radius: 50%;
-            background-color: $secondaryColor;
+          li {
             display: flex;
             align-items: center;
-            justify-content: center;
-            animation: background-color 0.2s ease-in;
+            list-style: none;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 3vw;
+            margin-top: 3vw;
 
             img {
-              width: 155%;
-              pointer-events: none;
+              margin-right: 3vw;
             }
           }
         }

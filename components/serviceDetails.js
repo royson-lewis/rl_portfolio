@@ -11,6 +11,24 @@ export default function ServiceDetails(props) {
     accentColor: "#6ED782",
     headLine1: "Designing a Design that matters",
     headLine2: "Designing a Design that matters",
+    services: [
+      {
+        name: "Wireframing",
+        icon: "/wireframe.svg",
+      },
+      {
+        name: "Mobile App UI Design",
+        icon: "/appUI.svg",
+      },
+      {
+        name: "Web UI Design",
+        icon: "/desktop.svg",
+      },
+      {
+        name: "User Testing",
+        icon: "/userTesting.svg",
+      },
+    ],
   };
   let front = {
     name: "Front-end Development",
@@ -21,6 +39,24 @@ export default function ServiceDetails(props) {
     accentColor: "#0DC482",
     headLine1: "Designing a Design that matters",
     headLine2: "Designing a Design that matters",
+    services: [
+      {
+        name: "React Web App",
+        icon: "/react.svg",
+      },
+      {
+        name: "Redux Integration",
+        icon: "/redux.svg",
+      },
+      {
+        name: "Design to clean code",
+        icon: "/DesignToCode.svg",
+      },
+      {
+        name: "Wordpress websites",
+        icon: "/wordpress.svg",
+      },
+    ],
   };
   let back = {
     name: "Back-end Development",
@@ -31,11 +67,32 @@ export default function ServiceDetails(props) {
     accentColor: "#FC326F",
     headLine1: "Designing a Design that matters",
     headLine2: "Designing a Design that matters",
+    services: [
+      {
+        name: "API Development",
+        icon: "/API.svg",
+      },
+      {
+        name: "Database Management",
+        icon: "/database.svg",
+      },
+      {
+        name: "Highly Scalable Apps",
+        icon: "/scale.svg",
+      },
+      {
+        name: "Login Authentication",
+        icon: "/auth.svg",
+      },
+      {
+        name: "and More",
+      },
+    ],
   };
 
-  let { image1, image2, headLine1, headLine2, accentColor, description1, description2, name } = eval(props.currentSection);
+  let { image1, image2, headLine1, headLine2, accentColor, description1, description2, name, services } = eval(props.currentSection);
   return (
-    <section className={styles.section}>
+    <>
       <section className={styles.details}>
         <div className={styles.imageContainer}>
           <div style={{ backgroundColor: accentColor }} className={styles.backDrop}>
@@ -70,14 +127,18 @@ export default function ServiceDetails(props) {
           </svg>
           <div>
             <ul>
-              <li>Wireframing</li>
-              <li>Mobile App UI Design</li>
-              <li>Web UI Design</li>
-              <li>User Testing</li>
+              {services.map((service) => {
+                return (
+                  <li>
+                    {service.icon ? <img src={service.icon} alt={service.name}></img> : null}
+                    {service.name}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>
       </section>
-    </section>
+    </>
   );
 }
