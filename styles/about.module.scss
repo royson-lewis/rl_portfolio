@@ -1,0 +1,30 @@
+/** @format */
+$primaryColor: #ffffff;
+$secondaryColor: #34314d;
+$primaryBGColor: #fcfcfc;
+$secondaryBGColor: #f1f1f1;
+$primaryAccentColor: #6c63ff;
+$secondaryAccentColor: #fed200;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+
+  p {
+      width: 85%
+  }
+
+  div {
+    background-color: $secondaryColor;
+    width: 100vw;
+    margin-top: 4rem;
+    color: $primaryBGColor;
+
+    svg {
+        margin-right: 1rem;
+    }
+  }
+}
