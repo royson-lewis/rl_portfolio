@@ -11,12 +11,8 @@ export default function Assets() {
         <h2>Royson Lewis Portfolio</h2>
         <h3>Royson Lewis Portfolio</h3>
         <h4>Royson Lewis Portfolio</h4>
-        <h5>Royson Lewis Portfolio</h5>
-        <h6>Royson Lewis Portfolio</h6>
         <p>Paragraph text</p>
         <a href='#'>A Link to a page</a>
-        <br></br>
-        <br></br>
         <br></br>
         <div>
           <button>Submit</button>
@@ -30,13 +26,10 @@ export default function Assets() {
           </button>
         </div>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <input></input>
         <input disabled='disabled'></input>
         <br></br>
         <textarea className='inputSuccess'></textarea>
+<<<<<<< HEAD
         <ul>
           <li>UnOrdered List</li>
         </ul>
@@ -44,6 +37,9 @@ export default function Assets() {
           <li>Ordered List</li>
         </ol>
         {/* <div className='progress'>
+=======
+        <div className='progress'>
+>>>>>>> 7972dd192fa17bcad964bb64e867a32ac9de0159
           <div className='bar'></div>
         </div>
         <div className='spinnerHolderFull'>
