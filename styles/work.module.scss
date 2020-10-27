@@ -1,0 +1,131 @@
+/** @format */
+
+$primaryColor: #ffffff;
+$secondaryColor: #34314d;
+$primaryBGColor: #fcfcfc;
+$secondaryBGColor: #f1f1f1;
+$primaryAccentColor: #6c63ff;
+$secondaryAccentColor: #fed200;
+
+.work {
+  .hero {
+    width: 100vw;
+    height: 220vw;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .essenceHeroArt {
+      width: 125%;
+      height: auto;
+      position: relative;
+      left: -10vw;
+    }
+
+    .workTitle {
+      height: auto;
+      position: relative;
+      left: 8vw;
+      top: -78vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      max-width: 82vw;
+
+      .essenceLogo {
+        width: 45vw;
+        height: auto;
+        position: relative;
+      }
+
+      h4 {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        width: 100%;
+      }
+
+      button {
+        font-size: 1.5rem;
+        background-color: $secondaryColor;
+      }
+    }
+  }
+
+  .projectInfo {
+    background-color: $secondaryColor;
+    height: fit-content;
+    width: 100vw;
+    position: relative;
+    top: -60vw;
+    margin-bottom: -60vw;
+    z-index: 0;
+    color: $primaryBGColor;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+    padding-top: 8rem;
+
+    .projectDetails {
+      table {
+        width: 100%;
+        font-size: 1.5rem;
+        border-spacing: 0;
+        tr {
+          td {
+            padding-right: 2rem;
+            text-align: start;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            vertical-align: baseline;
+          }
+        }
+      }
+    }
+
+    .techUsed {
+      margin-top: 5rem;
+
+      h3 {
+        font-weight: 700;
+      }
+
+      section {
+        div {
+          margin-top: 4rem;
+
+          h4 {
+            font-size: 1.7rem;
+            font-weight: 600;
+          }
+          ul {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0;
+            li {
+              display: flex;
+              margin-right: 3rem;
+              flex-direction: column;
+              align-items: center;
+
+              p {
+                width: fit-content;
+                max-width: 10ch;
+                text-align: center;
+                margin: 0;
+                font-size: 1.3rem;
+              }
+
+              svg {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

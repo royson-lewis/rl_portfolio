@@ -253,6 +253,31 @@ li {
   background-color: $secondaryBGColor;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  align-items: flex-start;
+  margin: 0 auto;
+
+  label {
+    input {
+      display: block;
+      width: 100%;
+      color: $primaryBGColor;
+      font-size: 1.8rem;
+      margin: 1rem 0;
+      border: none;
+      padding: 1.4rem;
+    }
+  }
+  button {
+    width: 50%;
+    padding: 0.4rem;
+    background-color: $secondaryColor;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   html,
   body {

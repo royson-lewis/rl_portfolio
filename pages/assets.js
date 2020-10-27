@@ -43,13 +43,33 @@ export default function Assets() {
         <ol>
           <li>Ordered List</li>
         </ol>
-        <div className='progress'>
+        {/* <div className='progress'>
           <div className='bar'></div>
         </div>
         <div className='spinnerHolderFull'>
           <div className='spinner'></div>
-        </div>
+        </div> */}
       </main>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
+      <form>
+        <label>
+          Email
+          <input type='email' autoComplete='email' placeholder='youremail@mail.com' required></input>
+        </label>
+        <button>Submit</button>
+      </form>
     </>
   );
 }
