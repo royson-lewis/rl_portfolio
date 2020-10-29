@@ -8,12 +8,12 @@ import ProjectInfo from "../../components/Work/projectInfo";
 import Results from "../../components/Work/results";
 import styles from "../../styles/work.module.scss";
 
-export default function Essence() {
+export default function Vamyou() {
   return (
     <main className={styles.work}>
-      <EssenceHero project='essence' />
-      <ProjectInfo project='essence' />
-      <ProjectCase project='essence' />
+      <EssenceHero project='vamyou' />
+      <ProjectInfo project='vamyou' />
+      <ProjectCase project='vamyou' />
       <Results />
       <Conclusion />
       <ContactSection />

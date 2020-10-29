@@ -71,11 +71,15 @@ export default function Results() {
         </svg>
         <button>Launch Live Project</button>
       </div>
-      <img src='/essence results mockup@2x.png' width='100%' alt='mockup'></img>
-      <img src='/essence homepage@2x.png' width='80%' alt='homepage'></img>
-      <img src='/essence product page@2x.png' width='80%' alt='product'></img>
-      <img src='/essence cart page@2x.png' width='80%' alt='cart'></img>
-      <img src='/essence checkout page@2x.png' width='80%' alt='checkout'></img>
+      <img className={styles.mockup} src='/essence results mockup@2x.png' width='100%' alt='mockup'></img>
+      <section>
+        <div className={styles.imageContainer}>
+          <img src='/essence homepage@2x.png' alt='homepage'></img>
+          <img src='/essence product page@2x.png' alt='product'></img>
+          <img src='/essence cart page@2x.png' alt='cart'></img>
+          <img src='/essence checkout page@2x.png' alt='checkout'></img>
+        </div>
+      </section>
     </section>
   );
 }

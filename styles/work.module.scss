@@ -6,6 +6,8 @@ $primaryBGColor: #fcfcfc;
 $secondaryBGColor: #f1f1f1;
 $primaryAccentColor: #6c63ff;
 $secondaryAccentColor: #fed200;
+$essenceAccent: #58d06f;
+$vamyouAccent: #fc326f;
 
 .work {
   .hero {
@@ -36,6 +38,14 @@ $secondaryAccentColor: #fed200;
       .essenceLogo {
         width: 45vw;
         height: auto;
+        position: relative;
+      }
+
+      .vamyouLogo {
+        width: 35vw;
+        height: auto;
+        top: -3rem;
+        margin-bottom: -2rem;
         position: relative;
       }
 
@@ -181,7 +191,6 @@ $secondaryAccentColor: #fed200;
     }
 
     section {
-      background-color: $secondaryBGColor;
       width: 100vw;
       display: flex;
       flex-direction: column;
@@ -189,7 +198,10 @@ $secondaryAccentColor: #fed200;
       margin-top: 2rem;
       padding: 1rem 2rem;
       padding-bottom: 3rem;
+    }
 
+    .greyBackground {
+      background-color: $secondaryBGColor;
       svg {
         width: 100vw;
         height: auto;
@@ -217,10 +229,143 @@ $secondaryAccentColor: #fed200;
         font-size: 1.6rem;
         font-weight: 400;
 
-        svg {
+        .pdfIcon {
           margin-left: 0.4rem;
           width: 1.6rem;
           height: auto;
+        }
+      }
+    }
+  }
+
+  .Results {
+    margin-top: 3rem;
+    background-color: $secondaryColor;
+    display: grid;
+    width: 100vw;
+    place-items: center;
+    grid-template: repeat(auto 4) / 1fr;
+    grid-template-areas:
+      "head"
+      "logo"
+      "mockup"
+      "pages";
+
+    h3 {
+      color: white;
+      font-weight: 650;
+      grid-area: head;
+    }
+
+    div {
+      grid-area: logo;
+      background-color: $primaryBGColor;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      border-radius: 0.8rem;
+
+      svg {
+        width: 15rem;
+        height: auto;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1.4rem;
+        background-color: $secondaryColor;
+      }
+    }
+
+    .mockup {
+      width: 90%;
+      margin-bottom: 10rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    section {
+      grid-area: pages;
+      background-color: $essenceAccent;
+      display: grid;
+      grid-template: repeat(auto, 4) / 100vw;
+      justify-items: center;
+      grid-template-areas:
+        "homepage"
+        "productpage"
+        "cart"
+        "checkout";
+
+      .imageContainer {
+        background-color: transparent;
+        position: relative;
+        top: -10rem;
+        margin-bottom: -10rem;
+      }
+    }
+  }
+
+  .conclusion {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    word-spacing: 0.3rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.05rem;
+    margin-bottom: 4rem;
+
+    h3 {
+      margin: 2rem;
+      font-size: 2.3rem;
+      font-family: Spartan, sans-serif;
+      font-weight: 700;
+      margin-top: 3rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+      margin-bottom: 2rem;
+    }
+
+    hr {
+      width: 100%;
+      background-color: $secondaryColor;
+      height: 0.1rem;
+      border: none;
+      opacity: 0.5;
+      margin-bottom: 2rem;
+    }
+
+    div {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      .return {
+        background-color: $secondaryColor;
+      }
+
+      .next {
+        background-color: $vamyouAccent;
+      }
+
+      button {
+        font-size: 1.6rem;
+        padding: 0.8rem;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin: 0.6rem 0.6rem;
+          margin-bottom: 0.8rem;
         }
       }
     }
