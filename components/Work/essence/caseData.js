@@ -94,6 +94,7 @@ export const essence = {
       {
         title: "Project Architecture",
         greyBG: true,
+        caption: "Sitemap for Essence Natural",
         para: ["Based on the market analysis and the brand needs, I structured a sitemap that best suits in fulfilling the market needs and results in an overall better user flow experience."],
         svg: (
           <svg id='essence_sitemap' data-name='essence sitemap' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' width='100%' height='auto' viewBox='0 0 1053.828 814.404'>
@@ -373,20 +374,36 @@ export const essence = {
       {
         title: "Wireframing & Low-fidelity Prototyping",
         para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype."],
-        imageLink: ["/lo-fi-proto_essence@2x.png"],
-        pdfLink: "#",
+        imageLink: [
+          {
+            src: "/lo-fi-proto_essence@2x.png",
+            pdfLink: "#",
+          },
+        ],
       },
       {
         title: "Designing Elements",
         para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
-        imageLink: ["/styleGuide Essence@2x.png", "/final Design essence@2x.png"],
-        pdfLink: "#",
+        imageLink: [
+          {
+            src: "/styleGuide Essence@2x.png",
+            pdfLink: "#",
+          },
+          {
+            src: "/final Design essence@2x.png",
+            pdfLink: "#",
+          },
+        ],
       },
       {
         title: "High-fidelity Prototyping",
         para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
-        imageLink: ["/high-fi-proto_essence@2x.png"],
-        pdfLink: "#",
+        imageLink: [
+          {
+            src: "/high-fi-proto_essence@2x.png",
+            pdfLink: "#",
+          },
+        ],
       },
       {
         mainTitle: "Development",
@@ -516,8 +533,12 @@ export const essence = {
       {
         title: "Building the base file structure",
         para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
-        imageLink: ["/file structure essence@2x.png"],
-        pdfLink: "#",
+        imageLink: [
+          {
+            src: "/file structure essence@2x.png",
+            pdfLink: "#",
+          },
+        ],
         greyBG: true,
       },
       {
@@ -529,6 +550,65 @@ export const essence = {
         iFrame: {
           src: "https://codepen.io/lewisroysonj/embed/pobdmJm?height=271&theme-id=dark&default-tab=js,result",
         },
+      },
+      {
+        title: "Setting up the Backend",
+        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        subSection: [
+          {
+            title: "Choosing the database",
+            para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. ", "After a clear sitemap has been prepared, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+            img: [
+              {
+                src: "/essence mongoPage.png",
+                caption: "MongoDB console for Essence",
+              },
+            ],
+          },
+          {
+            title: "Connecting the backend",
+            para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+          },
+        ],
+        greyBG: true,
+      },
+      {
+        title: "Implementing Testing",
+        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        imageLink: [
+          {
+            src: "/test screen@2x.png",
+            caption: "Testing screen",
+          },
+        ],
+      },
+      {
+        title: "Making the code Production ready",
+        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        greyBG: true,
+        list: [
+          {
+            heading: "A list of these procedures are:",
+            items: ["Most Obvious bugs are fixed", "code is well-structured and self documenting", "Automated Tests are written", "It's gone through a peer review process before final deployment"],
+            type: "ul",
+          },
+        ],
+      },
+      {
+        title: "Hosting",
+        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        imageLink: [
+          {
+            src: "/gcp essence server@2x.png",
+            caption: "Google Cloud Console for Essence Backend Hosting",
+            pdfLink: "#",
+          },
+          {
+            src: "/firebase essence@2x.png",
+            caption: "Firebase Console for Essence Frontend Hosting",
+            pdfLink: "#",
+          },
+        ],
       },
     ],
   },
