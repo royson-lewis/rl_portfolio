@@ -17,7 +17,7 @@ export default function HeroSection() {
         </h3>
         <div>
           <button className={styles.primaryButton}>My Projects</button>
-          <button className='secondaryButton'>My Projects</button>
+          <button className='secondaryButton'>Get in touch</button>
         </div>
         <div className={styles.socialLink}>
           <svg xmlns='http://www.w3.org/2000/svg' width='28.777' height='28.058' viewBox='0 0 28.777 28.058'>

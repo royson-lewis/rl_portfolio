@@ -232,7 +232,6 @@ $vamyouAccent: #fc326f;
 
   .Results {
     margin-top: 3rem;
-    background-color: $secondaryColor;
     display: grid;
     width: 100vw;
     place-items: center;
@@ -255,7 +254,7 @@ $vamyouAccent: #fc326f;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
+      padding: 2rem 4rem;
       border-radius: 0.8rem;
 
       svg {
@@ -282,7 +281,6 @@ $vamyouAccent: #fc326f;
 
     section {
       grid-area: pages;
-      background-color: $essenceAccent;
       display: grid;
       grid-template: repeat(auto, 4) / 100vw;
       justify-items: center;

@@ -1,7 +1,8 @@
 /** @format */
 import Styles from "../../styles/work.module.scss";
-import { essence } from "./essence/caseData";
-import { vamyou } from "./vamyou/caseData";
+import { essence } from "../../Data/work/Essence/caseData";
+import { vamyou } from "../../Data/work/Vamyou/caseData";
+
 export default function ProjectCase(props) {
   let currentProject;
   switch (props.project) {

@@ -14,9 +14,11 @@ export default function Vamyou() {
       <EssenceHero project='vamyou' />
       <ProjectInfo project='vamyou' />
       <ProjectCase project='vamyou' />
-      <Results />
-      <Conclusion />
-      <ContactSection />
+      <Results project='vamyou' />
+      <Conclusion project='vamyou' />
+      <section style={{ backgroundColor: "#f6f6f6", paddingBottom: "3rem" }}>
+        <ContactSection />
+      </section>
     </main>
   );
 }

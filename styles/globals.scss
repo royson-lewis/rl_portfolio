@@ -64,6 +64,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.selected {
+  font-weight: 750;
+  border-bottom: 4px solid $secondaryAccentColor;
+}
+
 button,
 .secondaryButton {
   background-color: $primaryAccentColor;
@@ -312,7 +317,7 @@ form {
   }
 
   h1 {
-    font-size: 6.5rem;
+    font-size: 8.5rem;
     font-weight: 750;
   }
   h2 {
@@ -347,7 +352,7 @@ form {
 
   button {
     background-color: $primaryAccentColor;
-    border: none;
+    border: 5.5px solid transparent;
     padding: 0.7vw 1.5vw;
     color: $primaryColor;
     font-weight: 550;
@@ -367,12 +372,40 @@ form {
     &:active {
       background-color: #5c54fc;
       box-shadow: 0.5px 0.5px 2px 0px rgba(0, 0, 0, 0.2);
-      border: none;
     }
 
     &:focus {
-      border: none;
       outline: none;
+    }
+  }
+
+  .secondaryButton {
+    background-color: transparent;
+    border: 5.5px solid $secondaryAccentColor;
+    color: $secondaryColor;
+
+    &:hover {
+      background-color: hsl(0, 0%, 100%);
+    }
+
+    &:active {
+      background-color: #f1f1f1;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $secondaryColor;
+    }
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+    &:disabled {
+      background-color: #d3d3d3;
+      color: #afafaf;
+      cursor: not-allowed;
+      box-shadow: none;
+      &:hover {
+        box-shadow: none;
+      }
     }
   }
 
@@ -393,6 +426,10 @@ form {
       outline: none;
       border-bottom: 2.2px solid $secondaryAccentColor;
     }
+  }
+
+  label {
+    font-size: 2.6rem;
   }
 
   .inputWarning {

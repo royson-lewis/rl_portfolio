@@ -48,3 +48,63 @@ $secondaryAccentColor: #fed200;
     justify-content: center;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    display: grid;
+    align-items: center;
+    width: 100vw;
+    grid-template: 10% 80% 10%/25% 25% 25% 25%;
+    margin-top: 5rem;
+    padding: 0;
+    column-gap: 5rem;
+    padding-bottom: 0;
+    grid-template-areas:
+      "null quicklinkHead connectHead nill"
+      "null quicklinks socialIcons nill"
+      "footerBottom footerBottom footerBottom footerBottom";
+
+    .quickHead {
+      grid-area: quicklinkHead;
+    }
+    ul {
+      grid-area: quicklinks;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 3rem;
+        color: $secondaryColor;
+      }
+    }
+
+    .connectHead {
+      grid-area: connectHead;
+    }
+
+    div {
+      grid-area: socialIcons;
+      align-self: start;
+      display: flex;
+      align-items: flex-start;
+      width: 50%;
+      justify-content: space-around;
+    }
+
+    section {
+      grid-area: footerBottom;
+      background-color: $secondaryColor;
+      width: 100vw;
+      position: relative;
+      left: 0vw;
+      margin-top: 5rem;
+      color: $primaryBGColor;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

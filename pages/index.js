@@ -5,6 +5,7 @@ import HeroSection from "../components/heroSection";
 import ServiceSection from "../components/serviceSection";
 import SkillSection from "../components/skillSection";
 import WorkSection from "../components/workSection";
+import WorkSectionDesktop from "../components/workSectionDesktop";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -13,7 +14,12 @@ export default function Home() {
       <main className={styles.homePage}>
         <HeroSection />
         <ServiceSection />
-        <WorkSection />
+        <section className={styles.mobileWork}>
+          <WorkSection />
+        </section>
+        <section className={styles.desktopWork}>
+          <WorkSectionDesktop />
+        </section>
         <SkillSection />
         <ContactSection />
       </main>

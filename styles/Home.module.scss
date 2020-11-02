@@ -7,9 +7,7 @@ $primaryAccentColor: #6c63ff;
 $secondaryAccentColor: #fed200;
 
 .heroSection {
-  --heightW: 20vw;
   height: fit-content;
-  min-height: 50rem;
   width: 100vw;
   min-height: 86vh;
   margin-bottom: 3rem;
@@ -141,6 +139,10 @@ $secondaryAccentColor: #fed200;
       width: 65%;
     }
   }
+}
+
+.desktopWork {
+  display: none;
 }
 
 .workSection {
@@ -441,6 +443,258 @@ $secondaryAccentColor: #fed200;
       font-size: 2rem;
       width: 100%;
       margin-top: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .heroSection {
+    grid-template: auto / 50% 50%;
+    grid-template-areas: "info art";
+    width: 90vw;
+    margin: 0 auto;
+    padding: 16rem 0rem;
+    margin-bottom: auto;
+    height: 80vh;
+    min-height: fit-content;
+
+    .heroArt {
+      padding-right: 2rem;
+      margin: auto;
+      svg {
+        height: auto;
+        width: 70%;
+      }
+    }
+
+    .heroInfo {
+      padding-left: 0;
+      place-self: center;
+      justify-content: center;
+      width: 80%;
+
+      h3 {
+        margin: 1rem 0;
+      }
+
+      div {
+        button {
+          padding: 2rem 2vw;
+          font-size: 2.6rem;
+          margin-right: 0.6vw;
+        }
+      }
+
+      .socialLink {
+        margin-top: 4rem;
+
+        svg {
+          height: 5.5rem;
+          width: auto;
+        }
+      }
+    }
+  }
+  .serviceSection {
+    width: auto;
+    padding: 4vw 5vw;
+    grid-template: auto 0.1fr / 1fr 1fr 1fr;
+    grid-template-areas:
+      "head head head"
+      "UI frontend backend";
+
+    h2 {
+      margin-bottom: 6rem;
+      margin-top: -1.5rem;
+    }
+
+    section {
+      border-bottom: none;
+      text-align: center;
+
+      svg {
+        width: 60%;
+        height: 60%;
+      }
+
+      h3 {
+        margin: 4rem 0vw;
+        font-size: 3.5rem;
+        margin-top: 6rem;
+      }
+
+      p {
+        width: 70%;
+        font-size: 2.4rem;
+        margin-bottom: 4rem;
+      }
+      button {
+        padding: 1rem 2rem;
+        font-size: 2.6rem;
+      }
+    }
+
+    .UISection {
+      svg {
+        height: 50%;
+        width: 50%;
+      }
+    }
+
+    .frontEndSection {
+      svg {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .backEndSection {
+      grid-area: backend;
+      svg {
+        height: 45%;
+        width: 45%;
+      }
+    }
+  }
+
+  .mobileWork {
+    display: none;
+  }
+
+  .desktopWork {
+    display: block;
+  }
+
+  .workSection {
+    .workSlider {
+      height: 120rem;
+
+      .sliderContainer {
+        height: 100%;
+
+        div {
+          .imageContainer {
+            img {
+              top: 0rem;
+            }
+          }
+
+          section {
+            top: -80rem;
+            margin-left: 25rem;
+
+            .logoContainer {
+              height: 18.5rem;
+            }
+
+            p {
+              margin-left: 1rem;
+              width: 65rem;
+              font-size: 2.8rem;
+            }
+
+            .buttonContainer {
+              a {
+                button {
+                  padding: 1.6rem 3rem;
+                  font-size: 2.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .sliderDotContainer {
+        top: -7rem;
+      }
+
+      .sliderButtons {
+        top: -55rem;
+      }
+    }
+  }
+
+  .skillSection {
+    grid-template: 0.2fr / 1fr 1fr 1fr 1fr;
+    padding: 10rem 25rem;
+    height: 110rem;
+    grid-template-areas:
+      "head head head head"
+      "ui frontend backend others";
+
+    h2 {
+      grid-area: head;
+    }
+
+    section {
+      width: 85%;
+      height: 75%;
+      max-width: none;
+      align-items: center;
+
+      img,
+      h3,
+      ul {
+        top: -6rem;
+      }
+
+      h3 {
+        font-size: 2.4rem;
+      }
+
+      ul {
+        li {
+          font-size: 2.2rem;
+          line-height: 2.5;
+
+          svg {
+            height: 3.6rem;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .contactSection {
+    width: 60vw;
+    margin: 0 auto;
+    align-items: center;
+
+    .contactCard {
+      h4 {
+        font-size: 2.8rem;
+      }
+
+      div {
+        width: fit-content;
+
+        button {
+          padding: 1.5rem 2.2rem;
+          font-size: 2.4rem;
+
+          svg {
+            height: 2.4rem;
+            width: 2.4rem;
+          }
+        }
+      }
+    }
+
+    form {
+      label {
+        margin-bottom: 4rem;
+
+        textarea {
+          height: 20rem;
+        }
+      }
+
+      button {
+        font-size: 2.4rem;
+        padding: 2.8rem;
+        margin-bottom: 4rem;
+      }
     }
   }
 }

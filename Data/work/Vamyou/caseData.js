@@ -416,8 +416,8 @@ export const vamyou = {
             para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. ", "After a clear sitemap has been prepared, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
             img: [
               {
-                src: "/essence mongoPage.png",
-                caption: "MongoDB console for Essence",
+                src: "/vamyou mongo page@2x.png",
+                caption: "MongoDB console for Vamyou",
               },
             ],
           },
@@ -455,13 +455,13 @@ export const vamyou = {
         para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
         imageLink: [
           {
-            src: "/gcp essence server@2x.png",
-            caption: "Google Cloud Console for Essence Backend Hosting",
+            src: "/vamyou client gcp page@2x.png",
+            caption: "Google Cloud Console for Vamyou Frontend Hosting",
             pdfLink: "#",
           },
           {
-            src: "/firebase essence@2x.png",
-            caption: "Firebase Console for Essence Frontend Hosting",
+            src: "/vamyou server gcp page@2x.png",
+            caption: "Google Cloud Console for Vamyou Backend Hosting",
             pdfLink: "#",
           },
         ],

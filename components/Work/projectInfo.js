@@ -1,7 +1,7 @@
 /** @format */
 import styles from "../../styles/work.module.scss";
-import { essence } from "./essence/infoData";
-import { vamyou } from "./vamyou/infoData";
+import { essence } from "../../Data/work/Essence/infoData";
+import { vamyou } from "../../Data/work/Vamyou/infoData";
 
 export default function ProjectInfo(props) {
   let currentProject;

@@ -6,7 +6,8 @@ $secondaryBGColor: #f7f7f7;
 $primaryAccentColor: #6c63ff;
 $secondaryAccentColor: #fed200;
 
-.header {
+.headerMobile,
+.headerDesktop {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -112,4 +113,61 @@ $secondaryAccentColor: #fed200;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease-in;
+}
+
+.headerDesktop {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .headerMobile {
+    display: none;
+  }
+
+  .headerDesktop {
+    display: flex;
+    height: auto;
+    width: 80vw;
+    padding: 4rem 0rem;
+    box-shadow: none;
+    justify-content: space-between;
+
+    h3 {
+      font-size: 3.5rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 2rem;
+        width: 5rem;
+        height: auto;
+      }
+    }
+
+    .navLinks {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        li {
+          list-style: none;
+          text-align: center;
+          a {
+            color: $secondaryColor;
+            font-size: 2.6rem;
+            margin-right: 0.7vw;
+            margin-left: 0.7vw;
+          }
+        }
+      }
+    }
+
+    .hireMeButton {
+      font-size: 3rem;
+      padding: 1rem 3rem;
+    }
+  }
 }

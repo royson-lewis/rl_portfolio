@@ -14,8 +14,8 @@ export default function Essence() {
       <EssenceHero project='essence' />
       <ProjectInfo project='essence' />
       <ProjectCase project='essence' />
-      <Results />
-      <Conclusion />
+      <Results project='essence' />
+      <Conclusion project='essence' />
       <ContactSection />
     </main>
   );

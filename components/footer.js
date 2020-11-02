@@ -6,7 +6,7 @@ import styles from "../styles/footer.module.scss";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <h3>Quick Links</h3>
+      <h3 className={styles.quickHead}>Quick Links</h3>
       <ul>
         <Link href='/'>
           <a>
@@ -40,7 +40,7 @@ export default function Footer() {
           </a>
         </Link>
       </ul>
-      <h3>Connect with me</h3>
+      <h3 className={styles.connectHead}>Connect with me</h3>
       <div>
         <svg xmlns='http://www.w3.org/2000/svg' width='35.662' height='34.771' viewBox='0 0 35.662 34.771'>
           <path
