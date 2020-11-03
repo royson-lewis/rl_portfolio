@@ -114,14 +114,15 @@ export default function WorkSectionDesktop() {
             );
           })}
         </div>
+        <div className={styles.sliderButtons}>
+          <img onClick={slideRight} src='/slideRightIcon.svg'></img>
+          <img onClick={slideLeft} src='/slideLeftIcon.svg'></img>
+        </div>
+
         <div className={styles.sliderDotContainer}>
           {sliderWorks.map((work) => {
             return <div onClick={setSlide} className={sliderWorks.indexOf(work)} key={work.image} id={slider.index === sliderWorks.indexOf(work) * -100 ? "currentDot" : ""}></div>;
           })}
-        </div>
-        <div className={styles.sliderButtons}>
-          <img onClick={slideRight} src='/slideRightIcon.svg'></img>
-          <img onClick={slideLeft} src='/slideLeftIcon.svg'></img>
         </div>
       </section>
     </section>

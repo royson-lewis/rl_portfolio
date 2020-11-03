@@ -152,8 +152,6 @@ $secondaryAccentColor: #fed200;
     padding: 2rem;
   }
   .workSlider {
-    display: grid;
-    width: 100vw;
     height: 76rem;
 
     .sliderContainer {
@@ -280,67 +278,72 @@ $secondaryAccentColor: #fed200;
   background-color: $secondaryBGColor;
   padding-top: 2rem;
   display: grid;
-  grid-template: 0.2fr repeat(auto, 3) / 1fr;
+  grid-template: 0.2fr auto / 100vw;
   justify-items: center;
-  width: 100vw;
 
   h2 {
     padding-bottom: 1rem;
   }
-
-  section {
-    background-color: $primaryBGColor;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    border-radius: 1rem;
+  div {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    padding: 0rem 0.6rem;
-    min-width: 20rem;
-    max-width: 35rem;
+    justify-content: space-around;
+    width: 100%;
     align-items: center;
-    box-shadow: 0px 1px 2px 2px #c0c0c036;
-    transition: box-shadow 0.1s ease-in;
+    flex-wrap: wrap;
 
-    &:hover {
-      box-shadow: 0px 1px 8px 6px #c0c0c036;
-    }
-
-    img,
-    h3,
-    ul {
-      position: relative;
-      top: -6rem;
-      margin-top: 2rem;
-    }
-
-    h3 {
-      text-align: center;
-      font-size: 1.8rem;
-    }
-
-    img {
-      top: -7rem;
-    }
-
-    ul {
+    section {
+      background-color: $primaryBGColor;
+      margin-top: 4rem;
+      margin-bottom: 3rem;
+      border-radius: 1rem;
       display: flex;
-      align-items: flex-start;
       flex-direction: column;
-      padding: 0;
-      width: 60%;
-      li {
-        list-style: none;
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-        font-weight: 400;
-        line-height: 1.5;
+      width: 30rem;
+      padding: 0rem 5rem;
+      align-items: center;
+      box-shadow: 0px 1px 2px 2px #c0c0c036;
+      transition: box-shadow 0.1s ease-in;
 
-        svg {
-          margin-right: 1rem;
+      &:hover {
+        box-shadow: 0px 1px 8px 6px #c0c0c036;
+      }
+
+      img,
+      h3,
+      ul {
+        position: relative;
+        top: -6rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 1.8rem;
+      }
+
+      img {
+        top: -7rem;
+      }
+
+      ul {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        li {
+          list-style: none;
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 1.5;
+
+          svg {
+            margin-right: 1rem;
+          }
         }
       }
     }
@@ -382,6 +385,7 @@ $secondaryAccentColor: #fed200;
     div {
       display: flex;
       width: 100%;
+      justify-content: center;
 
       button {
         background-color: $secondaryColor;
@@ -449,21 +453,21 @@ $secondaryAccentColor: #fed200;
 
 @media only screen and (min-width: 768px) {
   .heroSection {
-    grid-template: auto / 50% 50%;
+    grid-template: auto / 55% 45%;
     grid-template-areas: "info art";
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
-    padding: 16rem 0rem;
+    padding: 15rem 0rem;
     margin-bottom: auto;
-    height: 80vh;
-    min-height: fit-content;
+    height: 90vh;
+    min-height: 80rem;
 
     .heroArt {
-      padding-right: 2rem;
+      padding-right: 0rem;
       margin: auto;
       svg {
-        height: auto;
-        width: 70%;
+        height: 50rem;
+        width: auto;
       }
     }
 
@@ -471,15 +475,20 @@ $secondaryAccentColor: #fed200;
       padding-left: 0;
       place-self: center;
       justify-content: center;
-      width: 80%;
+      width: 100%;
 
       h3 {
         margin: 1rem 0;
+        font-size: 2.4rem;
+      }
+
+      h1 {
+        font-size: 6.7rem;
       }
 
       div {
         button {
-          padding: 2rem 2vw;
+          padding: 1.4rem 1.4vw;
           font-size: 2.6rem;
           margin-right: 0.6vw;
         }
@@ -489,7 +498,7 @@ $secondaryAccentColor: #fed200;
         margin-top: 4rem;
 
         svg {
-          height: 5.5rem;
+          height: 4rem;
           width: auto;
         }
       }
@@ -497,15 +506,17 @@ $secondaryAccentColor: #fed200;
   }
   .serviceSection {
     width: auto;
-    padding: 4vw 5vw;
+    padding: 8vw 5vw;
     grid-template: auto 0.1fr / 1fr 1fr 1fr;
     grid-template-areas:
       "head head head"
       "UI frontend backend";
 
     h2 {
-      margin-bottom: 6rem;
-      margin-top: -1.5rem;
+      margin-bottom: 14rem;
+      margin-top: -8.5rem;
+      font-size: 4.2rem;
+      font-weight: 600;
     }
 
     section {
@@ -513,24 +524,24 @@ $secondaryAccentColor: #fed200;
       text-align: center;
 
       svg {
-        width: 60%;
-        height: 60%;
+        width: 50%;
+        height: 50%;
       }
 
       h3 {
-        margin: 4rem 0vw;
-        font-size: 3.5rem;
-        margin-top: 6rem;
+        margin: 3rem 0vw;
+        font-size: 2.6rem;
+        margin-top: 4rem;
       }
 
       p {
         width: 70%;
-        font-size: 2.4rem;
-        margin-bottom: 4rem;
+        font-size: 2rem;
+        margin-bottom: 2.8rem;
       }
       button {
-        padding: 1rem 2rem;
-        font-size: 2.6rem;
+        padding: 0.8rem 1.6rem;
+        font-size: 2.2rem;
       }
     }
 
@@ -543,15 +554,16 @@ $secondaryAccentColor: #fed200;
 
     .frontEndSection {
       svg {
-        margin-bottom: 4rem;
+        margin-bottom: 2.4rem;
       }
     }
 
     .backEndSection {
       grid-area: backend;
       svg {
-        height: 45%;
-        width: 45%;
+        margin-bottom: 2rem;
+        height: 40%;
+        width: 40%;
       }
     }
   }
@@ -565,38 +577,55 @@ $secondaryAccentColor: #fed200;
   }
 
   .workSection {
+    margin-top: 2rem;
+    margin-bottom: -7.5rem;
+
+    h2 {
+      margin-bottom: -13rem;
+      position: relative;
+      z-index: 1;
+      font-size: 4.2rem;
+    }
     .workSlider {
-      height: 120rem;
+      height: 100vh;
 
       .sliderContainer {
         height: 100%;
 
         div {
           .imageContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             img {
               top: 0rem;
+              min-height: auto;
+              width: 100%;
             }
           }
 
           section {
-            top: -80rem;
-            margin-left: 25rem;
+            top: -50%;
+            left: 9vw;
+            transform: translate(0, -50%);
+            margin-left: auto;
 
             .logoContainer {
-              height: 18.5rem;
+              height: 10.5rem;
             }
 
             p {
               margin-left: 1rem;
               width: 65rem;
-              font-size: 2.8rem;
+              font-size: 2.4rem;
+              margin-top: 3rem;
             }
 
             .buttonContainer {
               a {
                 button {
-                  padding: 1.6rem 3rem;
-                  font-size: 2.6rem;
+                  padding: 1.2rem 1.8rem;
+                  font-size: 2.4rem;
                 }
               }
             }
@@ -605,51 +634,82 @@ $secondaryAccentColor: #fed200;
       }
 
       .sliderDotContainer {
-        top: -7rem;
+        top: auto;
+        transform: translateY(-10rem);
       }
-
       .sliderButtons {
-        top: -55rem;
+        width: 90vw;
+        top: -50rem;
+        z-index: 10;
+        transform: translateY(50%);
+        margin: 0 auto;
+        justify-content: space-between;
+
+        img {
+          cursor: pointer;
+        }
       }
     }
   }
 
   .skillSection {
-    grid-template: 0.2fr / 1fr 1fr 1fr 1fr;
-    padding: 10rem 25rem;
-    height: 110rem;
+    grid-template: 0.2fr auto / 80vw;
+    padding: 10rem 0rem;
+    justify-content: center;
+    column-gap: 2rem;
+    height: fit-content;
+    min-height: 90rem;
     grid-template-areas:
-      "head head head head"
-      "ui frontend backend others";
+      "head"
+      "ui";
 
     h2 {
       grid-area: head;
+      font-size: 4.2rem;
+      margin-top: -3rem;
     }
 
-    section {
-      width: 85%;
-      height: 75%;
-      max-width: none;
-      align-items: center;
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      flex-wrap: wrap;
+      section {
+        width: 36rem;
+        padding: 0rem 2rem;
+        align-items: flex-start;
+        height: 50rem;
 
-      img,
-      h3,
-      ul {
-        top: -6rem;
-      }
+        img,
+        h3,
+        ul {
+          top: -5rem;
+        }
 
-      h3 {
-        font-size: 2.4rem;
-      }
+        img,
+        h3 {
+          width: fit-content;
+          margin: 0 auto;
+        }
 
-      ul {
-        li {
+        h3 {
           font-size: 2.2rem;
-          line-height: 2.5;
+          margin-top: 4rem;
+        }
 
-          svg {
-            height: 3.6rem;
-            width: auto;
+        ul {
+          margin-left: 3.5rem;
+          margin-top: 3rem;
+          width: fit-content;
+          li {
+            font-size: 2rem;
+            line-height: 2.5;
+
+            svg {
+              height: auto;
+              width: 3.6rem;
+            }
           }
         }
       }
