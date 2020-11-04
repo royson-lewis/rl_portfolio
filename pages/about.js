@@ -5,7 +5,7 @@ export default function About() {
   return (
     <main className={styles.about}>
       <h2>About Me</h2>
-      <svg xmlns='http://www.w3.org/2000/svg' width='167.879' height='167.885' viewBox='0 0 167.879 167.885'>
+      <svg className={styles.dp} xmlns='http://www.w3.org/2000/svg' width='167.879' height='167.885' viewBox='0 0 167.879 167.885'>
         <g id='Group_205' data-name='Group 205' transform='translate(0)'>
           <path id='Path_238' data-name='Path 238' d='M429.879,195.939a83.654,83.654,0,0,1-6.76,33.054l-.278.641a84.078,84.078,0,0,1-91.466,48.985q-.756-.134-1.51-.278a83.188,83.188,0,0,1-15.184-4.478q-1.2-.481-2.374-1c-.536-.233-1.073-.474-1.6-.723a83.947,83.947,0,1,1,119.176-76.206Z' transform='translate(-262 -112)' fill='#dbdbdb' />
           <path id='Path_241' data-name='Path 241' d='M482.467,307.094a33.191,33.191,0,0,0,1.913,17.034,30.248,30.248,0,0,0,5.738-32.373A33.193,33.193,0,0,0,482.467,307.094Z' transform='translate(-427.407 -247.115)' opacity='0.2' />

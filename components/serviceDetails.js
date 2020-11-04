@@ -94,20 +94,28 @@ export default function ServiceDetails(props) {
   return (
     <>
       <section className={styles.details}>
-        <div className={styles.imageContainer}>
-          <div style={{ backgroundColor: accentColor }} className={styles.backDrop}>
-            <img src={image1}></img>
+        <div className={styles.serviceSection1}>
+          <div className={styles.imageContainer}>
+            <div style={{ backgroundColor: accentColor }} className={styles.backDrop}>
+              <img src={image1}></img>
+            </div>
+          </div>
+          <div className={styles.textSection}>
+            <h4>{headLine1}</h4>
+            <p>{description1}</p>
           </div>
         </div>
-        <h4>{headLine1}</h4>
-        <p>{description1}</p>
-        <div className={styles.imageContainer}>
-          <div className={styles.backDrop}>
-            <img src={image2}></img>
+        <div className={styles.serviceSection2}>
+          <div className={styles.imageContainer}>
+            <div className={styles.backDrop}>
+              <img src={image2}></img>
+            </div>
+          </div>
+          <div className={styles.textSection}>
+            <h4>{headLine2}</h4>
+            <p>{description2}</p>
           </div>
         </div>
-        <h4>{headLine2}</h4>
-        <p>{description2}</p>
       </section>
       <section className={styles.offers}>
         <h3>Services Offered in {name}</h3>

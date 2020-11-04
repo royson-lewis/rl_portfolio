@@ -23,13 +23,15 @@ export default function ProjectCase(props) {
   return (
     <>
       <section className={Styles.caseStudy}>
-        <h3>Project Overview</h3>
-        <p>{projectOverview} </p>
-        <p>{projectOverview2} </p>
-        <h3>The Challenge</h3>
-        {challengeSVG}
-        <p>{challenge}</p>
-        <h3>The Solution</h3>
+        <div className={Styles.caseStart}>
+          <h3>Project Overview</h3>
+          <p>{projectOverview} </p>
+          <p>{projectOverview2} </p>
+          <h3>The Challenge</h3>
+          {challengeSVG}
+          <p>{challenge}</p>
+          <h3>The Solution</h3>
+        </div>
         {solution ? solution.svg : null}
 
         {solution

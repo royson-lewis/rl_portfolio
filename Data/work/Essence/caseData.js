@@ -1,4 +1,5 @@
 /** @format */
+import styles from "../../../styles/work.module.scss";
 
 export const essence = {
   projectOverview: "ESSENCE is an eCommerce platform that provides daily essential products created with ingredients without any artificial processing or harmful chemicals. It focuses on making people get closer to the nature through its products with an elegant and sustainable way for the eco-system.",
