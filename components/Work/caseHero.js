@@ -4,6 +4,7 @@ import EssenceHeroArt from "./essence/essenceHeroArt";
 import EssenceHeroArtDesktop from "./essence/essenceHeroArtDesktop";
 import EssenceLogo from "./essence/essenceLogo";
 import VamyouHeroArt from "./vamyou/vamyouHeroArt";
+import VamyouHeroArtDesktop from "./vamyou/vamyouHeroArtDesktop";
 import VamyouLogo from "./vamyou/vamyouLogo";
 
 export default function EssenceHero(props) {
@@ -17,7 +18,7 @@ export default function EssenceHero(props) {
 
   const vamyou = {
     heroArt: <VamyouHeroArt />,
-    heroArtDesktop: <EssenceHeroArtDesktop />,
+    heroArtDesktop: <VamyouHeroArtDesktop />,
     logo: <VamyouLogo />,
     description: "A blog featuring all the latest trends and techniques essential for success in the field of business and finance.",
     link: "https://jen-blog-284811.uc.r.appspot.com/",

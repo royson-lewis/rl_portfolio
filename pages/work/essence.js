@@ -16,7 +16,9 @@ export default function Essence() {
       <ProjectCase project='essence' />
       <Results project='essence' />
       <Conclusion project='essence' />
-      <ContactSection />
+      <section style={{ backgroundColor: "#f6f6f6", paddingBottom: "3rem" }}>
+        <ContactSection />
+      </section>
     </main>
   );
 }

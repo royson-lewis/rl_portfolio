@@ -34,10 +34,10 @@ export default function Results(props) {
       <img className={styles.mockup} src={mockup} width='100%' alt='mockup'></img>
       <section style={{ backgroundColor: color.accent }}>
         <div className={styles.imageContainer}>
-          <img src={pages.page1} alt={pages.page1}></img>
-          <img src={pages.page2} alt={pages.page2}></img>
-          <img src={pages.page3} alt={pages.page3}></img>
-          <img src={pages.page4} alt={pages.page4}></img>
+          <img className={styles.page1} src={pages.page1} alt={pages.page1}></img>
+          <img className={styles.page2} src={pages.page2} alt={pages.page2}></img>
+          <img className={styles.page3} src={pages.page3} alt={pages.page3}></img>
+          <img className={styles.page4} src={pages.page4} alt={pages.page4}></img>
         </div>
       </section>
     </section>

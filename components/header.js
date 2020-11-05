@@ -1,5 +1,5 @@
 /** @format */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/header.module.scss";
 import BurgerMenu from "./burgerMenu";
 import Link from "./link";
@@ -7,6 +7,8 @@ import Link from "./link";
 export default function Header() {
   const [header, setHeader] = useState({
     burgerOpen: false,
+    scrollingUp: false,
+    scrollingDown: false,
   });
   function toggleBurger() {
     setHeader({
@@ -14,9 +16,38 @@ export default function Header() {
       burgerOpen: !header.burgerOpen,
     });
   }
+
+  // function scroll () {
+  //   window.onscroll
+  // }
+
+  useEffect(() => {
+    let currentScrollPosition = 0;
+    if (window) {
+      window.onscroll = () => {
+        let newScrollPosition = window.pageYOffset;
+        if (newScrollPosition > currentScrollPosition) {
+          setHeader({
+            ...header,
+            scrollingUp: false,
+            scrollingDown: true,
+          });
+        } else {
+          setHeader({
+            ...header,
+            scrollingUp: true,
+            scrollingDown: false,
+          });
+        }
+        currentScrollPosition = newScrollPosition;
+      };
+    }
+    return () => {};
+  }, []);
+
   return (
     <>
-      <header className={styles.headerMobile}>
+      <header style={header.scrollingUp && !header.scrollingDown ? { opacity: 1, position: "fixed" } : !header.scrollingUp && header.scrollingDown ? { opacity: 0, position: "fixed" } : null} className={styles.headerMobile}>
         <span className={styles.burgerButton} onClick={toggleBurger}>
           <svg xmlns='http://www.w3.org/2000/svg' width='23.328' height='17.131' viewBox='0 0 23.328 17.131'>
             <path id='Icon_open-menu' data-name='Icon open-menu' d='M3.091,3.438v3.19H26.419V3.438Zm0,7.113v3.19H26.419v-3.19Zm0,6.828v3.19H26.419v-3.19Z' transform='translate(-3.091 -3.438)' fill='#3f3d56' />
@@ -34,7 +65,7 @@ export default function Header() {
         <h3>Royson Lewis</h3>
         <button className={styles.hireMeButton}>Hire Me</button>
       </header>
-      <header className={styles.headerDesktop}>
+      <header style={header.scrollingUp && !header.scrollingDown ? { opacity: 1, position: "fixed" } : !header.scrollingUp && header.scrollingDown ? { opacity: 0, position: "fixed" } : null} className={styles.headerDesktop}>
         <a href='/'>
           <div className={styles.logo}>
             <svg xmlns='http://www.w3.org/2000/svg' width='32.743' height='32.765' viewBox='0 0 31.743 31.765'>
@@ -60,7 +91,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href='/work'>
+              <Link href='/#work_section'>
                 <a>Work</a>
               </Link>
             </li>
@@ -75,9 +106,9 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href='/resume'>
-                <a>Resume</a>
-              </Link>
+              <a target='_blank' href='https://storage.googleapis.com/royson-lewis.appspot.com/resume%20web%20dev.pdf'>
+                Resume
+              </a>
             </li>
           </ul>
         </nav>

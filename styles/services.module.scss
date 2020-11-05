@@ -11,6 +11,7 @@ $secondaryAccentColor: #fed200;
   display: grid;
   grid-template: repeat(auto, 4) / 1fr;
   justify-items: center;
+  padding-top: 20vw;
   grid-template-areas:
     "head"
     "tabs"
@@ -177,6 +178,7 @@ $secondaryAccentColor: #fed200;
     display: grid;
     grid-template: repeat(auto, 4) / 1fr;
     justify-items: center;
+    padding-top: 10rem;
     grid-template-areas:
       "head"
       "tabs"

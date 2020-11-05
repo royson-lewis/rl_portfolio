@@ -11,6 +11,7 @@ $secondaryAccentColor: #fed200;
   align-items: center;
   justify-items: center;
   text-align: center;
+  padding-top: 20vw;
   grid-template-areas:
     "head"
     "dp"
@@ -41,10 +42,11 @@ $secondaryAccentColor: #fed200;
     line-height: 2.5rem;
   }
 
-  button {
+  a {
     grid-area: button;
     padding: 0.8rem 1.2rem;
     font-size: 1.8rem;
+    margin-left: -1.5rem;
   }
 
   div {
@@ -65,6 +67,7 @@ $secondaryAccentColor: #fed200;
     display: grid;
     align-items: center;
     width: 100vw;
+    padding-top: 12rem;
     text-align: start;
     grid-template-columns: 48% 52%;
     grid-template-rows: repeat(auto, 5);

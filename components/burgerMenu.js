@@ -48,7 +48,7 @@ export default function BurgerMenu(props) {
             <svg xmlns='http://www.w3.org/2000/svg' width='21.945' height='21.945' viewBox='0 0 21.945 21.945'>
               <path id='group-work' data-name='group-work' d='M13.973,3A10.973,10.973,0,1,0,24.945,13.973,10.977,10.977,0,0,0,13.973,3ZM9.584,20.008a2.743,2.743,0,1,1,2.743-2.743A2.744,2.744,0,0,1,9.584,20.008ZM11.229,9.584a2.743,2.743,0,1,1,2.743,2.743A2.744,2.744,0,0,1,11.229,9.584Zm7.132,10.424A2.743,2.743,0,1,1,21.1,17.264,2.744,2.744,0,0,1,18.362,20.008Z' transform='translate(-3 -3)' fill='#3f3d56' />
             </svg>
-            <Link href='/work'>
+            <Link href='/#work_section'>
               <a onClick={props.toggleBurger}>Work</a>
             </Link>
           </li>
@@ -72,9 +72,9 @@ export default function BurgerMenu(props) {
             <svg xmlns='http://www.w3.org/2000/svg' width='23.721' height='23.721' viewBox='0 0 23.721 23.721'>
               <path id='resume' data-name='resume' d='M13.674,20.791h2.372V13.674H13.674ZM14.86,3a11.86,11.86,0,1,0,11.86,11.86A11.865,11.865,0,0,0,14.86,3Zm0,21.349a9.488,9.488,0,1,1,9.488-9.488A9.5,9.5,0,0,1,14.86,24.349ZM13.674,11.3h2.372V8.93H13.674Z' transform='translate(-3 -3)' fill='#3f3d56' />
             </svg>
-            <Link href='/resume'>
-              <a onClick={props.toggleBurger}>Resume</a>
-            </Link>
+            <a target='_blank' href='https://storage.googleapis.com/royson-lewis.appspot.com/resume%20web%20dev.pdf' onClick={props.toggleBurger}>
+              Resume
+            </a>
           </li>
         </ul>
       </nav>

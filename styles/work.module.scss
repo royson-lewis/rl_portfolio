@@ -294,20 +294,21 @@ $vamyouAccent: #fc326f;
 
     section {
       grid-area: pages;
-      display: grid;
-      grid-template: repeat(auto, 4) / 100vw;
-      justify-items: center;
-      grid-template-areas:
-        "homepage"
-        "productpage"
-        "cart"
-        "checkout";
 
       .imageContainer {
         background-color: transparent;
         position: relative;
         top: -10rem;
         margin-bottom: -10rem;
+        display: grid;
+        width: 100vw;
+        grid-template: repeat(auto, 4) / 100vw;
+        justify-items: center;
+        grid-template-areas:
+          "homepage"
+          "productpage"
+          "cart"
+          "checkout";
       }
     }
   }
@@ -402,7 +403,7 @@ $vamyouAccent: #fc326f;
         height: auto;
         position: relative;
         left: 13vw;
-        top: -32vw;
+        top: -33vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -416,7 +417,7 @@ $vamyouAccent: #fc326f;
         }
 
         .vamyouLogo {
-          width: 18vw;
+          width: 15vw;
           height: auto;
           top: -3rem;
           margin-bottom: -2rem;
@@ -426,7 +427,7 @@ $vamyouAccent: #fc326f;
         h4 {
           margin: 0.6vw 0;
           font-size: 1.2vw;
-          width: 70%;
+          width: 25ch;
         }
 
         button {
@@ -637,8 +638,8 @@ $vamyouAccent: #fc326f;
       grid-template: repeat(auto 4) / 1fr;
       grid-template-areas:
         "head"
-        "logo"
         "mockup"
+        "logo"
         "pages";
 
       h3 {
@@ -653,25 +654,31 @@ $vamyouAccent: #fc326f;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2rem 4rem;
+        margin-bottom: -7vw;
+        position: relative;
+        z-index: 1;
+        padding: 2vw 2vw;
         border-radius: 0.8rem;
 
         svg {
-          width: 15rem;
+          width: 15vw;
           height: auto;
           margin-bottom: 1rem;
         }
 
         button {
-          padding: 0.5rem 1rem;
-          font-size: 1.4rem;
+          padding: 1rem 1rem;
+          margin-top: 1.5rem;
+          font-size: 1.2vw;
           background-color: $secondaryColor;
         }
       }
 
       .mockup {
+        grid-area: mockup;
         width: 90%;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
+        margin-top: -10rem;
       }
 
       img {
@@ -680,26 +687,41 @@ $vamyouAccent: #fc326f;
 
       section {
         grid-area: pages;
-        display: grid;
-        grid-template: repeat(auto, 4) / 100vw;
-        justify-items: center;
-        grid-template-areas:
-          "homepage"
-          "productpage"
-          "cart"
-          "checkout";
+        width: 100%;
 
         .imageContainer {
           background-color: transparent;
           position: relative;
-          top: -10rem;
-          margin-bottom: -10rem;
+          top: -10vw;
+          width: 80vw;
+          margin: 0 auto;
+          column-gap: 2rem;
+          margin-bottom: -10vw;
+          grid-template: repeat(auto, 4) / repeat(25%, 3);
+          grid-template-areas:
+            "homepage nill cart"
+            "homepage productPage cart"
+            "homepage productPage checkout"
+            "homepage null checkout";
+
+          .page1 {
+            grid-area: homepage;
+          }
+          .page2 {
+            grid-area: productPage;
+          }
+          .page3 {
+            grid-area: cart;
+          }
+          .page4 {
+            grid-area: checkout;
+          }
         }
       }
     }
 
     .conclusion {
-      width: 90%;
+      width: 48%;
       margin: 0 auto;
       display: flex;
       flex-direction: column;

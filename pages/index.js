@@ -14,14 +14,18 @@ export default function Home() {
       <main className={styles.homePage}>
         <HeroSection />
         <ServiceSection />
-        <section className={styles.mobileWork}>
-          <WorkSection />
-        </section>
-        <section className={styles.desktopWork}>
-          <WorkSectionDesktop />
+        <section id='work_section'>
+          <section className={styles.mobileWork}>
+            <WorkSection />
+          </section>
+          <section className={styles.desktopWork}>
+            <WorkSectionDesktop />
+          </section>
         </section>
         <SkillSection />
-        <ContactSection />
+        <section id='contact'>
+          <ContactSection />
+        </section>
       </main>
     </>
   );

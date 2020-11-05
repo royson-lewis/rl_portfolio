@@ -10,6 +10,7 @@ $secondaryAccentColor: #fed200;
   height: fit-content;
   width: 100vw;
   min-height: 86vh;
+  padding-top: 20vw;
   margin-bottom: 3rem;
   display: grid;
   grid-template: auto auto / 1fr;
@@ -355,6 +356,7 @@ $secondaryAccentColor: #fed200;
   grid-template: auto auto auto auto auto / 1fr;
   justify-items: center;
   width: 100vw;
+  padding-top: 20vw;
   justify-content: center;
   grid-template-areas:
     "head"
@@ -436,6 +438,8 @@ $secondaryAccentColor: #fed200;
       textarea {
         width: 100%;
         margin-top: 1rem;
+        box-shadow: 0px 0px 4px 0px #bcbaba;
+        color: $secondaryColor;
       }
 
       textarea {
@@ -459,7 +463,7 @@ $secondaryAccentColor: #fed200;
     margin: 0 auto;
     padding: 15rem 0rem;
     margin-bottom: auto;
-    height: 90vh;
+    height: 100vh;
     min-height: 80rem;
 
     .heroArt {
@@ -719,6 +723,7 @@ $secondaryAccentColor: #fed200;
   .contactSection {
     width: 60vw;
     margin: 0 auto;
+    padding-top: 12rem;
     align-items: center;
 
     .contactCard {
@@ -754,6 +759,57 @@ $secondaryAccentColor: #fed200;
         font-size: 2.4rem;
         padding: 2.8rem;
         margin-bottom: 4rem;
+      }
+    }
+
+    .phoneModal {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.623);
+      position: fixed;
+      left: 0;
+      z-index: 500;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      section {
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+      }
+
+      div {
+        z-index: 1000;
+        pointer-events: all;
+        background-color: #fff;
+        width: 40rem;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        flex-direction: column;
+        box-shadow: -1px 0px 17px 2px #00000029;
+
+        button {
+          padding: 0.4rem 1rem;
+          font-size: 1.8rem;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-left: 1rem;
+            color: $secondaryColor;
+            width: 2rem;
+            height: auto;
+          }
+        }
       }
     }
   }
