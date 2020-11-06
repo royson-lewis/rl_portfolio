@@ -21,7 +21,6 @@ export default function Results(props) {
   }
 
   const { logo, projectLink, mockup, pages, color } = currentProject;
-  console.log(color.background);
   return (
     <section style={{ backgroundColor: color.background }} className={styles.Results}>
       <h3>Results</h3>

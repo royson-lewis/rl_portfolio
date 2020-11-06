@@ -1,7 +1,6 @@
 /** @format */
 import { useState } from "react";
 import ServiceDetails from "../components/serviceDetails";
-import ServiceSection from "../components/serviceSection";
 import styles from "../styles/services.module.scss";
 
 export default function services() {
@@ -11,13 +10,11 @@ export default function services() {
   });
   function setSection(e) {
     let selected = e.target.id;
-    console.log(selected);
     setService({
       ...service,
       current: selected,
     });
   }
-  console.log(service);
   return (
     <main className={styles.services}>
       <h2>Services</h2>

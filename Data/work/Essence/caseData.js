@@ -100,11 +100,11 @@ export const essence = {
         svg: (
           <svg id='essence_sitemap' data-name='essence sitemap' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' width='100%' height='auto' viewBox='0 0 1053.828 814.404'>
             <defs>
-              <clipPath id='clip-path'>
+              <clipPath id='clipPath'>
                 <rect id='Rectangle_315' data-name='Rectangle 315' width='1053.829' height='814.404' />
               </clipPath>
             </defs>
-            <g id='Group_270' data-name='Group 270' clip-path='url(#clip-path)'>
+            <g id='Group_270' data-name='Group 270' clipPath='url(#clipPath)'>
               <g id='Group_213' data-name='Group 213' transform='translate(189.417 505.6)'>
                 <rect id='Rectangle_291' data-name='Rectangle 291' width='330.804' height='265.657' fill='#e2fbf8' />
               </g>
@@ -115,16 +115,16 @@ export const essence = {
                 <rect id='Rectangle_293' data-name='Rectangle 293' width='424.964' height='179.684' transform='translate(0 0)' fill='#e2fbf8' />
               </g>
               <g id='Group_216' data-name='Group 216' transform='translate(96.859 346.596)'>
-                <path id='Path_252' data-name='Path 252' d='M61.128,264.84v28.268H313.1v0H183.983' transform='translate(-61.128 -264.84)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1' fill-rule='evenodd' />
+                <path id='Path_252' data-name='Path 252' d='M61.128,264.84v28.268H313.1v0H183.983' transform='translate(-61.128 -264.84)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1' fillRule='evenodd' />
               </g>
               <g id='Group_217' data-name='Group 217' transform='translate(279.864 428.274)'>
-                <path id='Path_253' data-name='Path 253' d='M363.19,346.058H212.826' transform='translate(-212.826 -346.058)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1.003' fill-rule='evenodd' />
+                <path id='Path_253' data-name='Path 253' d='M363.19,346.058H212.826' transform='translate(-212.826 -346.058)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1.003' fillRule='evenodd' />
               </g>
               <g id='Group_219' data-name='Group 219' transform='translate(219.527 446.55)'>
-                <path id='Path_255' data-name='Path 255' d='M156.723,346.161v41.826H285.386V585.252H219.119v0h129.2v22.861' transform='translate(-156.723 -346.161)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1' fill-rule='evenodd' />
+                <path id='Path_255' data-name='Path 255' d='M156.723,346.161v41.826H285.386V585.252H219.119v0h129.2v22.861' transform='translate(-156.723 -346.161)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1' fillRule='evenodd' />
               </g>
               <g id='Group_220' data-name='Group 220' transform='translate(90.864 221.651)'>
-                <path id='Path_256' data-name='Path 256' d='M56.456,163.187V216.66H186.851v0h126.93v34.925' transform='translate(-56.456 -163.187)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1' fill-rule='evenodd' />
+                <path id='Path_256' data-name='Path 256' d='M56.456,163.187V216.66H186.851v0h126.93v34.925' transform='translate(-56.456 -163.187)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1' fillRule='evenodd' />
               </g>
               <g id='Group_221' data-name='Group 221' transform='translate(421.39 94.496)'>
                 <rect id='Rectangle_294' data-name='Rectangle 294' width='113.151' height='36.549' transform='translate(0)' fill='#6fffd3' />
@@ -133,7 +133,7 @@ export const essence = {
                 <rect id='Rectangle_295' data-name='Rectangle 295' width='113.151' height='36.549' fill='#6fffd3' />
               </g>
               <g id='Group_223' data-name='Group 223' transform='translate(57.203 194.673)'>
-                <text id='Products' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Products' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Products
                   </tspan>
@@ -143,7 +143,7 @@ export const essence = {
                 <rect id='Rectangle_296' data-name='Rectangle 296' width='113.151' height='36.549' transform='translate(0 0)' fill='#6fffd3' />
               </g>
               <g id='Group_225' data-name='Group 225' transform='translate(50.107 318.529)'>
-                <text id='Body_Lotion' data-name='Body Lotion' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Body_Lotion' data-name='Body Lotion' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Body Lotion
                   </tspan>
@@ -153,7 +153,7 @@ export const essence = {
                 <rect id='Rectangle_297' data-name='Rectangle 297' width='113.151' height='36.549' transform='translate(0 0)' fill='#6fffd3' />
               </g>
               <g id='Group_227' data-name='Group 227' transform='translate(219.527 346.596)'>
-                <path id='Path_257' data-name='Path 257' d='M156.723,264.84v63.405' transform='translate(-156.723 -264.84)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1' fill-rule='evenodd' />
+                <path id='Path_257' data-name='Path 257' d='M156.723,264.84v63.405' transform='translate(-156.723 -264.84)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1' fillRule='evenodd' />
               </g>
               <g id='Group_228' data-name='Group 228' transform='translate(157.752 410.001)'>
                 <rect id='Rectangle_298' data-name='Rectangle 298' width='140.222' height='36.549' transform='translate(0 0)' fill='#6fffd3' />
@@ -183,7 +183,7 @@ export const essence = {
                 <rect id='Rectangle_306' data-name='Rectangle 306' width='113.151' height='36.549' transform='translate(0)' fill='#6fffd3' />
               </g>
               <g id='Group_237' data-name='Group 237' transform='translate(485.522 221.651)'>
-                <path id='Path_258' data-name='Path 258' d='M360.015,163.187v188.35' transform='translate(-360.015 -163.187)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1' fill-rule='evenodd' />
+                <path id='Path_258' data-name='Path 258' d='M360.015,163.187v188.35' transform='translate(-360.015 -163.187)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1' fillRule='evenodd' />
               </g>
               <g id='Group_238' data-name='Group 238' transform='translate(427.204 410.001)'>
                 <rect id='Rectangle_307' data-name='Rectangle 307' width='131.309' height='36.549' transform='translate(0 0)' fill='#6fffd3' />
@@ -192,10 +192,10 @@ export const essence = {
                 <rect id='Rectangle_308' data-name='Rectangle 308' width='113.151' height='36.549' transform='translate(0)' fill='#6fffd3' />
               </g>
               <g id='Group_240' data-name='Group 240' transform='translate(219.527 221.651)'>
-                <path id='Path_259' data-name='Path 259' d='M538.553,163.187v169.3h0v97.685l-254.567-.237' transform='translate(-156.723 -163.187)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1' fill-rule='evenodd' />
+                <path id='Path_259' data-name='Path 259' d='M538.553,163.187v169.3h0v97.685l-254.567-.237' transform='translate(-156.723 -163.187)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1' fillRule='evenodd' />
               </g>
               <g id='Group_241' data-name='Group 241' transform='translate(90.864 131.044)'>
-                <path id='Path_260' data-name='Path 260' d='M443.352,89.471l-.017,32.96H56.456v0H186.574v0H313.781v0H443.335v0H566.949v0H693.124v0H822.1v21.1' transform='translate(-56.456 -89.471)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1' fill-rule='evenodd' />
+                <path id='Path_260' data-name='Path 260' d='M443.352,89.471l-.017,32.96H56.456v0H186.574v0H313.781v0H443.335v0H566.949v0H693.124v0H822.1v21.1' transform='translate(-56.456 -89.471)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1' fillRule='evenodd' />
               </g>
               <g id='Group_242' data-name='Group 242' transform='translate(670.958 185.103)'>
                 <rect id='Rectangle_309' data-name='Rectangle 309' width='113.151' height='36.549' transform='translate(0)' fill='#6fffd3' />
@@ -207,95 +207,95 @@ export const essence = {
                 <rect id='Rectangle_311' data-name='Rectangle 311' width='113.151' height='36.549' transform='translate(0)' fill='#6fffd3' />
               </g>
               <g id='Group_245' data-name='Group 245' transform='translate(699.302 202.864)'>
-                <path id='Path_261' data-name='Path 261' d='M702.025,163.36v42.656h-21.9v75.079l-.831,35.051-.322.5v15.374H551.724v0H678.967v0h123.5v19.409' transform='translate(-551.724 -144.294)' fill='none' stroke='#000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='1.5' stroke-width='1' fill-rule='evenodd' />
-                <path id='Path_262' data-name='Path 262' d='M57.692-13.544h12.82' transform='translate(27.097 13.544)' fill='none' stroke='#000' stroke-width='1' />
+                <path id='Path_261' data-name='Path 261' d='M702.025,163.36v42.656h-21.9v75.079l-.831,35.051-.322.5v15.374H551.724v0H678.967v0h123.5v19.409' transform='translate(-551.724 -144.294)' fill='none' stroke='#000' strokeLinecap='round' strokeLinejoin='round' strokeMiterlimit='1.5' strokeWidth='1' fillRule='evenodd' />
+                <path id='Path_262' data-name='Path 262' d='M57.692-13.544h12.82' transform='translate(27.097 13.544)' fill='none' stroke='#000' strokeWidth='1' />
               </g>
               <g id='Group_246' data-name='Group 246' transform='translate(180.534 319.995)'>
-                <text id='Face_Wash' data-name='Face Wash' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Face_Wash' data-name='Face Wash' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Face Wash
                   </tspan>
                 </text>
               </g>
               <g id='Group_247' data-name='Group 247' transform='translate(306.143 319.995)'>
-                <text id='Diet_Foods' data-name='Diet Foods' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Diet_Foods' data-name='Diet Foods' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Diet Foods
                   </tspan>
                 </text>
               </g>
               <g id='Group_248' data-name='Group 248' transform='translate(450.766 104.312)'>
-                <text id='Home' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Home' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Home
                   </tspan>
                 </text>
               </g>
               <g id='Group_249' data-name='Group 249' transform='translate(440.689 58.011)'>
-                <text id='Site_Map' data-name='Site Map' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Site_Map' data-name='Site Map' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Site Map
                   </tspan>
                 </text>
               </g>
               <g id='Group_250' data-name='Group 250' transform='translate(195.347 194.674)'>
-                <text id='About' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='About' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     About
                   </tspan>
                 </text>
               </g>
               <g id='Group_251' data-name='Group 251' transform='translate(315.276 194.674)'>
-                <text id='Contact' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Contact' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Contact
                   </tspan>
                 </text>
               </g>
               <g id='Group_252' data-name='Group 252' transform='translate(448.822 194.674)'>
-                <text id='Search' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Search' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Search
                   </tspan>
                 </text>
               </g>
               <g id='Group_253' data-name='Group 253' transform='translate(437.546 418.852)'>
-                <text id='Search_results' data-name='Search results' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Search_results' data-name='Search results' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Search results
                   </tspan>
                 </text>
               </g>
               <g id='Group_254' data-name='Group 254' transform='translate(164.734 420.231)'>
-                <text id='Product_Details' data-name='Product Details' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Product_Details' data-name='Product Details' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Product Details
                   </tspan>
                 </text>
               </g>
               <g id='Group_255' data-name='Group 255' transform='translate(315.643 538.537)'>
-                <text id='Checkout' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Checkout' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Checkout
                   </tspan>
                 </text>
               </g>
               <g id='Group_256' data-name='Group 256' transform='translate(315.222 635.445)'>
-                <text id='Payment' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Payment' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Payment
                   </tspan>
                 </text>
               </g>
               <g id='Group_257' data-name='Group 257' transform='translate(222.82 718.536)'>
-                <text id='Order_Success' data-name='Order Success' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Order_Success' data-name='Order Success' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Order Success
                   </tspan>
                 </text>
               </g>
               <g id='Group_258' data-name='Group 258' transform='translate(377.773 718.536)'>
-                <text id='Order_Failure' data-name='Order Failure' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Order_Failure' data-name='Order Failure' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Order Failure
                   </tspan>
@@ -311,56 +311,56 @@ export const essence = {
                 <rect id='Rectangle_314' data-name='Rectangle 314' width='120.557' height='36.549' transform='translate(0 0)' fill='#6fffd3' />
               </g>
               <g id='Group_262' data-name='Group 262' transform='translate(580.431 195.137)'>
-                <text id='Cart' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Cart' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Cart
                   </tspan>
                 </text>
               </g>
               <g id='Group_263' data-name='Group 263' transform='translate(694.051 195.137)'>
-                <text id='Sign_Up' data-name='Sign Up' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Sign_Up' data-name='Sign Up' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Sign Up
                   </tspan>
                 </text>
               </g>
               <g id='Group_264' data-name='Group 264' transform='translate(820.587 193.675)'>
-                <text id='Sign_In' data-name='Sign In' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Sign_In' data-name='Sign In' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Sign In
                   </tspan>
                 </text>
               </g>
               <g id='Group_265' data-name='Group 265' transform='translate(798.214 349.224)'>
-                <text id='Pro_le' data-name='Proﬁle' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='Pro_le' data-name='Proﬁle' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Proﬁle
                   </tspan>
                 </text>
               </g>
               <g id='Group_266' data-name='Group 266' transform='translate(648.649 415.682)'>
-                <text id='My_Account' data-name='My Account' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='My_Account' data-name='My Account' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     My Account
                   </tspan>
                 </text>
               </g>
               <g id='Group_267' data-name='Group 267' transform='translate(783.346 418.708)'>
-                <text id='My_Orders' data-name='My Orders' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='My_Orders' data-name='My Orders' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     My Orders
                   </tspan>
                 </text>
               </g>
               <g id='Group_268' data-name='Group 268' transform='translate(917.774 418.708)'>
-                <text id='My_Address' data-name='My Address' transform='translate(0 14)' font-size='16' font-family='ArialMT, Arial'>
+                <text id='My_Address' data-name='My Address' transform='translate(0 14)' fontSize='16' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     My Address
                   </tspan>
                 </text>
               </g>
               <g id='Group_269' data-name='Group 269' transform='translate(335.916 18.156)'>
-                <text id='Essence_Naturals_Web-app' data-name='Essence Naturals Web-app' transform='translate(0.084 21.844)' font-size='24' font-family='ArialMT, Arial'>
+                <text id='Essence_Naturals_Web-app' data-name='Essence Naturals Web-app' transform='translate(0.084 21.844)' fontSize='24' fontFamily='ArialMT, Arial'>
                   <tspan x='0' y='0'>
                     Essence Naturals Web-app
                   </tspan>
@@ -441,7 +441,7 @@ export const essence = {
             <path id='Path_1110' data-name='Path 1110' d='M4,0C6.2,0,7.7,1.161,7.7,3.368S6.2,7.991,4,7.991A4,4,0,0,1,4,0Z' transform='translate(24.884 29.183)' fill='#ffb9b9' />
             <path id='Path_1090' data-name='Path 1090' d='M180.638,295.618c-.21-1.887-.241-4.987-1.9-5.93s-3.549-2-4.746-2.043c0,0-5.985,1.385-6.569,6.647a68.7,68.7,0,0,0,.39,12.961s.155,6.933-.917,10.539c0,0-1.909.571,1.989-.6s10.72,3.313,10.72,3.313.682-.682.682-1.169.354-4.175.354-4.175-.045-12.421,0-13.69A44.648,44.648,0,0,0,180.638,295.618Z' transform='translate(-149.997 -250.614)' fill='#3f3d56' />
             <path id='Path_1092' data-name='Path 1092' d='M185.378,391.851s-.682,4.288,2.144,3.9c0,0,1.462-.195,1.657,0s7.406-1.072,8.381-2.144c0,0,1.169-.39,1.754.195s6.432,1.169,4.678-.585a8.924,8.924,0,0,0-4.483-2.144l-3.7.195a5.234,5.234,0,0,1-3.119,0c-1.169-.585-4.483-.39-4.483-.39Z' transform='translate(-166.585 -339.596)' fill='#ffb9b9' />
-            <path id='Path_1093' data-name='Path 1093' d='M187.5,304.226s-4.385.487-4.385,6.822v8.089a6.887,6.887,0,0,0,.6,1.651,1.919,1.919,0,0,0,.873.8s.567.262.587.266c.5.277-.755-.257,1.028-.118a8.653,8.653,0,0,0,2.62,0c2.107-.34,5.033-1.219,5.2-1.186.487.1,0-3.31,0-3.31s-5.713-.833-6.864-.728c-.278.025.509-2.327.724-3.531C188.451,309.758,189.713,304.374,187.5,304.226Z' transform='translate(-164.709 -265.517)' fill='#3f3d56' stroke='#3c3b4e' stroke-width='0.1' />
+            <path id='Path_1093' data-name='Path 1093' d='M187.5,304.226s-4.385.487-4.385,6.822v8.089a6.887,6.887,0,0,0,.6,1.651,1.919,1.919,0,0,0,.873.8s.567.262.587.266c.5.277-.755-.257,1.028-.118a8.653,8.653,0,0,0,2.62,0c2.107-.34,5.033-1.219,5.2-1.186.487.1,0-3.31,0-3.31s-5.713-.833-6.864-.728c-.278.025.509-2.327.724-3.531C188.451,309.758,189.713,304.374,187.5,304.226Z' transform='translate(-164.709 -265.517)' fill='#3f3d56' stroke='#3c3b4e' strokeWidth='0.1' />
             <path id='Path_1105' data-name='Path 1105' d='M828.94,442.2s-2.725-8.241,4.039-6.722a4.39,4.39,0,0,1,2.631,1.012l.557.631c1.08,0,.344,1.42.138,2.6,0,0,.313.481-.488-.3a1.718,1.718,0,0,1-.357-.459c-.522-1.052-2.4-.78-3.607-.691-.618.046-.551,2.657-1.234,2.506C829.116,438.831,828.655,441.486,828.94,442.2Z' transform='translate(-803.936 -408.68)' fill='#2f2e41' />
           </svg>
         ),
@@ -515,12 +515,12 @@ export const essence = {
                     <g id='Group_447' data-name='Group 447' transform='translate(-0.14)'>
                       <rect id='Rectangle_213' data-name='Rectangle 213' width='70' height='70' rx='35' transform='translate(0.14)' fill='rgba(88,170,80,0.08)' />
                       <g id='mongodb' transform='translate(26.784 16.943)'>
-                        <path id='Path_155' data-name='Path 155' d='M26.185,49.15l-.947-.324s.116-4.827-1.617-5.174c-1.155-1.34.185-56.822,4.343-.185a3.377,3.377,0,0,0-1.686,1.94A17.816,17.816,0,0,0,26.185,49.15Z' transform='translate(-17.411 -13.578)' fill='#fff' fill-rule='evenodd' />
-                        <path id='Path_156' data-name='Path 156' d='M26.185,49.15l-.947-.324s.116-4.827-1.617-5.174c-1.155-1.34.185-56.822,4.343-.185a3.377,3.377,0,0,0-1.686,1.94A17.816,17.816,0,0,0,26.185,49.15Z' transform='translate(-17.411 -13.578)' fill='#a6a385' fill-rule='evenodd' />
-                        <path id='Path_157' data-name='Path 157' d='M32.725,31.386a16.781,16.781,0,0,0,6.352-16.793C37.206,6.348,32.795,3.645,32.31,2.605A11.661,11.661,0,0,1,31.27.573l.347,22.936c0,.023-.716,7.022,1.109,7.877' transform='translate(-23.443 -0.48)' fill='#fff' fill-rule='evenodd' />
-                        <path id='Path_158' data-name='Path 158' d='M32.725,31.386a16.781,16.781,0,0,0,6.352-16.793C37.206,6.348,32.795,3.645,32.31,2.605A11.661,11.661,0,0,1,31.27.573l.347,22.936c0,.023-.716,7.022,1.109,7.877' transform='translate(-23.443 -0.48)' fill='#499d4a' fill-rule='evenodd' />
-                        <path id='Path_159' data-name='Path 159' d='M7.342,31.409S-.442,26.1.02,16.742c.439-9.355,5.936-13.951,7-14.783A2.151,2.151,0,0,0,7.781.2c.485,1.04.393,15.545.462,17.255C8.451,24.041,7.873,30.162,7.342,31.409Z' transform='translate(0 -0.203)' fill='#fff' fill-rule='evenodd' />
-                        <path id='Path_160' data-name='Path 160' d='M7.342,31.409S-.442,26.1.02,16.742c.439-9.355,5.936-13.951,7-14.783A2.151,2.151,0,0,0,7.781.2c.485,1.04.393,15.545.462,17.255C8.451,24.041,7.873,30.162,7.342,31.409Z' transform='translate(0 -0.203)' fill='#58aa50' fill-rule='evenodd' />
+                        <path id='Path_155' data-name='Path 155' d='M26.185,49.15l-.947-.324s.116-4.827-1.617-5.174c-1.155-1.34.185-56.822,4.343-.185a3.377,3.377,0,0,0-1.686,1.94A17.816,17.816,0,0,0,26.185,49.15Z' transform='translate(-17.411 -13.578)' fill='#fff' fillRule='evenodd' />
+                        <path id='Path_156' data-name='Path 156' d='M26.185,49.15l-.947-.324s.116-4.827-1.617-5.174c-1.155-1.34.185-56.822,4.343-.185a3.377,3.377,0,0,0-1.686,1.94A17.816,17.816,0,0,0,26.185,49.15Z' transform='translate(-17.411 -13.578)' fill='#a6a385' fillRule='evenodd' />
+                        <path id='Path_157' data-name='Path 157' d='M32.725,31.386a16.781,16.781,0,0,0,6.352-16.793C37.206,6.348,32.795,3.645,32.31,2.605A11.661,11.661,0,0,1,31.27.573l.347,22.936c0,.023-.716,7.022,1.109,7.877' transform='translate(-23.443 -0.48)' fill='#fff' fillRule='evenodd' />
+                        <path id='Path_158' data-name='Path 158' d='M32.725,31.386a16.781,16.781,0,0,0,6.352-16.793C37.206,6.348,32.795,3.645,32.31,2.605A11.661,11.661,0,0,1,31.27.573l.347,22.936c0,.023-.716,7.022,1.109,7.877' transform='translate(-23.443 -0.48)' fill='#499d4a' fillRule='evenodd' />
+                        <path id='Path_159' data-name='Path 159' d='M7.342,31.409S-.442,26.1.02,16.742c.439-9.355,5.936-13.951,7-14.783A2.151,2.151,0,0,0,7.781.2c.485,1.04.393,15.545.462,17.255C8.451,24.041,7.873,30.162,7.342,31.409Z' transform='translate(0 -0.203)' fill='#fff' fillRule='evenodd' />
+                        <path id='Path_160' data-name='Path 160' d='M7.342,31.409S-.442,26.1.02,16.742c.439-9.355,5.936-13.951,7-14.783A2.151,2.151,0,0,0,7.781.2c.485,1.04.393,15.545.462,17.255C8.451,24.041,7.873,30.162,7.342,31.409Z' transform='translate(0 -0.203)' fill='#58aa50' fillRule='evenodd' />
                       </g>
                     </g>
                   </svg>

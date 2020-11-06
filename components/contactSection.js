@@ -28,7 +28,6 @@ export default function ContactSection() {
         </div>
         <section
           onClick={() => {
-            console.log(contact);
             setContact({
               ...contact,
               modalOpen: !contact.modalOpen,
@@ -49,7 +48,6 @@ export default function ContactSection() {
           </a>
           <button
             onClick={() => {
-              console.log(document);
               // document.execCommand("copy");
 
               setContact({

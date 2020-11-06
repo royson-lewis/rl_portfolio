@@ -122,7 +122,7 @@ export default function ServiceDetails(props) {
         <section>
           <svg xmlns='http://www.w3.org/2000/svg' width='336' height='102' viewBox='0 0 336 102'>
             <g id='offers_bg' data-name='offers bg' transform='translate(0 -61.08)'>
-              <g id='Rectangle_238' data-name='Rectangle 238' transform='translate(0 61.08)' fill='#3f3d56' stroke='#3f3d56' stroke-width='20'>
+              <g id='Rectangle_238' data-name='Rectangle 238' transform='translate(0 61.08)' fill='#3f3d56' stroke='#3f3d56' strokeWidth='20'>
                 <rect width='336' height='102' rx='8' stroke='none' />
                 <rect x='10' y='10' width='316' height='82' rx='2' fill='none' />
               </g>
@@ -137,7 +137,7 @@ export default function ServiceDetails(props) {
             <ul>
               {services.map((service) => {
                 return (
-                  <li>
+                  <li key={service.name}>
                     {service.icon ? <img src={service.icon} alt={service.name}></img> : null}
                     {service.name}
                   </li>

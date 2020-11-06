@@ -32,14 +32,13 @@ export default function ProjectInfo(props) {
             <tr>
               {projectInfo.type ? (
                 <>
-                  {" "}
                   <td>Type</td>
                   <td>{projectInfo.type}</td>
                 </>
               ) : (
                 <>
                   <td>Client</td>
-                  <td>{projectInfo.client}</td>{" "}
+                  <td>{projectInfo.client}</td>
                 </>
               )}
             </tr>

@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="550.313" height="430.142" viewBox="0 0 550.313 430.142">
   <defs>
     <linearGradient id="linear-gradient" x1="-20.453" y1="1" x2="-20.453" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="gray" stop-opacity="0.251"/>
-      <stop offset="0.535" stop-color="gray" stop-opacity="0.122"/>
-      <stop offset="1" stop-color="gray" stop-opacity="0.102"/>
+      <stop offset="0" stopColor="gray" stopOpacity="0.251"/>
+      <stop offset="0.535" stopColor="gray" stopOpacity="0.122"/>
+      <stop offset="1" stopColor="gray" stopOpacity="0.102"/>
     </linearGradient>
   </defs>
   <g id="essence_hero_desktop" data-name="essence hero desktop" transform="translate(-22.565)">
     <circle id="Ellipse_86" data-name="Ellipse 86" cx="40.823" cy="40.823" r="40.823" transform="translate(223.159 174.99)" fill="#58d06f"/>
-    <line id="Line_6" data-name="Line 6" y1="74.051" x2="0.335" transform="translate(263.612 215.589)" fill="#3f3d56" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_6" data-name="Line 6" y1="74.051" x2="0.335" transform="translate(263.612 215.589)" fill="#3f3d56" stroke="#3f3d56" strokeMiterlimit="10" strokeWidth="2"/>
     <circle id="Ellipse_87" data-name="Ellipse 87" cx="10.472" cy="10.472" r="10.472" transform="translate(253.475 205.117)" fill="#3f3d56"/>
     <path id="Path_938" data-name="Path 938" d="M515.368,501.134s-1.351-32.182-32.035-28.581" transform="translate(-251.627 -239.906)" fill="#3f3d56"/>
     <circle id="Ellipse_88" data-name="Ellipse 88" cx="40.823" cy="40.823" r="40.823" transform="translate(52.147 93.031)" fill="#58d06f"/>
-    <line id="Line_7" data-name="Line 7" y1="150.753" x2="2.349" transform="translate(90.658 133.808)" fill="#3f3d56" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_7" data-name="Line 7" y1="150.753" x2="2.349" transform="translate(90.658 133.808)" fill="#3f3d56" stroke="#3f3d56" strokeMiterlimit="10" strokeWidth="2"/>
     <circle id="Ellipse_89" data-name="Ellipse 89" cx="10.472" cy="10.472" r="10.472" transform="translate(82.535 123.336)" fill="#3f3d56"/>
     <path id="Path_939" data-name="Path 939" d="M258.634,373.917s-.994-32.195-31.717-28.933" transform="translate(-166.292 -197.467)" fill="#3f3d56"/>
-    <path id="Path_940" data-name="Path 940" d="M256.46,513.587s7.7-61.761-31.149-65.359" transform="translate(-165.757 -231.904)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_940" data-name="Path 940" d="M256.46,513.587s7.7-61.761-31.149-65.359" transform="translate(-165.757 -231.904)" fill="none" stroke="#3f3d56" strokeMiterlimit="10" strokeWidth="2"/>
     <circle id="Ellipse_90" data-name="Ellipse 90" cx="10.472" cy="10.472" r="10.472" transform="translate(49.082 205.852)" fill="#3f3d56"/>
     <circle id="Ellipse_91" data-name="Ellipse 91" cx="40.823" cy="40.823" r="40.823" transform="translate(139.936 2.402)" fill="#58d06f"/>
-    <line id="Line_8" data-name="Line 8" y1="247" transform="translate(180.784 43.374)" fill="#3f3d56" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_8" data-name="Line 8" y1="247" transform="translate(180.784 43.374)" fill="#3f3d56" stroke="#3f3d56" strokeMiterlimit="10" strokeWidth="2"/>
     <circle id="Ellipse_92" data-name="Ellipse 92" cx="10.472" cy="10.472" r="10.472" transform="translate(170.312 32.786)" fill="#3f3d56"/>
     <circle id="Ellipse_93" data-name="Ellipse 93" cx="10.472" cy="10.472" r="10.472" transform="translate(138.149 211.491)" fill="#3f3d56"/>
     <path id="Path_941" data-name="Path 941" d="M390.968,254.672s-1.5-32.175-32.164-28.435" transform="translate(-210.184 -157.924)" fill="#3f3d56"/>
     <path id="Path_942" data-name="Path 942" d="M390.968,391.384s-1.5-32.176-32.164-28.436" transform="translate(-210.184 -203.422)" fill="#3f3d56"/>
-    <path id="Path_943" data-name="Path 943" d="M390.968,522.213S397.7,459.672,358.8,456.68" transform="translate(-210.184 -234.717)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_943" data-name="Path 943" d="M390.968,522.213S397.7,459.672,358.8,456.68" transform="translate(-210.184 -234.717)" fill="none" stroke="#3f3d56" strokeMiterlimit="10" strokeWidth="2"/>
     <circle id="Ellipse_94" data-name="Ellipse 94" cx="10.472" cy="10.472" r="10.472" transform="translate(203.118 113.261)" fill="#3f3d56"/>
-    <path id="Path_944" data-name="Path 944" d="M407.753,371.649s-6.732-59.2,32.164-62.2" transform="translate(-226.326 -185.719)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_944" data-name="Path 944" d="M407.753,371.649s-6.732-59.2,32.164-62.2" transform="translate(-226.326 -185.719)" fill="none" stroke="#3f3d56" strokeMiterlimit="10" strokeWidth="2"/>
     <path id="Path_945" data-name="Path 945" d="M530.549,259.357a14.678,14.678,0,1,1,14.678-14.678,14.678,14.678,0,0,1-14.678,14.678Zm0-28.022a13.344,13.344,0,1,0,13.344,13.344,13.344,13.344,0,0,0-13.344-13.344Z" transform="translate(-262.456 -159.277)" fill="#3f3d56"/>
     <path id="Path_946" data-name="Path 946" d="M184.549,153.357a14.678,14.678,0,1,1,14.678-14.678A14.678,14.678,0,0,1,184.549,153.357Zm0-28.022a13.344,13.344,0,1,0,13.344,13.344A13.344,13.344,0,0,0,184.549,125.334Z" transform="translate(-147.306 -124)" fill="#3f3d56"/>
     <path id="Path_947" data-name="Path 947" d="M687.549,479.357a14.678,14.678,0,1,1,14.678-14.678A14.678,14.678,0,0,1,687.549,479.357Zm0-28.022a13.344,13.344,0,1,0,13.344,13.344,13.344,13.344,0,0,0-13.344-13.344Z" transform="translate(-340.706 -318.494)" fill="#3f3d56"/>
@@ -66,7 +66,7 @@
       <path id="Path_974" data-name="Path 974" d="M967.852,197.96a7.125,7.125,0,0,0-10.665-8.628c.317.012.635.033.955.072A11.427,11.427,0,0,1,967.852,197.96Z" transform="translate(-947.032 -188.104)"/>
       <path id="Path_975" data-name="Path 975" d="M974.283,250.665a18.945,18.945,0,0,1-14.665,20,19.049,19.049,0,0,1-4.382,3.531,18.927,18.927,0,0,0,19.047-23.532Z" transform="translate(-946.383 -208.924)"/>
     </g>
-    <line id="Line_9" data-name="Line 9" x1="2.448" y1="74.011" transform="translate(457.272 133.799)" fill="none" stroke="#3f3d56" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_9" data-name="Line 9" x1="2.448" y1="74.011" transform="translate(457.272 133.799)" fill="none" stroke="#3f3d56" strokeMiterlimit="10" strokeWidth="2"/>
     <circle id="Ellipse_98" data-name="Ellipse 98" cx="10.472" cy="10.472" r="10.472" transform="translate(446.8 123.327)" fill="#58d06f"/>
     <path id="Path_976" data-name="Path 976" d="M877.615,376.023s-2.559-32.108-33.086-27.357" transform="translate(-418.835 -196.61)" fill="#58d06f"/>
   </g>

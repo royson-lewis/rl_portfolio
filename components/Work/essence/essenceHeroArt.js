@@ -6,9 +6,9 @@ export default function EssenceHeroArt() {
     <svg className={styles.essenceHeroArt} xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' width='447.146' height='645.573' viewBox='0 0 447.146 645.573'>
       <defs>
         <linearGradient id='linear-gradient' x1='-20.453' y1='1' x2='-20.453' gradientUnits='objectBoundingBox'>
-          <stop offset='0' stop-color='gray' stop-opacity='0.251' />
-          <stop offset='0.535' stop-color='gray' stop-opacity='0.122' />
-          <stop offset='1' stop-color='gray' stop-opacity='0.102' />
+          <stop offset='0' stopColor='gray' stopOpacity='0.251' />
+          <stop offset='0.535' stopColor='gray' stopOpacity='0.122' />
+          <stop offset='1' stopColor='gray' stopOpacity='0.102' />
         </linearGradient>
       </defs>
       <g id='Group_457' data-name='Group 457' transform='translate(31.988 -91.825)'>

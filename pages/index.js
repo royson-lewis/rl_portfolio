@@ -8,12 +8,14 @@ import WorkSection from "../components/workSection";
 import WorkSectionDesktop from "../components/workSectionDesktop";
 import styles from "../styles/Home.module.scss";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <main className={styles.homePage}>
-        <HeroSection />
-        <ServiceSection />
+        <HeroSection hoverOver={props.hoverOver} hoverOut={props.hoverOut} />
+
+        <ServiceSection hoverOver={props.hoverOver} hoverOut={props.hoverOut} />
+
         <section id='work_section'>
           <section className={styles.mobileWork}>
             <WorkSection />

@@ -4,7 +4,7 @@ export default function serviceArts(props) {
   return (
     <>
       {props.section === "ui" ? (
-        <svg xmlns='http://www.w3.org/2000/svg' width='205.001' height='165.08' viewBox='0 0 205.001 165.08'>
+        <svg onMouseOver={props.hoverOver} onMouseLeave={props.hoverOut} xmlns='http://www.w3.org/2000/svg' width='205.001' height='165.08' viewBox='0 0 205.001 165.08'>
           <g transform='translate(-234.888 -1306)'>
             <g transform='translate(234.888 1306)'>
               <path d='M328.327,224.043H127.961V100.957H328.327Zm-199.872-.558H327.833V101.515H128.455Z' transform='translate(-125.441 -100.957)' fill='#3f3d56' />
@@ -33,7 +33,7 @@ export default function serviceArts(props) {
           </g>
         </svg>
       ) : props.section === "frontend" ? (
-        <svg xmlns='http://www.w3.org/2000/svg' width='205.442' height='143.691' viewBox='0 0 205.442 143.691'>
+        <svg onMouseOver={props.hoverOver} onMouseLeave={props.hoverOut} xmlns='http://www.w3.org/2000/svg' width='205.442' height='143.691' viewBox='0 0 205.442 143.691'>
           <g transform='translate(0 -15.03)'>
             <ellipse cx='100.906' cy='6.33' rx='100.906' ry='6.33' transform='translate(3.63 146.061)' fill='#3f3d56' />
             <circle cx='16.824' cy='16.824' r='16.824' transform='translate(161.499 15.03)' fill='#fed200' />
@@ -53,7 +53,7 @@ export default function serviceArts(props) {
           </g>
         </svg>
       ) : (
-        <svg xmlns='http://www.w3.org/2000/svg' width='150.258' height='139' viewBox='0 0 150.258 139'>
+        <svg onMouseOver={props.hoverOver} onMouseLeave={props.hoverOut} xmlns='http://www.w3.org/2000/svg' width='150.258' height='139' viewBox='0 0 150.258 139'>
           <g transform='translate(-284 -431.807)'>
             <rect width='122.891' height='100.688' transform='translate(409.731 435.422) rotate(90)' fill='#2f2e41' />
             <rect width='150' height='42' transform='translate(284 528.807)' fill='#3f3d56' />

@@ -18,7 +18,7 @@ export default function WorkSection() {
       accentColor: "#58CF6E",
     },
     {
-      image: "/workImageEssence.png",
+      image: "/vamyou work slider mobile.png",
       logo: "/vamyouLogo.png",
       description: "A blog featuring all the latest trends and techniques essential for success in the field of business and finance.",
       siteLink: "https://jen-blog-284811.uc.r.appspot.com/",
@@ -66,7 +66,6 @@ export default function WorkSection() {
   }
 
   function setSlide(e) {
-    console.log(e.target.className);
     let index = e.target.className;
     if (index === 0) {
       setSlider({
@@ -88,7 +87,7 @@ export default function WorkSection() {
         <div className={styles.sliderContainer}>
           {sliderWorks.map((work) => {
             return (
-              <>
+              <React.Fragment key={work.logo}>
                 <div style={{ transform: `translateX(${slider.index}vw)` }} key={work.image}>
                   <div className={styles.imageContainer}>
                     <img src={work.image}></img>
@@ -111,7 +110,7 @@ export default function WorkSection() {
                     </div>
                   </section>
                 </div>
-              </>
+              </React.Fragment>
             );
           })}
         </div>

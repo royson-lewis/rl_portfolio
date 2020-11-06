@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19.052" viewBox="0 0 19 19.052">
   <g id="API" transform="translate(-21.961 -34.948)">
     <rect id="Rectangle_273" data-name="Rectangle 273" width="19" height="19" transform="translate(21.961 35)" fill="rgba(255,255,255,0)"/>
-    <path id="Icon_material-data-usage" data-name="Icon material-data-usage" d="M12.8,3.075v2.7a6.232,6.232,0,0,1,5.346,6.165,6.347,6.347,0,0,1-.428,2.263l2.316,1.363a8.8,8.8,0,0,0,.784-3.626A8.915,8.915,0,0,0,12.8,3.075Zm-.891,15.1a6.233,6.233,0,0,1-.891-12.4v-2.7a8.909,8.909,0,1,0,8.063,14.131l-2.316-1.363A6.193,6.193,0,0,1,11.91,18.177Z" transform="translate(19.461 32.425)" fill="none" stroke="#fc326f" stroke-width="1"/>
+    <path id="Icon_material-data-usage" data-name="Icon material-data-usage" d="M12.8,3.075v2.7a6.232,6.232,0,0,1,5.346,6.165,6.347,6.347,0,0,1-.428,2.263l2.316,1.363a8.8,8.8,0,0,0,.784-3.626A8.915,8.915,0,0,0,12.8,3.075Zm-.891,15.1a6.233,6.233,0,0,1-.891-12.4v-2.7a8.909,8.909,0,1,0,8.063,14.131l-2.316-1.363A6.193,6.193,0,0,1,11.91,18.177Z" transform="translate(19.461 32.425)" fill="none" stroke="#fc326f" strokeWidth="1"/>
   </g>
 </svg>

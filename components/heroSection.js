@@ -2,13 +2,13 @@
 import HeroArt from "./heroArt";
 import styles from "../styles/Home.module.scss";
 
-export default function HeroSection() {
+export default function HeroSection(props) {
   return (
     <section className={styles.heroSection}>
       <section className={styles.heroArt}>
         <HeroArt />
       </section>
-      <section className={styles.heroInfo}>
+      <section onMouseOver={props.hoverOver} onMouseLeave={props.hoverOut} className={styles.heroInfo}>
         <h3>Hi, I am</h3>
         <h1>Royson Lewis</h1>
         <h3>Full-stack Web Developer</h3>

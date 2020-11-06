@@ -37,10 +37,10 @@ export default function ProjectCase(props) {
         {solution
           ? solution.data.map((section) => {
               return (
-                <section className={section.greyBG ? Styles.greyBackground : null} key={section.title}>
+                <section key={section.title + section.mainTitle} className={section.greyBG ? Styles.greyBackground : null}>
                   {section.mainTitle ? <h3>{section.mainTitle}</h3> : <h4>{section.title}</h4>}
                   {section.para.map((para) => {
-                    return <p>{para}</p>;
+                    return <p key={para}>{para}</p>;
                   })}
                   {section.svg ? section.svg : null}
                   {section.pdfLink ? (
@@ -60,9 +60,9 @@ export default function ProjectCase(props) {
                   {section.imageLink
                     ? section.imageLink.map((image) => {
                         return (
-                          <React.Fragment>
-                            <img key={image.src} src={image.src} alt={image.src} width='100%'></img>
-                            <caption>{image.caption}</caption>
+                          <React.Fragment key={image.src}>
+                            <img src={image.src} alt={image.src} width='100%'></img>
+                            <figcaption>{image.caption}</figcaption>
                             {image.pdfLink ? (
                               <a href={image.pdfLink}>
                                 Download PDF
@@ -81,7 +81,7 @@ export default function ProjectCase(props) {
                         );
                       })
                     : null}
-                  {section.caption ? <caption>{section.caption}</caption> : null}
+                  {section.caption ? <figcaption>{section.caption}</figcaption> : null}
                   {section.iFrame ? <iframe style={{ width: "100%", height: "35rem", border: "none" }} src={section.iFrame.src} loading='lazy'></iframe> : null}
 
                   {section.list
@@ -108,7 +108,7 @@ export default function ProjectCase(props) {
                                   return (
                                     <React.Fragment>
                                       <img key={image.src} src={image.src} alt={image.src} width='100%'></img>
-                                      <caption>{image.caption}</caption>
+                                      <figcaption>{image.caption}</figcaption>
                                     </React.Fragment>
                                   );
                                 })
@@ -133,7 +133,7 @@ export default function ProjectCase(props) {
                                   return (
                                     <React.Fragment key={img.src}>
                                       <img style={{ marginBottom: "1.5rem" }} src={img.src} key={img.src} width='100%' alt={img.caption ? img.caption : img.src}></img>
-                                      <caption>{img.caption}</caption>
+                                      <figcaption>{img.caption}</figcaption>
                                       {img.pdfLink ? (
                                         <a href={img.pdfLink}>
                                           Download PDF

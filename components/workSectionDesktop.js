@@ -66,7 +66,6 @@ export default function WorkSectionDesktop() {
   }
 
   function setSlide(e) {
-    console.log(e.target.className);
     let index = e.target.className;
     if (index === 0) {
       setSlider({
@@ -88,7 +87,7 @@ export default function WorkSectionDesktop() {
         <div className={styles.sliderContainer}>
           {sliderWorks.map((work) => {
             return (
-              <>
+              <React.Fragment key={work.logo}>
                 <div style={{ transform: `translateX(${slider.index}vw)` }} key={work.image}>
                   <div className={styles.imageContainer}>
                     <img src={work.image}></img>
@@ -110,7 +109,7 @@ export default function WorkSectionDesktop() {
                     </div>
                   </section>
                 </div>
-              </>
+              </React.Fragment>
             );
           })}
         </div>

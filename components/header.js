@@ -63,7 +63,11 @@ export default function Header() {
           </svg>
         </div>
         <h3>Royson Lewis</h3>
-        <button className={styles.hireMeButton}>Hire Me</button>
+        <Link href='/#contact'>
+          <a>
+            <button className={styles.hireMeButton}>Hire Me</button>
+          </a>
+        </Link>
       </header>
       <header style={header.scrollingUp && !header.scrollingDown ? { opacity: 1, position: "fixed" } : !header.scrollingUp && header.scrollingDown ? { opacity: 0, position: "fixed" } : null} className={styles.headerDesktop}>
         <a href='/'>
@@ -112,7 +116,11 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <button className={styles.hireMeButton}>Hire Me</button>
+        <Link href='/#contact'>
+          <a>
+            <button className={styles.hireMeButton}>Hire Me</button>
+          </a>
+        </Link>
       </header>
       <BurgerMenu open={header.burgerOpen} toggleBurger={toggleBurger} />
     </>
