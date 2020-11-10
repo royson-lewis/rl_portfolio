@@ -97,7 +97,7 @@ export default function ServiceDetails(props) {
         <div className={styles.serviceSection1}>
           <div className={styles.imageContainer}>
             <div style={{ backgroundColor: accentColor }} className={styles.backDrop}>
-              <img src={image1}></img>
+              <img src={image1} alt={image1}></img>
             </div>
           </div>
           <div className={styles.textSection}>

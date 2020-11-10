@@ -380,7 +380,7 @@ $secondaryAccentColor: #fed200;
     h4 {
       font-weight: 600;
       margin: 1rem 0;
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 2rem;
     }
 
@@ -412,7 +412,7 @@ $secondaryAccentColor: #fed200;
     }
   }
 
-  h4 {
+  .or {
     margin: 2rem;
     margin-top: 3rem;
   }
@@ -727,7 +727,7 @@ $secondaryAccentColor: #fed200;
     align-items: center;
 
     .contactCard {
-      h4 {
+      .or {
         font-size: 2.8rem;
       }
 

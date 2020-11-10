@@ -1,6 +1,6 @@
 {
   "name": "rj_portfolio_frontend",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "The Frontend of a portfolio showing skills, works and exerience of Royson Lewis",
   "main": "index.js",
   "repository": {
@@ -12,12 +12,17 @@
     "build": "next build",
     "start": "next start -p 8080",
     "gcp-build": "npm run build",
-    "deploy": "gcloud config set project royson-lewis && gcloud app deploy app.yml --version=0-0-2"
+    "deploy": "gcloud config set project royson-lewis && gcloud app deploy app.yml --version=0-1-0"
   },
   "dependencies": {
-    "next": "9.5.4",
+    "@loadable/component": "^5.14.1",
+    "@loadable/server": "^5.14.0",
+    "axios": "^0.21.0",
+    "next": "^10.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-lazyload": "^3.1.0",
+    "react-transition-group": "^4.4.1",
     "sass": "^1.27.0"
   },
   "keywords": [
@@ -25,5 +30,9 @@
     "royson lewis"
   ],
   "author": "Royson J lewis",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@loadable/babel-plugin": "^5.13.2",
+    "@loadable/webpack-plugin": "^5.14.0"
+  }
 }

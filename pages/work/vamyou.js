@@ -1,12 +1,15 @@
 /** @format */
 
-import ContactSection from "../../components/contactSection";
-import Conclusion from "../../components/Work/conclusion";
-import CaseHero from "../../components/Work/caseHero";
-import ProjectCase from "../../components/Work/projectCase";
-import ProjectInfo from "../../components/Work/projectInfo";
-import Results from "../../components/Work/results";
 import styles from "../../styles/work.module.scss";
+import dynamic from "next/dynamic";
+import LazyLoad from "react-lazyload";
+
+const CaseHero = dynamic(() => import("../../components/Work/caseHero"));
+const ProjectInfo = dynamic(() => import("../../components/Work/projectInfo"));
+const ProjectCase = dynamic(() => import("../../components/Work/projectCase"));
+const Results = dynamic(() => import("../../components/Work/results"));
+const Conclusion = dynamic(() => import("../../components/Work/conclusion"));
+const ContactSection = dynamic(() => import("../../components/contactSection"));
 
 export default function Vamyou() {
   return (
@@ -14,10 +17,16 @@ export default function Vamyou() {
       <CaseHero project='vamyou' />
       <ProjectInfo project='vamyou' />
       <ProjectCase project='vamyou' />
-      <Results project='vamyou' />
-      <Conclusion project='vamyou' />
+      <LazyLoad>
+        <Results project='vamyou' />
+      </LazyLoad>
+      <LazyLoad>
+        <Conclusion project='vamyou' />
+      </LazyLoad>
       <section style={{ backgroundColor: "#f6f6f6", paddingBottom: "3rem" }}>
-        <ContactSection />
+        <LazyLoad>
+          <ContactSection />
+        </LazyLoad>
       </section>
     </main>
   );

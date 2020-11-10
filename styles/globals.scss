@@ -206,7 +206,7 @@ li {
   top: 0;
   left: 0;
   overflow: hidden;
-  z-index: 100;
+  z-index: 100000;
 
   .bar {
     position: absolute;
@@ -252,7 +252,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 50;
+  z-index: 1000000;
   .spinner {
     width: 10rem;
     height: 10rem;
@@ -314,6 +314,109 @@ form {
   pointer-events: none;
   -moz-transition: none;
   transition: 0;
+}
+
+.successMessage,
+.failureMessage {
+  font-weight: 700;
+  width: 100%;
+  margin: 4rem 2rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+
+  h4 {
+    margin: 3.5rem 1.5rem;
+  }
+
+  svg {
+    height: 6rem;
+    width: auto;
+    margin: 0 1.5rem;
+  }
+}
+
+.successMessage {
+  background-color: #35ca9e;
+  color: white;
+}
+
+.failureMessage {
+  background-color: #f56064;
+  color: white;
+}
+
+.popupModal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.623);
+  position: fixed;
+  left: 0;
+  z-index: 500;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  section {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .successMessage,
+  .failureMessage {
+    z-index: 1000;
+    pointer-events: all;
+    background-color: #35ca9e;
+    color: white;
+    display: flex;
+    width: 80%;
+    padding: 8rem 0vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    flex-direction: column;
+    box-shadow: -1px 0px 17px 2px #00000029;
+
+    a {
+      color: white;
+    }
+
+    span {
+      width: fit-content;
+      font-size: 1.8rem;
+      font-weight: 600;
+      background-color: $secondaryColor;
+      padding: 1.5rem 3.5rem;
+      box-shadow: -1px 0px 4px 2px #00000029;
+      border-radius: 0.6rem;
+      cursor: pointer;
+    }
+    h4 {
+      font-size: 1.8rem;
+      padding: 0rem 4rem;
+      width: 90%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      margin-left: 1rem;
+      color: $secondaryColor;
+      width: 6rem;
+      height: auto;
+    }
+  }
+
+  .failureMessage {
+    background-color: #f56064;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -469,7 +572,7 @@ form {
     top: 0vw;
     left: 0vw;
     overflow: hidden;
-    z-index: 100;
+    z-index: 100000;
 
     .bar {
       position: absolute;
@@ -515,7 +618,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 50;
+    z-index: 10000;
     .spinner {
       width: 7vw;
       height: 7vw;
@@ -530,6 +633,78 @@ form {
   @keyframes spin {
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  .popupModal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.623);
+    position: fixed;
+    left: 0;
+    z-index: 500;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    section {
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
+
+    .successMessage,
+    .failureMessage {
+      z-index: 1000;
+      pointer-events: all;
+      background-color: #35ca9e;
+      color: white;
+      display: flex;
+      width: fit-content;
+      padding: 10rem 0vw;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      flex-direction: column;
+      box-shadow: -1px 0px 17px 2px #00000029;
+
+      a {
+        color: white;
+      }
+
+      span {
+        width: fit-content;
+        font-size: 2rem;
+        font-weight: 600;
+        background-color: $secondaryColor;
+        padding: 1.5rem 4rem;
+        box-shadow: -1px 0px 4px 2px #00000029;
+        border-radius: 0.6rem;
+        cursor: pointer;
+      }
+      h4 {
+        font-size: 2.5rem;
+        padding: 0rem 4rem;
+        width: 28ch;
+        text-align: center;
+        display: flex;
+        align-items: center;
+      }
+      svg {
+        margin-left: 1rem;
+        color: $secondaryColor;
+        width: 6rem;
+        height: auto;
+      }
+    }
+
+    .failureMessage {
+      background-color: #f56064;
     }
   }
 }

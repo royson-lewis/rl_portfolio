@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;750;800&display=swap' rel='stylesheet'></link>
+        <link rel='preconnect' href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;750;800&display=swap'></link>
       </Head>
       <section
         onMouseMove={(e) => {

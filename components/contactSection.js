@@ -1,11 +1,26 @@
 /** @format */
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/router";
+import api from "../lib/api";
 import styles from "../styles/Home.module.scss";
+import ResponsePopupModal from "./responsePopupModal";
 
 export default function ContactSection() {
+  const router = useRouter();
+
   const [contact, setContact] = useState({
-    modalOpen: false,
+    fullName: "",
+    email: "",
+    subject: "",
+    message: "",
   });
+
+  const [service, setService] = useState({
+    modalOpen: false,
+    responseModalOpen: false,
+  });
+
+  const copyRef = useRef(null);
 
   function copyText(text) {
     let copyText = text;
@@ -14,9 +29,66 @@ export default function ContactSection() {
     return "Copied text: " + copyText;
   }
 
+  function contactChangeHandler(e) {
+    setContact({
+      ...contact,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  async function submitHandler(e) {
+    e.preventDefault();
+    setService({
+      ...service,
+      loading: true,
+    });
+    const contactForm = contact;
+    try {
+      const response = await api.post("/contacts", contactForm);
+      console.log(response);
+      setService({
+        ...service,
+        loading: false,
+        error: false,
+        message: response.data.message,
+        responseModalOpen: true,
+      });
+      setContact({
+        fullName: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (err) {
+      console.error("Contact Submission Error: ", err);
+      setService({
+        ...service,
+        loading: false,
+        error: true,
+        message: err.message,
+        responseModalOpen: true,
+      });
+    }
+  }
+
+  useEffect(() => {
+    console.log(service);
+    return () => {};
+  }, [service]);
+
   return (
     <section style={{ marginBottom: "5rem" }} className={styles.contactSection}>
-      <div style={contact.modalOpen ? { display: "flex" } : { display: "none" }} className={styles.phoneModal}>
+      {service.loading ? (
+        <>
+          <div className='progress'>
+            <div className='bar'></div>
+          </div>
+          <div className='spinnerHolderFull'>
+            <div className='spinner'></div>
+          </div>
+        </>
+      ) : null}
+      <div style={service.modalOpen ? { display: "flex" } : { display: "none" }} className={styles.phoneModal}>
         <div>
           <h3 style={{ width: "fitContent", fontSize: "1.8rem" }}>Phone: +91 9620062353</h3>
           <button>
@@ -28,9 +100,9 @@ export default function ContactSection() {
         </div>
         <section
           onClick={() => {
-            setContact({
-              ...contact,
-              modalOpen: !contact.modalOpen,
+            setService({
+              ...service,
+              modalOpen: !service.modalOpen,
             });
           }}></section>
       </div>
@@ -50,9 +122,9 @@ export default function ContactSection() {
             onClick={() => {
               // document.execCommand("copy");
 
-              setContact({
-                ...contact,
-                modalOpen: !contact.modalOpen,
+              setService({
+                ...service,
+                modalOpen: !service.modalOpen,
               });
             }}>
             <svg xmlns='http://www.w3.org/2000/svg' width='13.856' height='13.874' viewBox='0 0 13.856 13.874'>
@@ -62,24 +134,34 @@ export default function ContactSection() {
           </button>
         </div>
       </section>
-      <h4>- or -</h4>
+      <h4 className={styles.or}>- or -</h4>
       <h3>Fill the contact form</h3>
-      <form>
+      <form id='form' onSubmit={submitHandler}>
+        {service.message && !service.loading && service.responseModalOpen ? (
+          <ResponsePopupModal
+            togglePopup={() => {
+              setService({ ...service, responseModalOpen: !service.responseModalOpen });
+            }}
+            message={service.message}
+            error={service.error}
+          />
+        ) : null}
+
         <label>
           Full Name*
-          <input required name='name' autoComplete='name'></input>
+          <input onChange={contactChangeHandler} value={contact.fullName} required name='fullName' autoComplete='name'></input>
         </label>
         <label>
           Email*
-          <input required name='email' autoComplete='email'></input>
+          <input onChange={contactChangeHandler} value={contact.email} required name='email' autoComplete='email'></input>
         </label>
         <label>
           Subject*
-          <input required name='subject' autoComplete='subject'></input>
+          <input onChange={contactChangeHandler} value={contact.subject} required name='subject' autoComplete='subject'></input>
         </label>
         <label>
           Message
-          <textarea name='message'></textarea>
+          <textarea onChange={contactChangeHandler} value={contact.message} name='message'></textarea>
         </label>
         <button type='submit'>Submit</button>
       </form>
