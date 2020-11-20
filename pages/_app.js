@@ -27,36 +27,49 @@ function MyApp({ Component, pageProps }) {
     });
   }
 
+  function redirectTohttps() {
+    if (location.protocol !== "https:") {
+      location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    }
+  }
+
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "development") {
+      redirectTohttps();
+    }
+    return () => {};
+  }, []);
+
   return (
     <>
       <Head>
+        <link rel='favicon icon' href='/favicon.ico'></link>
         <link rel='preconnect' href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;750;800&display=swap'></link>
+        <meta httpEquiv='Content-Security-Policy' content='upgrade-insecure-requests'></meta>
       </Head>
-      <section
-        onMouseMove={(e) => {
-          let x = e.clientX;
-          let y = e.clientY;
+      {/* onMouseMove={(e) => { 
+      //   let x = e.clientX;
+      //   let y = e.clientY;
 
-          // if (cursor.cursorOver) {
-          //   setCursor({
-          //     ...cursor,
-          //     left: x - 10,
-          //     top: y - 10,
-          //     // scale: 5,
-          //     // transition: "transform 0.03s linear",
-          //   });
-          // } else {
-          setCursor({
-            ...cursor,
-            left: x - 10,
-            top: y - 10,
-            scale: 1,
-          });
-          // }
-        }}>
+      //   if (cursor.cursorOver) {
+      //     setCursor({
+      //       ...cursor,
+      //       left: x - 10,
+      //       top: y - 10,
+      //       // scale: 5,
+      //       // transition: "transform 0.03s linear",
+      //     });
+      //   } else {
+      //     setCursor({
+      //       ...cursor,
+      //       left: x - 10,
+      //       top: y - 10,
+      //       scale: 1,
+      //     });
+      //   }
+      // }}> */}
+      <section>
         <Header />
-        <div style={{ MozTransform: `translate(${cursor.left + "px"}, ${cursor.top + "px"}) scale(${cursor.scale}) `, transform: `translate(${cursor.left + "px"}, ${cursor.top + "px"}) scale(${cursor.scale}) `, MozTransition: `${cursor.transition}`, transition: cursor.transition }} className='cursor'></div>
-
         <Component {...pageProps} hoverOver={hoverOver} hoverOut={hoverOut} />
         <Footer />
       </section>

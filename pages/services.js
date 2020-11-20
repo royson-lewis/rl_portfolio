@@ -1,35 +1,78 @@
 /** @format */
-import { useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import ServiceDetails from "../components/serviceDetails";
 import styles from "../styles/services.module.scss";
 
 export default function services() {
   const [service, setService] = useState({
-    current: "ui",
+    current: "",
+    section: "ui",
     loading: false,
   });
   function setSection(e) {
     let selected = e.target.id;
     setService({
       ...service,
-      current: selected,
+      section: selected,
     });
   }
+
+  function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, "\\$&");
+    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return "";
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+
+  useEffect(() => {
+    setService({
+      ...service,
+      current: getParameterByName("service"),
+    });
+  }, [service.section]);
+
   return (
-    <main className={styles.services}>
-      <h2>Services</h2>
-      <section className={styles.tabs}>
-        <div onClick={setSection} className={service.current === "ui" ? styles.current : null} id='ui'>
-          UI / UX Design
-        </div>
-        <div onClick={setSection} className={service.current === "front" ? styles.current : null} id='front'>
-          Frontend Development
-        </div>
-        <div onClick={setSection} className={service.current === "back" ? styles.current : null} id='back'>
-          Backend Development
-        </div>
-      </section>
-      {service.current ? <ServiceDetails currentSection={service.current} /> : null}
-    </main>
+    <>
+      <Head>
+        <title>Services - Royson Lewis</title>
+        <meta name='description' content='Checkout a list of services I provide in Fullstack Web Development and UI/UX Design' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='Services - Royson Lewis' />
+        <meta property='og:description' content='Checkout a list of services I provide in Fullstack Web Development and UI/UX Design' />
+        <meta property='og:url' content='https://www.roysonlewis.com/services' />
+        <meta property='og:site_name' content='Royson Lewis' />
+      </Head>
+      <main className={styles.services}>
+        <h2>Services</h2>
+        <section className={styles.tabs}>
+          <Link href='services?service=ui'>
+            <a>
+              <div onClick={setSection} id='ui' className={!service.current || service.current === "ui" ? styles.current : null}>
+                UI / UX Design
+              </div>
+            </a>
+          </Link>
+          <Link href='/services?service=front'>
+            <a>
+              <div onClick={setSection} id='front' className={service.current === "front" ? styles.current : null}>
+                Frontend Development
+              </div>
+            </a>
+          </Link>
+          <Link href='/services?service=back'>
+            <a>
+              <div onClick={setSection} id='back' className={service.current === "back" ? styles.current : null}>
+                Backend Development
+              </div>
+            </a>
+          </Link>
+        </section>
+        <ServiceDetails currentSection={service.current} />
+      </main>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import api from "../lib/api";
 import styles from "../styles/Home.module.scss";
 import ResponsePopupModal from "./responsePopupModal";
+import AlertTile from "./alertModal";
 
 export default function ContactSection() {
   const router = useRouter();
@@ -20,13 +21,19 @@ export default function ContactSection() {
     responseModalOpen: false,
   });
 
+  const [copyText, setCopyText] = useState({
+    copied: false,
+  });
+
   const copyRef = useRef(null);
 
-  function copyText(text) {
-    let copyText = text;
-    copyText.select();
+  function copyPhone() {
+    copyRef.current.select();
     document.execCommand("copy");
-    return "Copied text: " + copyText;
+    setCopyText({
+      copied: true,
+      copiedText: copyRef.current.value,
+    });
   }
 
   function contactChangeHandler(e) {
@@ -45,7 +52,6 @@ export default function ContactSection() {
     const contactForm = contact;
     try {
       const response = await api.post("/contacts", contactForm);
-      console.log(response);
       setService({
         ...service,
         loading: false,
@@ -71,11 +77,6 @@ export default function ContactSection() {
     }
   }
 
-  useEffect(() => {
-    console.log(service);
-    return () => {};
-  }, [service]);
-
   return (
     <section style={{ marginBottom: "5rem" }} className={styles.contactSection}>
       {service.loading ? (
@@ -88,10 +89,22 @@ export default function ContactSection() {
           </div>
         </>
       ) : null}
+      {copyText.copied ? (
+        <>
+          <AlertTile
+            showTile={copyText.copied}
+            toggleTile={() => {
+              setCopyText({ copied: !copyText.copied });
+            }}
+            tileText={`Copied Text: ${copyText.copiedText}`}
+          />
+        </>
+      ) : null}
+
       <div style={service.modalOpen ? { display: "flex" } : { display: "none" }} className={styles.phoneModal}>
         <div>
-          <h3 style={{ width: "fitContent", fontSize: "1.8rem" }}>Phone: +91 9620062353</h3>
-          <button>
+          <input style={{ width: "fitContent", fontSize: "1.8rem" }} readOnly value='+91 9620062353' ref={copyRef}></input>
+          <button onClick={copyPhone}>
             Copy
             <svg xmlns='http://www.w3.org/2000/svg' width='28.5' height='33' viewBox='0 0 28.5 33'>
               <path id='Icon_material-content-copy' data-name='Icon material-content-copy' d='M24,1.5H6a3.009,3.009,0,0,0-3,3v21H6V4.5H24Zm4.5,6H12a3.009,3.009,0,0,0-3,3v21a3.009,3.009,0,0,0,3,3H28.5a3.009,3.009,0,0,0,3-3v-21A3.009,3.009,0,0,0,28.5,7.5Zm0,24H12v-21H28.5Z' transform='translate(-3 -1.5)' fill='#3f3d56' />
@@ -110,7 +123,7 @@ export default function ContactSection() {
       <section className={styles.contactCard}>
         <h4>Interested in Hiring me for your next project?</h4>
         <div>
-          <a href='mailto:hello@roysonlewis.com' target='_blank'>
+          <a href='mailto:hello@roysonlewis.com' target='_blank' rel='noreferrer'>
             <button className={styles.whiteButton}>
               <svg xmlns='http://www.w3.org/2000/svg' width='15.75' height='11.908' viewBox='0 0 15.75 11.908'>
                 <path id='email' d='M.072,14.921v-9.8q0-.017.046-.323L5.266,9.733.133,15.261a1.6,1.6,0,0,1-.061-.34Zm.683-10.8a.593.593,0,0,1,.258-.051H14.881a.777.777,0,0,1,.273.051L9.99,9.069l-.683.612L7.955,10.923,6.6,9.682l-.683-.612ZM.771,15.925,5.95,10.362l2,1.82,2-1.82,5.179,5.563a.66.66,0,0,1-.258.051H1.014a.623.623,0,0,1-.243-.051Zm9.872-6.192L15.777,4.8a1.127,1.127,0,0,1,.046.323v9.8a1.45,1.45,0,0,1-.046.34Z' transform='translate(-0.072 -4.068)' fill='#3f3d56' />
@@ -134,7 +147,7 @@ export default function ContactSection() {
           </button>
         </div>
       </section>
-      <h4 className={styles.or}>- or -</h4>
+      <h3 className={styles.or}>- or -</h3>
       <h3>Fill the contact form</h3>
       <form id='form' onSubmit={submitHandler}>
         {service.message && !service.loading && service.responseModalOpen ? (

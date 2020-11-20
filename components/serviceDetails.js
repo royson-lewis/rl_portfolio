@@ -89,8 +89,23 @@ export default function ServiceDetails(props) {
       },
     ],
   };
+  let currentSection = ui;
+  switch (props.currentSection) {
+    case "ui":
+      currentSection = ui;
+      break;
+    case "front":
+      currentSection = front;
+      break;
+    case "back":
+      currentSection = back;
+      break;
+    default:
+      currentSection = ui;
+      break;
+  }
 
-  let { image1, image2, headLine1, headLine2, accentColor, description1, description2, name, services } = eval(props.currentSection);
+  let { image1, image2, headLine1, headLine2, accentColor, description1, description2, name, services } = currentSection;
   return (
     <>
       <section className={styles.details}>
@@ -108,7 +123,7 @@ export default function ServiceDetails(props) {
         <div className={styles.serviceSection2}>
           <div className={styles.imageContainer}>
             <div className={styles.backDrop}>
-              <img src={image2}></img>
+              <img src={image2} alt={image2}></img>
             </div>
           </div>
           <div className={styles.textSection}>

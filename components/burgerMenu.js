@@ -18,14 +18,20 @@ export default function BurgerMenu(props) {
           <svg onClick={props.toggleBurger} className={styles.closeNav} xmlns='http://www.w3.org/2000/svg' width='18.837' height='18.626' viewBox='0 0 18.837 18.626'>
             <path id='Icon_open-menu' data-name='Icon open-menu' d='M3.7,4.957l-2.62,2.4L17.392,23.583l2.523-2.406Zm-2.62,16.22L3.7,23.583,19.9,7.355l-2.5-2.4Z' transform='translate(-1.078 -4.957)' fill='#3f3d56' />
           </svg>
-          <svg className={styles.logoMenu} xmlns='http://www.w3.org/2000/svg' width='32.743' height='32.765' viewBox='0 0 31.743 31.765'>
-            <g transform='translate(-4.375 -4.375)'>
-              <path id='Path_231' data-name='Path 231' d='M31.646,9.248,18.741,3.461a1,1,0,0,0-.814,0L5.014,9.248a.606.606,0,0,0-.029,1.066l12.876,6.78a.982.982,0,0,0,.937,0l12.876-6.78A.606.606,0,0,0,31.646,9.248Z' transform='translate(1.032 1)' fill='#3f3d56' />
-              <path id='Path_232' data-name='Path 232' d='M19.721,33.062,32.7,26.195a.582.582,0,0,0,.259-.49V12.382a.537.537,0,0,0-.771-.512L19.21,18.557a.569.569,0,0,0-.3.512v13.5A.544.544,0,0,0,19.721,33.062Z' transform='translate(2.41 2.234)' fill='#fed200' stroke='#fed200' strokeWidth='1.5' />
-              <path id='Path_233' data-name='Path 233' d='M3.375,12.382V25.7a.582.582,0,0,0,.259.49l12.977,6.867a.531.531,0,0,0,.807-.49v-13.5a.569.569,0,0,0-.3-.512L4.146,11.87A.539.539,0,0,0,3.375,12.382Z' transform='translate(1 2.234)' fill='#3f3d56' />
-            </g>
-          </svg>
-          <h3>Royson Lewis</h3>
+          <a href='/'>
+            <svg xmlns='http://www.w3.org/2000/svg' width='46' height='46.442' viewBox='0 0 46 46.442'>
+              <g id='RoysonLewis_Logo' data-name='RoysonLewis Logo' transform='translate(-5883 -379.736)'>
+                <rect id='Rectangle_36' data-name='Rectangle 36' width='46' height='46' transform='translate(5883 380)' fill='rgba(255,255,255,0)' />
+                <g id='Group_32' data-name='Group 32' transform='translate(5891.593 379.736)'>
+                  <path id='Path_74' data-name='Path 74' d='M29.281-90.857a8.3,8.3,0,0,0-2.464-5.9A8.451,8.451,0,0,0,20.869-99.2H2.15A2.123,2.123,0,0,0,.017-97.081v6.421A2.123,2.123,0,0,0,2.15-88.546H18.534l.048,14.823a2.339,2.339,0,0,1-2.32,2.336l-14.118.174a2.123,2.123,0,0,0-2.106,2.1C.031-67.649.022-65.7.016-64.234a2.1,2.1,0,0,0,.621,1.5,2.143,2.143,0,0,0,1.511.622h20.2A6.822,6.822,0,0,0,29.2-68.873c.033-7.832.082-19.673.082-19.673Z' transform='translate(-0.016 99.42)' fill='#f0d039' fill-rule='evenodd' />
+                  <path id='Path_75' data-name='Path 75' d='M28.065-22.675A1.634,1.634,0,0,0,29.706-24.3v-2.193a1.634,1.634,0,0,0-1.641-1.626H2.653a1.634,1.634,0,0,0-1.641,1.626V-24.3a1.634,1.634,0,0,0,1.641,1.626Z' transform='translate(-0.441 69.117)' fill='#35304c' fill-rule='evenodd' />
+                  <path id='Path_76' data-name='Path 76' d='M29.282-91.457a8.167,8.167,0,0,0-8.2-8.13H2.15a2.142,2.142,0,0,0-1.508.619,2.1,2.1,0,0,0-.625,1.495v6.681A2.1,2.1,0,0,0,.642-89.3a2.143,2.143,0,0,0,1.508.619H29.282Z' transform='translate(-0.016 99.588)' fill='#fcf191' fill-rule='evenodd' />
+                </g>
+              </g>
+            </svg>
+
+            <h3>Royson Lewis</h3>
+          </a>
         </div>
         <ul>
           <li>
@@ -72,7 +78,7 @@ export default function BurgerMenu(props) {
             <svg xmlns='http://www.w3.org/2000/svg' width='23.721' height='23.721' viewBox='0 0 23.721 23.721'>
               <path id='resume' data-name='resume' d='M13.674,20.791h2.372V13.674H13.674ZM14.86,3a11.86,11.86,0,1,0,11.86,11.86A11.865,11.865,0,0,0,14.86,3Zm0,21.349a9.488,9.488,0,1,1,9.488-9.488A9.5,9.5,0,0,1,14.86,24.349ZM13.674,11.3h2.372V8.93H13.674Z' transform='translate(-3 -3)' fill='#3f3d56' />
             </svg>
-            <a target='_blank' href='https://storage.googleapis.com/royson-lewis.appspot.com/resume%20web%20dev.pdf' onClick={props.toggleBurger}>
+            <a target='_blank' rel='noreferrer' href='https://storage.googleapis.com/rl_portfolio_backend/Resume-Royson-Lewis.pdf' onClick={props.toggleBurger}>
               Resume
             </a>
           </li>

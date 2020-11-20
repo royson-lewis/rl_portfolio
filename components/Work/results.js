@@ -26,7 +26,7 @@ export default function Results(props) {
       <h3>Results</h3>
       <div>
         {logo}
-        <a target='_blank' href={projectLink}>
+        <a target='_blank' rel='noreferrer' href={projectLink}>
           <button>Launch Live Project</button>
         </a>
       </div>

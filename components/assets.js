@@ -14,7 +14,9 @@ export default function Assets() {
         <h5>Royson Lewis Portfolio</h5>
         <h6>Royson Lewis Portfolio</h6>
         <p>Paragraph text</p>
-        <a href='#'>A Link to a page</a>
+        <a rel='noreferrer' target='_blank' href='#'>
+          A Link to a page
+        </a>
         <br></br>
         <br></br>
         <br></br>
@@ -45,10 +47,10 @@ export default function Assets() {
         </ol>
         {/* <div className='progress'>
           <div className='bar'></div>
-        </div>
+  </div>*/}
         <div className='spinnerHolderFull'>
           <div className='spinner'></div>
-        </div> */}
+        </div>
       </main>
       <br></br>
       <br></br>

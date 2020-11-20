@@ -41,7 +41,13 @@ $secondaryAccentColor: #fed200;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
+
+    .heroIntro {
+      font-size: 2.2rem;
+      font-weight: 500;
+      margin: 0.6rem 0;
+    }
 
     h3 {
       margin: 0.6rem 0;
@@ -62,7 +68,7 @@ $secondaryAccentColor: #fed200;
       flex-wrap: wrap;
 
       button {
-        padding: 3% 1.5%;
+        padding: 1.5rem 2rem;
         margin-top: 1.5rem;
         font-size: 1.8rem;
         margin-right: 0.2rem;
@@ -122,10 +128,13 @@ $secondaryAccentColor: #fed200;
 
     p {
       margin: 0vw;
-      width: 25rem;
+      width: 30rem;
       font-size: 1.55rem;
       margin-bottom: 4vw;
       text-align: center;
+      line-height: 1.6;
+      letter-spacing: 0rem;
+      word-spacing: 0.1rem;
     }
     button {
       padding: 0.6rem 1.4rem;
@@ -412,9 +421,70 @@ $secondaryAccentColor: #fed200;
     }
   }
 
+  .phoneModal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.623);
+    position: fixed;
+    left: 0;
+    z-index: 500;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    section {
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
+
+    div {
+      z-index: 1000;
+      pointer-events: all;
+      background-color: #fff;
+      width: 40rem;
+      height: 20rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      flex-direction: column;
+      box-shadow: -1px 0px 17px 2px #00000029;
+
+      input {
+        padding: 0.3rem 1rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        margin: 2rem 0rem;
+        width: fit-content;
+      }
+
+      button {
+        padding: 0.4rem 1rem;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-left: 1rem;
+          color: $secondaryColor;
+          width: 2rem;
+          height: auto;
+        }
+      }
+    }
+  }
+
   .or {
     margin: 2rem;
     margin-top: 3rem;
+    font-size: 2.4rem;
+    font-weight: 400;
   }
 
   h3 {
@@ -539,7 +609,7 @@ $secondaryAccentColor: #fed200;
       }
 
       p {
-        width: 70%;
+        width: 80%;
         font-size: 2rem;
         margin-bottom: 2.8rem;
       }
@@ -554,20 +624,24 @@ $secondaryAccentColor: #fed200;
         height: 50%;
         width: 50%;
       }
+
+      p {
+        width: 70%;
+      }
     }
 
     .frontEndSection {
       svg {
-        margin-bottom: 2.4rem;
+        margin-bottom: 1rem;
       }
     }
 
     .backEndSection {
       grid-area: backend;
       svg {
-        margin-bottom: 2rem;
-        height: 40%;
-        width: 40%;
+        margin-bottom: 0rem;
+        height: 35%;
+        width: 35%;
       }
     }
   }
@@ -797,9 +871,17 @@ $secondaryAccentColor: #fed200;
         flex-direction: column;
         box-shadow: -1px 0px 17px 2px #00000029;
 
+        input {
+          padding: 0.3rem 1rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+          margin: 2rem 0rem;
+          width: fit-content;
+        }
+
         button {
           padding: 0.4rem 1rem;
-          font-size: 1.8rem;
+          font-size: 1.6rem;
           display: flex;
           align-items: center;
 

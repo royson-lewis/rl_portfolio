@@ -31,6 +31,10 @@ $secondaryAccentColor: #fed200;
     li {
       margin-bottom: 3rem;
       color: $secondaryColor;
+
+      a {
+        color: inherit;
+      }
     }
   }
 

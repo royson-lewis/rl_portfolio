@@ -33,7 +33,7 @@ export default function EssenceHero(props) {
       <div className={styles.workTitle}>
         {logo}
         <h4>{description}</h4>
-        <a href={link}>
+        <a rel='noreferrer' target='_blank' href={link}>
           <button>Launch Project</button>
         </a>
       </div>

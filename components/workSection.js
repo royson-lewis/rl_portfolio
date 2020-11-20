@@ -90,16 +90,16 @@ export default function WorkSection() {
               <React.Fragment key={work.logo}>
                 <div style={{ transform: `translateX(${slider.index}vw)` }} key={work.image}>
                   <div className={styles.imageContainer}>
-                    <img src={work.image}></img>
+                    <img src={work.image} alt={work.image}></img>
                     <div className={styles.infoOverlay}></div>
                   </div>
                   <section>
                     <div className={styles.logoContainer}>
-                      <img src={work.logo}></img>
+                      <img src={work.logo} alt={work.logo}></img>
                     </div>
                     <p>{work.description}</p>
                     <div className={styles.buttonContainer}>
-                      <a target='_blank' href={work.siteLink}>
+                      <a rel='noreferrer' target='_blank' href={work.siteLink}>
                         <button>View Live Project</button>
                       </a>
                       <Link href={work.caseLink}>
@@ -120,8 +120,8 @@ export default function WorkSection() {
           })}
         </div>
         <div className={styles.sliderButtons}>
-          <img onClick={slideRight} src='/slideRightIcon.svg'></img>
-          <img onClick={slideLeft} src='/slideLeftIcon.svg'></img>
+          <img onClick={slideRight} alt='Right slider icon' src='/slideRightIcon.svg'></img>
+          <img onClick={slideLeft} alt='left slider icon' src='/slideLeftIcon.svg'></img>
         </div>
       </section>
     </section>

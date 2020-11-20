@@ -14,7 +14,7 @@ body {
   font-family: spartan, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: $secondaryColor;
   background-color: $primaryBGColor;
-  cursor: none;
+  // cursor: none;
 }
 
 * {
@@ -63,6 +63,41 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.notificationTileShow,
+.notificationTileHide {
+  background-color: $secondaryColor;
+  color: white;
+  padding: 4rem 4rem;
+  border-radius: 0.8rem;
+  position: fixed;
+  bottom: 0;
+  left: 50vw;
+  width: fit-content;
+  transform: translateX(-50%);
+  box-shadow: -1px 1px 6px 1px #0000004a;
+  font-weight: 600;
+  z-index: 1000;
+  margin-bottom: 6rem;
+  opacity: 1;
+  transition: all 0.2s ease-in;
+  display: flex;
+  align-items: center;
+
+  svg {
+    height: 3rem;
+    width: auto;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+.notificationTileHide {
+  transform: translateY(100vh);
+  opacity: 0;
 }
 
 .selected {
@@ -266,7 +301,7 @@ li {
 
 @keyframes spin {
   100% {
-    transform: rotate(360deg);
+    // transform: rotate(360deg);
   }
 }
 
@@ -706,5 +741,42 @@ form {
     .failureMessage {
       background-color: #f56064;
     }
+  }
+
+  .notificationTileShow,
+  .notificationTileHide {
+    font-size: 1.8rem;
+    background-color: $secondaryColor;
+    color: white;
+    padding: 4rem 4rem;
+    border-radius: 0.8rem;
+    position: fixed;
+    bottom: 0;
+    right: 10rem;
+    box-shadow: -1px 1px 6px 1px #0000004a;
+    margin: 0 auto;
+    font-weight: 600;
+    z-index: 1000;
+    margin-bottom: 6rem;
+    opacity: 1;
+    transition: all 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    left: auto;
+    transform: translateX(0%);
+
+    svg {
+      height: 3rem;
+      width: auto;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .notificationTileHide {
+    transform: translateX(100vw);
+    opacity: 0;
   }
 }
