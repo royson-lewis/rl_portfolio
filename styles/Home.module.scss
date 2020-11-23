@@ -9,15 +9,20 @@ $secondaryAccentColor: #fed200;
 .heroSection {
   height: fit-content;
   width: 100vw;
-  min-height: 86vh;
-  padding-top: 20vw;
-  margin-bottom: 3rem;
+  // min-height: fit-content;
+  padding: 5rem 0;
+  padding-top: 10rem;
+  // margin-bottom: 3rem;
   display: grid;
   grid-template: auto auto / 1fr;
   place-items: center;
   grid-template-areas:
     "art"
     "info";
+
+  & > * {
+    // border: 2px solid blue;
+  }
 
   .heroArt {
     height: fit-content;
@@ -35,22 +40,26 @@ $secondaryAccentColor: #fed200;
   }
 
   .heroInfo {
-    padding-left: 2.4rem;
+    padding: 2.4rem;
     grid-area: info;
-    place-self: start;
+    place-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
 
+    & > * {
+      // border: 2px solid blue;
+    }
+
     .heroIntro {
       font-size: 2.2rem;
       font-weight: 500;
-      margin: 0.6rem 0;
+      margin: 0.4rem 0;
     }
 
     h3 {
-      margin: 0.6rem 0;
+      margin: 0.4rem 0;
       font-weight: 500;
 
       span {
@@ -65,24 +74,35 @@ $secondaryAccentColor: #fed200;
       width: 100%;
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
+      margin: 1rem 0rem;
+
+      & > * {
+        // border: 1px solid red;
+      }
 
       button {
-        padding: 1.5rem 2rem;
-        margin-top: 1.5rem;
+        padding: 1rem 1rem;
+        width: 50%;
+        margin: 1rem 1.5vw 1rem 0;
         font-size: 1.8rem;
-        margin-right: 0.2rem;
+        // margin-right: 0.2rem;
         min-width: fit-content;
       }
     }
 
     .socialLink {
-      margin-top: 5vw;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      margin-top: 1rem;
 
       svg {
-        margin-right: 3rem;
-        height: 4rem;
+        height: auto;
         width: 4rem;
+        margin-right: 6vw;
       }
     }
   }
@@ -119,18 +139,18 @@ $secondaryAccentColor: #fed200;
 
     svg {
       width: 90%;
-      height: 90%;
+      height: auto;
     }
 
     h3 {
-      margin: 6vw 0vw;
+      margin: 3rem 0vw;
     }
 
     p {
-      margin: 0vw;
+      margin: 0;
       width: 30rem;
       font-size: 1.55rem;
-      margin-bottom: 4vw;
+      margin-bottom: 2rem;
       text-align: center;
       line-height: 1.6;
       letter-spacing: 0rem;
@@ -190,7 +210,7 @@ $secondaryAccentColor: #fed200;
           }
 
           .infoOverlay {
-            height: 40%;
+            height: 30rem;
             width: 100%;
             backdrop-filter: blur(5px);
             background-color: rgb(156 156 156 / 12%);
@@ -205,10 +225,12 @@ $secondaryAccentColor: #fed200;
           margin-top: 2rem;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
-          margin-left: 4vw;
+          align-items: center;
+          // margin-left: 4vw;
 
           .logoContainer {
+            display: flex;
+            justify-content: center;
             height: 6.5rem;
 
             img {
@@ -223,18 +245,20 @@ $secondaryAccentColor: #fed200;
             font-size: 1.6rem;
             font-weight: 500;
             line-height: 1.35;
+            text-align: center;
           }
 
           .buttonContainer {
             display: flex;
             flex-wrap: nowrap;
+            justify-content: center;
 
             a {
               color: $secondaryColor;
               button {
                 width: fit-content;
-                padding: 1rem 0.6rem;
-                font-size: 1.8rem;
+                padding: 1rem 1vw;
+                font-size: 1.6rem;
                 background-color: transparent;
                 color: $secondaryColor;
               }

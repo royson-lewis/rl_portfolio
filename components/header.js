@@ -65,12 +65,12 @@ export default function Header() {
                 </g>
               </g>
             </svg>
-            <h3>Royson Lewis</h3>
+            <h3>RoysonLewis</h3>
           </a>
         </div>
         <Link href='/#contact'>
-          <a>
-            <button className={styles.hireMeButton}>Hire Me</button>
+          <a className={styles.hireMeButton}>
+            <button>Hire Me</button>
           </a>
         </Link>
       </header>

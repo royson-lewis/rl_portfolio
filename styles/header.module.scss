@@ -12,7 +12,8 @@ $secondaryAccentColor: #fed200;
   align-items: center;
   justify-content: space-evenly;
   width: 100vw;
-  height: 10rem;
+  height: fit-content;
+  padding: 2rem 1rem;
   position: fixed;
   z-index: 100;
   background-color: $primaryBGColor;
@@ -22,25 +23,39 @@ $secondaryAccentColor: #fed200;
   transition: opacity 0.1s ease-in;
 
   .burgerButton {
-    margin-right: 1.5rem;
+    // margin-right: 0rem;
+    flex: 0.125;
     cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     svg {
-      height: 2.5rem;
-      width: auto;
+      height: auto;
+      width: 60%;
+      min-width: 3rem;
+      max-width: 3.4rem;
     }
   }
 
-  h3 {
-    font-size: 2.3rem;
-    color: $secondaryColor;
-  }
-
   .logo {
-    margin-left: -3rem;
+    // margin-left: -3rem;
+    width: fit-content;
+    flex: 0.6;
 
     a {
       display: flex;
       align-items: center;
+
+      h3 {
+        font-size: 2rem;
+        color: $secondaryColor;
+        margin: 0;
+      }
+
+      h3 {
+        width: fit-content;
+      }
 
       svg {
         width: 4rem;
@@ -51,12 +66,23 @@ $secondaryAccentColor: #fed200;
   }
 
   .hireMeButton {
-    border: 4px solid $secondaryAccentColor;
-    background-color: transparent;
-    color: $secondaryColor;
-    font-size: 2rem;
-    margin-left: 4rem;
-    padding: 1vw 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.3;
+    height: 100%;
+    // margin-left: 4rem;
+
+    button {
+      font-size: 2rem;
+      height: 100%;
+      width: fit-content;
+      border: 4px solid $secondaryAccentColor;
+      color: $secondaryColor;
+      background-color: transparent;
+      padding: 0.3rem 1.6vw;
+      min-width: 11rem;
+    }
   }
 }
 
@@ -72,29 +98,36 @@ $secondaryAccentColor: #fed200;
 
   .navHeader {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    height: 10rem;
-    padding-left: 3rem;
+    height: fit-content;
+    padding: 2.5rem 1rem;
     width: 100%;
-    padding-right: 8rem;
     box-shadow: 0px 0px 3px #00000085;
 
     a {
+      flex: 0.9;
       display: flex;
       align-items: center;
       color: inherit;
 
+      h3 {
+        margin: 0;
+        font-size: 2rem;
+      }
+
       svg {
-        height: 4rem;
-        width: auto;
+        height: auto;
+        width: 4rem;
       }
     }
 
     .closeNav {
-      margin-right: 1.8rem;
-      height: 2.5rem;
-      width: auto;
+      flex: 0.045;
+      // margin-right: 1.8rem;
+      margin-left: 0.8rem;
+      height: auto;
+      width: 100%;
       cursor: pointer;
     }
 

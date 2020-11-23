@@ -44,7 +44,8 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel='favicon icon' href='/favicon.ico'></link>
-        <link rel='preconnect' href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;750;800&display=swap'></link>
+        <link rel='preconnect' href='https://fonts.gstatic.com'></link>
+        <link href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800&display=swap' rel='stylesheet'></link>
         <meta httpEquiv='Content-Security-Policy' content='upgrade-insecure-requests'></meta>
       </Head>
       {/* onMouseMove={(e) => { 

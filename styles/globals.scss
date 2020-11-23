@@ -1,4 +1,6 @@
 /** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800&display=swap");
 $primaryColor: #ffffff;
 $secondaryColor: #34314d;
 $primaryBGColor: #fcfcfc;
@@ -11,7 +13,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 62.5%;
-  font-family: spartan, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "spartan", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: $secondaryColor;
   background-color: $primaryBGColor;
   // cursor: none;
