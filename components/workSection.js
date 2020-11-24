@@ -10,7 +10,7 @@ export default function WorkSection() {
 
   let sliderWorks = [
     {
-      image: "/workImageEssence.png",
+      image: "/essence work slider mobile.png",
       logo: "/essenceLogo.png",
       description: "An Ecommerce web app featuring daily essential  products inspired from nature for a better future.",
       siteLink: "https://essence-server.web.app/",

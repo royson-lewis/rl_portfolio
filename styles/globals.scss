@@ -106,6 +106,29 @@ a:hover {
   font-weight: 750;
   border-bottom: 4px solid $secondaryAccentColor;
 }
+.goToTop {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  right: 0;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+  justify-content: center;
+  box-shadow: 0px 1px 5px 3px rgb(0 0 0 / 10%);
+  background-color: $secondaryBGColor;
+
+  &:hover {
+    background-color: rgb(228, 228, 228);
+  }
+
+  svg {
+    width: 2rem;
+    height: auto;
+  }
+}
 
 button,
 .secondaryButton {

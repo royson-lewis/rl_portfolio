@@ -42,7 +42,6 @@ export default function Header() {
         currentScrollPosition = newScrollPosition;
       };
     }
-    return () => {};
   }, []);
 
   return (

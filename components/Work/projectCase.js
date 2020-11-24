@@ -29,7 +29,7 @@ export default function ProjectCase(props) {
           <p>{projectOverview} </p>
           <p>{projectOverview2} </p>
           <h3>The Challenge</h3>
-          {challengeSVG}
+          <div className={Styles.challengeSVG}>{challengeSVG}</div>
           <p>{challenge}</p>
           <h3>The Solution</h3>
         </div>
@@ -66,7 +66,7 @@ export default function ProjectCase(props) {
                               <img src={image.src} alt={image.src} width='100%'></img>
                               <figcaption>{image.caption}</figcaption>
                               {image.pdfLink ? (
-                                <a rel='noreferrer' target="_blank" href={image.pdfLink}>
+                                <a rel='noreferrer' target='_blank' href={image.pdfLink}>
                                   Download PDF
                                   <svg className={Styles.pdfIcon} xmlns='http://www.w3.org/2000/svg' width='13.125' height='16' viewBox='0 0 13.125 16'>
                                     <path
@@ -138,7 +138,7 @@ export default function ProjectCase(props) {
                                       <img style={{ marginBottom: "1.5rem" }} src={img.src} key={img.src} width='100%' alt={img.caption ? img.caption : img.src}></img>
                                       <figcaption>{img.caption}</figcaption>
                                       {img.pdfLink ? (
-                                        <a rel='noreferrer' target="_blank" href={img.pdfLink}>
+                                        <a rel='noreferrer' target='_blank' href={img.pdfLink}>
                                           Download PDF
                                           <svg className={Styles.pdfIcon} xmlns='http://www.w3.org/2000/svg' width='13.125' height='16' viewBox='0 0 13.125 16'>
                                             <path
