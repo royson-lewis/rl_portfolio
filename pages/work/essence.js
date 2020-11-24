@@ -21,43 +21,27 @@ export default function Essence() {
     });
   }
 
-  // const [topScroll, setScroll] = useState({
-  //   scrollingUp: false,
-  //   scrollingDown: false,
-  //   showButton: false,
-  // });
-  // useEffect(() => {
-  //   let currentScrollPosition = 0;
-  //   if (window) {
-  //     window.onscroll = () => {
-  //       let newScrollPosition = window.pageYOffset;
-  //       if (newScrollPosition > currentScrollPosition) {
-  //         setScroll({
-  //           ...topScroll,
-  //           scrollingUp: false,
-  //           scrollingDown: true,
-  //         });
-  //       } else {
-  //         setScroll({
-  //           ...topScroll,
-  //           scrollingUp: true,
-  //           scrollingDown: false,
-  //         });
-  //       }
-  //       if (window.pageYOffset > 1600) {
-  //         setScroll({
-  //           showButton: true,
-  //         });
-  //       } else {
-  //         setScroll({
-  //           showButton: false,
-  //         });
-  //       }
-  //       currentScrollPosition = newScrollPosition;
-  //     };
-  //   }
-  //   return () => {};
-  // }, []);
+  const [topScroll, setScroll] = useState({
+    scrollingUp: false,
+    scrollingDown: false,
+    showButton: false,
+  });
+  useEffect(() => {
+    if (window) {
+      window.onscroll = () => {
+        if (window.pageYOffset > 1600) {
+          setScroll({
+            showButton: true,
+          });
+        } else {
+          setScroll({
+            showButton: false,
+          });
+        }
+      };
+    }
+    return () => {};
+  }, []);
   return (
     <>
       <Head>
@@ -71,7 +55,7 @@ export default function Essence() {
         <meta property='og:image' content='/essence results mockup@2x.png' />
       </Head>
       <main className={styles.work} id='top'>
-        {/* {topScroll.showButton ? (
+        {topScroll.showButton ? (
           <button className='goToTop' onClick={goToTop}>
             <svg xmlns='http://www.w3.org/2000/svg' width='17.164' height='15.921' viewBox='0 0 17.164 15.921'>
               <g id='Icon_feather-arrow-up' data-name='Icon feather-arrow-up' transform='translate(2.121 1.5)'>
@@ -80,7 +64,7 @@ export default function Essence() {
               </g>
             </svg>
           </button>
-        ) : null} */}
+        ) : null}
         <CaseHero project='essence' />
         <ProjectInfo project='essence' />
         <ProjectCase project='essence' />

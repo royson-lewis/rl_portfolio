@@ -65,6 +65,7 @@ export default function Footer() {
       </footer>
       <section className={styles.footerBottom}>
         <p>&copy; 2020 Royson Lewis</p>
+        <a href='/sitemap.xml'>Sitemap</a>
       </section>
     </>
   );

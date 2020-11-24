@@ -33,47 +33,92 @@ const sitemapXML = (data) => {
      
       <url>
         <loc>https://www.roysonlewis.com/</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
-        <priority>1.00</priority>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.90</priority>
+      </url>
+      <url>
+        <loc>https://roysonlewis.com/</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.90</priority>
       </url>
       <url>
         <loc>https://www.roysonlewis.com/services</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://roysonlewis.com/services</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
         <loc>https://www.roysonlewis.com/about</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://roysonlewis.com/about</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
         <loc>https://www.roysonlewis.com/contact</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://roysonlewis.com/contact</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
         <loc>https://www.roysonlewis.com/services?service=ui</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://roysonlewis.com/services?service=ui</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
         <loc>https://www.roysonlewis.com/services?service=front</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://roysonlewis.com/services?service=front</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
         <loc>https://www.roysonlewis.com/services?service=back</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+      <loc>https://roysonlewis.com/services?service=back</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
         <loc>https://www.roysonlewis.com/work/essence</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://roysonlewis.com/work/essence</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
         <loc>https://www.roysonlewis.com/work/vamyou</loc>
-        <lastmod>2020-11-23T19:03:37+00:00</lastmod>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://roysonlewis.com/work/vamyou</loc>
+        <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
     </urlset>`;

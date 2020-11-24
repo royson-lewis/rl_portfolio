@@ -24,18 +24,25 @@ export default function Vamyou() {
     showButton: false,
   });
   useEffect(() => {
-    console.log(window.pageYOffset);
-    if (window.pageYOffset > 1600) {
-      setScroll({
-        showButton: true,
-      });
-    } else {
-      setScroll({
-        showButton: false,
-      });
+    let mounted = false;
+    if (!mounted) {
+      window.onscroll = () => {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset > 1600) {
+          setScroll({
+            showButton: true,
+          });
+        } else {
+          setScroll({
+            showButton: false,
+          });
+        }
+      };
     }
 
-    return () => {};
+    return () => {
+      mounted = true;
+    };
   }, []);
   console.log(topScroll);
 
