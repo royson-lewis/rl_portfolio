@@ -11,7 +11,7 @@ export default function EssenceHero(props) {
   const essence = {
     heroArt: <EssenceHeroArt />,
     heroArtDesktop: <EssenceHeroArtDesktop />,
-    logo: <EssenceLogo />,
+    logo: "/essence logo.png",
     description: "A daily essential product company Inspired by the nature!",
     link: "https://essence-server.web.app/",
   };
@@ -19,7 +19,7 @@ export default function EssenceHero(props) {
   const vamyou = {
     heroArt: <VamyouHeroArt />,
     heroArtDesktop: <VamyouHeroArtDesktop />,
-    logo: <VamyouLogo />,
+    logo: "/vamyouLogo@2x.png",
     description: "A blog featuring all the latest trends and techniques essential for success in the field of business and finance.",
     link: "https://jen-blog-284811.uc.r.appspot.com/",
   };
@@ -31,7 +31,8 @@ export default function EssenceHero(props) {
       <div className={styles.heroArtMobile}>{heroArt}</div>
       <div className={styles.heroArtDesktop}>{heroArtDesktop}</div>
       <div className={styles.workTitle}>
-        {logo}
+        {/* {logo} */}
+        <img className={styles.logo} src={logo} alt='logo'></img>
         <h4>{description}</h4>
         <a rel='noreferrer' target='_blank' href={link}>
           <button>Launch Project</button>

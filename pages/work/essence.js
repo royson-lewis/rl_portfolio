@@ -68,7 +68,7 @@ export default function Essence() {
         <CaseHero project='essence' />
         <ProjectInfo project='essence' />
         <ProjectCase project='essence' />
-        <LazyLoad>
+        <LazyLoad height={400}>
           <Results project='essence' height={400} />
         </LazyLoad>
         <LazyLoad height={400}>

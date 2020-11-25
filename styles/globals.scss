@@ -324,9 +324,21 @@ li {
   }
 }
 
+.spinnerHolder {
+  .spinner {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: relative;
+    border: 8px solid $secondaryColor;
+    border-right: 8px solid transparent;
+    animation: spin 1s linear infinite;
+  }
+}
+
 @keyframes spin {
   100% {
-    // transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 

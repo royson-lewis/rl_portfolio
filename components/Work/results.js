@@ -25,7 +25,8 @@ export default function Results(props) {
     <section style={{ backgroundColor: color.background }} className={styles.Results}>
       <h3>Results</h3>
       <div>
-        {logo}
+        {/* {logo} */}
+        <img src={logo} alt='logo'></img>
         <a target='_blank' rel='noreferrer' href={projectLink}>
           <button>Launch Live Project</button>
         </a>

@@ -27,7 +27,6 @@ export default function Vamyou() {
     let mounted = false;
     if (!mounted) {
       window.onscroll = () => {
-        console.log(window.pageYOffset);
         if (window.pageYOffset > 1600) {
           setScroll({
             showButton: true,
@@ -44,7 +43,6 @@ export default function Vamyou() {
       mounted = true;
     };
   }, []);
-  console.log(topScroll);
 
   return (
     <>
