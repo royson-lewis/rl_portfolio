@@ -491,7 +491,11 @@ form {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1480px) {
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1480px) {
   html,
   body {
     padding: 0;

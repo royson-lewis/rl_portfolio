@@ -178,7 +178,181 @@ $secondaryAccentColor: #fed200;
   display: none;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1480px) {
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .headerMobile,
+  .headerDesktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: fit-content;
+    padding: 2rem 1rem;
+    position: fixed;
+    z-index: 100;
+    background-color: $primaryBGColor;
+    margin: 0 auto;
+    opacity: 1;
+    box-shadow: 0px 0px 3px #00000085;
+    transition: opacity 0.1s ease-in;
+
+    .burgerButton {
+      // margin-right: 0rem;
+      flex: 0.125;
+      cursor: pointer;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        height: auto;
+        width: 60%;
+        min-width: 3rem;
+        max-width: 3.4rem;
+      }
+    }
+
+    .logo {
+      // margin-left: -3rem;
+      width: fit-content;
+      flex: 0.6;
+
+      a {
+        display: flex;
+        align-items: center;
+
+        h3 {
+          font-size: 2rem;
+          color: $secondaryColor;
+          margin: 0;
+        }
+
+        h3 {
+          width: fit-content;
+        }
+
+        svg {
+          width: 4rem;
+          height: auto;
+          margin-right: 0rem;
+        }
+      }
+    }
+
+    .hireMeButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0.3;
+      height: 100%;
+      // margin-left: 4rem;
+
+      button {
+        font-size: 2rem;
+        height: 100%;
+        width: fit-content;
+        border: 4px solid $secondaryAccentColor;
+        color: $secondaryColor;
+        background-color: transparent;
+        padding: 0.3rem 1.6vw;
+        min-width: 11rem;
+      }
+    }
+  }
+
+  .burgerMenuOpen {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    left: -100vw;
+    background-color: $primaryBGColor;
+    width: 80vw;
+    height: 100vh;
+    transition: all 0.3s ease;
+
+    .navHeader {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: fit-content;
+      padding: 2.5rem 1rem;
+      width: 100%;
+      box-shadow: 0px 0px 3px #00000085;
+
+      a {
+        flex: 0.9;
+        display: flex;
+        align-items: center;
+        color: inherit;
+
+        h3 {
+          margin: 0;
+          font-size: 2rem;
+        }
+
+        svg {
+          height: auto;
+          width: 4rem;
+        }
+      }
+
+      .closeNav {
+        flex: 0.045;
+        // margin-right: 1.8rem;
+        margin-left: 0.8rem;
+        height: auto;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      // .logoMenu {
+      //   width: 9rem;
+      //   height: 9vw;
+      //   margin-right: 3vw;
+      // }
+
+      h3 {
+        font-size: 2.3rem;
+      }
+    }
+    ul {
+      margin-top: 3rem;
+      margin-left: -1rem;
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5rem;
+        font-weight: 500;
+        cursor: pointer;
+        a {
+          color: $secondaryColor;
+        }
+        svg {
+          margin-right: 2.5rem;
+          margin-bottom: 0rem;
+        }
+      }
+    }
+  }
+
+  .menuBackground {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(32, 32, 32, 0.356);
+    position: fixed;
+    top: 0vw;
+    z-index: 90;
+    pointer-events: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+
+  .headerDesktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1480px) {
   .headerMobile {
     display: none;
   }
@@ -189,10 +363,6 @@ $secondaryAccentColor: #fed200;
     padding: 2rem 8vw;
     box-shadow: none;
     justify-content: space-between;
-
-    & > * {
-      // border: 2px solid red;
-    }
 
     h3 {
       font-size: 2rem;
@@ -276,6 +446,10 @@ $secondaryAccentColor: #fed200;
         width: 4rem;
         height: auto;
       }
+
+      h3 {
+        color: $secondaryColor;
+      }
     }
 
     .navLinks {
@@ -300,6 +474,9 @@ $secondaryAccentColor: #fed200;
     .hireMeButton {
       font-size: 2.2rem;
       padding: 0.7rem 2rem;
+      background-color: transparent;
+      border: 3px solid $secondaryAccentColor;
+      color: $secondaryColor;
     }
   }
 }

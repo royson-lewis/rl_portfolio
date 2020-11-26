@@ -11,7 +11,7 @@ $secondaryAccentColor: #fed200;
   align-items: center;
   justify-items: center;
   text-align: center;
-  padding-top: 20vw;
+  padding-top: 10rem;
   grid-template-areas:
     "head"
     "dp"
@@ -62,7 +62,73 @@ $secondaryAccentColor: #fed200;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .about {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding-top: 8rem;
+    grid-template-areas:
+      "head"
+      "dp"
+      "intro"
+      "description"
+      "button"
+      "hello";
+    width: 100vw;
+
+    h2 {
+      grid-area: head;
+      font-size: 3.5rem;
+    }
+
+    h3 {
+      grid-area: intro;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .dp {
+      grid-area: dp;
+    }
+
+    p {
+      grid-area: description;
+      width: 60%;
+      font-size: 1.8rem;
+      word-spacing: 0.6rem;
+      letter-spacing: 0.02rem;
+      line-height: 2.5rem;
+    }
+
+    a {
+      grid-area: button;
+      padding: 0.8rem 1.2rem;
+      font-size: 2rem;
+      margin-left: -1.5rem;
+
+      button {
+        font-size: 1.8rem;
+      }
+    }
+
+    div {
+      grid-area: hello;
+      background-color: $secondaryColor;
+      width: 100vw;
+      margin-top: 4rem;
+      color: $primaryBGColor;
+
+      svg {
+        margin-right: 1rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
   .about {
     display: grid;
     align-items: center;

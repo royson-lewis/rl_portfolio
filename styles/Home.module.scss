@@ -532,12 +532,530 @@ $secondaryAccentColor: #fed200;
     button {
       font-size: 2rem;
       width: 100%;
+      min-height: 6rem;
       margin-top: 1rem;
     }
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1470px) {
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .heroSection {
+    grid-template: auto / 55% 45%;
+    grid-template-areas: "info art";
+    width: 85vw;
+    margin: 0 auto;
+    padding: 15rem 0rem;
+    margin-bottom: auto;
+    height: 100vh;
+    min-height: 80rem;
+
+    .heroArt {
+      height: fit-content;
+      margin: 3rem 0;
+      grid-area: art;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      svg {
+        height: 80%;
+        width: 80%;
+      }
+    }
+
+    .heroInfo {
+      padding-left: 0;
+      place-self: center;
+      justify-content: center;
+      width: 100%;
+
+      h3 {
+        margin: 0.8rem 0;
+        font-size: 2.2rem;
+      }
+
+      h1 {
+        font-size: 4.5rem;
+      }
+
+      div {
+        button {
+          padding: 1rem 1.2vw;
+          font-size: 2rem;
+          margin-right: 1vw;
+        }
+      }
+
+      .socialLink {
+        margin-top: 2rem;
+
+        svg {
+          height: 3rem;
+          width: auto;
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+  .serviceSection {
+    height: fit-content;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    background-color: $secondaryBGColor;
+    grid-template: auto 1fr 1fr 1fr 0.1fr / 1fr;
+    grid-template-areas:
+      "head"
+      "UI"
+      "frontend"
+      "backend"
+      "null";
+
+    h2 {
+      grid-area: head;
+      font-size: 3.5rem;
+      justify-self: center;
+    }
+
+    section {
+      justify-self: center;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgb(160, 160, 160);
+      width: fit-content;
+
+      svg {
+        width: 90%;
+        height: auto;
+      }
+
+      h3 {
+        margin: 3rem 0vw 1rem 0;
+        font-size: 2.2rem;
+      }
+
+      p {
+        margin: 0;
+        width: 30rem;
+        font-size: 1.55rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        line-height: 1.6;
+        letter-spacing: 0rem;
+        word-spacing: 0.1rem;
+      }
+      button {
+        padding: 0.6rem 1.4rem;
+        font-size: 2rem;
+        background-color: $secondaryColor;
+      }
+    }
+
+    .backEndSection {
+      svg {
+        height: 65%;
+        width: 65%;
+      }
+    }
+  }
+
+  .desktopWork {
+    display: none;
+  }
+
+  .workSection {
+    h2 {
+      width: fit-content;
+      margin: 0 auto;
+      padding: 2rem;
+      font-size: 3.5rem;
+    }
+    .workSlider {
+      height: 110rem;
+
+      .sliderContainer {
+        max-width: 200vw;
+        display: flex;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        div {
+          height: 100%;
+          min-width: 100vw;
+          overflow: hidden;
+          position: relative;
+          left: 0vw;
+          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+
+          .imageContainer {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            img {
+              width: 100vw;
+              position: relative;
+              top: -5rem;
+            }
+
+            .infoOverlay {
+              height: 30rem;
+              width: 100%;
+              backdrop-filter: blur(5px);
+              background-color: rgb(156 156 156 / 12%);
+              position: absolute;
+              bottom: 0rem;
+            }
+          }
+
+          section {
+            position: relative;
+            top: -30rem;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // margin-left: 4vw;
+
+            .logoContainer {
+              display: flex;
+              justify-content: center;
+              height: 6.5rem;
+
+              img {
+                height: 100%;
+                width: auto;
+              }
+            }
+
+            p {
+              margin-left: 0.5rem;
+              width: 80vw;
+              font-size: 1.6rem;
+              font-weight: 500;
+              line-height: 1.35;
+              text-align: center;
+            }
+
+            .buttonContainer {
+              display: flex;
+              flex-wrap: nowrap;
+              justify-content: center;
+
+              a {
+                color: $secondaryColor;
+                button {
+                  width: fit-content;
+                  padding: 1rem 1vw;
+                  font-size: 1.6rem;
+                  background-color: transparent;
+                  color: $secondaryColor;
+                }
+              }
+
+              & :first-child {
+                button {
+                  background-color: $secondaryColor;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .sliderDotContainer {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        position: relative;
+        top: -3rem;
+
+        div {
+          width: 3rem;
+          height: 1.5rem;
+          margin-right: 1rem;
+          border-radius: 10rem;
+          cursor: pointer;
+          background-color: rgb(196, 196, 196);
+        }
+      }
+
+      .sliderButtons {
+        display: flex;
+        width: 90%;
+        position: relative;
+        top: -38rem;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        justify-content: space-between;
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .skillSection {
+    background-color: $secondaryBGColor;
+    padding-top: 2rem;
+    display: grid;
+    grid-template: 0.2fr auto / 100vw;
+    justify-items: center;
+
+    h2 {
+      padding-bottom: 1rem;
+
+      font-size: 3.5rem;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 100%;
+      align-items: center;
+      flex-wrap: wrap;
+
+      section {
+        background-color: $primaryBGColor;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        padding: 0rem 5rem;
+        align-items: center;
+        box-shadow: 0px 1px 2px 2px #c0c0c036;
+        transition: box-shadow 0.1s ease-in;
+
+        &:hover {
+          box-shadow: 0px 1px 8px 6px #c0c0c036;
+        }
+
+        img,
+        h3,
+        ul {
+          position: relative;
+          top: -6rem;
+          margin-top: 2rem;
+        }
+
+        h3 {
+          text-align: center;
+          font-size: 1.8rem;
+        }
+
+        img {
+          top: -7rem;
+        }
+
+        ul {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 0;
+          width: 100%;
+          li {
+            list-style: none;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.5;
+
+            svg {
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactSection {
+    display: grid;
+    grid-template: auto auto auto auto auto / 1fr;
+    justify-items: center;
+    width: 100vw;
+    padding-top: 5vw;
+    justify-content: center;
+    grid-template-areas:
+      "head"
+      "card"
+      "or"
+      "subHead"
+      "form";
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    .contactCard {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      color: #f1f1f1;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 3rem;
+      border-radius: 1.2rem;
+      background-image: linear-gradient(to right, #3128ce, #6c63ff);
+
+      h4 {
+        font-weight: 600;
+        margin: 1rem 0;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      div {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        button {
+          background-color: $secondaryColor;
+          padding: 1rem 1.2rem;
+          font-weight: 400;
+          font-size: 1.7rem;
+          line-height: 1;
+          display: flex;
+          align-items: center;
+
+          svg {
+            height: 1.6rem;
+            width: 1.6rem;
+            margin-right: 0.4rem;
+            margin-bottom: 0.2rem;
+          }
+        }
+        .whiteButton {
+          background-color: $primaryBGColor;
+          color: $secondaryColor;
+        }
+      }
+    }
+
+    .phoneModal {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.623);
+      position: fixed;
+      left: 0;
+      z-index: 500;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      section {
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+      }
+
+      div {
+        z-index: 1000;
+        pointer-events: all;
+        background-color: #fff;
+        width: 40rem;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        flex-direction: column;
+        box-shadow: -1px 0px 17px 2px #00000029;
+
+        input {
+          padding: 0.3rem 1rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+          margin: 2rem 0rem;
+          width: fit-content;
+        }
+
+        button {
+          padding: 0.4rem 1rem;
+          font-size: 1.6rem;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-left: 1rem;
+            color: $secondaryColor;
+            width: 2rem;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .or {
+      margin: 2rem;
+      margin-top: 3rem;
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+
+    h3 {
+      margin: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      margin-top: 2rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        input,
+        textarea {
+          width: 100%;
+          margin-top: 1rem;
+          box-shadow: 0px 0px 4px 0px #bcbaba;
+          color: $secondaryColor;
+        }
+
+        textarea {
+          height: 10rem;
+        }
+      }
+
+      button {
+        font-size: 2rem;
+        min-height: 7rem;
+        width: 100%;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1470px) {
   .heroSection {
     grid-template: auto / 55% 45%;
     grid-template-areas: "info art";
@@ -790,7 +1308,7 @@ $secondaryAccentColor: #fed200;
         display: flex;
         width: 90%;
         position: relative;
-        top: -38rem;
+        top: -50%;
         transform: translateY(-50%);
         margin: 0 auto;
         justify-content: space-between;
@@ -1027,11 +1545,12 @@ $secondaryAccentColor: #fed200;
       }
 
       .socialLink {
-        margin-top: 4rem;
+        margin-top: 3rem;
 
         svg {
           height: 4rem;
           width: auto;
+          margin-right: 3rem;
         }
       }
     }
@@ -1112,56 +1631,118 @@ $secondaryAccentColor: #fed200;
     display: block;
   }
 
-  .workSection {
-    margin-top: 2rem;
-    margin-bottom: -7.5rem;
-
+  .workSectionDesktop {
     h2 {
-      margin-bottom: -13rem;
+      width: fit-content;
+      margin: 0 auto;
+      padding: 2rem;
+      margin-bottom: -12rem;
+      z-index: 10;
+      font-size: 3.2rem;
       position: relative;
-      z-index: 1;
-      font-size: 4.2rem;
     }
+
+    .sliderDotContainer {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      position: relative;
+      top: 0rem;
+      margin-top: -6rem;
+
+      div {
+        width: 3rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+        border-radius: 10rem;
+        cursor: pointer;
+        background-color: rgb(196, 196, 196);
+      }
+    }
+
     .workSlider {
-      height: 100vh;
+      height: 50vw;
 
       .sliderContainer {
+        max-width: 200vw;
+        display: flex;
         height: 100%;
+        overflow: hidden;
+        position: relative;
 
         div {
+          height: 100%;
+          min-width: 100vw;
+          overflow: hidden;
+          position: relative;
+          left: 0vw;
+          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+
           .imageContainer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
             img {
+              width: auto;
+              height: 115%;
+              position: absolute;
               top: 0rem;
-              min-height: auto;
-              width: 100%;
+              right: 0rem;
             }
           }
 
-          section {
+          .infoContainer {
+            position: relative;
             top: -50%;
-            left: 9vw;
-            transform: translate(0, -50%);
-            margin-left: auto;
+            transform: translateY(-50%);
+            display: flex;
+            // width: 40vw;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 12vw;
 
             .logoContainer {
-              height: 10.5rem;
+              // display: flex;
+              // justify-content: center;
+              height: auto;
+              width: fit-content;
+
+              img {
+                height: auto;
+                width: 20%;
+              }
             }
 
             p {
-              margin-left: 1rem;
-              width: 65rem;
-              font-size: 2.4rem;
-              margin-top: 3rem;
+              margin-left: 0.5rem;
+              width: 30%;
+              font-size: 1.6rem;
+              font-weight: 500;
+              line-height: 1.35;
+              text-align: start;
             }
 
             .buttonContainer {
+              // display: flex;
+              width: 100%;
+              // flex-wrap: nowrap;
+              // justify-content: center;
+
               a {
+                color: $secondaryColor;
                 button {
-                  padding: 1.2rem 1.8rem;
-                  font-size: 2.4rem;
+                  width: fit-content;
+                  padding: 1rem 1vw;
+                  font-size: 1.6rem;
+                  background-color: transparent;
+                  color: $secondaryColor;
+                }
+              }
+
+              & :first-child {
+                button {
+                  background-color: $secondaryColor;
+                  color: white;
                 }
               }
             }
@@ -1169,15 +1750,12 @@ $secondaryAccentColor: #fed200;
         }
       }
 
-      .sliderDotContainer {
-        top: auto;
-        transform: translateY(-10rem);
-      }
       .sliderButtons {
-        width: 90vw;
-        top: -50rem;
-        z-index: 10;
-        transform: translateY(50%);
+        display: flex;
+        width: 90%;
+        position: relative;
+        top: -50%;
+        transform: translateY(-50%);
         margin: 0 auto;
         justify-content: space-between;
 
@@ -1216,6 +1794,7 @@ $secondaryAccentColor: #fed200;
         padding: 0rem 2rem;
         align-items: flex-start;
         height: 50rem;
+        margin: 1rem;
 
         img,
         h3,
@@ -1281,6 +1860,10 @@ $secondaryAccentColor: #fed200;
     form {
       label {
         margin-bottom: 4rem;
+
+        input {
+          min-height: 7rem;
+        }
 
         textarea {
           height: 20rem;

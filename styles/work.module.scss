@@ -439,7 +439,7 @@ $vamyouAccent: #fc326f;
         height: auto;
         position: relative;
         left: 10vw;
-        top: -33vw;
+        top: -32vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -461,8 +461,9 @@ $vamyouAccent: #fc326f;
         // }
 
         .logo {
-          width: auto;
-          height: 10vw;
+          width: 17vw;
+          margin-bottom: 1rem;
+          height: auto;
         }
 
         h4 {
@@ -484,8 +485,8 @@ $vamyouAccent: #fc326f;
       height: fit-content;
       width: 100%;
       position: relative;
-      top: -55vw;
-      margin-bottom: -55vw;
+      top: -53vw;
+      margin-bottom: -53vw;
       z-index: 0;
       color: $primaryBGColor;
       display: flex;
@@ -493,7 +494,7 @@ $vamyouAccent: #fc326f;
       align-items: baseline;
       justify-content: space-evenly;
       padding: 3rem;
-      padding-top: 18rem;
+      padding-top: 15vw;
 
       .projectDetails {
         table {
@@ -839,8 +840,8 @@ $vamyouAccent: #fc326f;
 @media only screen and (min-width: 1480px) {
   .work {
     .hero {
-      width: 100vw;
-      height: 85vw;
+      width: 100%;
+      height: 95vw;
       overflow: hidden;
       position: relative;
       z-index: 1;
@@ -852,36 +853,42 @@ $vamyouAccent: #fc326f;
       .heroArtDesktop {
         display: block;
         .essenceHeroArt {
-          width: 111%;
+          width: 121%;
           height: auto;
           position: relative;
-          left: -10vw;
+          left: -13vw;
+          top: 5vw;
         }
       }
 
       .workTitle {
         height: auto;
         position: relative;
-        left: 13vw;
-        top: -33vw;
+        left: 10vw;
+        top: -30vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         width: fit-content;
         max-width: 82vw;
 
-        .essenceLogo {
-          width: 18vw;
-          height: auto;
-          position: relative;
-        }
+        // .essenceLogo {
+        //   width: 18vw;
+        //   height: auto;
+        //   position: relative;
+        // }
 
-        .vamyouLogo {
-          width: 15vw;
-          height: auto;
-          top: -3rem;
-          margin-bottom: -2rem;
-          position: relative;
+        // .vamyouLogo {
+        //   width: 8vw;
+        //   height: auto;
+        //   top: -3rem;
+        //   margin-bottom: -2rem;
+        //   position: relative;
+        // }
+
+        .logo {
+          width: auto;
+          height: 7vw;
         }
 
         h4 {
