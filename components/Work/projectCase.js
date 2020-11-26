@@ -49,9 +49,11 @@ export default function ProjectCase(props) {
               return (
                 <section key={section.title + section.mainTitle} className={section.greyBG ? Styles.greyBackground : null}>
                   {section.mainTitle ? <h3>{section.mainTitle}</h3> : <h4>{section.title}</h4>}
-                  {section.para.map((para) => {
-                    return <p key={para}>{para}</p>;
-                  })}
+                  {section.para
+                    ? section.para.map((para) => {
+                        return <p key={para}>{para}</p>;
+                      })
+                    : null}
                   {section.svg ? section.svg : null}
                   {section.pdfLink ? (
                     <a rel='noreferrer' target='_blank' href={section.pdfLink}>

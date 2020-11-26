@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Conclusion(props) {
   const essence = {
-    conclusion: "After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. ",
+    conclusion: "Finally, to conclude all things, this app was a major part of my learning process and helped me understand the whole workflow of an e-commerce website along with how to implement some of the essential features in order to run the app successfully.",
     nextProject: "/work/vamyou",
     color: {
       background: "#36354A",
@@ -12,7 +12,7 @@ export default function Conclusion(props) {
     },
   };
   const vamyou = {
-    conclusion: "After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. ",
+    conclusion: "Finally, to conclude all things, It was an awesome experience building a complete custom blogging website with the implementation of server-side frameworks such as Next.js for a better SEO and performance.",
     nextProject: "/work/essence",
     color: {
       background: "#111D4A",

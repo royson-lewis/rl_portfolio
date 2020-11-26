@@ -43,13 +43,13 @@ export default function WorkSectionDesktop() {
     }
   }
 
-  // useEffect(() => {
-  //   let intervalID = 0;
-  //   intervalID = setInterval(slideLeft, 3500);
-  //   return () => {
-  //     clearInterval(intervalID);
-  //   };
-  // }, [slider.index]);
+  useEffect(() => {
+    let intervalID = 0;
+    intervalID = setInterval(slideLeft, 3500);
+    return () => {
+      clearInterval(intervalID);
+    };
+  }, [slider.index]);
 
   function slideRight() {
     if (slider.index !== 0) {

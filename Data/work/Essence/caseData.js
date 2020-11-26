@@ -117,7 +117,7 @@ export const essence = {
       },
       {
         title: "Designing Elements",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["Based on the wireframes and test results, I created a style guide which helped me in creating various design elements for the final design."],
         imageLink: [
           {
             src: "/styleGuide Essence@2x.png",
@@ -131,7 +131,7 @@ export const essence = {
       },
       {
         title: "High-fidelity Prototyping",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["After the final design has been created, I implemented the final high-fidelity prototypes which further clarified the overall user flow of the project. The finalized design got tested by several groups of people which helped in finding the unknown issues in the prototype and improve the overall experience."],
         imageLink: [
           {
             src: "/high-fi-proto_essence@2x.png",
@@ -141,7 +141,6 @@ export const essence = {
       },
       {
         mainTitle: "Development",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
         svg: (
           <svg id='Group_425' data-name='Group 425' xmlns='http://www.w3.org/2000/svg' width='157.516' height='119.627' viewBox='0 0 157.516 119.627'>
             <path id='Path_1049' data-name='Path 1049' d='M346.759,84.54c-6.923-27.224-30.845-46.875-58.924-47.663C272.991,36.46,257.371,41.384,246,58.612c-20.33,30.8,1.249,52.079,16.294,62.192a94.138,94.138,0,0,1,19.458,17.489c10.162,12.059,29.712,27.044,52.995,3.565C351.62,124.84,351.371,102.674,346.759,84.54Z' transform='translate(-211.396 -36.853)' fill='#f2f2f2' />
@@ -181,7 +180,7 @@ export const essence = {
       },
       {
         title: "Choosing the right technology",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["For the Essence Naturals Ecommerce Web app, I used the Javascript library React.JS along with CSS3 and JSX/HTML for the frontend, Express JS, a Node.JS framework for the backend with MongoDB as the database management system, Firebase and Google App Engine for hosting the front-end and back-end respectively and Stripe as the payment gateway."],
         horizontalItems: [
           {
             type: "svg",
@@ -266,7 +265,7 @@ export const essence = {
       },
       {
         title: "Building the base file structure",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["The base file structure for both the frontend and the backend got created with all the required files connected to run a basic app successfully."],
         imageLink: [
           {
             src: "/file structure essence@2x.png",
@@ -277,21 +276,18 @@ export const essence = {
       },
       {
         title: "Converting Design to Clean code",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
-        // <iframe style={{ height: "80vw", width: "100%" }} scrolling='no' title='Test' src= frameborder='no' loading='lazy' allowtransparency='true' allowfullscreen='true'>
-
-        // </iframe>
+        para: ["I converted all the designs to React code i.e HTML/JSX, CSS, and Javascript while Implementing both responsiveness and functionality to the App."],
         iFrame: {
           src: "https://codepen.io/lewisroysonj/embed/pobdmJm?height=271&theme-id=dark&default-tab=js,result",
         },
       },
       {
         title: "Setting up the Backend",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["I developed API routes to connect the backend with the frontend and implement various features such as Authentication, Search, Comments, Adding products to cart, Checkout, Dynamic rendering, and so on."],
         subSection: [
           {
             title: "Choosing the database",
-            para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. ", "After a clear sitemap has been prepared, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+            para: ["I chose MongoDB as the right fit for a Database management system as it is a fast, modern, and easily scalable database."],
             img: [
               {
                 src: "/essence mongoPage.png",
@@ -299,16 +295,12 @@ export const essence = {
               },
             ],
           },
-          {
-            title: "Connecting the backend",
-            para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
-          },
         ],
         greyBG: true,
       },
       {
         title: "Implementing Testing",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["I implemented automated unit testing using testing libraries such as Jest and React Testing Library to make the app run 100% of the time without any errors."],
         imageLink: [
           {
             src: "/test screen@2x.png",
@@ -318,19 +310,19 @@ export const essence = {
       },
       {
         title: "Making the code Production ready",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["I refactored all the source code to refine it into a cleaner version with as many fewer errors and repetition of the code as possible to come up with a final production-ready version of the app."],
         greyBG: true,
         list: [
           {
-            heading: "A list of these procedures are:",
-            items: ["Most Obvious bugs are fixed", "code is well-structured and self documenting", "Automated Tests are written", "It's gone through a peer review process before final deployment"],
+            heading: "A list of these procedures include:",
+            items: ["Fixing most obvious bugs", "A well-structured and self documenting code", "Going through a peer review process before final deployment"],
             type: "ul",
           },
         ],
       },
       {
         title: "Hosting",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["The final version of the app got tested once again before deploying it to the servers. The successfully tested app's frontend got hosted in Firebase and the backend in Google Cloud Platform's App engine."],
         imageLink: [
           {
             src: "/gcp essence server@2x.png",
