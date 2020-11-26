@@ -43,13 +43,13 @@ export default function WorkSectionDesktop() {
     }
   }
 
-  useEffect(() => {
-    let intervalID = 0;
-    intervalID = setInterval(slideLeft, 3500);
-    return () => {
-      clearInterval(intervalID);
-    };
-  }, [slider.index]);
+  // useEffect(() => {
+  //   let intervalID = 0;
+  //   intervalID = setInterval(slideLeft, 3500);
+  //   return () => {
+  //     clearInterval(intervalID);
+  //   };
+  // }, [slider.index]);
 
   function slideRight() {
     if (slider.index !== 0) {
@@ -81,7 +81,7 @@ export default function WorkSectionDesktop() {
   }
 
   return (
-    <section className={styles.workSection}>
+    <section className={styles.workSectionDesktop}>
       <h2>Work</h2>
       <section className={styles.workSlider}>
         <div className={styles.sliderContainer}>
@@ -92,7 +92,7 @@ export default function WorkSectionDesktop() {
                   <div className={styles.imageContainer}>
                     <img src={work.image} alt={work.image}></img>
                   </div>
-                  <section>
+                  <section className={styles.infoContainer}>
                     <div className={styles.logoContainer}>
                       <img src={work.logo} alt={work.logo}></img>
                     </div>
@@ -117,13 +117,12 @@ export default function WorkSectionDesktop() {
           <img onClick={slideRight} alt='right icon' src='/slideRightIcon.svg'></img>
           <img onClick={slideLeft} alt='left icon' src='/slideLeftIcon.svg'></img>
         </div>
-
-        <div className={styles.sliderDotContainer}>
-          {sliderWorks.map((work) => {
-            return <div onClick={setSlide} className={sliderWorks.indexOf(work)} key={work.image} id={slider.index === sliderWorks.indexOf(work) * -100 ? "currentDot" : ""}></div>;
-          })}
-        </div>
       </section>
+      <div className={styles.sliderDotContainer}>
+        {sliderWorks.map((work) => {
+          return <div onClick={setSlide} className={sliderWorks.indexOf(work)} key={work.image} id={slider.index === sliderWorks.indexOf(work) * -100 ? "currentDot" : ""}></div>;
+        })}
+      </div>
     </section>
   );
 }

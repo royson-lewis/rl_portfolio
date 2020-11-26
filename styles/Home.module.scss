@@ -20,10 +20,6 @@ $secondaryAccentColor: #fed200;
     "art"
     "info";
 
-  & > * {
-    // border: 2px solid blue;
-  }
-
   .heroArt {
     height: fit-content;
     margin: 3rem 0;
@@ -47,10 +43,6 @@ $secondaryAccentColor: #fed200;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-
-    & > * {
-      // border: 2px solid blue;
-    }
 
     .heroIntro {
       font-size: 2.2rem;
@@ -77,10 +69,6 @@ $secondaryAccentColor: #fed200;
       justify-content: flex-start;
       flex-wrap: wrap;
       margin: 1rem 0rem;
-
-      & > * {
-        // border: 1px solid red;
-      }
 
       button {
         padding: 1rem 1rem;
@@ -549,7 +537,453 @@ $secondaryAccentColor: #fed200;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1470px) {
+  .heroSection {
+    grid-template: auto / 55% 45%;
+    grid-template-areas: "info art";
+    width: 85vw;
+    margin: 0 auto;
+    padding: 15rem 0rem;
+    margin-bottom: auto;
+    height: 100vh;
+    min-height: 80rem;
+
+    .heroArt {
+      padding-right: 0rem;
+      margin: auto;
+      svg {
+        height: 50rem;
+        width: auto;
+      }
+    }
+
+    .heroInfo {
+      padding-left: 0;
+      place-self: center;
+      justify-content: center;
+      width: 100%;
+
+      h3 {
+        margin: 0.8rem 0;
+        font-size: 2.2rem;
+      }
+
+      h1 {
+        font-size: 6rem;
+      }
+
+      div {
+        button {
+          padding: 1rem 1.4vw;
+          font-size: 2.4rem;
+          margin-right: 0.6vw;
+        }
+      }
+
+      .socialLink {
+        margin-top: 3rem;
+
+        svg {
+          height: 3rem;
+          width: auto;
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+  .serviceSection {
+    width: auto;
+    padding: 8vw 5vw;
+    grid-template: auto 0.1fr / 1fr 1fr 1fr;
+    grid-template-areas:
+      "head head head"
+      "UI frontend backend";
+
+    h2 {
+      margin-bottom: 5rem;
+      margin-top: -5.5rem;
+      font-size: 3.2rem;
+      font-weight: 600;
+    }
+
+    section {
+      border-bottom: none;
+      text-align: center;
+
+      svg {
+        width: 50%;
+        height: 50%;
+      }
+
+      h3 {
+        margin: 3rem 0vw;
+        font-size: 2.2rem;
+        margin-top: 4rem;
+      }
+
+      p {
+        width: 90%;
+        font-size: 1.8rem;
+        margin-bottom: 2.8rem;
+      }
+      button {
+        padding: 0.8rem 1rem;
+        font-size: 2rem;
+      }
+    }
+
+    .UISection {
+      svg {
+        height: 50%;
+        width: 50%;
+      }
+
+      p {
+        width: 70%;
+      }
+    }
+
+    .frontEndSection {
+      svg {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .backEndSection {
+      grid-area: backend;
+      svg {
+        margin-bottom: 0rem;
+        height: 35%;
+        width: 35%;
+      }
+    }
+  }
+
+  .mobileWork {
+    display: none;
+  }
+
+  .desktopWork {
+    display: block;
+  }
+
+  .workSectionDesktop {
+    h2 {
+      width: fit-content;
+      margin: 0 auto;
+      padding: 2rem;
+      margin-bottom: -12rem;
+      z-index: 10;
+      font-size: 3.2rem;
+      position: relative;
+    }
+
+    .sliderDotContainer {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      position: relative;
+      top: 0rem;
+      margin-top: -6rem;
+
+      div {
+        width: 3rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+        border-radius: 10rem;
+        cursor: pointer;
+        background-color: rgb(196, 196, 196);
+      }
+    }
+
+    .workSlider {
+      height: 76rem;
+
+      .sliderContainer {
+        max-width: 200vw;
+        display: flex;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        div {
+          height: 100%;
+          min-width: 100vw;
+          overflow: hidden;
+          position: relative;
+          left: 0vw;
+          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+
+          .imageContainer {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            img {
+              width: auto;
+              height: 100%;
+              position: absolute;
+              top: 0rem;
+              right: -8rem;
+            }
+          }
+
+          .infoContainer {
+            position: relative;
+            top: -50%;
+            transform: translateY(-50%);
+            display: flex;
+            // width: 40vw;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 12vw;
+
+            .logoContainer {
+              // display: flex;
+              // justify-content: center;
+              height: auto;
+              width: fit-content;
+
+              img {
+                height: auto;
+                width: 20%;
+              }
+            }
+
+            p {
+              margin-left: 0.5rem;
+              width: 50%;
+              font-size: 1.6rem;
+              font-weight: 500;
+              line-height: 1.35;
+              text-align: start;
+            }
+
+            .buttonContainer {
+              // display: flex;
+              width: 100%;
+              // flex-wrap: nowrap;
+              // justify-content: center;
+
+              a {
+                color: $secondaryColor;
+                button {
+                  width: fit-content;
+                  padding: 1rem 1vw;
+                  font-size: 1.6rem;
+                  background-color: transparent;
+                  color: $secondaryColor;
+                }
+              }
+
+              & :first-child {
+                button {
+                  background-color: $secondaryColor;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .sliderButtons {
+        display: flex;
+        width: 90%;
+        position: relative;
+        top: -38rem;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        justify-content: space-between;
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .skillSection {
+    grid-template: 0.2fr auto / 80vw;
+    padding: 10rem 0rem;
+    justify-content: center;
+    column-gap: 2rem;
+    height: fit-content;
+    min-height: 90rem;
+    grid-template-areas:
+      "head"
+      "ui";
+
+    h2 {
+      grid-area: head;
+      font-size: 4.2rem;
+      margin-top: 0rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      flex-wrap: wrap;
+
+      section {
+        width: 36rem;
+        padding: 0rem 2rem;
+        align-items: flex-start;
+        height: 50rem;
+        margin: 1rem;
+
+        img,
+        h3,
+        ul {
+          top: -5rem;
+        }
+
+        img,
+        h3 {
+          width: fit-content;
+          margin: 0 auto;
+        }
+
+        h3 {
+          font-size: 2.2rem;
+          margin-top: 4rem;
+        }
+
+        ul {
+          margin-left: 3.5rem;
+          margin-top: 3rem;
+          width: fit-content;
+          li {
+            font-size: 2rem;
+            line-height: 2.5;
+
+            svg {
+              height: auto;
+              width: 3.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactSection {
+    width: 82vw;
+    margin: 0 auto;
+    padding-top: 12rem;
+    align-items: center;
+
+    .contactCard {
+      .or {
+        font-size: 2.8rem;
+      }
+
+      div {
+        width: fit-content;
+
+        button {
+          padding: 1.5rem 2.2rem;
+          font-size: 2.4rem;
+
+          svg {
+            height: 2.4rem;
+            width: 2.4rem;
+          }
+        }
+      }
+    }
+
+    form {
+      label {
+        margin-bottom: 4rem;
+
+        input {
+          min-height: 6rem;
+        }
+
+        textarea {
+          height: 20rem;
+        }
+      }
+
+      button {
+        font-size: 2.4rem;
+        padding: 2rem;
+        margin-bottom: 4rem;
+
+        &:hover {
+          background-color: #525069;
+        }
+
+        &:active {
+          background-color: $secondaryColor;
+        }
+      }
+    }
+
+    .phoneModal {
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.623);
+      position: fixed;
+      left: 0;
+      z-index: 500;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      section {
+        width: 100vw;
+        height: 100vh;
+        background-color: transparent;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+      }
+
+      div {
+        z-index: 1000;
+        pointer-events: all;
+        background-color: #fff;
+        width: 40rem;
+        height: 20rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        flex-direction: column;
+        box-shadow: -1px 0px 17px 2px #00000029;
+
+        input {
+          padding: 0.3rem 1rem;
+          margin-bottom: 1.5rem;
+          text-align: center;
+          margin: 2rem 0rem;
+          width: fit-content;
+        }
+
+        button {
+          padding: 0.4rem 1rem;
+          font-size: 1.6rem;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-left: 1rem;
+            color: $secondaryColor;
+            width: 2rem;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1470px) {
   .heroSection {
     grid-template: auto / 55% 45%;
     grid-template-areas: "info art";

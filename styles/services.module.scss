@@ -180,7 +180,179 @@ $secondaryAccentColor: #fed200;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1480px) {
+  .services {
+    display: grid;
+    grid-template: repeat(auto, 4) / 1fr;
+    justify-items: center;
+    padding-top: 10rem;
+    grid-template-areas:
+      "head"
+      "tabs"
+      "details"
+      "list";
+
+    h2 {
+      font-size: 3.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .tabs {
+      width: 98vw;
+      height: auto;
+      font-size: 2.2rem;
+      padding: 1.5rem 1rem;
+
+      a {
+        width: 100%;
+        font-size: 2rem;
+        color: inherit;
+        text-decoration: none;
+        div {
+          margin: 0 0.1rem;
+          padding: 3rem 2rem;
+          height: 7rem;
+          min-width: 10rem;
+          max-height: fit-content;
+        }
+      }
+    }
+    .details {
+      grid-area: details;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 70%;
+      margin: 4rem 0rem;
+
+      .serviceSection1,
+      .serviceSection2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .textSection {
+          justify-content: space-between;
+
+          h4 {
+            margin: 3rem;
+          }
+        }
+
+        h4 {
+          font-weight: 600;
+          font-size: 2.6rem;
+          margin: 3rem 0 1.5rem 0;
+        }
+
+        p {
+          font-size: 2rem;
+          width: 100%;
+          margin: 0;
+          margin-bottom: 3rem;
+        }
+
+        .imageContainer {
+          display: flex;
+          position: relative;
+          justify-content: center;
+          margin: 6rem;
+
+          .backDrop {
+            width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+            background-color: $secondaryColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: background-color 0.2s ease-in;
+
+            img {
+              width: 170%;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+
+      .serviceSection2 {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .offers {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background-color: $secondaryBGColor;
+      padding: 4rem 0 8rem 0;
+      margin: 3rem 0 0 0;
+
+      h3 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 80%;
+        margin-top: 2rem;
+
+        svg {
+          position: absolute;
+          width: 92%;
+          height: auto;
+        }
+
+        div {
+          background-color: #fff;
+          position: relative;
+          width: 55%;
+          padding: 1vw 0;
+          height: fit-content;
+          border-radius: 1rem;
+          box-shadow: 0px 0px 4px 1px #b5b5b566;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 0;
+            margin: 10rem 4rem;
+            margin-left: 8vw;
+
+            li {
+              display: flex;
+              align-items: center;
+              list-style: none;
+              font-size: 2.2rem;
+              font-weight: 500;
+              margin-bottom: 4rem;
+              margin-top: 4rem;
+
+              img {
+                margin-right: 3rem;
+                width: 3.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1480px) {
   .services {
     display: grid;
     grid-template: repeat(auto, 4) / 1fr;

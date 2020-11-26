@@ -178,7 +178,78 @@ $secondaryAccentColor: #fed200;
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1480px) {
+  .headerMobile {
+    display: none;
+  }
+
+  .headerDesktop {
+    display: flex;
+    height: auto;
+    padding: 2rem 8vw;
+    box-shadow: none;
+    justify-content: space-between;
+
+    & > * {
+      // border: 2px solid red;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-left: -1rem;
+
+      a {
+        color: $secondaryColor;
+      }
+
+      h3 {
+        color: $secondaryColor;
+      }
+
+      svg {
+        margin-right: 0.8rem;
+        margin-bottom: 0.5rem;
+        width: 4rem;
+        height: auto;
+      }
+    }
+
+    .navLinks {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 0;
+
+        li {
+          list-style: none;
+          text-align: center;
+          a {
+            color: $secondaryColor;
+            font-size: 2rem;
+            margin-right: 0.5vw;
+            margin-left: 0.5vw;
+          }
+        }
+      }
+    }
+
+    .hireMeButton {
+      font-size: 2.2rem;
+      padding: 0.7rem 2rem;
+      background-color: transparent;
+      border: 2px solid $secondaryAccentColor;
+      color: $secondaryColor;
+    }
+  }
+}
+
+@media only screen and (min-width: 1480px) {
   .headerMobile {
     display: none;
   }
