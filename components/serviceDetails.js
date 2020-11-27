@@ -4,13 +4,13 @@ import styles from "../styles/services.module.scss";
 export default function ServiceDetails(props) {
   let ui = {
     name: "UI / UX Design",
-    image1: "/ui mobile 1.png",
-    image2: "/ui mobile 2.png",
-    description1: "We develop WordPress websites and eCommerce solutions while maintaining a focus on user experience, responsive design, creativity and growth.",
-    description2: "We develop WordPress websites and eCommerce solutions while maintaining a focus on user experience, responsive design, creativity and growth.",
+    image1: "/service ui 2.png",
+    image2: "/service ui 1.png",
+    description1: "I develop designs with the users in mind, creating designs for a better overall experience.",
+    description2: "I like to create designs with more focus on functionality than just the designs.",
     accentColor: "#6ED782",
-    headLine1: "Designing a Design that matters",
-    headLine2: "Designing a Design that matters",
+    headLine1: "Building experiences through Design!",
+    headLine2: "Design that empowers functionality!",
     services: [
       {
         name: "Wireframing",
@@ -32,13 +32,13 @@ export default function ServiceDetails(props) {
   };
   let front = {
     name: "Front-end Development",
-    description1: "We develop WordPress websites and eCommerce solutions while maintaining a focus on user experience, responsive design, creativity and growth.",
-    description2: "We develop WordPress websites and eCommerce solutions while maintaining a focus on user experience, responsive design, creativity and growth.",
-    image1: "/front lap 1.png",
-    image2: "/front lap 1.png",
+    description1: "I develop ideas to life through code with quality and craftsmanship using technologies that make it possible.",
+    description2: "I use various technologies and make them work together to build things that matter.",
+    image1: "/service front 1.png",
+    image2: "/service front 2.png",
     accentColor: "#0DC482",
-    headLine1: "Designing a Design that matters",
-    headLine2: "Designing a Design that matters",
+    headLine1: "Developing Ideas to Life!",
+    headLine2: "Bringing technologies together!",
     services: [
       {
         name: "React Web App",
@@ -60,13 +60,13 @@ export default function ServiceDetails(props) {
   };
   let back = {
     name: "Back-end Development",
-    description1: "We develop WordPress websites and eCommerce solutions while maintaining a focus on user experience, responsive design, creativity and growth.",
-    description2: "We develop WordPress websites and eCommerce solutions while maintaining a focus on user experience, responsive design, creativity and growth.",
-    image1: "/back tab 1.png",
-    image2: "/back tab 1.png",
+    description1: "by Implementing backend features that take a usual app to the next level!",
+    description2: "using database management systems such as MySQL, MongoDB, etc",
+    image1: "/service back 1.png",
+    image2: "/service back 2.png",
     accentColor: "#FC326F",
-    headLine1: "Designing a Design that matters",
-    headLine2: "Designing a Design that matters",
+    headLine1: "Making things work seamlessly!",
+    headLine2: "Integrating and Managing Data",
     services: [
       {
         name: "API Development",
@@ -112,7 +112,7 @@ export default function ServiceDetails(props) {
         <div className={styles.serviceSection1}>
           <div className={styles.imageContainer}>
             <div style={{ backgroundColor: accentColor }} className={styles.backDrop}>
-              <img src={image1} alt={image1}></img>
+              <img className={styles.image1} src={image1} alt={image1}></img>
             </div>
           </div>
           <div className={styles.textSection}>

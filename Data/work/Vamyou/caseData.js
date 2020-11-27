@@ -1,9 +1,8 @@
 /** @format */
 
 export const vamyou = {
-  projectOverview: "Vamyou is a blogging platform daily essential products created with ingredients without any artificial processing or harmful chemicals. It focuses on making people get closer to the nature through its products with an elegant and sustainable way for the eco-system.",
-  projectOverview2: "This project helped me in deepening my knowledge in designing, developing and managing a complete eCommerce website from the ground up and in exploring the brand approach towards providing quality and sustainable products to the end user.",
-  challenge: "Creating a website with a design and functionality that complements with the theme and intensions of the brand and it's products and build a strong impression in the mind of the customer.",
+  projectOverview: "Vamyou is a blogging platform with content relating to Finance and Business focused on visualizing and Motivating people to set their foot on the right track in the industry.",
+  challenge: "Developing a complete custom blogging website with a Content Management System to help the client upload or edit Blogs without any code.",
   challengeSVG: (
     <svg xmlns='http://www.w3.org/2000/svg' width='192' height='136.717' viewBox='0 0 192 136.717'>
       <g id='Group_434' data-name='Group 434' transform='translate(0)'>
@@ -210,13 +209,13 @@ export const vamyou = {
     data: [
       {
         title: "Analysis",
-        para: ["A market research consisting of study about the competition, current trends and the impacts of human consumables on eco-system helped in coming up with a design that truly defines the brand and its goals.", "With consideration to the brand needs and my personal knowledge and skills, I finalized with right technologies that this project should use for its design and development. I will explain briefly about the use of technology and the processes I went through in completing the project in the upcoming parts of this case study."],
+        para: ["Thorough market research of Competitions, trends, and the brand's goal helped in developing a modern and minimal design for the website."],
       },
 
       {
         title: "Project Architecture",
         greyBG: true,
-        para: ["Based on the market analysis and the brand needs, I structured a sitemap that best suits in fulfilling the market needs and results in an overall better user flow experience."],
+        para: ["Based on the research and the brand needs, I structured a sitemap that can give an overview of the whole website."],
         imageLink: [
           {
             src: "/vamyou sitemap@2x.png",
@@ -237,7 +236,7 @@ export const vamyou = {
       },
       {
         title: "Designing Elements",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["Based on the wireframes and test results, I created a style guide which helped me in creating various design elements for the final design."],
         imageLink: [
           {
             src: "/style guide vamyou@2x.png",
@@ -251,7 +250,7 @@ export const vamyou = {
       },
       {
         title: "High-fidelity Prototyping",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["After the final design has been created, I implemented the final high-fidelity prototypes which further clarified the overall user flow of the project. The finalized design got tested by several groups of people which helped in finding the unknown issues in the prototype and improve the overall experience."],
         imageLink: [
           {
             src: "/high-fi-proto_vamyou@2x.png",
@@ -261,7 +260,6 @@ export const vamyou = {
       },
       {
         mainTitle: "Development",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
         svg: (
           <svg xmlns='http://www.w3.org/2000/svg' width='164.833' height='118.078' viewBox='0 0 164.833 118.078'>
             <g id='Group_446' data-name='Group 446' transform='translate(-8.813)'>
@@ -303,7 +301,7 @@ export const vamyou = {
       },
       {
         title: "Choosing the right technology",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["For Vamyou Website, I used the Javascript library React.js with a server-side rendering framework Next.js for an overall better performance and SEO. For the Backend APIs, I used Express.js, a Node.js framework with MongoDB as the Database Management System. For Hosting and Deployment, I used Google App Engine for both the frontend and the backend."],
         horizontalItems: [
           {
             type: "svg",
@@ -388,7 +386,7 @@ export const vamyou = {
       },
       {
         title: "Building the base file structure",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["I created the base file structure for both the frontend and the backend with all the required files connected to run a basic app successfully."],
         imageLink: [
           {
             src: "/file structure essence@2x.png",
@@ -399,7 +397,7 @@ export const vamyou = {
       },
       {
         title: "Converting Design to Clean code",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["I converted all the designs to React code i.e HTML/JSX, CSS, and Javascript while Implementing both responsiveness and functionality to the App."],
         // <iframe style={{ height: "80vw", width: "100%" }} scrolling='no' title='Test' src= frameborder='no' loading='lazy' allowtransparency='true' allowfullscreen='true'>
 
         // </iframe>
@@ -409,11 +407,11 @@ export const vamyou = {
       },
       {
         title: "Setting up the Backend",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["I developed API routes to connect the backend with the frontend and implement various features such as Dynamic Blog and Profile Rendering, Authentication, Search, Comments, and so on."],
         subSection: [
           {
             title: "Choosing the database",
-            para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. ", "After a clear sitemap has been prepared, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+            para: ["I chose MongoDB as the right fit for a Database management system as it is a fast, modern, and easily scalable database."],
             img: [
               {
                 src: "/vamyou mongo page@2x.png",
@@ -421,16 +419,12 @@ export const vamyou = {
               },
             ],
           },
-          {
-            title: "Connecting the backend",
-            para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
-          },
         ],
         greyBG: true,
       },
       {
         title: "Implementing Testing",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["I implemented automated unit testing using testing libraries such as Jest and React Testing Library to make the app run 100% of the time without any errors."],
         imageLink: [
           {
             src: "/test screen@2x.png",
@@ -440,19 +434,19 @@ export const vamyou = {
       },
       {
         title: "Making the code Production ready",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["I refactored all the source code to refine it into a cleaner version with as many fewer errors and repetition of the code as possible to come up with a final production-ready version of the app."],
         greyBG: true,
         list: [
           {
-            heading: "A list of these procedures are:",
-            items: ["Most Obvious bugs are fixed", "code is well-structured and self documenting", "Automated Tests are written", "It's gone through a peer review process before final deployment"],
+            heading: "A list of these procedures include:",
+            items: ["Fixing most obvious bugs", "A well-structured and self documenting code", "Going through a peer review process before final deployment"],
             type: "ul",
           },
         ],
       },
       {
         title: "Hosting",
-        para: ["After a clear sitemap has been prepared, I used it as a reference to create a low-fi Prototype with wireframes using Adobe XD, which later got tested by a small number of people which further helped in improving the overall user experience of the prototype. "],
+        para: ["The final version of the website got tested once again before deploying it to the servers for any errors. The successfully tested app's frontend and the backend got hosted in Google Cloud Platform's App engine."],
         imageLink: [
           {
             src: "/vamyou client gcp page@2x.png",

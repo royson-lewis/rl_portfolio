@@ -12,7 +12,7 @@ export default function Conclusion(props) {
     },
   };
   const vamyou = {
-    conclusion: "Finally, to conclude all things, It was an awesome experience building a complete custom blogging website with the implementation of server-side frameworks such as Next.js for a better SEO and performance.",
+    conclusion: "Finally, to conclude all things, It was an awesome experience building a complete custom blogging website with the implementation of server-side frameworks such as Next.js for a better SEO and performance and a Content Management System for managing all the site contents.",
     nextProject: "/work/essence",
     color: {
       background: "#111D4A",
