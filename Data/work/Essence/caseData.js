@@ -100,10 +100,9 @@ export const essence = {
         imageLink: [
           {
             src: "/essence sitemap@2x.png",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/essence%20sitemap%402x.pdf",
           },
         ],
-
-        pdfLink: "#",
       },
       {
         title: "Wireframing & Low-fidelity Prototyping",
@@ -111,7 +110,7 @@ export const essence = {
         imageLink: [
           {
             src: "/lo-fi-proto_essence@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/lo-fi-proto_essence%402x.pdf",
           },
         ],
       },
@@ -121,11 +120,11 @@ export const essence = {
         imageLink: [
           {
             src: "/styleGuide Essence@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/styleGuide%20Essence%402x.pdf",
           },
           {
             src: "/final Design essence@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/final%20Design%20essence%402x.pdf",
           },
         ],
       },
@@ -135,7 +134,7 @@ export const essence = {
         imageLink: [
           {
             src: "/high-fi-proto_essence@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/high-fi-proto_essence%402x.pdf",
           },
         ],
       },
@@ -269,7 +268,7 @@ export const essence = {
         imageLink: [
           {
             src: "/file structure essence@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/file%20structure%20essence%402x.pdf",
           },
         ],
         greyBG: true,
@@ -292,6 +291,7 @@ export const essence = {
               {
                 src: "/essence mongoPage.png",
                 caption: "MongoDB console for Essence",
+                pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/essence%20mongoPage%402x.pdf",
               },
             ],
           },
@@ -327,12 +327,12 @@ export const essence = {
           {
             src: "/gcp essence server@2x.png",
             caption: "Google Cloud Console for Essence Backend Hosting",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/gcp%20essence%20server%402x.pdf",
           },
           {
             src: "/firebase essence@2x.png",
             caption: "Firebase Console for Essence Frontend Hosting",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/firebase%20essence%402x.pdf",
           },
         ],
       },

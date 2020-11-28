@@ -220,7 +220,7 @@ export const vamyou = {
           {
             src: "/vamyou sitemap@2x.png",
             caption: "Sitemap for Essence Natural",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/vamyou%20sitemap%402x.pdf",
           },
         ],
       },
@@ -230,7 +230,7 @@ export const vamyou = {
         imageLink: [
           {
             src: "/lo-fi prototype vamyou@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/lo-fi%20prototype%20vamyou%402x.pdf",
           },
         ],
       },
@@ -240,11 +240,11 @@ export const vamyou = {
         imageLink: [
           {
             src: "/style guide vamyou@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/style%20guide%20vamyou%402x.pdf",
           },
           {
             src: "/finalizing design@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/finalizing%20design%402x.pdf",
           },
         ],
       },
@@ -254,7 +254,7 @@ export const vamyou = {
         imageLink: [
           {
             src: "/high-fi-proto_vamyou@2x.png",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/high-fi-proto_vamyou%402x.pdf",
           },
         ],
       },
@@ -390,7 +390,6 @@ export const vamyou = {
         imageLink: [
           {
             src: "/file structure essence@2x.png",
-            pdfLink: "#",
           },
         ],
         greyBG: true,
@@ -416,6 +415,7 @@ export const vamyou = {
               {
                 src: "/vamyou mongo page@2x.png",
                 caption: "MongoDB console for Vamyou",
+                pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/vamyou%20mongo%20page%402x.pdf",
               },
             ],
           },
@@ -451,12 +451,12 @@ export const vamyou = {
           {
             src: "/vamyou client gcp page@2x.png",
             caption: "Google Cloud Console for Vamyou Frontend Hosting",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/vamyou%20client%20gcp%20page%402x.pdf",
           },
           {
             src: "/vamyou server gcp page@2x.png",
             caption: "Google Cloud Console for Vamyou Backend Hosting",
-            pdfLink: "#",
+            pdfLink: "https://storage.googleapis.com/rl_portfolio_public/pdfs/vamyou%20server%20gcp%20page%402x.pdf",
           },
         ],
       },
