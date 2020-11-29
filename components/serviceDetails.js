@@ -116,7 +116,7 @@ export default function ServiceDetails(props) {
             </div>
           </div>
           <div className={styles.textSection}>
-            <h4>{headLine1}</h4>
+            <h3>{headLine1}</h3>
             <p>{description1}</p>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function ServiceDetails(props) {
             </div>
           </div>
           <div className={styles.textSection}>
-            <h4>{headLine2}</h4>
+            <h3>{headLine2}</h3>
             <p>{description2}</p>
           </div>
         </div>

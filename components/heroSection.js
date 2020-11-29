@@ -11,10 +11,10 @@ export default function HeroSection(props) {
       <section onMouseOver={props.hoverOver} onMouseLeave={props.hoverOut} className={styles.heroInfo}>
         <span className={styles.heroIntro}>Hi, I am</span>
         <h1>Royson Lewis</h1>
-        <h3>Full-stack Web Developer</h3>
-        <h3>
+        <h2>Full-stack Web Developer</h2>
+        <h2>
           <span>&</span> UI / UX Designer
-        </h3>
+        </h2>
         <div>
           <a href='/#work_section'>
             <button className={styles.primaryButton}>My Projects</button>
@@ -24,7 +24,7 @@ export default function HeroSection(props) {
           </a>
         </div>
         <div className={styles.socialLink}>
-          <a rel='noreferrer' href='https://github.com/lewisroysonj' target='_blank'>
+          <a aria-label='github' rel='noreferrer' href='https://github.com/lewisroysonj' target='_blank'>
             <svg xmlns='http://www.w3.org/2000/svg' width='28.777' height='28.058' viewBox='0 0 28.777 28.058'>
               <path
                 id='github'
@@ -35,17 +35,17 @@ export default function HeroSection(props) {
               />
             </svg>
           </a>
-          <a rel='noreferrer' href='https://www.linkedin.com/in/lewisroysonj' target='_blank'>
+          <a rel='noreferrer' aria-label='linkedin' href='https://www.linkedin.com/in/lewisroysonj' target='_blank'>
             <svg xmlns='http://www.w3.org/2000/svg' width='26.261' height='26.261' viewBox='0 0 26.261 26.261'>
               <path id='linkedin' data-name='linkedin' d='M24.386,2.25H1.87A1.884,1.884,0,0,0,0,4.143V26.618a1.884,1.884,0,0,0,1.87,1.893H24.386a1.889,1.889,0,0,0,1.876-1.893V4.143A1.889,1.889,0,0,0,24.386,2.25ZM7.937,24.76H4.045V12.227h3.9V24.76ZM5.991,10.515A2.257,2.257,0,1,1,8.248,8.258a2.258,2.258,0,0,1-2.257,2.257ZM22.527,24.76H18.635v-6.1c0-1.454-.029-3.324-2.022-3.324-2.028,0-2.339,1.583-2.339,3.218v6.2H10.381V12.227h3.734v1.712h.053a4.1,4.1,0,0,1,3.687-2.022c3.939,0,4.672,2.6,4.672,5.973Z' transform='translate(0 -2.25)' fill='#3f3d56' />
             </svg>
           </a>
-          <a rel='noreferrer' href='https://twitter.com/lewisroysonj' target='_blank'>
+          <a rel='noreferrer' aria-label='twitter' href='https://twitter.com/lewisroysonj' target='_blank'>
             <svg xmlns='http://www.w3.org/2000/svg' width='28.786' height='23.379' viewBox='0 0 28.786 23.379'>
               <path id='twitter' data-name='twitter' d='M25.827,9.207c.018.256.018.511.018.767,0,7.8-5.936,16.786-16.786,16.786A16.672,16.672,0,0,1,0,24.112a12.2,12.2,0,0,0,1.425.073,11.815,11.815,0,0,0,7.324-2.521,5.91,5.91,0,0,1-5.516-4.091,7.44,7.44,0,0,0,1.114.091,6.24,6.24,0,0,0,1.553-.2,5.9,5.9,0,0,1-4.731-5.79V11.6a5.942,5.942,0,0,0,2.667.749A5.908,5.908,0,0,1,2.009,4.458a16.769,16.769,0,0,0,12.165,6.174,6.66,6.66,0,0,1-.146-1.352,5.905,5.905,0,0,1,10.21-4.037,11.615,11.615,0,0,0,3.744-1.425A5.884,5.884,0,0,1,25.388,7.07a11.827,11.827,0,0,0,3.4-.913A12.682,12.682,0,0,1,25.827,9.207Z' transform='translate(0 -3.381)' fill='#3f3d56' />
             </svg>
           </a>
-          <a rel='noreferrer' href='https://www.behance.net/roysonlewis' target='_blank'>
+          <a rel='noreferrer' aria-label='behance' href='https://www.behance.net/roysonlewis' target='_blank'>
             <svg xmlns='http://www.w3.org/2000/svg' width='38' height='38' viewBox='0 0 38 38'>
               <path
                 id='behance-square'
@@ -56,14 +56,14 @@ export default function HeroSection(props) {
               />
             </svg>
           </a>
-          <a rel='noreferrer' href='https://dribbble.com/lewisroysonj' target='_blank'>
+          <a rel='noreferrer' aria-label='dribble' href='https://dribbble.com/lewisroysonj' target='_blank'>
             <svg xmlns='http://www.w3.org/2000/svg' width='40.903' height='40.903' viewBox='0 0 40.903 40.903'>
               <path
                 id='Path_232'
                 data-name='Path 232'
                 d='M20.452,0A20.452,20.452,0,1,0,40.9,20.452,20.458,20.458,0,0,0,20.452,0ZM33.96,9.427A17.389,17.389,0,0,1,37.909,20.3a41.248,41.248,0,0,0-12.156-.555c-.133-.288-.244-.6-.377-.909-.355-.843-.754-1.708-1.153-2.529A23.379,23.379,0,0,0,33.96,9.427ZM20.452,3.017A17.43,17.43,0,0,1,32.031,7.409c-.311.444-2.95,3.971-9.161,6.3A94.308,94.308,0,0,0,16.348,3.483,17.765,17.765,0,0,1,20.452,3.017ZM13.021,4.658A110.233,110.233,0,0,1,19.5,14.751,65.512,65.512,0,0,1,3.349,16.88,17.55,17.55,0,0,1,13.021,4.658ZM2.972,20.474v-.532a63.828,63.828,0,0,0,17.945-2.484c.51.976.976,1.974,1.42,2.972-.222.067-.466.133-.688.2-9.006,2.906-13.8,10.847-14.2,11.512A17.428,17.428,0,0,1,2.972,20.474ZM20.452,37.931A17.347,17.347,0,0,1,9.738,34.249c.311-.643,3.86-7.475,13.708-10.913.044-.022.067-.022.111-.044a72.212,72.212,0,0,1,3.727,13.243A17.181,17.181,0,0,1,20.452,37.931Zm9.738-2.995A75.157,75.157,0,0,0,26.8,22.492a25.51,25.51,0,0,1,10.869.754A17.319,17.319,0,0,1,30.19,34.937Z'
                 fill='#3f3d56'
-                fill-rule='evenodd'
+                fillRule='evenodd'
               />
             </svg>
           </a>

@@ -96,13 +96,13 @@ export default function ProjectCase(props) {
                       })
                     : null}
                   {section.caption ? <figcaption>{section.caption}</figcaption> : null}
-                  {section.iFrame ? <iframe style={{ width: "100%", height: "35rem", border: "none" }} src={section.iFrame.src} loading='lazy'></iframe> : null}
+                  {section.iFrame ? <iframe title={section.iFrame.src} style={{ width: "100%", height: "35rem", border: "none" }} src={section.iFrame.src} loading='lazy'></iframe> : null}
 
                   {section.list
                     ? section.list.map((list) => {
                         return (
                           <React.Fragment key={section.list.indexOf(list)}>
-                            <h6>{list.heading}</h6>
+                            <span className={Styles.listHead}>{list.heading}</span>
                             {list.type === "ol" ? (
                               <ol>
                                 {list.items.map((item) => {

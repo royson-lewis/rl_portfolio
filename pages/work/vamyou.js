@@ -57,16 +57,14 @@ export default function Vamyou() {
         <meta property='og:image' content='/Vamyou results mockup ipad iphone mac@2x.png' />
       </Head>
       <main className={styles.work} id='top'>
-        {topScroll.showButton ? (
-          <button className='goToTop' onClick={goToTop}>
-            <svg xmlns='http://www.w3.org/2000/svg' width='17.164' height='15.921' viewBox='0 0 17.164 15.921'>
-              <g id='Icon_feather-arrow-up' data-name='Icon feather-arrow-up' transform='translate(2.121 1.5)'>
-                <path id='Path_1275' data-name='Path 1275' d='M18,20.422V7.5' transform='translate(-11.539 -7.5)' fill='none' stroke='#3f3d56' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' />
-                <path id='Path_1276' data-name='Path 1276' d='M7.5,13.961,13.961,7.5l6.461,6.461' transform='translate(-7.5 -7.5)' fill='none' stroke='#3f3d56' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' />
-              </g>
-            </svg>
-          </button>
-        ) : null}
+        <button className='goToTop' aria-label='go to top' onClick={goToTop}>
+          <svg xmlns='http://www.w3.org/2000/svg' width='17.164' height='15.921' viewBox='0 0 17.164 15.921'>
+            <g id='Icon_feather-arrow-up' data-name='Icon feather-arrow-up' transform='translate(2.121 1.5)'>
+              <path id='Path_1275' data-name='Path 1275' d='M18,20.422V7.5' transform='translate(-11.539 -7.5)' fill='none' stroke='#3f3d56' strokeLinecap='round' strokeLinejoin='round' strokeWidth='3' />
+              <path id='Path_1276' data-name='Path 1276' d='M7.5,13.961,13.961,7.5l6.461,6.461' transform='translate(-7.5 -7.5)' fill='none' stroke='#3f3d56' strokeLinecap='round' strokeLinejoin='round' strokeWidth='3' />
+            </g>
+          </svg>
+        </button>
         <CaseHero project='vamyou' />
         <ProjectInfo project='vamyou' />
         <ProjectCase project='vamyou' />

@@ -121,7 +121,7 @@ export default function ContactSection() {
       </div>
       <h2>Contact</h2>
       <section className={styles.contactCard}>
-        <h4>Interested in Hiring me for your next project?</h4>
+        <h3>Interested in Hiring me for your next project?</h3>
         <div>
           <a href='mailto:hello@roysonlewis.com' target='_blank' rel='noreferrer'>
             <button className={styles.whiteButton}>
