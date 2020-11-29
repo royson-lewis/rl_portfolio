@@ -5,27 +5,23 @@ import Head from "next/head";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { useEffect, useState } from "react";
+import Router from "next/router";
+import FullscreenLoader from "../components/fullscreenLoader";
 
 function MyApp({ Component, pageProps }) {
-  const [cursor, setCursor] = useState({
-    left: "",
-    top: "",
-    padding: "",
-    id: "",
-    cursorOver: false,
-    scale: 1,
+  const [loading, setLoading] = useState(false);
+
+  Router.events.on("routeChangeStart", (url) => {
+    setLoading(true);
   });
 
-  function hoverOver() {
-    setCursor({
-      cursorOver: true,
-    });
-  }
-  function hoverOut() {
-    setCursor({
-      cursorOver: false,
-    });
-  }
+  Router.events.on("routeChangeComplete", () => {
+    setLoading(false);
+  });
+
+  Router.events.on("routeChangeError", () => {
+    setLoading(false);
+  });
 
   function redirectTohttps() {
     if (location.protocol !== "https:") {
@@ -48,30 +44,11 @@ function MyApp({ Component, pageProps }) {
         <link href='https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;800&display=swap' rel='stylesheet'></link>
         <meta httpEquiv='Content-Security-Policy' content='upgrade-insecure-requests'></meta>
       </Head>
-      {/* onMouseMove={(e) => { 
-      //   let x = e.clientX;
-      //   let y = e.clientY;
 
-      //   if (cursor.cursorOver) {
-      //     setCursor({
-      //       ...cursor,
-      //       left: x - 10,
-      //       top: y - 10,
-      //       // scale: 5,
-      //       // transition: "transform 0.03s linear",
-      //     });
-      //   } else {
-      //     setCursor({
-      //       ...cursor,
-      //       left: x - 10,
-      //       top: y - 10,
-      //       scale: 1,
-      //     });
-      //   }
-      // }}> */}
       <section>
         <Header />
-        <Component {...pageProps} hoverOver={hoverOver} hoverOut={hoverOut} />
+        {loading ? <FullscreenLoader /> : null}
+        <Component {...pageProps} />
         <Footer />
       </section>
     </>

@@ -102,11 +102,9 @@ export default function WorkSection() {
                       <a rel='noreferrer' target='_blank' href={work.siteLink}>
                         <button>View Live Project</button>
                       </a>
-                      <Link href={work.caseLink}>
-                        <a>
-                          <button style={{ border: `4px solid ${work.accentColor}` }}>View Case</button>
-                        </a>
-                      </Link>
+                      <a href={work.caseLink}>
+                        <button style={{ border: `4px solid ${work.accentColor}` }}>View Case</button>
+                      </a>
                     </div>
                   </section>
                 </div>

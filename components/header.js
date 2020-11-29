@@ -17,13 +17,9 @@ export default function Header() {
     });
   }
 
-  // function scroll () {
-  //   window.onscroll
-  // }
-
   useEffect(() => {
-    let currentScrollPosition = 0;
     if (window) {
+      let currentScrollPosition = 0;
       window.onscroll = () => {
         let newScrollPosition = window.pageYOffset;
         if (newScrollPosition > currentScrollPosition) {

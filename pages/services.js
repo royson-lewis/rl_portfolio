@@ -7,8 +7,7 @@ import styles from "../styles/services.module.scss";
 
 export default function services() {
   const [service, setService] = useState({
-    current: "",
-    section: "ui",
+    section: "",
     loading: false,
   });
   function setSection(e) {
@@ -31,9 +30,9 @@ export default function services() {
   useEffect(() => {
     setService({
       ...service,
-      current: getParameterByName("service"),
+      section: getParameterByName("service"),
     });
-  }, [service.section]);
+  }, []);
 
   return (
     <>
@@ -51,27 +50,27 @@ export default function services() {
         <section className={styles.tabs}>
           <Link href='services?service=ui'>
             <a>
-              <div onClick={setSection} id='ui' className={!service.current || service.current === "ui" ? styles.current : null}>
+              <div onClick={setSection} id='ui' className={!service.section || service.section === "ui" ? styles.current : null}>
                 UI / UX Design
               </div>
             </a>
           </Link>
           <Link href='/services?service=front'>
             <a>
-              <div onClick={setSection} id='front' className={service.current === "front" ? styles.current : null}>
+              <div onClick={setSection} id='front' className={service.section === "front" ? styles.current : null}>
                 Frontend Development
               </div>
             </a>
           </Link>
           <Link href='/services?service=back'>
             <a>
-              <div onClick={setSection} id='back' className={service.current === "back" ? styles.current : null}>
+              <div onClick={setSection} id='back' className={service.section === "back" ? styles.current : null}>
                 Backend Development
               </div>
             </a>
           </Link>
         </section>
-        <ServiceDetails currentSection={service.current} />
+        <ServiceDetails currentSection={service.section} />
       </main>
     </>
   );

@@ -26,22 +26,22 @@ export default function Essence() {
     scrollingDown: false,
     showButton: false,
   });
-  useEffect(() => {
-    if (window) {
-      window.onscroll = () => {
-        if (window.pageYOffset > 1600) {
-          setScroll({
-            showButton: true,
-          });
-        } else {
-          setScroll({
-            showButton: false,
-          });
-        }
-      };
-    }
-    return () => {};
-  }, []);
+  // useEffect(() => {
+  //   if (window) {
+  //     window.onscroll = () => {
+  //       if (window.pageYOffset > 1600) {
+  //         setScroll({
+  //           showButton: true,
+  //         });
+  //       } else {
+  //         setScroll({
+  //           showButton: false,
+  //         });
+  //       }
+  //     };
+  //   }
+  //   return () => {};
+  // }, []);
   return (
     <>
       <Head>
@@ -54,7 +54,22 @@ export default function Essence() {
         <meta property='og:site_name' content='Royson Lewis' />
         <meta property='og:image' content='/essence results mockup@2x.png' />
       </Head>
+
       <main className={styles.work} id='top'>
+        {typeof window !== "undefined"
+          ? () => {
+              if (window.pageYOffset > 1600) {
+                console.log(window.pageYOffset);
+                setScroll({
+                  showButton: true,
+                });
+              } else {
+                setScroll({
+                  showButton: false,
+                });
+              }
+            }
+          : null}
         {topScroll.showButton ? (
           <button className='goToTop' onClick={goToTop}>
             <svg xmlns='http://www.w3.org/2000/svg' width='17.164' height='15.921' viewBox='0 0 17.164 15.921'>
@@ -68,6 +83,7 @@ export default function Essence() {
         <CaseHero project='essence' />
         <ProjectInfo project='essence' />
         <ProjectCase project='essence' />
+
         <LazyLoad height={400}>
           <Results project='essence' height={400} />
         </LazyLoad>

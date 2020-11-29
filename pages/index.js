@@ -9,7 +9,7 @@ import WorkSection from "../components/workSection";
 import WorkSectionDesktop from "../components/workSectionDesktop";
 import styles from "../styles/Home.module.scss";
 
-export default function Home(props) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -23,9 +23,9 @@ export default function Home(props) {
         <meta property='og:image' content='/royson cover@2x.png' />
       </Head>
       <main className={styles.homePage}>
-        <HeroSection hoverOver={props.hoverOver} hoverOut={props.hoverOut} />
+        <HeroSection />
 
-        <ServiceSection hoverOver={props.hoverOver} hoverOut={props.hoverOut} />
+        <ServiceSection />
 
         <section id='work_section'>
           <section className={styles.mobileWork}>
