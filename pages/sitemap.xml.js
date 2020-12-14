@@ -1,19 +1,14 @@
 /** @format */
-
-import axios from "axios";
 import React from "react";
 
-const sitemapXML = (data) => {
-  let latestPost = 0;
-  let projectsXML = "";
-
+const sitemapXML = () => {
   //   data.map((post) => {
   //     const postDate = Date.parse(post.modified);
   //     if (!latestPost || postDate > latestPost) {
   //       latestPost = postDate;
   //     }
 
-  //     const projectURL = `https://www.roysonlewis.com/`;
+  //     const projectURL = `http://www.roysonlewis.com/`;
   //     projectsXML += `
   //       <url>
   //          <loc>${projectURL}</loc>
@@ -29,95 +24,94 @@ const sitemapXML = (data) => {
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
      
       <url>
-        <loc>https://www.roysonlewis.com/</loc>
+        <loc>http://www.roysonlewis.com/</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.90</priority>
       </url>
       <url>
-        <loc>https://roysonlewis.com/</loc>
+        <loc>http://roysonlewis.com/</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.90</priority>
       </url>
       <url>
-        <loc>https://www.roysonlewis.com/services</loc>
+        <loc>http://www.roysonlewis.com/services</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://roysonlewis.com/services</loc>
+        <loc>http://roysonlewis.com/services</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://www.roysonlewis.com/about</loc>
+        <loc>http://www.roysonlewis.com/about</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://roysonlewis.com/about</loc>
+        <loc>http://roysonlewis.com/about</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://www.roysonlewis.com/contact</loc>
+        <loc>http://www.roysonlewis.com/contact</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://roysonlewis.com/contact</loc>
+        <loc>http://roysonlewis.com/contact</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://www.roysonlewis.com/services?service=ui</loc>
+        <loc>http://www.roysonlewis.com/services?service=ui</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://roysonlewis.com/services?service=ui</loc>
+        <loc>http://roysonlewis.com/services?service=ui</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://www.roysonlewis.com/services?service=front</loc>
+        <loc>http://www.roysonlewis.com/services?service=front</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://roysonlewis.com/services?service=front</loc>
+        <loc>http://roysonlewis.com/services?service=front</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://www.roysonlewis.com/services?service=back</loc>
+        <loc>http://www.roysonlewis.com/services?service=back</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-      <loc>https://roysonlewis.com/services?service=back</loc>
+      <loc>http://roysonlewis.com/services?service=back</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://www.roysonlewis.com/work/essence</loc>
+        <loc>http://www.roysonlewis.com/work/essence</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://roysonlewis.com/work/essence</loc>
+        <loc>http://roysonlewis.com/work/essence</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://www.roysonlewis.com/work/vamyou</loc>
+        <loc>http://www.roysonlewis.com/work/vamyou</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>
       <url>
-        <loc>https://roysonlewis.com/work/vamyou</loc>
+        <loc>http://roysonlewis.com/work/vamyou</loc>
         <lastmod>2020-11-25T19:03:37+00:00</lastmod>
         <priority>0.80</priority>
       </url>

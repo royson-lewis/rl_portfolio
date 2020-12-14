@@ -42,7 +42,7 @@ export default function services() {
         <meta property='og:type' content='website' />
         <meta property='og:title' content='Services - Royson Lewis' />
         <meta property='og:description' content='Checkout a list of services I provide in Fullstack Web Development and UI/UX Design' />
-        <meta property='og:url' content='https://www.roysonlewis.com/services' />
+        <meta property='og:url' content='http://www.roysonlewis.com/services' />
         <meta property='og:site_name' content='Royson Lewis' />
       </Head>
       <main className={styles.services}>

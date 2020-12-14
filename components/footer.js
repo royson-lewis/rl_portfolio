@@ -66,6 +66,7 @@ export default function Footer() {
       <section className={styles.footerBottom}>
         <p>&copy; 2020 Royson Lewis</p>
         <a href='/sitemap.xml'>Sitemap</a>
+        <p>v{process.env.APP_VERSION}</p>
       </section>
     </>
   );

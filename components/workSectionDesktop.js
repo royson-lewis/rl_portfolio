@@ -2,6 +2,7 @@
 import styles from "../styles/Home.module.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import React from "react";
 
 export default function WorkSectionDesktop() {
   const [slider, setSlider] = useState({

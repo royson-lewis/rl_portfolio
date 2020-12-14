@@ -2,6 +2,7 @@
 import styles from "../styles/Home.module.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import React from "react";
 
 export default function WorkSection() {
   const [slider, setSlider] = useState({
@@ -102,9 +103,11 @@ export default function WorkSection() {
                       <a rel='noreferrer' target='_blank' href={work.siteLink}>
                         <button>View Live Project</button>
                       </a>
-                      <a href={work.caseLink}>
-                        <button style={{ border: `4px solid ${work.accentColor}` }}>View Case</button>
-                      </a>
+                      <Link href={work.caseLink}>
+                        <a>
+                          <button style={{ border: `4px solid ${work.accentColor}` }}>View Case</button>
+                        </a>
+                      </Link>
                     </div>
                   </section>
                 </div>

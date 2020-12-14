@@ -23,18 +23,18 @@ function MyApp({ Component, pageProps }) {
     setLoading(false);
   });
 
-  function redirectTohttps() {
-    if (location.protocol !== "https:") {
-      location.replace(`https:${location.href.substring(location.protocol.length)}`);
-    }
-  }
+  // function redirectTohttps() {
+  //   if (location.protocol !== "https:") {
+  //     location.replace(`https:${location.href.substring(location.protocol.length)}`);
+  //   }
+  // }
 
-  useEffect(() => {
-    if (process.env.NODE_ENV !== "development") {
-      redirectTohttps();
-    }
-    return () => {};
-  }, []);
+  // useEffect(() => {
+  //   if (process.env.NODE_ENV !== "development") {
+  //     redirectTohttps();
+  //   }
+  //   return () => {};
+  // }, []);
 
   return (
     <>

@@ -51,13 +51,16 @@ $secondaryAccentColor: #fed200;
   width: 100%;
   color: $primaryBGColor;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
   a {
     color: $primaryBGColor;
-    margin-left: 5rem;
     font-weight: 400;
+  }
+
+  * {
+    opacity: 0.7;
   }
 }
 
@@ -124,11 +127,11 @@ $secondaryAccentColor: #fed200;
     background-color: $secondaryColor;
     margin-top: 0rem;
     color: $primaryBGColor;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 0 10vw;
 
     a {
       color: $primaryBGColor;
-      margin-left: 26vw;
     }
   }
 }
@@ -190,11 +193,11 @@ $secondaryAccentColor: #fed200;
     background-color: $secondaryColor;
     margin-top: 0rem;
     color: $primaryBGColor;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 0 10vw;
 
     a {
       color: $primaryBGColor;
-      margin-left: 20rem;
     }
   }
 }

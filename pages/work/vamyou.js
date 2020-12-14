@@ -52,7 +52,7 @@ export default function Vamyou() {
         <meta property='og:type' content='article' />
         <meta property='og:title' content='Project - Vamyou' />
         <meta property='og:description' content='Vamyou, A Finance and Business related Blogging Website' />
-        <meta property='og:url' content='https://www.roysonlewis.com/work/vamyou' />
+        <meta property='og:url' content='http://www.roysonlewis.com/work/vamyou' />
         <meta property='og:site_name' content='Royson Lewis' />
         <meta property='og:image' content='/Vamyou results mockup ipad iphone mac@2x.png' />
       </Head>
