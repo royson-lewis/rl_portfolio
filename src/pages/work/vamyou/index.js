@@ -1,19 +1,19 @@
 /** @format */
 
-import styles from "../../styles/work.module.scss";
+import styles from "../../../styles/work.module.scss";
 import dynamic from "next/dynamic";
 import LazyLoad from "react-lazyload";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
-const CaseHero = dynamic(() => import("../../components/Work/caseHero"));
-const ProjectInfo = dynamic(() => import("../../components/Work/projectInfo"));
-const ProjectCase = dynamic(() => import("../../components/Work/projectCase"));
-const Results = dynamic(() => import("../../components/Work/results"));
-const Conclusion = dynamic(() => import("../../components/Work/conclusion"));
-const ContactSection = dynamic(() => import("../../components/contactSection"));
+const CaseHero = dynamic(() => import("../../../components/Work/caseHero"));
+const ProjectInfo = dynamic(() => import("../../../components/Work/projectInfo"));
+const ProjectCase = dynamic(() => import("../../../components/Work/projectCase"));
+const Results = dynamic(() => import("../../../components/Work/results"));
+const Conclusion = dynamic(() => import("../../../components/Work/conclusion"));
+const ContactSection = dynamic(() => import("../../../components/contactSection"));
 
-export default function Vamyou() {
+export default function Index() {
   function goToTop() {
     scroll({
       top: 0,

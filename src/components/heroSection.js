@@ -1,6 +1,6 @@
 /** @format */
 import HeroArt from "./heroArt";
-import styles from "../styles/Home.module.scss";
+import styles from "../pages/index.module.scss";
 
 export default function HeroSection(props) {
   return (

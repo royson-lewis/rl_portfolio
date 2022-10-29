@@ -1,9 +1,9 @@
 /** @format */
 import Styles from "../../styles/work.module.scss";
-import { essence } from "../../Data/work/Essence/caseData";
-import { vamyou } from "../../Data/work/Vamyou/caseData";
+import { essence } from "../../data/work/essence/caseData";
+import { vamyou } from "../../data/work/vamyou/caseData";
 import LazyLoad, { lazyload } from "react-lazyload";
-import LazyPlaceholder from "../../components/lazyPlaceholder";
+import LazyPlaceholder from "../lazyPlaceholder";
 import React from "react";
 
 export default function ProjectCase(props) {

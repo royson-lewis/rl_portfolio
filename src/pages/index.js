@@ -7,7 +7,7 @@ import ServiceSection from "../components/serviceSection";
 import SkillSection from "../components/skillSection";
 import WorkSection from "../components/workSection";
 import WorkSectionDesktop from "../components/workSectionDesktop";
-import styles from "../styles/Home.module.scss";
+import styles from "./index.module.scss";
 
 export default function Home() {
   return (

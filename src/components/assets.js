@@ -1,7 +1,7 @@
 /** @format */
 
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import styles from "../pages/index.module.scss";
 
 export default function Assets() {
   return (

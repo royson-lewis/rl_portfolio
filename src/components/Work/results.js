@@ -2,8 +2,8 @@
 
 import styles from "../../styles/work.module.scss";
 
-import { essence } from "../../Data/work/Essence/resultData";
-import { vamyou } from "../../Data/work/Vamyou/resultData";
+import { essence } from "../../data/work/essence/resultData";
+import { vamyou } from "../../data/work/vamyou/resultData";
 
 export default function Results(props) {
   let currentProject;
