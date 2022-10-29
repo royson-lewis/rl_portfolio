@@ -1,5 +1,5 @@
 /** @format */
-import styles from "../styles/Home.module.scss";
+import styles from "../pages/index.module.scss";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import React from "react";

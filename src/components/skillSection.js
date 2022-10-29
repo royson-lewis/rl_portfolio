@@ -1,6 +1,6 @@
 /** @format */
 
-import styles from "../styles/Home.module.scss";
+import styles from "../pages/index.module.scss";
 
 export default function SkillSection() {
   let uiSkillArray = ["Adobe XD", "Figma", "Adobe Photoshop", "Adobe Illustrator"];

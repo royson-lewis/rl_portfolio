@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import api from "../lib/api";
-import styles from "../styles/Home.module.scss";
+import styles from "../pages/index.module.scss";
 import ResponsePopupModal from "./responsePopupModal";
 import AlertTile from "./alertModal";
 

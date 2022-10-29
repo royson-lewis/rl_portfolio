@@ -1,9 +1,9 @@
 /** @format */
 
 import Head from "next/head";
-import ContactSection from "../components/contactSection";
+import ContactSection from "../../components/contactSection";
 
-export default function Contact() {
+export default function Index() {
   return (
     <>
       <Head>

@@ -2,10 +2,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import ServiceDetails from "../components/serviceDetails";
-import styles from "../styles/services.module.scss";
+import ServiceDetails from "../../components/serviceDetails";
+import styles from "../../styles/services.module.scss";
 
-export default function services() {
+export default function index() {
   const [service, setService] = useState({
     section: "",
     loading: false,
@@ -48,7 +48,7 @@ export default function services() {
       <main className={styles.services}>
         <h2>Services</h2>
         <section className={styles.tabs}>
-          <Link href='services?service=ui'>
+          <Link href='?service=ui'>
             <a>
               <div onClick={setSection} id='ui' className={!service.section || service.section === "ui" ? styles.current : null}>
                 UI / UX Design
