@@ -1,0 +1,1285 @@
+$primaryColor: #fff;
+$secondaryColor: #34314d;
+$primaryBGColor: #fcfcfc;
+$secondaryBGColor: #f1f1f1;
+$primaryAccentColor: #6c63ff;
+$secondaryAccentColor: #fed200;
+$essenceAccent: #58d06f;
+$vamyouAccent: #fc326f;
+
+.work {
+  width: 100vw;
+
+  .hero {
+    width: 100%;
+    height: 230vw;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    .heroArtDesktop {
+      display: none;
+
+      .essenceHeroArt {
+        width: 125%;
+        height: auto;
+        position: relative;
+        left: -10vw;
+      }
+    }
+
+    .heroArtMobile {
+      .essenceHeroArt {
+        width: 125%;
+        height: auto;
+        position: relative;
+        left: -10vw;
+        margin-top: 5rem;
+      }
+    }
+
+    .workTitle {
+      height: auto;
+      position: relative;
+      left: 8vw;
+      top: -82vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: fit-content;
+      max-width: 82vw;
+
+      .essenceLogo {
+        width: 45vw;
+        height: auto;
+        position: relative;
+      }
+
+      .logo {
+        width: auto;
+        height: 20vw;
+      }
+
+      .vamyouLogo {
+        width: 35vw;
+        height: auto;
+        top: -3rem;
+        margin-bottom: -2rem;
+        position: relative;
+      }
+
+      h4 {
+        margin: 1.5rem 0;
+        font-size: 1.8rem;
+        width: 100%;
+      }
+
+      button {
+        font-size: 1.5rem;
+        background-color: $secondaryColor;
+      }
+    }
+  }
+
+  .projectInfo {
+    background-color: $secondaryColor;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    top: -60vw;
+    margin-bottom: -60vw;
+    z-index: 0;
+    color: $primaryBGColor;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+    padding-top: 8rem;
+
+    .projectDetails {
+      table {
+        width: 100%;
+        font-size: 1.5rem;
+        border-spacing: 0;
+
+        tr {
+          td {
+            padding-right: 2rem;
+            text-align: start;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            vertical-align: baseline;
+          }
+        }
+      }
+    }
+
+    .techUsed {
+      margin-top: 5rem;
+
+      h3 {
+        font-weight: 700;
+      }
+
+      section {
+        div {
+          margin-top: 4rem;
+
+          h4 {
+            font-size: 1.7rem;
+            font-weight: 600;
+          }
+
+          ul {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0;
+
+            li {
+              display: flex;
+              margin-right: 3rem;
+              flex-direction: column;
+              align-items: center;
+
+              p {
+                width: fit-content;
+                max-width: 10ch;
+                text-align: center;
+                margin: 0;
+                font-size: 1.3rem;
+              }
+
+              svg {
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .caseStudy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    word-spacing: 0.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.05rem;
+    padding: 0 1rem;
+
+    h3 {
+      font-weight: 700;
+      font-size: 2.3rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    h4 {
+      text-align: center;
+      width: 100%;
+      font-size: 2.1rem;
+      margin-top: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    h5 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      text-align: center;
+      margin: 1.5rem;
+    }
+
+    .listHead {
+      font-size: 1.8rem;
+      font-weight: 500;
+      width: 100%;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    ul {
+      padding-left: 2rem;
+
+      li {
+        margin: 1rem;
+      }
+    }
+
+    .challengeSVG {
+      display: flex;
+      justify-content: center;
+
+      svg {
+        width: fit-content;
+      }
+    }
+
+    section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .greyBackground {
+      background-color: $secondaryBGColor;
+
+      svg {
+        width: 100%;
+        height: auto;
+      }
+
+      .productionLists {
+        flex-direction: column;
+        text-align: left;
+      }
+    }
+
+    .designElements {
+      img {
+        width: 100%;
+      }
+    }
+
+    figcaption {
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    a {
+      padding-bottom: 2rem;
+      display: flex;
+      width: fit-content;
+      margin: 1rem auto 0;
+      align-items: center;
+      color: black;
+      font-size: 1.6rem;
+      font-weight: 400;
+      text-align: center;
+
+      .pdfIcon {
+        margin-left: 0.4rem;
+        width: 1.6rem;
+        height: auto;
+      }
+    }
+  }
+
+  .Results {
+    margin-top: 3rem;
+    display: grid;
+    width: 100%;
+    place-items: center;
+    grid-template: repeat(auto 4) / 1fr;
+    grid-template-areas:
+      'head'
+      'logo'
+      'mockup'
+      'pages';
+
+    h3 {
+      color: white;
+      font-weight: 650;
+      grid-area: head;
+    }
+
+    div {
+      grid-area: logo;
+      background-color: $primaryBGColor;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 4rem;
+      border-radius: 0.8rem;
+
+      svg {
+        width: 15rem;
+        height: auto;
+      }
+
+      img {
+        width: 15rem;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1.4rem;
+        background-color: $secondaryColor;
+      }
+    }
+
+    .mockup {
+      width: 90%;
+      margin-bottom: 10rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    section {
+      grid-area: pages;
+      width: 100%;
+
+      .imageContainer {
+        background-color: transparent;
+        position: relative;
+        top: -10rem;
+        margin-bottom: -10rem;
+        display: grid;
+        grid-template: repeat(auto, 4) / 100%;
+        justify-items: center;
+        grid-template-areas:
+          'homepage'
+          'productpage'
+          'cart'
+          'checkout';
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .conclusion {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    word-spacing: 0.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.05rem;
+    margin-bottom: 4rem;
+
+    h3 {
+      margin: 2rem;
+      font-size: 2.3rem;
+      font-family: Spartan, sans-serif;
+      font-weight: 700;
+      margin-top: 3rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+      margin-bottom: 2rem;
+    }
+
+    hr {
+      width: 100%;
+      background-color: $secondaryColor;
+      height: 0.1rem;
+      border: none;
+      opacity: 0.5;
+      margin-bottom: 2rem;
+    }
+
+    div {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      .return {
+        background-color: $secondaryColor;
+      }
+
+      .next {
+        background-color: $vamyouAccent;
+      }
+
+      button {
+        font-size: 1.6rem;
+        padding: 0.8rem;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin: 0.6rem;
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1480px) {
+  .work {
+    width: 100vw;
+
+    .hero {
+      width: 100%;
+      height: 95vw;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .heroArtMobile {
+        display: none;
+      }
+
+      .heroArtDesktop {
+        display: block;
+
+        .essenceHeroArt {
+          width: 121%;
+          height: auto;
+          position: relative;
+          left: -13vw;
+          top: 5vw;
+        }
+      }
+
+      .workTitle {
+        height: auto;
+        position: relative;
+        left: 10vw;
+        top: -32vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        max-width: 82vw;
+
+        // .essenceLogo {
+        //   width: 18vw;
+        //   height: auto;
+        //   position: relative;
+        // }
+
+        // .vamyouLogo {
+        //   width: 8vw;
+        //   height: auto;
+        //   top: -3rem;
+        //   margin-bottom: -2rem;
+        //   position: relative;
+        // }
+
+        .logo {
+          width: 17vw;
+          margin-bottom: 1rem;
+          height: auto;
+        }
+
+        h4 {
+          margin: 0.6vw 0;
+          font-size: 1.2vw;
+          width: 25ch;
+        }
+
+        button {
+          font-size: 1.1vw;
+          margin-top: 1vw;
+          background-color: $secondaryColor;
+        }
+      }
+    }
+
+    .projectInfo {
+      background-color: $secondaryColor;
+      height: fit-content;
+      width: 100%;
+      position: relative;
+      top: -53vw;
+      margin-bottom: -53vw;
+      z-index: 0;
+      color: $primaryBGColor;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-evenly;
+      padding: 3rem;
+      padding-top: 15vw;
+
+      .projectDetails {
+        table {
+          width: 100%;
+          font-size: 1.6rem;
+          border-spacing: 0;
+          padding: 0 2.5rem;
+
+          tr {
+            td {
+              padding-right: 2rem;
+              text-align: start;
+              border-bottom: 1px solid #eee;
+              padding-bottom: 3rem;
+              padding-top: 2rem;
+              vertical-align: baseline;
+            }
+          }
+        }
+
+        h3 {
+          font-size: 3rem;
+          padding: 0 2.5rem;
+        }
+      }
+
+      .techUsed {
+        margin-top: 0;
+
+        h3 {
+          font-weight: 600;
+          font-size: 3rem;
+        }
+
+        section {
+          display: grid;
+          width: 100%;
+          align-items: center;
+          gap: 3rem;
+          grid-template-areas:
+            'design development'
+            'hosting payment';
+
+          div {
+            margin-top: 0;
+
+            h4 {
+              font-size: 1.7rem;
+              font-weight: 600;
+            }
+
+            ul {
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+              padding: 0;
+
+              li {
+                display: flex;
+                margin-right: 3rem;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                  width: fit-content;
+                  max-width: 10ch;
+                  text-align: center;
+                  margin: 0;
+                  font-size: 1.3rem;
+                }
+
+                svg {
+                  margin-bottom: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .caseStudy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      text-align: left;
+      word-spacing: 0.3rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.4;
+      letter-spacing: 0.05rem;
+
+      h3 {
+        font-weight: 700;
+        font-size: 2.3rem;
+        width: 80%;
+        text-align: center;
+      }
+
+      h4 {
+        text-align: center;
+        width: 80%;
+        font-size: 2.1rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      h5 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+        margin: 1.5rem;
+      }
+
+      p {
+        margin-top: 1rem;
+      }
+
+      .caseStart {
+        width: 68%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      ul {
+        padding-left: 2rem;
+
+        li {
+          margin: 1rem;
+        }
+      }
+
+      section {
+        width: 68%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        padding-bottom: 3rem;
+      }
+
+      .greyBackground {
+        background-color: $secondaryBGColor;
+        width: 100%;
+
+        & > * {
+          width: 68%;
+        }
+
+        a {
+          width: fit-content;
+        }
+
+        svg {
+          width: 48%;
+          height: auto;
+        }
+
+        .productionLists {
+          flex-direction: column;
+          text-align: left;
+        }
+      }
+
+      .designElements {
+        img {
+          width: 100%;
+        }
+      }
+
+      a {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        color: black;
+        font-size: 1.6rem;
+        font-weight: 400;
+
+        .pdfIcon {
+          margin-left: 0.4rem;
+          width: 1.6rem;
+          height: auto;
+        }
+      }
+    }
+
+    .Results {
+      margin-top: 3rem;
+      display: grid;
+      width: 100%;
+      place-items: center;
+      grid-template: repeat(auto 4) / 1fr;
+      grid-template-areas:
+        'head'
+        'mockup'
+        'logo'
+        'pages';
+
+      h3 {
+        color: white;
+        font-weight: 650;
+        grid-area: head;
+      }
+
+      div {
+        grid-area: logo;
+        background-color: $primaryBGColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -6vw;
+        position: relative;
+        z-index: 1;
+        padding: 3vw 3.5vw;
+        border-radius: 0.8rem;
+
+        svg {
+          width: 15vw;
+          height: auto;
+          margin-bottom: 1rem;
+        }
+
+        img {
+          width: 15vw;
+        }
+
+        button {
+          padding: 1rem;
+          margin-top: 1.5rem;
+          font-size: 1.2vw;
+          background-color: $secondaryColor;
+        }
+      }
+
+      .mockup {
+        grid-area: mockup;
+        width: 90%;
+        margin-bottom: 5rem;
+        margin-top: -10rem;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      section {
+        grid-area: pages;
+        width: 100%;
+
+        .imageContainer {
+          background-color: transparent;
+          position: relative;
+          top: -10vw;
+          width: 80vw;
+          margin: 0 auto;
+          column-gap: 2rem;
+          margin-bottom: -10vw;
+          grid-template: repeat(auto, 4) / repeat(25%, 3);
+          grid-template-areas:
+            'homepage nill cart'
+            'homepage productPage cart'
+            'homepage productPage checkout'
+            'homepage null checkout';
+
+          .page1 {
+            grid-area: homepage;
+          }
+
+          .page2 {
+            grid-area: productPage;
+          }
+
+          .page3 {
+            grid-area: cart;
+          }
+
+          .page4 {
+            grid-area: checkout;
+          }
+        }
+      }
+    }
+
+    .conclusion {
+      width: 68%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      word-spacing: 0.3rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.4;
+      letter-spacing: 0.05rem;
+      margin-bottom: 4rem;
+
+      h3 {
+        margin: 2rem;
+        font-size: 2.3rem;
+        font-family: Spartan, sans-serif;
+        font-weight: 700;
+        margin-top: 3rem;
+      }
+
+      p {
+        margin: 0.5rem 0;
+        margin-bottom: 2rem;
+      }
+
+      hr {
+        width: 100%;
+        background-color: $secondaryColor;
+        height: 0.1rem;
+        border: none;
+        opacity: 0.5;
+        margin-bottom: 2rem;
+      }
+
+      div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .return {
+          background-color: $secondaryColor;
+        }
+
+        .next {
+          background-color: $vamyouAccent;
+        }
+
+        button {
+          font-size: 1.6rem;
+          padding: 0.8rem;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin: 0.6rem;
+            margin-bottom: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1480px) {
+  .work {
+    .hero {
+      width: 100%;
+      height: 95vw;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      .heroArtMobile {
+        display: none;
+      }
+
+      .heroArtDesktop {
+        display: block;
+
+        .essenceHeroArt {
+          width: 121%;
+          height: auto;
+          position: relative;
+          left: -13vw;
+          top: 0;
+        }
+      }
+
+      .workTitle {
+        height: auto;
+        position: relative;
+        left: 10vw;
+        top: -35vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        max-width: 82vw;
+
+        // .essenceLogo {
+        //   width: 18vw;
+        //   height: auto;
+        //   position: relative;
+        // }
+
+        // .vamyouLogo {
+        //   width: 8vw;
+        //   height: auto;
+        //   top: -3rem;
+        //   margin-bottom: -2rem;
+        //   position: relative;
+        // }
+
+        .logo {
+          width: auto;
+          height: 7vw;
+        }
+
+        h4 {
+          margin: 0.6vw 0;
+          font-size: 1.2vw;
+          width: 25ch;
+        }
+
+        button {
+          font-size: 1.1vw;
+          margin-top: 1vw;
+          background-color: $secondaryColor;
+        }
+      }
+    }
+
+    .projectInfo {
+      background-color: $secondaryColor;
+      height: fit-content;
+      width: 100vw;
+      position: relative;
+      top: -55vw;
+      margin-bottom: -55vw;
+      z-index: 0;
+      color: $primaryBGColor;
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-evenly;
+      padding: 3rem;
+      padding-top: 24rem;
+
+      .projectDetails {
+        table {
+          width: 100%;
+          font-size: 1.6rem;
+          border-spacing: 0;
+
+          tr {
+            td {
+              padding-right: 2rem;
+              text-align: start;
+              border-bottom: 1px solid #eee;
+              padding-bottom: 3rem;
+              padding-top: 2rem;
+              vertical-align: baseline;
+            }
+          }
+        }
+      }
+
+      .techUsed {
+        margin-top: 0;
+
+        h3 {
+          font-weight: 600;
+        }
+
+        section {
+          display: grid;
+          width: 100%;
+          align-items: center;
+          gap: 3rem;
+          grid-template-areas:
+            'design development'
+            'hosting payment';
+
+          div {
+            margin-top: 0;
+
+            h4 {
+              font-size: 1.7rem;
+              font-weight: 600;
+            }
+
+            ul {
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+              padding: 0;
+
+              li {
+                display: flex;
+                margin-right: 3rem;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                  width: fit-content;
+                  max-width: 10ch;
+                  text-align: center;
+                  margin: 0;
+                  font-size: 1.3rem;
+                }
+
+                svg {
+                  margin-bottom: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .caseStudy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      margin: 0 auto;
+      text-align: left;
+      word-spacing: 0.3rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.4;
+      letter-spacing: 0.05rem;
+
+      h3 {
+        font-weight: 700;
+        font-size: 2.3rem;
+        width: 80%;
+        text-align: center;
+      }
+
+      h4 {
+        text-align: center;
+        width: 80%;
+        font-size: 2.1rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      h5 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-align: center;
+        margin: 1.5rem;
+      }
+
+      p {
+        margin-top: 1rem;
+      }
+
+      .caseStart {
+        width: 48%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      ul {
+        padding-left: 2rem;
+
+        li {
+          margin: 1rem;
+        }
+      }
+
+      section {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        padding-bottom: 3rem;
+      }
+
+      .greyBackground {
+        background-color: $secondaryBGColor;
+        width: 100%;
+
+        & > * {
+          width: 48%;
+        }
+
+        a {
+          width: fit-content;
+        }
+
+        svg {
+          width: 48%;
+          height: auto;
+        }
+
+        .productionLists {
+          flex-direction: column;
+          text-align: left;
+        }
+      }
+
+      .designElements {
+        img {
+          width: 100vw;
+        }
+      }
+
+      a {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        color: black;
+        font-size: 1.6rem;
+        font-weight: 400;
+
+        .pdfIcon {
+          margin-left: 0.4rem;
+          width: 1.6rem;
+          height: auto;
+        }
+      }
+    }
+
+    .Results {
+      margin-top: 3rem;
+      display: grid;
+      width: 100vw;
+      place-items: center;
+      grid-template: repeat(auto 4) / 1fr;
+      grid-template-areas:
+        'head'
+        'mockup'
+        'logo'
+        'pages';
+
+      h3 {
+        color: white;
+        font-weight: 650;
+        grid-area: head;
+      }
+
+      div {
+        grid-area: logo;
+        background-color: $primaryBGColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -7vw;
+        position: relative;
+        z-index: 1;
+        padding: 2vw;
+        border-radius: 0.8rem;
+
+        svg {
+          width: 15vw;
+          height: auto;
+          margin-bottom: 1rem;
+        }
+
+        img {
+          width: 15vw;
+        }
+
+        button {
+          padding: 1rem;
+          margin-top: 1.5rem;
+          font-size: 1.2vw;
+          background-color: $secondaryColor;
+        }
+      }
+
+      .mockup {
+        grid-area: mockup;
+        width: 90%;
+        margin-bottom: 5rem;
+        margin-top: -10rem;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      section {
+        grid-area: pages;
+        width: 100%;
+
+        .imageContainer {
+          background-color: transparent;
+          position: relative;
+          top: -10vw;
+          width: 80vw;
+          margin: 0 auto;
+          column-gap: 2rem;
+          margin-bottom: -10vw;
+          grid-template: repeat(auto, 4) / repeat(25%, 3);
+          grid-template-areas:
+            'homepage nill cart'
+            'homepage productPage cart'
+            'homepage productPage checkout'
+            'homepage null checkout';
+
+          .page1 {
+            grid-area: homepage;
+          }
+
+          .page2 {
+            grid-area: productPage;
+          }
+
+          .page3 {
+            grid-area: cart;
+          }
+
+          .page4 {
+            grid-area: checkout;
+          }
+        }
+      }
+    }
+
+    .conclusion {
+      width: 48%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      word-spacing: 0.3rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.4;
+      letter-spacing: 0.05rem;
+      margin-bottom: 4rem;
+
+      h3 {
+        margin: 2rem;
+        font-size: 2.3rem;
+        font-family: Spartan, sans-serif;
+        font-weight: 700;
+        margin-top: 3rem;
+      }
+
+      p {
+        margin: 0.5rem 0;
+        margin-bottom: 2rem;
+      }
+
+      hr {
+        width: 100%;
+        background-color: $secondaryColor;
+        height: 0.1rem;
+        border: none;
+        opacity: 0.5;
+        margin-bottom: 2rem;
+      }
+
+      div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .return {
+          background-color: $secondaryColor;
+        }
+
+        .next {
+          background-color: $vamyouAccent;
+        }
+
+        button {
+          font-size: 1.6rem;
+          padding: 0.8rem;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin: 0.6rem;
+            margin-bottom: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
