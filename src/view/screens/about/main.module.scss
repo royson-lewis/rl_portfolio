@@ -1,0 +1,240 @@
+$primaryColor: #ffffff;
+$secondaryColor: #34314d;
+$primaryBGColor: #fcfcfc;
+$secondaryBGColor: #f1f1f1;
+$primaryAccentColor: #6c63ff;
+$secondaryAccentColor: #fed200;
+
+.about {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding-top: 10rem;
+  grid-template-areas:
+    "head"
+    "dp"
+    "intro"
+    "description"
+    "button"
+    "hello";
+  width: 100vw;
+
+  h2 {
+    grid-area: head;
+  }
+
+  h3 {
+    grid-area: intro;
+  }
+
+  .dpContainer {
+    grid-area: dp;
+
+    width: 20rem;
+    height: 20rem;
+    margin-right: 3vw;
+    justify-self: center;
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 120%;
+      margin-left: 4rem;
+    }
+  }
+
+  p {
+    grid-area: description;
+    width: 85%;
+    font-size: 1.8rem;
+    word-spacing: 0.6rem;
+    letter-spacing: 0.02rem;
+    line-height: 2.5rem;
+  }
+
+  a {
+    grid-area: button;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.8rem;
+    margin-left: -1.5rem;
+  }
+
+  div {
+    grid-area: hello;
+    background-color: $secondaryColor;
+    width: 100vw;
+    margin-top: 4rem;
+    color: $primaryBGColor;
+
+    svg {
+      margin-right: 1rem;
+    }
+  }
+
+  button {
+    color: $primaryBGColor;
+    background-color: $secondaryColor;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .about {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding-top: 8rem;
+    grid-template-areas:
+      "head"
+      "dp"
+      "intro"
+      "description"
+      "button"
+      "hello";
+    width: 100vw;
+
+    h2 {
+      grid-area: head;
+      font-size: 3.5rem;
+    }
+
+    h3 {
+      grid-area: intro;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .dp {
+      grid-area: dp;
+    }
+
+    p {
+      grid-area: description;
+      width: 60%;
+      font-size: 1.8rem;
+      word-spacing: 0.6rem;
+      letter-spacing: 0.02rem;
+      line-height: 2.5rem;
+    }
+
+    a {
+      grid-area: button;
+      padding: 0.8rem 1.2rem;
+      font-size: 2rem;
+      margin-left: -1.5rem;
+
+      button {
+        font-size: 1.8rem;
+      }
+    }
+
+    div {
+      grid-area: hello;
+      background-color: $secondaryColor;
+      width: 100vw;
+      margin-top: 4rem;
+      color: $primaryBGColor;
+
+      svg {
+        margin-right: 1rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .about {
+    display: grid;
+    align-items: center;
+    width: 100vw;
+    padding-top: 12rem;
+    text-align: start;
+    grid-template-columns: 48% 52%;
+    grid-template-rows: repeat(fit-content, 5);
+    justify-items: start;
+    align-items: baseline;
+    justify-content: center;
+    grid-template-areas:
+      "nill head"
+      "dp intro"
+      "dp description"
+      "dp description"
+      "null button"
+      "hello hello";
+
+    h2 {
+      grid-area: head;
+      font-size: 5rem;
+    }
+
+    h3 {
+      grid-area: intro;
+      margin: 0;
+      height: fit-content;
+      font-weight: 600;
+      font-size: 3.2rem;
+      align-self: center;
+    }
+
+    .dpContainer {
+      grid-area: dp;
+
+      width: 25rem;
+      height: 25rem;
+      margin-right: 3vw;
+      justify-self: end;
+      display: flex;
+      border-radius: 50%;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 120%;
+        margin-left: 4rem;
+      }
+    }
+
+    p {
+      grid-area: description;
+      width: 65%;
+      font-size: 1.8rem;
+      word-spacing: 0.6rem;
+      letter-spacing: 0.02rem;
+      line-height: 2.5rem;
+      margin: 0;
+      align-self: center;
+      margin-bottom: 4rem;
+    }
+
+    button {
+      grid-area: button;
+      padding: 0.8rem 1.2rem;
+      font-size: 1.8rem;
+    }
+
+    div {
+      grid-area: hello;
+      text-align: center;
+      background-color: $secondaryColor;
+      width: 100vw;
+      margin-top: 6rem;
+      color: $primaryBGColor;
+
+      h3 {
+        margin: 3rem 0rem;
+      }
+
+      svg {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

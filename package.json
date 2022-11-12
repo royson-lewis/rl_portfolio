@@ -1,7 +1,7 @@
 {
   "name": "rj_portfolio_frontend",
   "version": "1.0.2",
-  "description": "The Frontend of a portfolio showing skills, works and exerience of Royson Lewis",
+  "description": "A portfolio website showcasing the skills, work and experience of Royson Lewis",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -14,7 +14,11 @@
     "start": "next start -p 8080",
     "export": "next export",
     "gcp-build": "npm run build",
-    "deploy": "gcloud config set project royson-lewis && gcloud app deploy app.yml --version=1-0-2"
+    "deploy": "gcloud config set project royson-lewis && gcloud app deploy app.yml --version=1-0-2",
+    "eslint": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
+    "stylelint": "stylelint --fix 'src/**/*.{scss,less}'",
+    "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,scss}' --write",
+    "typescript": "tsc --noEmit"
   },
   "dependencies": {
     "@loadable/component": "^5.14.1",
@@ -26,8 +30,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-lazyload": "^3.1.0",
-    "react-transition-group": "^4.4.1",
-    "sass": "^1.27.0"
+    "react-transition-group": "^4.4.1"
   },
   "keywords": [
     "portfolio",
@@ -37,6 +40,26 @@
   "license": "ISC",
   "devDependencies": {
     "@loadable/babel-plugin": "^5.13.2",
-    "@loadable/webpack-plugin": "^5.14.0"
+    "@loadable/webpack-plugin": "^5.14.0",
+    "@next/eslint-plugin-next": "^13.0.3",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-lazyload": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "^13.0.3",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.56.1",
+    "stylelint": "^14.14.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "typescript": "^4.8.4"
   }
 }
