@@ -1,4 +1,4 @@
-$primaryColor: #ffffff;
+$primaryColor: #fff;
 $secondaryColor: #34314d;
 $primaryBGColor: #fcfcfc;
 $secondaryBGColor: #f1f1f1;
@@ -152,7 +152,6 @@ $secondaryAccentColor: #fed200;
 @media only screen and (min-width: 1100px) {
   .about {
     display: grid;
-    align-items: center;
     width: 100vw;
     padding-top: 12rem;
     text-align: start;
@@ -229,7 +228,7 @@ $secondaryAccentColor: #fed200;
       color: $primaryBGColor;
 
       h3 {
-        margin: 3rem 0rem;
+        margin: 3rem 0;
       }
 
       svg {

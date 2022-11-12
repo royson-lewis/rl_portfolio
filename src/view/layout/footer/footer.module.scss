@@ -1,17 +1,15 @@
-/** @format */
-
-$primaryColor: #ffffff;
-$secondaryColor: #34314d;
-$primaryBGColor: #fcfcfc;
-$secondaryBGColor: #f1f1f1;
-$primaryAccentColor: #6c63ff;
-$secondaryAccentColor: #fed200;
+$primary-color: #fff;
+$secondary-color: #34314d;
+$primary-BG-color: #fcfcfc;
+$secondary-BG-color: #f1f1f1;
+$primary-accent-color: #6c63ff;
+$secondary-accent-color: #fed200;
 
 .footer {
   display: grid;
   grid-template: repeat(auto, 4) / 100vw;
-  background-color: $secondaryBGColor;
-  border-top: 2px solid $secondaryAccentColor;
+  background-color: $secondary-BG-color;
+  border-top: 2px solid $secondary-accent-color;
   padding: 4rem 0;
   justify-items: center;
   grid-template-areas:
@@ -30,7 +28,7 @@ $secondaryAccentColor: #fed200;
 
     li {
       margin-bottom: 3rem;
-      color: $secondaryColor;
+      color: $secondary-color;
 
       a {
         color: inherit;
@@ -47,15 +45,15 @@ $secondaryAccentColor: #fed200;
 }
 
 .footerBottom {
-  background-color: $secondaryColor;
+  background-color: $secondary-color;
   width: 100%;
-  color: $primaryBGColor;
+  color: $primary-BG-color;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   a {
-    color: $primaryBGColor;
+    color: $primary-BG-color;
     font-weight: 400;
   }
 
@@ -71,7 +69,7 @@ $secondaryAccentColor: #fed200;
     grid-template: auto auto auto/40vw 40vw;
     justify-items: center;
     justify-content: center;
-    padding: 4rem 0rem;
+    padding: 4rem 0;
     margin: 0 auto;
     grid-template-areas:
       'quicklinkHead connectHead'
@@ -85,6 +83,7 @@ $secondaryAccentColor: #fed200;
     .quickHead {
       grid-area: quicklinkHead;
     }
+
     ul {
       grid-area: quicklinks;
       width: fit-content;
@@ -96,7 +95,7 @@ $secondaryAccentColor: #fed200;
 
       li {
         margin-bottom: 3rem;
-        color: $secondaryColor;
+        color: $secondary-color;
       }
     }
 
@@ -124,14 +123,14 @@ $secondaryAccentColor: #fed200;
     display: flex;
     height: 100%;
     grid-area: footerBottom;
-    background-color: $secondaryColor;
-    margin-top: 0rem;
-    color: $primaryBGColor;
+    background-color: $secondary-color;
+    margin-top: 0;
+    color: $primary-BG-color;
     justify-content: space-around;
     padding: 0 10vw;
 
     a {
-      color: $primaryBGColor;
+      color: $primary-BG-color;
     }
   }
 }
@@ -142,7 +141,7 @@ $secondaryAccentColor: #fed200;
     align-items: center;
     grid-template: auto auto auto/50vw 50vw;
     justify-items: center;
-    padding: 4rem 0rem;
+    padding: 4rem 0;
     grid-template-areas:
       'quicklinkHead connectHead'
       'quicklinks socialIcons'
@@ -151,6 +150,7 @@ $secondaryAccentColor: #fed200;
     .quickHead {
       grid-area: quicklinkHead;
     }
+
     ul {
       grid-area: quicklinks;
       width: fit-content;
@@ -162,7 +162,7 @@ $secondaryAccentColor: #fed200;
 
       li {
         margin-bottom: 3rem;
-        color: $secondaryColor;
+        color: $secondary-color;
       }
     }
 
@@ -190,14 +190,14 @@ $secondaryAccentColor: #fed200;
     display: flex;
     height: 100%;
     grid-area: footerBottom;
-    background-color: $secondaryColor;
-    margin-top: 0rem;
-    color: $primaryBGColor;
+    background-color: $secondary-color;
+    margin-top: 0;
+    color: $primary-BG-color;
     justify-content: space-around;
     padding: 0 10vw;
 
     a {
-      color: $primaryBGColor;
+      color: $primary-BG-color;
     }
   }
 }

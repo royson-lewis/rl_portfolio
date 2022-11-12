@@ -1,4 +1,4 @@
-$primaryColor: #ffffff;
+$primaryColor: #fff;
 $secondaryColor: #34314d;
 $primaryBGColor: #fcfcfc;
 $secondaryBGColor: #f1f1f1;
@@ -9,6 +9,7 @@ $vamyouAccent: #fc326f;
 
 .work {
   width: 100vw;
+
   .hero {
     width: 100%;
     height: 230vw;
@@ -100,11 +101,12 @@ $vamyouAccent: #fc326f;
         width: 100%;
         font-size: 1.5rem;
         border-spacing: 0;
+
         tr {
           td {
             padding-right: 2rem;
             text-align: start;
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid #eee;
             padding-bottom: 1rem;
             padding-top: 1rem;
             vertical-align: baseline;
@@ -128,11 +130,13 @@ $vamyouAccent: #fc326f;
             font-size: 1.7rem;
             font-weight: 600;
           }
+
           ul {
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
             padding: 0;
+
             li {
               display: flex;
               margin-right: 3rem;
@@ -204,6 +208,7 @@ $vamyouAccent: #fc326f;
 
     ul {
       padding-left: 2rem;
+
       li {
         margin: 1rem;
       }
@@ -212,6 +217,7 @@ $vamyouAccent: #fc326f;
     .challengeSVG {
       display: flex;
       justify-content: center;
+
       svg {
         width: fit-content;
       }
@@ -253,11 +259,10 @@ $vamyouAccent: #fc326f;
     }
 
     a {
-      margin-top: 1rem;
       padding-bottom: 2rem;
       display: flex;
       width: fit-content;
-      margin: 0 auto;
+      margin: 1rem auto 0;
       align-items: center;
       color: black;
       font-size: 1.6rem;
@@ -405,7 +410,7 @@ $vamyouAccent: #fc326f;
         align-items: center;
 
         svg {
-          margin: 0.6rem 0.6rem;
+          margin: 0.6rem;
           margin-bottom: 0.8rem;
         }
       }
@@ -430,6 +435,7 @@ $vamyouAccent: #fc326f;
 
       .heroArtDesktop {
         display: block;
+
         .essenceHeroArt {
           width: 121%;
           height: auto;
@@ -506,11 +512,12 @@ $vamyouAccent: #fc326f;
           font-size: 1.6rem;
           border-spacing: 0;
           padding: 0 2.5rem;
+
           tr {
             td {
               padding-right: 2rem;
               text-align: start;
-              border-bottom: 1px solid #eeeeee;
+              border-bottom: 1px solid #eee;
               padding-bottom: 3rem;
               padding-top: 2rem;
               vertical-align: baseline;
@@ -525,7 +532,7 @@ $vamyouAccent: #fc326f;
       }
 
       .techUsed {
-        margin-top: 0rem;
+        margin-top: 0;
 
         h3 {
           font-weight: 600;
@@ -540,18 +547,21 @@ $vamyouAccent: #fc326f;
           grid-template-areas:
             'design development'
             'hosting payment';
+
           div {
-            margin-top: 0rem;
+            margin-top: 0;
 
             h4 {
               font-size: 1.7rem;
               font-weight: 600;
             }
+
             ul {
               display: flex;
               align-items: flex-start;
               justify-content: flex-start;
               padding: 0;
+
               li {
                 display: flex;
                 margin-right: 3rem;
@@ -623,6 +633,7 @@ $vamyouAccent: #fc326f;
 
       ul {
         padding-left: 2rem;
+
         li {
           margin: 1rem;
         }
@@ -649,6 +660,7 @@ $vamyouAccent: #fc326f;
         a {
           width: fit-content;
         }
+
         svg {
           width: 48%;
           height: auto;
@@ -724,7 +736,7 @@ $vamyouAccent: #fc326f;
         }
 
         button {
-          padding: 1rem 1rem;
+          padding: 1rem;
           margin-top: 1.5rem;
           font-size: 1.2vw;
           background-color: $secondaryColor;
@@ -764,12 +776,15 @@ $vamyouAccent: #fc326f;
           .page1 {
             grid-area: homepage;
           }
+
           .page2 {
             grid-area: productPage;
           }
+
           .page3 {
             grid-area: cart;
           }
+
           .page4 {
             grid-area: checkout;
           }
@@ -832,7 +847,7 @@ $vamyouAccent: #fc326f;
           align-items: center;
 
           svg {
-            margin: 0.6rem 0.6rem;
+            margin: 0.6rem;
             margin-bottom: 0.8rem;
           }
         }
@@ -856,12 +871,13 @@ $vamyouAccent: #fc326f;
 
       .heroArtDesktop {
         display: block;
+
         .essenceHeroArt {
           width: 121%;
           height: auto;
           position: relative;
           left: -13vw;
-          top: 0vw;
+          top: 0;
         }
       }
 
@@ -930,11 +946,12 @@ $vamyouAccent: #fc326f;
           width: 100%;
           font-size: 1.6rem;
           border-spacing: 0;
+
           tr {
             td {
               padding-right: 2rem;
               text-align: start;
-              border-bottom: 1px solid #eeeeee;
+              border-bottom: 1px solid #eee;
               padding-bottom: 3rem;
               padding-top: 2rem;
               vertical-align: baseline;
@@ -944,7 +961,7 @@ $vamyouAccent: #fc326f;
       }
 
       .techUsed {
-        margin-top: 0rem;
+        margin-top: 0;
 
         h3 {
           font-weight: 600;
@@ -958,18 +975,21 @@ $vamyouAccent: #fc326f;
           grid-template-areas:
             'design development'
             'hosting payment';
+
           div {
-            margin-top: 0rem;
+            margin-top: 0;
 
             h4 {
               font-size: 1.7rem;
               font-weight: 600;
             }
+
             ul {
               display: flex;
               align-items: flex-start;
               justify-content: flex-start;
               padding: 0;
+
               li {
                 display: flex;
                 margin-right: 3rem;
@@ -1041,6 +1061,7 @@ $vamyouAccent: #fc326f;
 
       ul {
         padding-left: 2rem;
+
         li {
           margin: 1rem;
         }
@@ -1067,6 +1088,7 @@ $vamyouAccent: #fc326f;
         a {
           width: fit-content;
         }
+
         svg {
           width: 48%;
           height: auto;
@@ -1128,7 +1150,7 @@ $vamyouAccent: #fc326f;
         margin-bottom: -7vw;
         position: relative;
         z-index: 1;
-        padding: 2vw 2vw;
+        padding: 2vw;
         border-radius: 0.8rem;
 
         svg {
@@ -1142,7 +1164,7 @@ $vamyouAccent: #fc326f;
         }
 
         button {
-          padding: 1rem 1rem;
+          padding: 1rem;
           margin-top: 1.5rem;
           font-size: 1.2vw;
           background-color: $secondaryColor;
@@ -1182,12 +1204,15 @@ $vamyouAccent: #fc326f;
           .page1 {
             grid-area: homepage;
           }
+
           .page2 {
             grid-area: productPage;
           }
+
           .page3 {
             grid-area: cart;
           }
+
           .page4 {
             grid-area: checkout;
           }
@@ -1250,7 +1275,7 @@ $vamyouAccent: #fc326f;
           align-items: center;
 
           svg {
-            margin: 0.6rem 0.6rem;
+            margin: 0.6rem;
             margin-bottom: 0.8rem;
           }
         }

@@ -1,4 +1,4 @@
-$primaryColor: #ffffff;
+$primaryColor: #fff;
 $secondaryColor: #34314d;
 $primaryBGColor: #fcfcfc;
 $secondaryBGColor: #f7f7f7;
@@ -18,7 +18,7 @@ $secondaryAccentColor: #fed200;
   background-color: $primaryBGColor;
   margin: 0 auto;
   opacity: 1;
-  box-shadow: 0px 0px 3px #00000085;
+  box-shadow: 0 0 3px #00000085;
   transition: opacity 0.1s ease-in;
 
   .burgerButton {
@@ -29,6 +29,7 @@ $secondaryAccentColor: #fed200;
     display: flex;
     align-items: center;
     justify-content: center;
+
     svg {
       height: auto;
       width: 60%;
@@ -50,16 +51,13 @@ $secondaryAccentColor: #fed200;
         font-size: 2rem;
         color: $secondaryColor;
         margin: 0;
-      }
-
-      h3 {
         width: fit-content;
       }
 
       svg {
         width: 4rem;
         height: auto;
-        margin-right: 0rem;
+        margin-right: 0;
       }
     }
   }
@@ -70,6 +68,7 @@ $secondaryAccentColor: #fed200;
     justify-content: center;
     flex: 0.3;
     height: 100%;
+
     // margin-left: 4rem;
 
     button {
@@ -102,7 +101,7 @@ $secondaryAccentColor: #fed200;
     height: fit-content;
     padding: 2.5rem 1rem;
     width: 100%;
-    box-shadow: 0px 0px 3px #00000085;
+    box-shadow: 0 0 3px #00000085;
 
     a {
       flex: 0.9;
@@ -123,6 +122,7 @@ $secondaryAccentColor: #fed200;
 
     .closeNav {
       flex: 0.045;
+
       // margin-right: 1.8rem;
       margin-left: 0.8rem;
       height: auto;
@@ -140,21 +140,25 @@ $secondaryAccentColor: #fed200;
       font-size: 2.3rem;
     }
   }
+
   ul {
     margin-top: 3rem;
     margin-left: -1rem;
+
     li {
       display: flex;
       align-items: center;
       margin-bottom: 5rem;
       font-weight: 500;
       cursor: pointer;
+
       a {
         color: $secondaryColor;
       }
+
       svg {
         margin-right: 2.5rem;
-        margin-bottom: 0rem;
+        margin-bottom: 0;
       }
     }
   }
@@ -163,9 +167,9 @@ $secondaryAccentColor: #fed200;
 .menuBackground {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(32, 32, 32, 0.356);
+  background-color: rgb(32 32 32 / 35.6%);
   position: fixed;
-  top: 0vw;
+  top: 0;
   z-index: 90;
   pointer-events: none;
   cursor: pointer;
@@ -191,7 +195,7 @@ $secondaryAccentColor: #fed200;
     background-color: $primaryBGColor;
     margin: 0 auto;
     opacity: 1;
-    box-shadow: 0px 0px 3px #00000085;
+    box-shadow: 0 0 3px #00000085;
     transition: opacity 0.1s ease-in;
 
     .burgerButton {
@@ -202,6 +206,7 @@ $secondaryAccentColor: #fed200;
       display: flex;
       align-items: center;
       justify-content: center;
+
       svg {
         height: auto;
         width: 60%;
@@ -223,16 +228,13 @@ $secondaryAccentColor: #fed200;
           font-size: 2rem;
           color: $secondaryColor;
           margin: 0;
-        }
-
-        h3 {
           width: fit-content;
         }
 
         svg {
           width: 4rem;
           height: auto;
-          margin-right: 0rem;
+          margin-right: 0;
         }
       }
     }
@@ -243,6 +245,7 @@ $secondaryAccentColor: #fed200;
       justify-content: center;
       flex: 0.3;
       height: 100%;
+
       // margin-left: 4rem;
 
       button {
@@ -275,7 +278,7 @@ $secondaryAccentColor: #fed200;
       height: fit-content;
       padding: 2.5rem 1rem;
       width: 100%;
-      box-shadow: 0px 0px 3px #00000085;
+      box-shadow: 0 0 3px #00000085;
 
       a {
         flex: 0.9;
@@ -296,6 +299,7 @@ $secondaryAccentColor: #fed200;
 
       .closeNav {
         flex: 0.045;
+
         // margin-right: 1.8rem;
         margin-left: 0.8rem;
         height: auto;
@@ -313,21 +317,25 @@ $secondaryAccentColor: #fed200;
         font-size: 2.3rem;
       }
     }
+
     ul {
       margin-top: 3rem;
       margin-left: -1rem;
+
       li {
         display: flex;
         align-items: center;
         margin-bottom: 5rem;
         font-weight: 500;
         cursor: pointer;
+
         a {
           color: $secondaryColor;
         }
+
         svg {
           margin-right: 2.5rem;
-          margin-bottom: 0rem;
+          margin-bottom: 0;
         }
       }
     }
@@ -336,9 +344,9 @@ $secondaryAccentColor: #fed200;
   .menuBackground {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(32, 32, 32, 0.356);
+    background-color: rgb(32 32 32 / 35.6%);
     position: fixed;
-    top: 0vw;
+    top: 0;
     z-index: 90;
     pointer-events: none;
     cursor: pointer;
@@ -398,6 +406,7 @@ $secondaryAccentColor: #fed200;
         li {
           list-style: none;
           text-align: center;
+
           a {
             color: $secondaryColor;
             font-size: 2rem;
@@ -439,6 +448,7 @@ $secondaryAccentColor: #fed200;
       display: flex;
       align-items: center;
       margin-left: -1rem;
+
       svg {
         margin-right: 0.8rem;
         margin-bottom: 0.5rem;
@@ -460,6 +470,7 @@ $secondaryAccentColor: #fed200;
         li {
           list-style: none;
           text-align: center;
+
           a {
             color: $secondaryColor;
             font-size: 2.2rem;

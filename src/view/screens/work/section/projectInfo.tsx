@@ -46,7 +46,6 @@ const ProjectInfo = (props: { project: string }) => {
               <ul>
                 {category.techs.map((tech) => (
                   <li key={tech.name}>
-                    {tech.logo}
                     <p>{tech.name}</p>
                   </li>
                 ))}

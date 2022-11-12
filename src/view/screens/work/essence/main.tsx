@@ -55,7 +55,7 @@ const WorkEssenceMain = () => (
       <ProjectInfo project="essence" />
       <ProjectCase project="essence" />
       <LazyLoad height={400}>
-        <Results project="essence" height={400} />
+        <Results project="essence" />
       </LazyLoad>
       <LazyLoad height={400}>
         <Conclusion project="essence" />

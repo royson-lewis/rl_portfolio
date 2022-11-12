@@ -11,6 +11,10 @@
     "selector-pseudo-element-colon-notation": null,
     "at-rule-no-unknown": null,
     "comment-empty-line-before": null,
-    "function-no-unknown": null
+    "function-no-unknown": null,
+    "selector-class-pattern": null,
+    "scss/dollar-variable-pattern": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "selector-id-pattern": null
   }
 }

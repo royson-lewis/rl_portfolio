@@ -32,3 +32,4 @@ next.config.js
 
 # vercel
 .vercel
+/tsconfig.tsbuildinfo
