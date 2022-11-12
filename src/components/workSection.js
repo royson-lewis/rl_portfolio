@@ -104,9 +104,7 @@ export default function WorkSection() {
                         <button>View Live Project</button>
                       </a>
                       <Link href={work.caseLink}>
-                        <a>
-                          <button style={{ border: `4px solid ${work.accentColor}` }}>View Case</button>
-                        </a>
+                        <button style={{ border: `4px solid ${work.accentColor}` }}>View Case</button>
                       </Link>
                     </div>
                   </section>
