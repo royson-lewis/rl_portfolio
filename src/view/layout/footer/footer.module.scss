@@ -15,10 +15,10 @@ $secondaryAccentColor: #fed200;
   padding: 4rem 0;
   justify-items: center;
   grid-template-areas:
-    "quicklinkHead"
-    "quicklinks"
-    "connectHead"
-    "socialIcons";
+    'quicklinkHead'
+    'quicklinks'
+    'connectHead'
+    'socialIcons';
 
   ul {
     width: fit-content;
@@ -74,9 +74,9 @@ $secondaryAccentColor: #fed200;
     padding: 4rem 0rem;
     margin: 0 auto;
     grid-template-areas:
-      "quicklinkHead connectHead"
-      "quicklinks socialIcons"
-      "footerBottom footerBottom";
+      'quicklinkHead connectHead'
+      'quicklinks socialIcons'
+      'footerBottom footerBottom';
 
     h3 {
       font-size: 3rem;
@@ -144,9 +144,9 @@ $secondaryAccentColor: #fed200;
     justify-items: center;
     padding: 4rem 0rem;
     grid-template-areas:
-      "quicklinkHead connectHead"
-      "quicklinks socialIcons"
-      "footerBottom footerBottom";
+      'quicklinkHead connectHead'
+      'quicklinks socialIcons'
+      'footerBottom footerBottom';
 
     .quickHead {
       grid-area: quicklinkHead;

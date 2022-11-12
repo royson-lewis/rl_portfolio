@@ -1,7 +1,7 @@
-import styles from "../main.module.scss";
-import workInfoData from "../../../../config/work/info-data";
+import styles from '../main.module.scss'
+import workInfoData from '../../../../config/work/info-data'
 
-export default function ProjectInfo(props: { project: string }) {
+const ProjectInfo = (props: { project: string }) => {
   const { projectInfo, techUsed } = workInfoData[props.project]
   return (
     <section className={styles.projectInfo}>
@@ -41,20 +41,22 @@ export default function ProjectInfo(props: { project: string }) {
         <h3>Technologies Used</h3>
         <section>
           {techUsed.map((category) => (
-              <div key={category.catName}>
-                <h4>{category.catName}</h4>
-                <ul>
-                  {category.techs.map((tech) => (
-                      <li key={tech.name}>
-                        {tech.logo}
-                        <p>{tech.name}</p>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            ))}
+            <div key={category.catName}>
+              <h4>{category.catName}</h4>
+              <ul>
+                {category.techs.map((tech) => (
+                  <li key={tech.name}>
+                    {tech.logo}
+                    <p>{tech.name}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </section>
       </div>
     </section>
-  );
+  )
 }
+
+export default ProjectInfo

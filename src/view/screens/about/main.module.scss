@@ -12,12 +12,12 @@ $secondaryAccentColor: #fed200;
   text-align: center;
   padding-top: 10rem;
   grid-template-areas:
-    "head"
-    "dp"
-    "intro"
-    "description"
-    "button"
-    "hello";
+    'head'
+    'dp'
+    'intro'
+    'description'
+    'button'
+    'hello';
   width: 100vw;
 
   h2 {
@@ -91,12 +91,12 @@ $secondaryAccentColor: #fed200;
     text-align: center;
     padding-top: 8rem;
     grid-template-areas:
-      "head"
-      "dp"
-      "intro"
-      "description"
-      "button"
-      "hello";
+      'head'
+      'dp'
+      'intro'
+      'description'
+      'button'
+      'hello';
     width: 100vw;
 
     h2 {
@@ -162,12 +162,12 @@ $secondaryAccentColor: #fed200;
     align-items: baseline;
     justify-content: center;
     grid-template-areas:
-      "nill head"
-      "dp intro"
-      "dp description"
-      "dp description"
-      "null button"
-      "hello hello";
+      'nill head'
+      'dp intro'
+      'dp description'
+      'dp description'
+      'null button'
+      'hello hello';
 
     h2 {
       grid-area: head;

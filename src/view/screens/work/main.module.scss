@@ -165,7 +165,7 @@ $vamyouAccent: #fc326f;
     margin: 0 auto;
     text-align: left;
     word-spacing: 0.3rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.4;
     letter-spacing: 0.05rem;
     padding: 0 1rem;
@@ -279,10 +279,10 @@ $vamyouAccent: #fc326f;
     place-items: center;
     grid-template: repeat(auto 4) / 1fr;
     grid-template-areas:
-      "head"
-      "logo"
-      "mockup"
-      "pages";
+      'head'
+      'logo'
+      'mockup'
+      'pages';
 
     h3 {
       color: white;
@@ -338,10 +338,10 @@ $vamyouAccent: #fc326f;
         grid-template: repeat(auto, 4) / 100%;
         justify-items: center;
         grid-template-areas:
-          "homepage"
-          "productpage"
-          "cart"
-          "checkout";
+          'homepage'
+          'productpage'
+          'cart'
+          'checkout';
 
         img {
           width: 100%;
@@ -358,7 +358,7 @@ $vamyouAccent: #fc326f;
     align-items: center;
     text-align: left;
     word-spacing: 0.3rem;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.4;
     letter-spacing: 0.05rem;
     margin-bottom: 4rem;
@@ -538,8 +538,8 @@ $vamyouAccent: #fc326f;
           align-items: center;
           gap: 3rem;
           grid-template-areas:
-            "design development"
-            "hosting payment";
+            'design development'
+            'hosting payment';
           div {
             margin-top: 0rem;
 
@@ -584,7 +584,7 @@ $vamyouAccent: #fc326f;
       margin: 0 auto;
       text-align: left;
       word-spacing: 0.3rem;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.4;
       letter-spacing: 0.05rem;
 
@@ -690,10 +690,10 @@ $vamyouAccent: #fc326f;
       place-items: center;
       grid-template: repeat(auto 4) / 1fr;
       grid-template-areas:
-        "head"
-        "mockup"
-        "logo"
-        "pages";
+        'head'
+        'mockup'
+        'logo'
+        'pages';
 
       h3 {
         color: white;
@@ -756,10 +756,10 @@ $vamyouAccent: #fc326f;
           margin-bottom: -10vw;
           grid-template: repeat(auto, 4) / repeat(25%, 3);
           grid-template-areas:
-            "homepage nill cart"
-            "homepage productPage cart"
-            "homepage productPage checkout"
-            "homepage null checkout";
+            'homepage nill cart'
+            'homepage productPage cart'
+            'homepage productPage checkout'
+            'homepage null checkout';
 
           .page1 {
             grid-area: homepage;
@@ -785,7 +785,7 @@ $vamyouAccent: #fc326f;
       align-items: center;
       text-align: left;
       word-spacing: 0.3rem;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.4;
       letter-spacing: 0.05rem;
       margin-bottom: 4rem;
@@ -956,8 +956,8 @@ $vamyouAccent: #fc326f;
           align-items: center;
           gap: 3rem;
           grid-template-areas:
-            "design development"
-            "hosting payment";
+            'design development'
+            'hosting payment';
           div {
             margin-top: 0rem;
 
@@ -1002,7 +1002,7 @@ $vamyouAccent: #fc326f;
       margin: 0 auto;
       text-align: left;
       word-spacing: 0.3rem;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.4;
       letter-spacing: 0.05rem;
 
@@ -1108,10 +1108,10 @@ $vamyouAccent: #fc326f;
       place-items: center;
       grid-template: repeat(auto 4) / 1fr;
       grid-template-areas:
-        "head"
-        "mockup"
-        "logo"
-        "pages";
+        'head'
+        'mockup'
+        'logo'
+        'pages';
 
       h3 {
         color: white;
@@ -1174,10 +1174,10 @@ $vamyouAccent: #fc326f;
           margin-bottom: -10vw;
           grid-template: repeat(auto, 4) / repeat(25%, 3);
           grid-template-areas:
-            "homepage nill cart"
-            "homepage productPage cart"
-            "homepage productPage checkout"
-            "homepage null checkout";
+            'homepage nill cart'
+            'homepage productPage cart'
+            'homepage productPage checkout'
+            'homepage null checkout';
 
           .page1 {
             grid-area: homepage;
@@ -1203,7 +1203,7 @@ $vamyouAccent: #fc326f;
       align-items: center;
       text-align: left;
       word-spacing: 0.3rem;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.4;
       letter-spacing: 0.05rem;
       margin-bottom: 4rem;

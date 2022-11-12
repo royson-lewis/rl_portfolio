@@ -16,8 +16,8 @@ $secondaryAccentColor: #fed200;
   grid-template: auto auto / 1fr;
   place-items: center;
   grid-template-areas:
-    "art"
-    "info";
+    'art'
+    'info';
 
   .heroArt {
     height: fit-content;
@@ -103,11 +103,11 @@ $secondaryAccentColor: #fed200;
   background-color: $secondaryBGColor;
   grid-template: auto 1fr 1fr 1fr 0.1fr / 1fr;
   grid-template-areas:
-    "head"
-    "UI"
-    "frontend"
-    "backend"
-    "null";
+    'head'
+    'UI'
+    'frontend'
+    'backend'
+    'null';
 
   h2 {
     grid-area: head;
@@ -185,7 +185,8 @@ $secondaryAccentColor: #fed200;
         overflow: hidden;
         position: relative;
         left: 0vw;
-        transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+        transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72),
+          -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
 
         .imageContainer {
           height: 100%;
@@ -380,11 +381,11 @@ $secondaryAccentColor: #fed200;
   padding-top: 20vw;
   justify-content: center;
   grid-template-areas:
-    "head"
-    "card"
-    "or"
-    "subHead"
-    "form";
+    'head'
+    'card'
+    'or'
+    'subHead'
+    'form';
 
   .contactCard {
     display: flex;
@@ -541,7 +542,7 @@ $secondaryAccentColor: #fed200;
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
   .heroSection {
     grid-template: auto / 55% 45%;
-    grid-template-areas: "info art";
+    grid-template-areas: 'info art';
     width: 85vw;
     margin: 0 auto;
     padding: 15rem 0rem;
@@ -606,11 +607,11 @@ $secondaryAccentColor: #fed200;
     background-color: $secondaryBGColor;
     grid-template: auto 1fr 1fr 1fr 0.1fr / 1fr;
     grid-template-areas:
-      "head"
-      "UI"
-      "frontend"
-      "backend"
-      "null";
+      'head'
+      'UI'
+      'frontend'
+      'backend'
+      'null';
 
     h2 {
       grid-area: head;
@@ -691,7 +692,8 @@ $secondaryAccentColor: #fed200;
           overflow: hidden;
           position: relative;
           left: 0vw;
-          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72),
+            -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
 
           .imageContainer {
             height: 100%;
@@ -888,11 +890,11 @@ $secondaryAccentColor: #fed200;
     padding-top: 5vw;
     justify-content: center;
     grid-template-areas:
-      "head"
-      "card"
-      "or"
-      "subHead"
-      "form";
+      'head'
+      'card'
+      'or'
+      'subHead'
+      'form';
 
     h2 {
       font-size: 3.5rem;
@@ -1054,7 +1056,7 @@ $secondaryAccentColor: #fed200;
 @media only screen and (min-width: 1100px) and (max-width: 1470px) {
   .heroSection {
     grid-template: auto / 55% 45%;
-    grid-template-areas: "info art";
+    grid-template-areas: 'info art';
     width: 85vw;
     margin: 0 auto;
     padding: 15rem 0rem;
@@ -1110,8 +1112,8 @@ $secondaryAccentColor: #fed200;
     padding: 8vw 5vw;
     grid-template: auto 0.1fr / 1fr 1fr 1fr;
     grid-template-areas:
-      "head head head"
-      "UI frontend backend";
+      'head head head'
+      'UI frontend backend';
 
     h2 {
       margin-bottom: 5rem;
@@ -1226,7 +1228,8 @@ $secondaryAccentColor: #fed200;
           overflow: hidden;
           position: relative;
           left: 0vw;
-          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72),
+            -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
 
           .imageContainer {
             height: 100%;
@@ -1324,8 +1327,8 @@ $secondaryAccentColor: #fed200;
     height: fit-content;
     min-height: 90rem;
     grid-template-areas:
-      "head"
-      "ui";
+      'head'
+      'ui';
 
     h2 {
       grid-area: head;
@@ -1500,7 +1503,7 @@ $secondaryAccentColor: #fed200;
 @media only screen and (min-width: 1470px) {
   .heroSection {
     grid-template: auto / 55% 45%;
-    grid-template-areas: "info art";
+    grid-template-areas: 'info art';
     width: 80vw;
     margin: 0 auto;
     padding: 15rem 0rem;
@@ -1556,8 +1559,8 @@ $secondaryAccentColor: #fed200;
     padding: 8vw 5vw;
     grid-template: auto 0.1fr / 1fr 1fr 1fr;
     grid-template-areas:
-      "head head head"
-      "UI frontend backend";
+      'head head head'
+      'UI frontend backend';
 
     h2 {
       margin-bottom: 14rem;
@@ -1672,7 +1675,8 @@ $secondaryAccentColor: #fed200;
           overflow: hidden;
           position: relative;
           left: 0vw;
-          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72), -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
+          transition: transform 0.25s cubic-bezier(0.47, 0, 0.75, 0.72),
+            -webkit-transform 0.25s cubic-bezier(0.4, 0, 1, 1);
 
           .imageContainer {
             height: 100%;
@@ -1770,8 +1774,8 @@ $secondaryAccentColor: #fed200;
     height: fit-content;
     min-height: 90rem;
     grid-template-areas:
-      "head"
-      "ui";
+      'head'
+      'ui';
 
     h2 {
       grid-area: head;

@@ -79,6 +79,7 @@
         "some": ["nesting", "id"]
       }
     }],
+    "react/react-in-jsx-scope": 0,
     "react/jsx-props-no-spreading": "off",
     "jsx-a11y/control-has-associated-label":"off",
     "react/destructuring-assignment": [0],
