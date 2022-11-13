@@ -1,0 +1,56 @@
+version: '3.7'
+
+networks:
+  rl_network:
+    driver: bridge
+
+services:
+  rl_portfolio:
+    container_name: rl_portfolio
+    hostname: rl_portfolio
+    networks:
+      rl_network:
+        aliases:
+          - rl_portfolio
+    deploy:
+      placement:
+        constraints:
+          - node.role == worker
+    build:
+      context: docker
+      dockerfile: dockerfile
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    environment:
+      XDEBUG_CONFIG: remote_enable=off remote_port=9001 remote_host=host.docker.internal
+      CHOKIDAR_USEPOLLING: "true"
+    working_dir: /var/www/html/
+    volumes:
+      - .:/var/www
+      - ./docker/php:/usr/local/etc
+    expose:
+      - 9000
+    labels:
+      - traefik.enable=true
+
+  frontend.nginx:
+    container_name: frontend.nginx
+    hostname: frontend.nginx
+    depends_on:
+      - frontend.app
+    networks:
+      provetrade-network:
+        aliases:
+          - frontend.nginx
+    deploy:
+      placement:
+        constraints:
+          - node.role == worker
+    image: nginx:1
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - .:/var/www
+      - /etc/modules
+      - ./docker/nginx:/etc/nginx
