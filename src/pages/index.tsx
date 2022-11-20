@@ -5,7 +5,7 @@ import HomeMain from '../view/screens/home/main'
 const HomeIndex = () => (
   <>
     <Head>
-      <title>Home - Royson Lewis</title>
+      <title>Home -s Royson Lewis</title>
       <meta
         name="description"
         content="Welcome to my Portfolio!, Explore some of my best projects, Services and Skills showcased in this portfolio. Contact me for any queries through the various options available in the contact section."
