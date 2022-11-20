@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import styles from './footer.module.scss'
 
-const Footer = () => (
+const FooterMain = () => (
   <>
     <footer className={styles.footer}>
       <h3 className={styles.quickHead}>Quick Links</h3>
@@ -103,4 +103,4 @@ const Footer = () => (
   </>
 )
 
-export default Footer
+export default FooterMain

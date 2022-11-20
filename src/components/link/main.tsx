@@ -1,0 +1,106 @@
+import React, {
+  CSSProperties,
+  KeyboardEventHandler,
+  MouseEventHandler,
+  PropsWithChildren,
+} from 'react'
+
+import Link, { LinkProps } from 'next/link'
+
+interface LinkMainTypes {
+  to?: string | { search: string }
+  href?: string
+  external?: boolean
+  className?: string
+  target?: string
+  ariaLabel?: string
+  rel?: string
+  style?: CSSProperties
+  onClick?: MouseEventHandler
+  onKeyDown?: KeyboardEventHandler<HTMLAnchorElement>
+  portal?: string
+  locale?: LinkProps['locale']
+  dir?: string
+  popUpWindow?: boolean
+  role?: string
+}
+
+const LinkMain: React.FC<PropsWithChildren<LinkMainTypes>> = ({
+  to,
+  href,
+  external,
+  className,
+  target,
+  rel,
+  style,
+  onClick,
+  onKeyDown,
+  children,
+  portal,
+  locale,
+  dir,
+  popUpWindow,
+  ariaLabel,
+  role,
+  ...props
+}) => {
+  if (external) {
+    return (
+      <a
+        className={className}
+        style={style}
+        href={href}
+        target={target || '_blank'}
+        rel={rel || 'noreferrer nofollow'}
+        onClick={onClick}
+        onKeyDown={onKeyDown}
+        aria-label={ariaLabel}
+        role={role}
+      >
+        {children}
+      </a>
+    )
+  }
+  if (popUpWindow) {
+    const portalUrl = portal ? `http://${portal}${to}${dir || ''}` : href
+    const openPopUpWindow = () => {
+      const { innerWidth, open } = window
+      const reduceWith = (innerWidth / 100) * 30
+      const smallScreenWidth = innerWidth - reduceWith
+      const smallScreenLeft = innerWidth < 768 ? 0 : 20
+      const smallScreenTop = innerWidth < 768 ? 20 : 200
+      open(
+        portalUrl,
+        '',
+        `top=${smallScreenTop},left=${smallScreenLeft},height=600,width=${smallScreenWidth},scrollbars=auto`,
+      )
+    }
+    return (
+      <a
+        className={className}
+        style={style}
+        href={undefined}
+        target={target}
+        rel={rel}
+        aria-label={ariaLabel}
+        role={role}
+        onClick={openPopUpWindow}
+        onKeyDown={openPopUpWindow}
+      >
+        {children}
+      </a>
+    )
+  }
+  return (
+    <Link
+      {...props}
+      href={to || '#'}
+      role="link"
+      tabIndex={0}
+    >
+      {children}
+    </Link>
+  )
+}
+
+export default LinkMain

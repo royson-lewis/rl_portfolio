@@ -23,17 +23,30 @@
     "typescript": "tsc --noEmit"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-brands-svg-icons": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@loadable/component": "^5.14.1",
     "@loadable/server": "^5.14.0",
+    "@next/bundle-analyzer": "^13.0.4",
+    "@reduxjs/toolkit": "^1.9.0",
     "axios": "^0.21.0",
+    "bootstrap": "^5.2.2",
+    "classnames": "^2.3.2",
     "env-cmd": "^10.1.0",
     "firebase-admin": "^9.4.2",
     "next": "^13.0.3",
+    "next-compose-plugins": "^2.2.1",
     "next-sitemap": "^3.1.30",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-lazyload": "^3.1.0",
-    "react-transition-group": "^4.4.1"
+    "react-redux": "^8.0.5",
+    "react-transition-group": "^4.4.1",
+    "redux-saga": "^1.2.1"
   },
   "devDependencies": {
     "@loadable/babel-plugin": "^5.13.2",
