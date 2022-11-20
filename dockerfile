@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /project/rl_portfolio
 
 # dependencies
 COPY package.json ./
@@ -11,5 +11,4 @@ RUN yarn install
 # bundle app src
 COPY . .
 
-EXPOSE 9000
 CMD ["yarn", "start"]

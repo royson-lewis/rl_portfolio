@@ -2,19 +2,21 @@
   "name": "rj_portfolio_frontend",
   "version": "1.0.2",
   "description": "A portfolio website showcasing the skills, work and experience of Royson Lewis",
-  "main": "index.js",
+  "author": "Royson J lewis",
   "repository": {
     "type": "git",
     "url": "https://github.com/lewisroysonj/Royson_Lewis_Portfolio.git"
   },
+  "license": "ISC",
+  "keywords": [
+    "portfolio",
+    "royson lewis"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "start": "env-cmd -f .env next dev",
+    "build": "env-cmd -f .env next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "start": "next start -p 8080",
-    "export": "next export",
-    "gcp-build": "npm run build",
-    "deploy": "gcloud config set project royson-lewis && gcloud app deploy app.yml --version=1-0-2",
+    "serve": "next start -p 5001",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
     "stylelint": "stylelint --fix 'src/**/*.{scss,less}'",
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,scss}' --write",
@@ -24,6 +26,7 @@
     "@loadable/component": "^5.14.1",
     "@loadable/server": "^5.14.0",
     "axios": "^0.21.0",
+    "env-cmd": "^10.1.0",
     "firebase-admin": "^9.4.2",
     "next": "^13.0.3",
     "next-sitemap": "^3.1.30",
@@ -32,12 +35,6 @@
     "react-lazyload": "^3.1.0",
     "react-transition-group": "^4.4.1"
   },
-  "keywords": [
-    "portfolio",
-    "royson lewis"
-  ],
-  "author": "Royson J lewis",
-  "license": "ISC",
   "devDependencies": {
     "@loadable/babel-plugin": "^5.13.2",
     "@loadable/webpack-plugin": "^5.14.0",
