@@ -1,0 +1,140 @@
+@import '../../styles/variables/style';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  align-items: center;
+
+  .footer-contact {
+    display: flex;
+    padding: 220px 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    width: 100%;
+    color: $light-bg-color;
+    gap: 10px;
+
+    h4 {
+      font-weight: 800;
+      font-size: 28px;
+      line-height: 41px;
+      color: $primary-color;
+      margin: 0;
+    }
+
+    h5 {
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 122%;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    & > a {
+      color: $light-bg-color;
+      display: flex;
+      font-size: 27px;
+      text-decoration: underline;
+      font-weight: 700;
+      line-height: 40px;
+
+      svg {
+        width: 22px;
+        transform: rotate(44.98deg);
+        margin-left: 5px;
+        margin-top: 5px;
+        color: $primary-color;
+      }
+    }
+
+    .social-contacts {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin-top: 24px;
+
+      svg {
+        width: 38px;
+        color: $light-bg-color;
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    gap: 20px;
+
+    .company-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        margin: 0;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      & :last-child {
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    }
+
+    .social-links,
+    .other-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      a {
+        color: $light-bg-color;
+
+        svg {
+          width: 27px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer {
+    .footer-contact {
+      padding: 250px 0;
+      gap: 10px;
+
+      h4 {
+        font-size: 26px;
+      }
+
+      h5 {
+        font-weight: 800;
+        font-size: 38px;
+      }
+
+      & > a {
+        font-size: 22px;
+
+        svg {
+          width: 20px;
+        }
+      }
+
+      .social-contacts {
+        gap: 30px;
+        margin-top: 15px;
+
+        svg {
+          width: 34px;
+        }
+      }
+    }
+  }
+}
