@@ -2,7 +2,7 @@ const uris = {
   index: '/',
   project: '/project',
   about: '/about',
-  contact: '/contact'
+  contact: '/contact',
 }
 
 export default uris

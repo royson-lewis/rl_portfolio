@@ -20,9 +20,7 @@ const HomeMain = () => (
       <meta property="og:site_name" content="Royson Lewis" />
       <meta property="og:image" content="/royson cover@2x.png" />
     </Head>
-    <main className={styles.homePage}>
-      Homepage
-    </main>
+    <main className={styles.homePage}>Homepage</main>
   </>
 )
 

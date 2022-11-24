@@ -1,12 +1,16 @@
 import '../view/layout/styles/globals/_style.scss'
 
+import { ReactElement, ReactNode } from 'react'
+
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import { NextPage } from 'next'
+import { SSRProvider } from 'react-bootstrap'
+import { Provider } from 'react-redux'
 
-import LayoutMain from "../view/layout/main/Index";
-import {NextPage} from "next";
-import {ReactElement, ReactNode} from "react";
-import store from "../config/store/reducers";
+import LayoutMain from '../view/layout/main'
+import store from '../config/store/reducers'
+import PageLoadProvider from '../config/page-load/provider'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -16,18 +20,20 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
-  return (
-    <>
-      <Head>
-        <title>Royson Lewis | Portfolio</title>
-      </Head>
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => (
+  <SSRProvider>
+    <Provider store={store}>
       <LayoutMain>
-        <Component {...pageProps} />
+        <Head>
+          <title>Royson Lewis | Portfolio</title>
+        </Head>
+        <PageLoadProvider>
+          <Component {...pageProps} />
+        </PageLoadProvider>
       </LayoutMain>
-    </>
-  )
-}
+    </Provider>
+  </SSRProvider>
+)
 
 export type RootState = ReturnType<typeof store.getState>
 

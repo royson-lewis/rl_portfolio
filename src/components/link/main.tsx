@@ -5,7 +5,7 @@ import React, {
   PropsWithChildren,
 } from 'react'
 
-import Link, { LinkProps } from 'next/link'
+import Link from 'next/link'
 
 interface LinkMainTypes {
   to?: string | { search: string }
@@ -19,7 +19,6 @@ interface LinkMainTypes {
   onClick?: MouseEventHandler
   onKeyDown?: KeyboardEventHandler<HTMLAnchorElement>
   portal?: string
-  locale?: LinkProps['locale']
   dir?: string
   popUpWindow?: boolean
   role?: string
@@ -37,7 +36,6 @@ const LinkMain: React.FC<PropsWithChildren<LinkMainTypes>> = ({
   onKeyDown,
   children,
   portal,
-  locale,
   dir,
   popUpWindow,
   ariaLabel,
@@ -92,12 +90,7 @@ const LinkMain: React.FC<PropsWithChildren<LinkMainTypes>> = ({
     )
   }
   return (
-    <Link
-      {...props}
-      href={to || '#'}
-      role="link"
-      tabIndex={0}
-    >
+    <Link {...props} href={to || '#'} role="link" tabIndex={0}>
       {children}
     </Link>
   )

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Router } from 'next/router'
 
 import actionTypes from './actions'
-import {RootState} from "../../pages/_app.page";
+import { RootState } from '../../pages/_app.page'
 
 const PageLoadProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   const dispatch = useDispatch()
@@ -30,7 +30,7 @@ const PageLoadProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
 
   return (
     <>
-      <p>Loading page...</p>
+      {loading && <p>Loading page...</p>}
       {children}
     </>
   )

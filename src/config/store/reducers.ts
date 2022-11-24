@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
 
 import rootSaga from './sagas'
-import pageLoad from '../pageLoad/reducers'
+import pageLoad from '../page-load/reducers'
 
 const sagaMiddleware = createSagaMiddleware()
 

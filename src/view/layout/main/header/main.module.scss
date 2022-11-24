@@ -8,7 +8,8 @@
   background-color: transparent;
   color: $text-color;
 
-  .desktop, .mobile {
+  .desktop,
+  .mobile {
     margin: 20px 30px;
     width: 100%;
     display: flex;
@@ -37,7 +38,8 @@
       align-items: center;
       border: none;
 
-      & :hover, & :active {
+      & :hover,
+      & :active {
         color: $primary-color;
         transition: 0.1s ease-in color;
       }
@@ -49,7 +51,8 @@
   }
 }
 
-.nav-links, .nav-mail {
+.nav-links,
+.nav-mail {
   .link-list {
     list-style: none;
     display: flex;
@@ -108,6 +111,8 @@
       }
 
       &.mail {
+        cursor: pointer;
+
         svg {
           width: 17px;
           height: auto;

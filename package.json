@@ -1,6 +1,6 @@
 {
   "name": "rj_portfolio_frontend",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A portfolio website showcasing the skills, work and experience of Royson Lewis",
   "author": "Royson J lewis",
   "repository": {
@@ -46,6 +46,7 @@
     "react-lazyload": "^3.1.0",
     "react-redux": "^8.0.5",
     "react-transition-group": "^4.4.1",
+    "redux": "^4.2.0",
     "redux-saga": "^1.2.1"
   },
   "devDependencies": {
