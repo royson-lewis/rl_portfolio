@@ -15,64 +15,46 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import LinkMain from "../../../../components/link/main";
 import LogoMain from "../../../widgets/logo/main";
+import {Offcanvas} from "react-bootstrap";
 
-const HeaderMain = () => {
+const HeaderMain: React.FC<{isMobile: boolean}> = ({ isMobile }) => {
+  return (
+    <header className={styles['header-main']}>
+      {isMobile ? <HeaderMobile /> : <HeaderDesktop />}
+    </header>
+  )
+}
+
+const HeaderDesktop = () => {
+  return (
+    <>
+      <section className={styles['desktop']}>
+        <LogoMain monotone />
+        <NavLinks />
+        <NavMail />
+      </section>
+    </>
+  )
+}
+
+const HeaderMobile = () => {
   const [openMenu, setOpenMenu] = useState(false)
   return (
     <>
-      <header
-        className={cn(styles['header-main'])}
-      >
-        <section>
-          <LogoMain monotone />
-          <NavLinks />
-          <nav className={styles['nav-links']}>
-            <ul className={cn(styles['link-list'])}>
-              <li className={styles['mail']}>
-                <LinkMain
-                  onClick={() => setOpenMenu && setOpenMenu(false)}
-                  to={uris.index}
-                  external
-                >
-                  hello@roysonlewis.com
-                  <FontAwesomeIcon icon={faArrowUp} />
-                </LinkMain>
-              </li>
-            </ul>
-          </nav>
-        </section>
-      </header>
-      <header
-        className={cn(
-          styles['header-main'],
-          styles.mobile,
-        )}
-      >
-        <section>
-          <div className={styles['header-left']}>
-            <div className={styles['logo-section']}>
-              <ButtonMain onClick={() => setOpenMenu(!openMenu)} aria-label="menu">
-                <FontAwesomeIcon icon={faBars} />
-              </ButtonMain>
-              <LogoMain monotone />
-            </div>
-          </div>
-          <div className={cn(styles['nav-list-mobile'], { [styles.open]: openMenu })}>
-            <div className={styles['nav-links-header']}>
-              <LogoMain />
-              <FontAwesomeIcon onClick={() => setOpenMenu(false)} icon={faTimes} />
-            </div>
-            <ul className={styles['nav-links-container']}>
-              <NavLinks setOpenMenu={setOpenMenu} mobile />
-            </ul>
-          </div>
-          <button
-            type="button"
-            onClick={() => setOpenMenu(false)}
-            className={cn(styles['nav-list-background'], { [styles.close]: !openMenu })}
-          />
-        </section>
-      </header>
+      <section className={styles['mobile']}>
+        <LogoMain monotone />
+        <button type="button" onClick={() => setOpenMenu(!openMenu)} aria-label="menu">
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+        <Offcanvas placement="end" show={openMenu} onHide={() => setOpenMenu(false)}>
+          <Offcanvas.Header closeButton>
+            <LogoMain monotone />
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            <NavLinks setOpenMenu={setOpenMenu} mobile />
+          </Offcanvas.Body>
+        </Offcanvas>
+      </section>
     </>
   )
 }
@@ -84,10 +66,9 @@ const NavLinks: React.FC<{
   const { pathname } = useRouter()
   const activeClassNameFormatter = (currentPath: string) =>
     cn({ [styles['current-nav']]: pathname === currentPath })
-  console.log(pathname, uris.project)
   return (
-    <nav className={styles['nav-links']}>
-      <ul className={cn(styles['link-list'], { [styles.mobile]: mobile })}>
+    <nav className={cn(styles['nav-links'], { [styles['mobile']]: mobile })}>
+      <ul className={cn(styles['link-list'])}>
         <li
           className={activeClassNameFormatter(uris.project)}
         >
@@ -111,7 +92,7 @@ const NavLinks: React.FC<{
           </LinkMain>
         </li>
         <li
-          className={activeClassNameFormatter(uris.index)}
+          className={activeClassNameFormatter(uris.contact)}
         >
           <LinkMain
             onClick={() => setOpenMenu && setOpenMenu(false)}
@@ -119,6 +100,24 @@ const NavLinks: React.FC<{
           >
             {mobile && <FontAwesomeIcon icon={faBuilding} />}
             Contact
+          </LinkMain>
+        </li>
+      </ul>
+    </nav>
+  )
+}
+
+const NavMail = () => {
+  return (
+    <nav className={styles['nav-mail']}>
+      <ul className={cn(styles['link-list'])}>
+        <li className={styles['mail']}>
+          <LinkMain
+            to={uris.index}
+            external
+          >
+            hello@roysonlewis.com
+            <FontAwesomeIcon icon={faArrowUp} />
           </LinkMain>
         </li>
       </ul>

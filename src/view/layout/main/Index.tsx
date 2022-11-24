@@ -5,7 +5,7 @@ import FooterMain from "./footer/footer";
 const LayoutMain: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
-      <HeaderMain />
+      <HeaderMain isMobile={true} />
       <main>{children}</main>
       {/*<FooterMain />*/}
     </>
