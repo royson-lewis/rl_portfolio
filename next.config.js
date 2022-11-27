@@ -7,6 +7,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
   trailingSlash: true,
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  images: {
+    domains: ["cdn.dribbble.com"],
+  },
 }
 
 const nextPlugins = [
