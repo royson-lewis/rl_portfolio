@@ -1,4 +1,4 @@
-@import "../../../../layout/styles/variables/style";
+@import '../../../../layout/styles/variables/style';
 
 .projects-section {
   width: 1400px;
@@ -11,6 +11,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
     .category-info {
       display: flex;
       flex-direction: column;
@@ -47,9 +48,11 @@
       display: flex;
       flex-direction: column;
       gap: 60px;
+
       .category-project {
         display: flex;
         flex-direction: column;
+
         h4 {
           font-weight: 800;
           font-size: 24px;
@@ -61,11 +64,13 @@
         .project-images {
           display: flex;
           gap: 20px;
+
           .project-image-wrapper {
             width: 400px;
             height: 500px;
             border-radius: 18px;
             overflow: hidden;
+
             img {
               height: 100%;
               width: 100%;
@@ -90,6 +95,7 @@
         h3 {
           min-width: 400px;
         }
+
         p {
           width: 100%;
         }
@@ -99,8 +105,10 @@
         .category-project {
           .project-images {
             flex-wrap: wrap;
+
             .project-image-wrapper {
               width: 100%;
+
               img {
                 height: 100%;
                 width: 100%;
@@ -116,6 +124,7 @@
 @media only screen and (max-width: 1000px) {
   .projects-section {
     gap: 80px;
+
     .project-category {
       flex-wrap: wrap;
 
@@ -136,6 +145,7 @@
     .project-category {
       .category-info {
         gap: 10px;
+
         h2 {
           font-size: 24px;
         }

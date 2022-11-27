@@ -1,4 +1,4 @@
-@import "../../../../layout/styles/variables/style";
+@import '../../../../layout/styles/variables/style';
 
 .hero-section {
   height: calc(100vh - 69px);
@@ -70,18 +70,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(235, 235, 235, 0.39);
+        background-color: rgb(235 235 235 / 39%);
         border-radius: 50%;
         color: #383838;
 
         &:nth-child(2) {
-          background-color: rgba(229, 238, 241, 0.6);
-          color: #0A66C2;
+          background-color: rgb(229 238 241 / 60%);
+          color: #0a66c2;
         }
 
         &:nth-child(3) {
-          background-color: rgba(240, 223, 230, 0.5);
-          color: #C32361;
+          background-color: rgb(240 223 230 / 50%);
+          color: #c32361;
         }
 
         svg {
@@ -162,6 +162,7 @@
 
     .hero-info {
       margin: 0 10px;
+
       h2 {
         font-size: 24px;
       }
