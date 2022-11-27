@@ -1,0 +1,122 @@
+@import "../../../../layout/styles/variables/style";
+
+.skills-section {
+  margin: 100px auto 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 0 50px;
+
+  .skills-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    h2 {
+      margin: 0;
+      font-weight: 800;
+      font-size: 28px;
+      text-align: center;
+      line-height: 41px;
+      color: $primary-color;
+    }
+
+    h3 {
+      margin: 0;
+      text-align: center;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 122%;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 144.5%;
+      width: 500px;
+      text-align: center;
+    }
+  }
+
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+
+    .skills-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 45px;
+      flex-wrap: wrap;
+
+      .skill-pill {
+        display: flex;
+        justify-content: center;
+        padding: 22px;
+        margin: 10px 0;
+        width: 220px;
+        background-color: rgba(237, 113, 113, 0.08);
+        border-radius: 293px;
+
+        svg {
+          width: 30px;
+          height: 30px;
+          color: $primary-color;
+          margin-right: 10px;
+        }
+
+        p {
+          margin: 0;
+          font-weight: 800;
+          font-size: 22px;
+          line-height: 122%;
+          letter-spacing: -0.01em;
+        }
+
+        &.special-pill {
+          background-color: rgba(33, 47, 85, 0.07);
+
+          svg {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .skills-section {
+    margin: 100px auto 100px;
+    gap: 30px;
+    padding: 0 50px;
+
+    .skills-header {
+      gap: 10px;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      h3 {
+        font-size: 38px;
+      }
+
+      p {
+        font-size: 20px;
+        width: 100%;
+      }
+    }
+
+    .skills-container {
+      gap: 30px;
+
+      .skills-row {
+        gap: 30px;
+      }
+    }
+  }
+}
