@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Image from 'next/image'
-import MouseScrollIcon from '../../../assets/mouse-scroll-icon.svg'
 
+import MouseScrollIcon from '../../../assets/mouse-scroll-icon.svg'
 import styles from './main.module.scss'
 
 const SectionHeroMain = () => (

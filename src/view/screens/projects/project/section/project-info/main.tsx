@@ -1,8 +1,9 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReact, faFigma, faSass } from '@fortawesome/free-brands-svg-icons'
+
 import styles from './main.module.scss'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faReact, faFigma, faSass} from "@fortawesome/free-brands-svg-icons";
 
 const SectionProjectInfoMain = () => (
   <section className={styles['project-info-section']}>
@@ -23,9 +24,15 @@ const SectionProjectInfoMain = () => (
       <div className={styles['info-section']}>
         <h4>Technology Used</h4>
         <div className={styles['technology-container']}>
-          <span><FontAwesomeIcon icon={faReact} /></span>
-          <span><FontAwesomeIcon icon={faFigma} /></span>
-          <span><FontAwesomeIcon icon={faSass} /></span>
+          <span>
+            <FontAwesomeIcon icon={faReact} />
+          </span>
+          <span>
+            <FontAwesomeIcon icon={faFigma} />
+          </span>
+          <span>
+            <FontAwesomeIcon icon={faSass} />
+          </span>
         </div>
       </div>
     </section>

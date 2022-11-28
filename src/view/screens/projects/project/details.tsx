@@ -1,12 +1,13 @@
 import React from 'react'
 
+import Image from 'next/image'
+
 import styles from './details.module.scss'
-import SectionHeroMain from "./section/hero/main";
-import Image from "next/image";
+import SectionHeroMain from './section/hero/main'
 import EssenceMainImage from '../assets/essence-main-image.png'
-import SectionProjectInfoMain from "./section/project-info/main";
-import SectionProjectContentMain from "./section/project-content/main";
-import SectionPaginationMain from "./section/pagination/main";
+import SectionProjectInfoMain from './section/project-info/main'
+import SectionProjectContentMain from './section/project-content/main'
+import SectionPaginationMain from './section/pagination/main'
 
 const ProjectDetails = () => (
   <>
