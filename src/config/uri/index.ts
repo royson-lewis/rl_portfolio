@@ -1,8 +1,8 @@
 const uris = {
   index: '/',
-  project: '/project',
+  projects: '#projects',
   about: '/about',
-  contact: '/contact',
+  contact: '#contact',
 }
 
 export default uris
