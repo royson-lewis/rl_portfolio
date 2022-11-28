@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import WorkVamyouMain from '../../../view/screens/work/vamyou/main'
+import WorkVamyouMain from '../../../view/screens/projects/vamyou/main'
 
 const VamyouIndex = () => (
   <>

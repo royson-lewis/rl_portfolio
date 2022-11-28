@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import WorkEssenceMain from '../../../view/screens/work/essence/main'
+import WorkEssenceMain from '../../../view/screens/projects/essence/main'
 
 const WorkEssenceIndex = () => (
   <>
