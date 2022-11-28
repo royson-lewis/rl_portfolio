@@ -5,6 +5,8 @@ import SectionHeroMain from "./section/hero/main";
 import Image from "next/image";
 import EssenceMainImage from '../assets/essence-main-image.png'
 import SectionProjectInfoMain from "./section/project-info/main";
+import SectionProjectContentMain from "./section/project-content/main";
+import SectionPaginationMain from "./section/pagination/main";
 
 const ProjectDetails = () => (
   <>
@@ -14,6 +16,8 @@ const ProjectDetails = () => (
         <Image src={EssenceMainImage} alt="project presentation in different devices" />
       </section>
       <SectionProjectInfoMain />
+      <SectionProjectContentMain />
+      <SectionPaginationMain />
     </main>
   </>
 )
