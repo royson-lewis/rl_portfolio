@@ -65,8 +65,8 @@ const NavLinks: React.FC<{
   return (
     <nav className={cn(styles['nav-links'], { [styles.mobile]: mobile })}>
       <ul className={cn(styles['link-list'])}>
-        <li className={activeClassNameFormatter(uris.project)}>
-          <LinkMain onClick={() => setOpenMenu && setOpenMenu(false)} to={uris.project}>
+        <li className={activeClassNameFormatter(uris.projects)}>
+          <LinkMain onClick={() => setOpenMenu && setOpenMenu(false)} to={uris.projects}>
             {mobile && <FontAwesomeIcon icon={faBriefcase} />}
             Projects
           </LinkMain>
