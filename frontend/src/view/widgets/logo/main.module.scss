@@ -1,0 +1,20 @@
+@import 'src/view/layout/styles/variables/style';
+
+.logo-main-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+
+  a {
+    .image-container {
+      position: relative;
+      height: auto;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

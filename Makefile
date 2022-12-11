@@ -1,5 +1,4 @@
 # variables
-ENV := $(shell grep -w 'APP_ENV' .env)
 UNAME := $(shell uname -a)
 ifeq ($(findstring WSL,"$(UNAME)"),WSL)
 	IS_WSL=true
@@ -7,25 +6,29 @@ else
 	IS_WSL=false
 endif
 
-PORT = 5000
-
-# pls sort alphabetically except 'default'
-
-default: env up
+default: env up start-frontend
 
 env:
 ifeq ($(IS_WSL), true)
 	@echo "This is Local"
-	rm -rf .env > /dev/null 2>&1
-	cp ./src/config/parameters/local.env .env
+	rm -rf ./frontend/.env > /dev/null 2>&1
+	rm -rf ./backend/.env > /dev/null 2>&1
+	cp ./frontend/src/config/parameters/local.env ./frontend/.env
+	cp ./backend/src/config/parameters/local.env ./backend/.env
 else
 	@echo "This is Remote"
 endif
 
 up: down
-	docker-compose up --remove-orphans
-	docker-compose exec -T web sh -c \
-  	"yarn start"
+	docker-compose -f docker-compose.yml up -d --remove-orphans
+
+start-frontend:
+	docker-compose -f docker-compose.yml exec frontend sh -c \
+    	"yarn start"
+
+start-backend:
+	docker-compose -f docker-compose.yml exec backend sh -c \
+    	"yarn start"
 
 down: timeout
 	docker ps -a -q | xargs -n 1 -P 8 -I {} docker stop {}
@@ -37,24 +40,37 @@ timeout:
 	export COMPOSE_HTTP_TIMEOUT=2000
 
 kill:
-	docker-compose exec -T web sh -c \
+	docker-compose -f docker-compose.yml exec -T frontend sh -c \
 	"killall node > /dev/null 2>&1"
 
-lint:
-	docker-compose exec web sh -c \
-  "yarn eslint && yarn stylelint && yarn prettier && yarn typescript && ANALYZE=true yarn build"
+lint-frontend:
+	docker-compose -f docker-compose.yml exec frontend sh -c \
+  "cd frontend && yarn eslint && yarn stylelint && yarn prettier && yarn typescript && ANALYZE=true yarn build"
 
-ssh: timeout
-	docker-compose exec web sh
+lint-backend:
+	docker-compose -f docker-compose.yml exec backend sh -c \
+  "cd backend && yarn eslint && yarn prettier && yarn typescript && ANALYZE=true yarn build"
+
+ssh-frontend: timeout
+	docker-compose -f docker-compose.yml exec frontend sh
+
+ssh-backend: timeout
+	docker-compose -f docker-compose.yml exec backend sh
 
 build: down timeout
-	docker-compose build
+	docker-compose -f docker-compose.yml build
 	docker-compose up -d --remove-orphans
-	make package
+	make package-frontend
+	make package-backend
 	make down
 
-package:
-	docker-compose exec web sh -c \
+package-frontend:
+	docker-compose -f docker-compose.yml exec frontend sh -c \
+	"yarn install"
+	make owner
+
+package-backend:
+	docker-compose -f docker-compose.yml exec backend sh -c \
 	"yarn install"
 	make owner
 
@@ -64,24 +80,39 @@ owner:
 
 destroy: down
 	docker volume prune -f
-	docker-compose build --no-cache
-	docker-compose up -d --remove-orphans
-	make package
-	make down
+	docker image rm -f $(docker image ls -q)
+	docker container rm -f $(docker container ls -qa)
 
 log:
-	docker-compose ps
+	docker-compose -f docker-compose.yml ps
 	sleep 1
-	docker-compose logs -f
+	docker-compose -f docker-compose.yml logs -f
 
 serve:
-	docker-compose exec web sh -c \
+	docker-compose -f docker-compose.yml exec frontend sh -c \
 	"yarn serve"
 
-bundle:
-	docker-compose exec web sh -c \
+bundle-frontend:
+	docker-compose -f docker-compose.yml exec frontend sh -c \
 	"yarn build"
 
-bundle-analyze:
-	docker-compose exec web sh -c \
-	"ANALYZE=true yarn build"
+bundle-backend:
+	docker-compose -f docker-compose.yml exec backend sh -c \
+	"yarn build"
+
+# db
+migration-generate:
+	docker-compose -f docker-compose.yml exec backend sh -c \
+  "yarn run migration:generate src/database/migrations/$(name)"
+
+migration-create:
+	docker-compose -f docker-compose.yml exec backend sh -c \
+  "yarn run migration:create src/database/migrations/$(name)"
+
+migration-run:
+	docker-compose -f docker-compose.yml exec backend sh -c \
+	"yarn run migration:run"
+
+migration-revert:
+	docker-compose -f docker-compose.yml exec backend sh -c \
+	"yarn run migration:revert"
