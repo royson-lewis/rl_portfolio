@@ -36,6 +36,14 @@ export class ProjectController {
     );
   }
 
+  @Get('categories')
+  async getCategories() {
+    return handleSuccessResponse(
+      await this.projectService.getCategoryProjects(),
+      'Category projects retrieved successfully',
+    );
+  }
+
   @Get(':id')
   async get(@Param('id', ParseIntPipe) id: number) {
     return handleSuccessResponse(

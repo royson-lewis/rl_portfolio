@@ -60,7 +60,7 @@ export class ProjectService {
     delete createProjectDto.categoryId;
     delete createProjectDto.technologies;
     Object.assign(newProject, plainToClass(Project, createProjectDto));
-    return await this.projectRepository.manager.save(newProject);
+    return this.projectRepository.manager.save(newProject);
   }
 
   async getAll(): Promise<Project[]> {
@@ -87,6 +87,14 @@ export class ProjectService {
         HttpStatus.BAD_REQUEST,
       );
     }
+  }
+
+  async getCategoryProjects(): Promise<ProjectCategory[]> {
+    return await this.projectCategoryRepository.find({
+      relations: {
+        projects: true
+      },
+    })
   }
 
   async getCaseStudy(id: number): Promise<any> {
@@ -130,7 +138,7 @@ export class ProjectService {
         newCaseStudy,
         plainToClass(ProjectCaseStudy, createCaseStudyDto),
       );
-      return await this.projectCaseStudyRepository.manager.save(newCaseStudy);
+      return this.projectCaseStudyRepository.manager.save(newCaseStudy);
     } else {
       throw new HttpException(
         'Case study already exists for this project',
@@ -160,7 +168,7 @@ export class ProjectService {
           caseSections: caseStudySections,
         }),
       );
-      return await this.projectCaseStudyRepository.manager.save(newCaseStudy);
+      return this.projectCaseStudyRepository.manager.save(newCaseStudy);
     } else {
       throw new HttpException(
         'No case study exists for this project',
