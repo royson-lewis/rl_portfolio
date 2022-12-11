@@ -1,0 +1,32 @@
+@import '../../../layout/styles/variables/style';
+
+.project-details-page {
+  .main-image {
+    margin: 10px auto 100px;
+    width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+
+    img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .project-details-page {
+    .main-image {
+      margin: 10px auto 100px;
+      width: 90%;
+      height: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
