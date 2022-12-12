@@ -5,11 +5,20 @@ import {
   IsOptional,
   IsString,
 } from 'class-validator';
+import {ProjectGallery} from "./entities/project-gallery.entity";
 
 export class CreateProjectDto {
   @IsString()
   @IsNotEmpty()
   name: string;
+
+  @IsString()
+  @IsOptional()
+  slug: string;
+
+  @IsString()
+  @IsNotEmpty()
+  mainImage: string;
 
   @IsString()
   @IsOptional()
@@ -34,6 +43,10 @@ export class CreateProjectDto {
   @IsArray()
   @IsOptional()
   technologies: Array<number>;
+
+  @IsArray()
+  @IsNotEmpty()
+  gallery: Array<ProjectGallery>;
 }
 
 export class CreateCaseStudyDto {

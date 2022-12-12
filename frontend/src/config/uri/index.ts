@@ -1,6 +1,6 @@
 const uris = {
   index: '/',
-  projects: '#projects',
+  projects: '/projects',
   about: '/about',
   contact: '#contact',
 }

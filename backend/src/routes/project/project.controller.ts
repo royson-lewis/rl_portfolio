@@ -44,11 +44,11 @@ export class ProjectController {
     );
   }
 
-  @Get(':id')
-  async get(@Param('id', ParseIntPipe) id: number) {
+  @Get(':slug')
+  async getBySlug(@Param('slug') slug: string) {
     return handleSuccessResponse(
-      await this.projectService.get(id),
-      'Projects retrieved successfully',
+      await this.projectService.getBySlug(slug),
+      'Project retrieved successfully',
     );
   }
 

@@ -60,11 +60,33 @@ export class ProjectService {
     delete createProjectDto.categoryId;
     delete createProjectDto.technologies;
     Object.assign(newProject, plainToClass(Project, createProjectDto));
-    return this.projectRepository.manager.save(newProject);
+
+    // slug
+    const slug = createProjectDto.slug || createProjectDto.name
+    newProject.slug = slug.split(' ').join('-').toLowerCase()
+
+    // gallery
+    newProject.gallery = createProjectDto.gallery
+
+    try {
+     return await this.projectRepository.manager.save(newProject);
+    } catch (error) {
+      if (error.code === 'ER_DUP_ENTRY') {
+        const errorMessage = `Value ${error.sqlMessage.split("'")[1]} already exists!`
+        throw new HttpException(
+          errorMessage,
+          HttpStatus.BAD_REQUEST,
+        );
+      }
+    }
   }
 
   async getAll(): Promise<Project[]> {
-    return await this.projectRepository.find();
+    return await this.projectRepository.find({
+      relations: {
+        gallery: true
+      }
+    });
   }
 
   async get(id: number): Promise<Project> {
@@ -89,10 +111,34 @@ export class ProjectService {
     }
   }
 
+  async getBySlug(slug: string): Promise<Project> {
+    const project = await this.projectRepository.findOne({
+      relations: {
+        caseStudy: {
+          caseSections: true,
+        },
+        category: true,
+        technologies: true,
+      },
+      where: { slug: slug },
+    });
+
+    if (project?.slug) {
+      return project;
+    } else {
+      throw new HttpException(
+        'No project with this slug exists',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+  }
+
   async getCategoryProjects(): Promise<ProjectCategory[]> {
     return await this.projectCategoryRepository.find({
       relations: {
-        projects: true
+        projects: {
+          gallery: true
+        }
       },
     })
   }
