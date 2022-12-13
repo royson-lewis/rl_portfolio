@@ -63,10 +63,10 @@ export class ProjectController {
     );
   }
 
-  @Get(':id/case-study')
-  async getCaseStudy(@Param('id', ParseIntPipe) id: number) {
+  @Get(':slug/case-study')
+  async getCaseStudyByProjectSlug(@Param('slug') slug: string) {
     return handleSuccessResponse(
-      await this.projectService.getCaseStudy(id),
+      await this.projectService.getCaseStudyByProjectSlug(slug),
       'Case study retrieved successfully!',
     );
   }

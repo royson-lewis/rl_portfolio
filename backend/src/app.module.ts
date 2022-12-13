@@ -9,12 +9,15 @@ import { TechnologyModule } from './routes/technology/technology.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     TypeOrmModule.forRootAsync(typeOrmAsyncConfig),
     ProjectModule,
     TechnologyModule,
   ],
 })
+
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(logger).forRoutes(ProjectController);

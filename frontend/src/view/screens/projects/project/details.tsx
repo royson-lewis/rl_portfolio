@@ -7,11 +7,15 @@ import SectionHeroMain from './section/hero/main'
 import SectionProjectInfoMain from './section/project-info/main'
 import SectionProjectContentMain from './section/project-content/main'
 import SectionPaginationMain from './section/pagination/main'
-import {ProjectBySlugTypes} from "../../../../api/projects/types";
+import {CaseStudyTypes, ProjectBySlugTypes} from "../../../../api/projects/types";
 
-const ProjectDetails: React.FC<{project: ProjectBySlugTypes}> =
+const ProjectDetails: React.FC<{
+    project: ProjectBySlugTypes,
+    caseStudy: CaseStudyTypes
+}> =
     ({
-        project
+        project,
+        caseStudy
      }) => (
   <>
     <main className={styles['project-details-page']}>
@@ -29,8 +33,13 @@ const ProjectDetails: React.FC<{project: ProjectBySlugTypes}> =
           type={project.type}
           duration={project.duration}
       />
-      <SectionProjectContentMain />
-      <SectionPaginationMain />
+      <SectionProjectContentMain
+          caseStudy={caseStudy}
+      />
+      <SectionPaginationMain
+          prevProject={project.prevProject}
+          nextProject={project.nextProject}
+      />
     </main>
   </>
 )

@@ -5,18 +5,28 @@ import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './main.module.scss'
 import ButtonMain from '../../../../../../components/button/main'
+import LinkMain from "../../../../../../components/link/main";
+import uris from "../../../../../../config/uri";
 
-const SectionPaginationMain = () => (
-  <section className={styles['project-pagination']}>
-    <ButtonMain className="no-border-w-icon">
-      <FontAwesomeIcon icon={faArrowLeft} />
-      Previous Project
-    </ButtonMain>
-    <ButtonMain className="no-border-w-icon">
-      Next Project
-      <FontAwesomeIcon icon={faArrowRight} />
-    </ButtonMain>
-  </section>
-)
+const SectionPaginationMain: React.FC<{
+    prevProject: string
+    nextProject: string
+}> = ({
+    prevProject,
+    nextProject
+}) => {
+    return (
+        <section className={styles['project-pagination']}>
+            <LinkMain style={!prevProject ? { opacity: "0.5", pointerEvents: "none", cursor: "not-allowed" } : {}} to={`${uris.projects}/${prevProject}`}>
+                <FontAwesomeIcon icon={faArrowLeft} />
+                Previous Project
+            </LinkMain>
+            <LinkMain style={!nextProject ? { opacity: "0.5", pointerEvents: "none", cursor: "not-allowed" } : {}} to={`${uris.projects}/${nextProject}`}>
+                Next Project
+                <FontAwesomeIcon icon={faArrowRight} />
+            </LinkMain>
+        </section>
+    )
+}
 
 export default SectionPaginationMain

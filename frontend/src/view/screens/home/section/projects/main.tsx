@@ -28,7 +28,7 @@ const SectionProjectsMain: React.FC<{
                                     <div key={project.id} className={styles['category-project']}>
                                         <div className={styles['project-images']}>
                                             {project.gallery?.map((gallery) => (
-                                                <ProjectGallery gallery={gallery} slug={project.slug} />
+                                                <ProjectGallery key={gallery.id} gallery={gallery} slug={project.slug} />
                                             ))}
                                         </div>
                                         <h4>{project.name}</h4>

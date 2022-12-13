@@ -90,7 +90,7 @@ const LinkMain: React.FC<PropsWithChildren<LinkMainTypes>> = ({
     )
   }
   return (
-    <Link {...props} href={to || '#'} role="link" tabIndex={0}>
+    <Link {...props} style={style} className={className} href={to || '#'} role="link" tabIndex={0}>
       {children}
     </Link>
   )

@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact, faFigma, faSass } from '@fortawesome/free-brands-svg-icons'
 import Image from 'next/image'
 import styles from './main.module.scss'
 import TechnologyTypes from "../../../../../../api/technology/types";
@@ -38,7 +36,7 @@ const SectionProjectInfoMain: React.FC<{
           {
             technologyUsed?.map(tech => {
               return (
-                  <span><Image height={50} width={50} src={tech.logo} alt={tech.name} /></span>
+                  <span key={tech.id}><Image height={50} width={50} src={tech.logo} alt={tech.name} /></span>
               )
             })
           }

@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { In, Repository } from 'typeorm';
+import { In, Repository, DataSource } from 'typeorm';
 import { Project } from './entities/project.entity';
 import {
   CreateCaseStudyDto,
@@ -12,6 +12,8 @@ import { plainToClass } from 'class-transformer';
 import { ProjectCategory } from './entities/project-category.entity';
 import { Technology } from '../technology/entities/technology.entity';
 import { ProjectCaseSection } from './entities/project-case-section.entity';
+import {IGetProjectBySlugResponse} from "./project.interface";
+import AppDataSource from "../../config/type-orm/typeorm.config-migrations";
 
 @Injectable()
 export class ProjectService {
@@ -111,7 +113,9 @@ export class ProjectService {
     }
   }
 
-  async getBySlug(slug: string): Promise<Project> {
+  async getBySlug(slug: string): Promise<IGetProjectBySlugResponse> {
+    const projectResponse = {} as IGetProjectBySlugResponse
+
     const project = await this.projectRepository.findOne({
       relations: {
         caseStudy: {
@@ -123,8 +127,22 @@ export class ProjectService {
       where: { slug: slug },
     });
 
+    Object.assign(projectResponse, project)
+
     if (project?.slug) {
-      return project;
+      try {
+        const prevProject = await AppDataSource.manager.query(`SELECT * FROM project WHERE id < ${project.id} ORDER BY id DESC LIMIT 1`)
+        projectResponse.prevProject = prevProject[0].slug
+      } catch (err) {
+        projectResponse.prevProject = null
+      }
+      try {
+        const nextProject = await AppDataSource.manager.query(`SELECT * FROM project WHERE id>${project.id} ORDER BY id LIMIT 1`)
+        projectResponse.nextProject = nextProject[0].slug
+      } catch (err) {
+        projectResponse.nextProject = null
+      }
+      return projectResponse;
     } else {
       throw new HttpException(
         'No project with this slug exists',
@@ -143,14 +161,14 @@ export class ProjectService {
     })
   }
 
-  async getCaseStudy(id: number): Promise<any> {
+  async getCaseStudyByProjectSlug(slug: string): Promise<ProjectCaseStudy> {
     const project = await this.projectRepository.findOne({
       relations: {
         caseStudy: {
           caseSections: true,
         },
       },
-      where: { id },
+      where: { slug },
     });
 
     if (project?.caseStudy?.id) {
@@ -158,7 +176,7 @@ export class ProjectService {
     } else {
       throw new HttpException(
         'No case study found for this project',
-        HttpStatus.BAD_REQUEST,
+        HttpStatus.NO_CONTENT,
       );
     }
   }
