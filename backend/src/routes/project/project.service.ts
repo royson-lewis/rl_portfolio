@@ -12,6 +12,8 @@ import { plainToClass } from 'class-transformer';
 import { ProjectCategory } from './entities/project-category.entity';
 import { Technology } from '../technology/entities/technology.entity';
 import { ProjectCaseSection } from './entities/project-case-section.entity';
+import { IGetProjectBySlugResponse } from './project.interface';
+import AppDataSource from '../../config/type-orm/typeorm.config-migrations';
 
 @Injectable()
 export class ProjectService {
@@ -60,11 +62,32 @@ export class ProjectService {
     delete createProjectDto.categoryId;
     delete createProjectDto.technologies;
     Object.assign(newProject, plainToClass(Project, createProjectDto));
-    return await this.projectRepository.manager.save(newProject);
+
+    // slug
+    const slug = createProjectDto.slug || createProjectDto.name;
+    newProject.slug = slug.split(' ').join('-').toLowerCase();
+
+    // gallery
+    newProject.gallery = createProjectDto.gallery;
+
+    try {
+      return await this.projectRepository.manager.save(newProject);
+    } catch (error) {
+      if (error.code === 'ER_DUP_ENTRY') {
+        const errorMessage = `Value ${
+          error.sqlMessage.split("'")[1]
+        } already exists!`;
+        throw new HttpException(errorMessage, HttpStatus.BAD_REQUEST);
+      }
+    }
   }
 
   async getAll(): Promise<Project[]> {
-    return await this.projectRepository.find();
+    return await this.projectRepository.find({
+      relations: {
+        gallery: true,
+      },
+    });
   }
 
   async get(id: number): Promise<Project> {
@@ -89,14 +112,66 @@ export class ProjectService {
     }
   }
 
-  async getCaseStudy(id: number): Promise<any> {
+  async getBySlug(slug: string): Promise<IGetProjectBySlugResponse> {
+    const projectResponse = {} as IGetProjectBySlugResponse;
+
+    const project = await this.projectRepository.findOne({
+      relations: {
+        caseStudy: {
+          caseSections: true,
+        },
+        category: true,
+        technologies: true,
+      },
+      where: { slug: slug },
+    });
+
+    Object.assign(projectResponse, project);
+
+    if (project?.slug) {
+      try {
+        const prevProject = await AppDataSource.manager.query(
+          `SELECT * FROM project WHERE id < ${project.id} ORDER BY id DESC LIMIT 1`,
+        );
+        projectResponse.prevProject = prevProject[0].slug;
+      } catch (err) {
+        projectResponse.prevProject = null;
+      }
+      try {
+        const nextProject = await AppDataSource.manager.query(
+          `SELECT * FROM project WHERE id>${project.id} ORDER BY id LIMIT 1`,
+        );
+        projectResponse.nextProject = nextProject[0].slug;
+      } catch (err) {
+        projectResponse.nextProject = null;
+      }
+      return projectResponse;
+    } else {
+      throw new HttpException(
+        'No project with this slug exists',
+        HttpStatus.BAD_REQUEST,
+      );
+    }
+  }
+
+  async getCategoryProjects(): Promise<ProjectCategory[]> {
+    return await this.projectCategoryRepository.find({
+      relations: {
+        projects: {
+          gallery: true,
+        },
+      },
+    });
+  }
+
+  async getCaseStudyByProjectSlug(slug: string): Promise<ProjectCaseStudy> {
     const project = await this.projectRepository.findOne({
       relations: {
         caseStudy: {
           caseSections: true,
         },
       },
-      where: { id },
+      where: { slug },
     });
 
     if (project?.caseStudy?.id) {
@@ -104,7 +179,7 @@ export class ProjectService {
     } else {
       throw new HttpException(
         'No case study found for this project',
-        HttpStatus.BAD_REQUEST,
+        HttpStatus.NO_CONTENT,
       );
     }
   }
@@ -130,7 +205,7 @@ export class ProjectService {
         newCaseStudy,
         plainToClass(ProjectCaseStudy, createCaseStudyDto),
       );
-      return await this.projectCaseStudyRepository.manager.save(newCaseStudy);
+      return this.projectCaseStudyRepository.manager.save(newCaseStudy);
     } else {
       throw new HttpException(
         'Case study already exists for this project',
@@ -160,7 +235,7 @@ export class ProjectService {
           caseSections: caseStudySections,
         }),
       );
-      return await this.projectCaseStudyRepository.manager.save(newCaseStudy);
+      return this.projectCaseStudyRepository.manager.save(newCaseStudy);
     } else {
       throw new HttpException(
         'No case study exists for this project',

@@ -9,7 +9,9 @@ import { TechnologyModule } from './routes/technology/technology.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     TypeOrmModule.forRootAsync(typeOrmAsyncConfig),
     ProjectModule,
     TechnologyModule,

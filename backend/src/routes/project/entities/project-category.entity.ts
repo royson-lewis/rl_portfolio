@@ -9,6 +9,9 @@ export class ProjectCategory {
   @Column()
   name: string;
 
+  @Column()
+  description: string;
+
   @OneToMany(() => Project, (project) => project.category)
   projects: Project[];
 }

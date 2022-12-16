@@ -45,11 +45,11 @@ kill:
 
 lint-frontend:
 	docker-compose -f docker-compose.yml exec frontend sh -c \
-  "cd frontend && yarn eslint && yarn stylelint && yarn prettier && yarn typescript && ANALYZE=true yarn build"
+ 	 "yarn eslint && yarn stylelint && yarn prettier && yarn typescript && ANALYZE=true yarn build"
 
 lint-backend:
 	docker-compose -f docker-compose.yml exec backend sh -c \
-  "cd backend && yarn eslint && yarn prettier && yarn typescript && ANALYZE=true yarn build"
+ 	 "yarn eslint && yarn prettier && yarn typescript && ANALYZE=true yarn build"
 
 ssh-frontend: timeout
 	docker-compose -f docker-compose.yml exec frontend sh

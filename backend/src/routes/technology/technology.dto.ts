@@ -1,4 +1,10 @@
-import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsOptional,
+  IsBoolean,
+  IsNumber,
+  IsString,
+} from 'class-validator';
 
 export class CreateTechnologyDto {
   @IsString()
@@ -8,12 +14,16 @@ export class CreateTechnologyDto {
   @IsString()
   @IsNotEmpty()
   logo: string;
-}
 
-export class UpdateTechnologyDto extends CreateTechnologyDto {
-  @IsOptional()
-  name: string;
+  @IsBoolean()
+  @IsNotEmpty()
+  featured: boolean;
 
+  @IsNumber()
+  @IsNotEmpty()
+  rank: bigint;
+
+  @IsString()
   @IsOptional()
-  logo: string;
+  accentColor: string;
 }

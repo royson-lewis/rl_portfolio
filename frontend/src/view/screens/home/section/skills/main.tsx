@@ -5,8 +5,11 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import cn from 'classnames'
 
 import styles from './main.module.scss'
+import TechnologyTypes from '../../../../../api/technology/types'
 
-const SectionSkillsMain = () => (
+const SectionSkillsMain: React.FC<{
+  skills: TechnologyTypes[]
+}> = ({ skills }) => (
   <section className={styles['skills-section']}>
     <div className={styles['skills-header']}>
       <h2>Skills</h2>
@@ -17,64 +20,17 @@ const SectionSkillsMain = () => (
       </p>
     </div>
     <div className={styles['skills-container']}>
-      <div className={cn(styles['skills-row'], styles.one)}>
-        <div className={cn(styles['skill-pill'])}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>Typescript</p>
-        </div>
-        <div className={cn(styles['skill-pill'], styles['special-pill'])}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>React</p>
-        </div>
-        <div className={styles['skill-pill']}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>CSS</p>
-        </div>
-        <div className={styles['skill-pill']}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>HTML</p>
-        </div>
-      </div>
-      <div className={cn(styles['skills-row'], styles.two)}>
-        <div className={styles['skill-pill']}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>Node.js</p>
-        </div>
-        <div className={styles['skill-pill']}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>SQL/NoSQL</p>
-        </div>
-        <div className={styles['skill-pill']}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>Figma</p>
-        </div>
-        <div className={cn(styles['skill-pill'], styles['special-pill'])}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>Docker</p>
-        </div>
-        <div className={styles['skill-pill']}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>Nest.js</p>
-        </div>
-      </div>
-      <div className={cn(styles['skills-row'], styles.three)}>
-        <div className={cn(styles['skill-pill'], styles['special-pill'])}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>Next.js</p>
-        </div>
-        <div className={styles['skill-pill']}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>HTML</p>
-        </div>
-        <div className={cn(styles['skill-pill'], styles['special-pill'])}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>AWS</p>
-        </div>
-        <div className={styles['skill-pill']}>
-          <FontAwesomeIcon icon={faCheckCircle} />
-          <p>Electron</p>
-        </div>
-      </div>
+      {skills
+        .sort((a, b) => a.rank - b.rank)
+        .map((skill) => (
+          <div
+            key={skill.id}
+            className={cn(styles['skill-pill'], { [styles.featured]: skill.featured })}
+          >
+            <FontAwesomeIcon icon={faCheckCircle} />
+            <p>{skill.name}</p>
+          </div>
+        ))}
     </div>
   </section>
 )

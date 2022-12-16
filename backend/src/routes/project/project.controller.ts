@@ -36,11 +36,19 @@ export class ProjectController {
     );
   }
 
-  @Get(':id')
-  async get(@Param('id', ParseIntPipe) id: number) {
+  @Get('categories')
+  async getCategories() {
     return handleSuccessResponse(
-      await this.projectService.get(id),
-      'Projects retrieved successfully',
+      await this.projectService.getCategoryProjects(),
+      'Category projects retrieved successfully',
+    );
+  }
+
+  @Get(':slug')
+  async getBySlug(@Param('slug') slug: string) {
+    return handleSuccessResponse(
+      await this.projectService.getBySlug(slug),
+      'Project retrieved successfully',
     );
   }
 
@@ -55,10 +63,10 @@ export class ProjectController {
     );
   }
 
-  @Get(':id/case-study')
-  async getCaseStudy(@Param('id', ParseIntPipe) id: number) {
+  @Get(':slug/case-study')
+  async getCaseStudyByProjectSlug(@Param('slug') slug: string) {
     return handleSuccessResponse(
-      await this.projectService.getCaseStudy(id),
+      await this.projectService.getCaseStudyByProjectSlug(slug),
       'Case study retrieved successfully!',
     );
   }

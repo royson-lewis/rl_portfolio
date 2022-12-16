@@ -9,7 +9,7 @@ export class ProjectCaseSection {
   @Column()
   title: string;
 
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'longtext' })
   description: string;
 
   @Column({ nullable: true })

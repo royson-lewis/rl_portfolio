@@ -11,10 +11,10 @@ import LinkMain from '../../../../components/link/main'
 const FooterMain = () => (
   <>
     <footer className={styles.footer}>
-      <section className={styles['footer-contact']}>
+      <section id="contact" className={styles['footer-contact']}>
         <h4>Contact</h4>
         <h5>Get in touch</h5>
-        <LinkMain to="#">
+        <LinkMain external href="mailto:hello@roysonlewis.com">
           hello@roysonlewis.com
           <FontAwesomeIcon icon={faArrowUp} />
         </LinkMain>
