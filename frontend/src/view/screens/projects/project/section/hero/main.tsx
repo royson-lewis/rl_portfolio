@@ -6,14 +6,10 @@ import MouseScrollIcon from '../../../assets/mouse-scroll-icon.svg'
 import styles from './main.module.scss'
 
 const SectionHeroMain: React.FC<{
-    name: string
-    description: string
-    category: string
-}> = ({
-    name,
-    description,
-    category
-}) => (
+  name: string
+  description: string
+  category: string
+}> = ({ name, description, category }) => (
   <section className={styles['hero-section']}>
     <h3>{name}</h3>
     <p>{description}</p>

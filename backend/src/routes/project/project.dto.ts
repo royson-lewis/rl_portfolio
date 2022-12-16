@@ -5,7 +5,7 @@ import {
   IsOptional,
   IsString,
 } from 'class-validator';
-import {ProjectGallery} from "./entities/project-gallery.entity";
+import { ProjectGallery } from './entities/project-gallery.entity';
 
 export class CreateProjectDto {
   @IsString()

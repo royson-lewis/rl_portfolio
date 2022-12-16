@@ -6,15 +6,23 @@
   margin: 0 auto 100px;
   justify-content: space-between;
 
-  button {
+  .pagination-link {
     background: none !important;
     font-weight: 800;
     font-size: 24px;
     line-height: 35px;
     text-transform: capitalize;
+    color: $primary-color;
 
     svg {
-      margin: 0 10px;
+      margin: 0 10px 4px;
+      width: 24px;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      text-decoration: none;
+      opacity: 0.5;
     }
   }
 }

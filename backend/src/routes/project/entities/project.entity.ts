@@ -8,13 +8,13 @@ import {
   OneToOne,
   OneToMany,
   PrimaryGeneratedColumn,
-  Index
+  Index,
 } from 'typeorm';
 import { ProjectCaseStudy } from './project-case-study.entity';
 import { ProjectCategory } from './project-category.entity';
 import { Technology } from '../../technology/entities/technology.entity';
-import {ProjectGallery} from "./project-gallery.entity";
-import {IProject} from "../project.interface";
+import { ProjectGallery } from './project-gallery.entity';
+import { IProject } from '../project.interface';
 
 @Entity()
 export class Project implements IProject {
@@ -58,7 +58,7 @@ export class Project implements IProject {
   technologies: Technology[];
 
   @OneToMany(() => ProjectGallery, (gallery) => gallery.project, {
-    cascade: true
+    cascade: true,
   })
   gallery: ProjectGallery[];
 }

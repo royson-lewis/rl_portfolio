@@ -6,7 +6,7 @@ import { Project } from './entities/project.entity';
 import { ProjectCaseStudy } from './entities/project-case-study.entity';
 import { ProjectCategory } from './entities/project-category.entity';
 import { Technology } from '../technology/entities/technology.entity';
-import {TechnologyModule} from "../technology/technology.module";
+import { TechnologyModule } from '../technology/technology.module';
 
 @Module({
   imports: [
@@ -16,7 +16,7 @@ import {TechnologyModule} from "../technology/technology.module";
       ProjectCategory,
       Technology,
     ]),
-    TechnologyModule
+    TechnologyModule,
   ],
   controllers: [ProjectController],
   providers: [ProjectService],

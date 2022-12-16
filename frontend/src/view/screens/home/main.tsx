@@ -3,18 +3,18 @@ import React from 'react'
 import SectionHeroMain from './section/hero/main'
 import SectionProjectsMain from './section/projects/main'
 import SectionSkillsMain from './section/skills/main'
-import ProjectTypes, {CategoryProjectsTypes} from "../../../api/projects/types";
+import { CategoryProjectsTypes } from '../../../api/projects/types'
+import TechnologyTypes from '../../../api/technology/types'
 
 const HomeMain: React.FC<{
-    categoryProjects: CategoryProjectsTypes[]
-}> = ({
-    categoryProjects
-}) => (
+  categoryProjects: CategoryProjectsTypes[]
+  skills: TechnologyTypes[]
+}> = ({ categoryProjects, skills }) => (
   <>
     <main>
       <SectionHeroMain />
       <SectionProjectsMain categoryProjects={categoryProjects} />
-      <SectionSkillsMain />
+      <SectionSkillsMain skills={skills} />
     </main>
   </>
 )

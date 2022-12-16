@@ -1,7 +1,8 @@
 import axios, { AxiosError, AxiosResponse } from 'axios'
-import {errorResponseHandler, successResponseHandler} from "../lib/api/ResponseHandler";
-import {ResponseError} from "./types";
-import accessTokenHandler from "../lib/api/TokenHandlers";
+
+import { errorResponseHandler, successResponseHandler } from '../lib/api/ResponseHandler'
+import { ResponseError } from './types'
+import accessTokenHandler from '../lib/api/TokenHandlers'
 
 const MainAPIHost = process.env.NEXT_PUBLIC_API_MAIN
 

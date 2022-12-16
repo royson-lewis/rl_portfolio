@@ -17,7 +17,6 @@ import { TechnologyModule } from './routes/technology/technology.module';
     TechnologyModule,
   ],
 })
-
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer.apply(logger).forRoutes(ProjectController);

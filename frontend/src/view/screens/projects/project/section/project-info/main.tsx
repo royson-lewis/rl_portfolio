@@ -1,20 +1,16 @@
 import React from 'react'
 
 import Image from 'next/image'
+
 import styles from './main.module.scss'
-import TechnologyTypes from "../../../../../../api/technology/types";
+import TechnologyTypes from '../../../../../../api/technology/types'
 
 const SectionProjectInfoMain: React.FC<{
   role: string
   type: string
   duration: string
   technologyUsed: Array<TechnologyTypes>
-}> = ({
-    role,
-    duration,
-    technologyUsed,
-    type
-}) => (
+}> = ({ role, duration, technologyUsed, type }) => (
   <section className={styles['project-info-section']}>
     <h3>Project Info</h3>
     <section className={styles['info-sections-container']}>
@@ -33,13 +29,11 @@ const SectionProjectInfoMain: React.FC<{
       <div className={styles['info-section']}>
         <h4>Technology Used</h4>
         <div className={styles['technology-container']}>
-          {
-            technologyUsed?.map(tech => {
-              return (
-                  <span key={tech.id}><Image height={50} width={50} src={tech.logo} alt={tech.name} /></span>
-              )
-            })
-          }
+          {technologyUsed?.map((tech) => (
+            <span key={tech.id}>
+              <Image height={50} width={50} src={tech.logo} alt={tech.name} />
+            </span>
+          ))}
         </div>
       </div>
     </section>

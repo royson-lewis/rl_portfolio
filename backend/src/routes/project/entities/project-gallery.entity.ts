@@ -1,6 +1,5 @@
-import { Column, Entity, ManyToMany, OneToMany,ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import {Project} from "./project.entity";
-import {ProjectCategory} from "./project-category.entity";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Project } from './project.entity';
 
 @Entity()
 export class ProjectGallery {

@@ -7,39 +7,38 @@ import SectionHeroMain from './section/hero/main'
 import SectionProjectInfoMain from './section/project-info/main'
 import SectionProjectContentMain from './section/project-content/main'
 import SectionPaginationMain from './section/pagination/main'
-import {CaseStudyTypes, ProjectBySlugTypes} from "../../../../api/projects/types";
+import { CaseStudyTypes, ProjectBySlugTypes } from '../../../../api/projects/types'
 
 const ProjectDetails: React.FC<{
-    project: ProjectBySlugTypes,
-    caseStudy: CaseStudyTypes
-}> =
-    ({
-        project,
-        caseStudy
-     }) => (
+  project: ProjectBySlugTypes
+  caseStudy: CaseStudyTypes
+}> = ({ project, caseStudy }) => (
   <>
     <main className={styles['project-details-page']}>
       <SectionHeroMain
-          category={project.category?.name}
-          name={project.name}
-          description={project.description}
+        category={project.category?.name}
+        name={project.name}
+        description={project.description}
       />
       <section className={styles['main-image']}>
-        <Image priority width={900} height={900} src={project.mainImage} alt="project presentation in different devices" />
+        {project.mainImage && (
+          <Image
+            priority
+            width={900}
+            height={900}
+            src={project.mainImage}
+            alt="project presentation in different devices"
+          />
+        )}
       </section>
       <SectionProjectInfoMain
-          technologyUsed={project.technologies}
-          role={project.role}
-          type={project.type}
-          duration={project.duration}
+        technologyUsed={project.technologies}
+        role={project.role}
+        type={project.type}
+        duration={project.duration}
       />
-      <SectionProjectContentMain
-          caseStudy={caseStudy}
-      />
-      <SectionPaginationMain
-          prevProject={project.prevProject}
-          nextProject={project.nextProject}
-      />
+      <SectionProjectContentMain caseStudy={caseStudy} />
+      <SectionPaginationMain prevProject={project.prevProject} nextProject={project.nextProject} />
     </main>
   </>
 )

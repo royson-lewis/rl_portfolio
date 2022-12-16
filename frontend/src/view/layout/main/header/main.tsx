@@ -65,8 +65,8 @@ const NavLinks: React.FC<{
   return (
     <nav className={cn(styles['nav-links'], { [styles.mobile]: mobile })}>
       <ul className={cn(styles['link-list'])}>
-        <li className={activeClassNameFormatter(uris.projects)}>
-          <LinkMain onClick={() => setOpenMenu && setOpenMenu(false)} to={uris.projects}>
+        <li className={activeClassNameFormatter(uris.homeProjects)}>
+          <LinkMain onClick={() => setOpenMenu && setOpenMenu(false)} to={uris.homeProjects}>
             {mobile && <FontAwesomeIcon icon={faBriefcase} />}
             Projects
           </LinkMain>
@@ -92,7 +92,7 @@ const NavMail = () => (
   <nav className={styles['nav-mail']}>
     <ul className={cn(styles['link-list'])}>
       <li className={styles.mail}>
-        <LinkMain to={uris.index} external>
+        <LinkMain href="mailto:hello@roysonlewis.com" external>
           hello@roysonlewis.com
           <FontAwesomeIcon icon={faArrowUp} />
         </LinkMain>

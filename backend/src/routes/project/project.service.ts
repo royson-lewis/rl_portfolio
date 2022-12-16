@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { In, Repository, DataSource } from 'typeorm';
+import { In, Repository } from 'typeorm';
 import { Project } from './entities/project.entity';
 import {
   CreateCaseStudyDto,
@@ -12,8 +12,8 @@ import { plainToClass } from 'class-transformer';
 import { ProjectCategory } from './entities/project-category.entity';
 import { Technology } from '../technology/entities/technology.entity';
 import { ProjectCaseSection } from './entities/project-case-section.entity';
-import {IGetProjectBySlugResponse} from "./project.interface";
-import AppDataSource from "../../config/type-orm/typeorm.config-migrations";
+import { IGetProjectBySlugResponse } from './project.interface';
+import AppDataSource from '../../config/type-orm/typeorm.config-migrations';
 
 @Injectable()
 export class ProjectService {
@@ -64,21 +64,20 @@ export class ProjectService {
     Object.assign(newProject, plainToClass(Project, createProjectDto));
 
     // slug
-    const slug = createProjectDto.slug || createProjectDto.name
-    newProject.slug = slug.split(' ').join('-').toLowerCase()
+    const slug = createProjectDto.slug || createProjectDto.name;
+    newProject.slug = slug.split(' ').join('-').toLowerCase();
 
     // gallery
-    newProject.gallery = createProjectDto.gallery
+    newProject.gallery = createProjectDto.gallery;
 
     try {
-     return await this.projectRepository.manager.save(newProject);
+      return await this.projectRepository.manager.save(newProject);
     } catch (error) {
       if (error.code === 'ER_DUP_ENTRY') {
-        const errorMessage = `Value ${error.sqlMessage.split("'")[1]} already exists!`
-        throw new HttpException(
-          errorMessage,
-          HttpStatus.BAD_REQUEST,
-        );
+        const errorMessage = `Value ${
+          error.sqlMessage.split("'")[1]
+        } already exists!`;
+        throw new HttpException(errorMessage, HttpStatus.BAD_REQUEST);
       }
     }
   }
@@ -86,8 +85,8 @@ export class ProjectService {
   async getAll(): Promise<Project[]> {
     return await this.projectRepository.find({
       relations: {
-        gallery: true
-      }
+        gallery: true,
+      },
     });
   }
 
@@ -114,7 +113,7 @@ export class ProjectService {
   }
 
   async getBySlug(slug: string): Promise<IGetProjectBySlugResponse> {
-    const projectResponse = {} as IGetProjectBySlugResponse
+    const projectResponse = {} as IGetProjectBySlugResponse;
 
     const project = await this.projectRepository.findOne({
       relations: {
@@ -127,20 +126,24 @@ export class ProjectService {
       where: { slug: slug },
     });
 
-    Object.assign(projectResponse, project)
+    Object.assign(projectResponse, project);
 
     if (project?.slug) {
       try {
-        const prevProject = await AppDataSource.manager.query(`SELECT * FROM project WHERE id < ${project.id} ORDER BY id DESC LIMIT 1`)
-        projectResponse.prevProject = prevProject[0].slug
+        const prevProject = await AppDataSource.manager.query(
+          `SELECT * FROM project WHERE id < ${project.id} ORDER BY id DESC LIMIT 1`,
+        );
+        projectResponse.prevProject = prevProject[0].slug;
       } catch (err) {
-        projectResponse.prevProject = null
+        projectResponse.prevProject = null;
       }
       try {
-        const nextProject = await AppDataSource.manager.query(`SELECT * FROM project WHERE id>${project.id} ORDER BY id LIMIT 1`)
-        projectResponse.nextProject = nextProject[0].slug
+        const nextProject = await AppDataSource.manager.query(
+          `SELECT * FROM project WHERE id>${project.id} ORDER BY id LIMIT 1`,
+        );
+        projectResponse.nextProject = nextProject[0].slug;
       } catch (err) {
-        projectResponse.nextProject = null
+        projectResponse.nextProject = null;
       }
       return projectResponse;
     } else {
@@ -155,10 +158,10 @@ export class ProjectService {
     return await this.projectCategoryRepository.find({
       relations: {
         projects: {
-          gallery: true
-        }
+          gallery: true,
+        },
       },
-    })
+    });
   }
 
   async getCaseStudyByProjectSlug(slug: string): Promise<ProjectCaseStudy> {

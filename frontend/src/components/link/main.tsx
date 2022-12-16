@@ -22,6 +22,7 @@ interface LinkMainTypes {
   dir?: string
   popUpWindow?: boolean
   role?: string
+  disabled?: boolean
 }
 
 const LinkMain: React.FC<PropsWithChildren<LinkMainTypes>> = ({
@@ -40,6 +41,7 @@ const LinkMain: React.FC<PropsWithChildren<LinkMainTypes>> = ({
   popUpWindow,
   ariaLabel,
   role,
+  disabled,
   ...props
 }) => {
   if (external) {
@@ -89,10 +91,25 @@ const LinkMain: React.FC<PropsWithChildren<LinkMainTypes>> = ({
       </a>
     )
   }
+  if (!disabled) {
+    return (
+      <Link
+        {...props}
+        aria-disabled={disabled}
+        style={style}
+        className={className}
+        href={to || '#'}
+        role="link"
+        tabIndex={0}
+      >
+        {children}
+      </Link>
+    )
+  }
   return (
-    <Link {...props} style={style} className={className} href={to || '#'} role="link" tabIndex={0}>
+    <a aria-disabled={disabled} style={style} className={className} role="link" tabIndex={0}>
       {children}
-    </Link>
+    </a>
   )
 }
 
