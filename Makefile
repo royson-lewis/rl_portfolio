@@ -1,23 +1,10 @@
-# variables
-UNAME := $(shell uname -a)
-ifeq ($(findstring WSL,"$(UNAME)"),WSL)
-	IS_WSL=true
-else
-	IS_WSL=false
-endif
-
 default: env up start-frontend
 
 env:
-ifeq ($(IS_WSL), true)
-	@echo "This is Local"
 	rm -rf ./frontend/.env > /dev/null 2>&1
 	rm -rf ./backend/.env > /dev/null 2>&1
 	cp ./frontend/src/config/parameters/local.env ./frontend/.env
 	cp ./backend/src/config/parameters/local.env ./backend/.env
-else
-	@echo "This is Remote"
-endif
 
 up: down
 	docker-compose -f docker-compose.yml up -d --remove-orphans
@@ -67,12 +54,10 @@ build: down timeout
 package-frontend:
 	docker-compose -f docker-compose.yml exec frontend sh -c \
 	"yarn install"
-	make owner
 
 package-backend:
 	docker-compose -f docker-compose.yml exec backend sh -c \
 	"yarn install"
-	make owner
 
 owner:
 	chown -R $$(whoami) .
