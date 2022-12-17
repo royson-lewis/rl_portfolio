@@ -9,14 +9,18 @@ import TechnologyTypes from '../../../api/technology/types'
 const HomeMain: React.FC<{
   categoryProjects: CategoryProjectsTypes[]
   skills: TechnologyTypes[]
-}> = ({ categoryProjects, skills }) => (
-  <>
-    <main>
-      <SectionHeroMain />
-      <SectionProjectsMain categoryProjects={categoryProjects} />
-      <SectionSkillsMain skills={skills} />
-    </main>
-  </>
-)
+}> = ({ categoryProjects, skills }) => {
+  return (
+    (
+      <>
+        <main>
+          <SectionHeroMain />
+          <SectionProjectsMain categoryProjects={categoryProjects} />
+          <SectionSkillsMain skills={skills} />
+        </main>
+      </>
+    )
+  )
+}
 
 export default HomeMain

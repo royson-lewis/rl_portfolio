@@ -43,6 +43,16 @@
       line-height: 122%;
       text-align: center;
       letter-spacing: -0.01em;
+      
+      .developer-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          position: absolute;
+        }
+      }
 
       span {
         color: $primary-color;
