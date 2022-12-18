@@ -49,7 +49,7 @@
 
     & > p {
       font-weight: 400;
-      font-size: 26px;
+      font-size: 24px;
       line-height: 169.1%;
       letter-spacing: -0.01em;
       margin-bottom: 150px;
@@ -68,6 +68,8 @@
         line-height: 122%;
         letter-spacing: -0.01em;
         margin: 0;
+        position: sticky;
+        top: 150px;
       }
 
       .experience-container {
@@ -83,8 +85,8 @@
           gap: 12px;
 
           h4 {
-            font-weight: 700;
-            font-size: 24px;
+            font-weight: 800;
+            font-size: 28px;
             line-height: 29px;
             color: $primary-color;
           }
@@ -97,10 +99,11 @@
           }
 
           p {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 24px;
+            font-size: 20px;
             width: 560px;
+            font-weight: 400;
+            line-height: 169.1%;
+            letter-spacing: -0.01em;
           }
         }
       }
@@ -113,8 +116,23 @@
       text-align: center;
       text-decoration-line: underline;
       text-transform: capitalize;
-      color: $primary-color !important;
       margin-bottom: 240px;
+
+      svg {
+        width: 30px;
+        margin-left: 16px;
+        margin-top: 2px;
+        color: $primary-color !important;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1650px) {
+  .about-page {
+    .about-body {
+      overflow: hidden;
     }
   }
 }
@@ -122,7 +140,8 @@
 @media only screen and (max-width: 1450px) {
   .about-page {
     .about-body {
-      width: 90%;
+      width: 100%;
+      padding: 50px;
 
       .about-image-container {
         height: 100%;
@@ -132,15 +151,26 @@
         margin-bottom: 100px;
       }
 
-      .about-experience {
-        margin-bottom: 100px;
-        flex-wrap: wrap;
-        gap: 40px;
-      }
-
       & > button {
         font-weight: 800;
         margin-bottom: 150px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .about-page {
+    .about-body {
+      .about-experience {
+        flex-direction: column;
+        margin-bottom: 100px;
+        gap: 40px;
+
+        h3 {
+          position: relative;
+          top: 0;
+        }
       }
     }
   }

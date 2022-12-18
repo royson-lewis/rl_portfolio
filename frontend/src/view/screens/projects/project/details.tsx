@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import Image from 'next/image'
+import { useSpring, animated } from '@react-spring/web'
 
 import styles from './details.module.scss'
 import SectionHeroMain from './section/hero/main'
@@ -12,35 +13,49 @@ import { CaseStudyTypes, ProjectBySlugTypes } from '../../../../api/projects/typ
 const ProjectDetails: React.FC<{
   project: ProjectBySlugTypes
   caseStudy: CaseStudyTypes
-}> = ({ project, caseStudy }) => (
-  <>
-    <main className={styles['project-details-page']}>
-      <SectionHeroMain
-        category={project.category?.name}
-        name={project.name}
-        description={project.description}
-      />
-      <section className={styles['main-image']}>
-        {project.mainImage && (
-          <Image
-            priority
-            width={900}
-            height={900}
-            src={project.mainImage}
-            alt="project presentation in different devices"
-          />
-        )}
-      </section>
-      <SectionProjectInfoMain
-        technologyUsed={project.technologies}
-        role={project.role}
-        type={project.type}
-        duration={project.duration}
-      />
-      <SectionProjectContentMain caseStudy={caseStudy} />
-      <SectionPaginationMain prevProject={project.prevProject} nextProject={project.nextProject} />
-    </main>
-  </>
-)
+}> = ({ project, caseStudy }) => {
+  const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
+  const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
+
+  const titleSprings = useSpring({
+    delay: 500,
+    from: titleFromState,
+    to: titleToState,
+  })
+
+  return (
+    <>
+      <main className={styles['project-details-page']}>
+        <SectionHeroMain
+          category={project.category?.name}
+          name={project.name}
+          description={project.description}
+        />
+        <animated.section style={titleSprings} className={styles['main-image']}>
+          {project.mainImage && (
+            <Image
+              priority
+              width={900}
+              height={900}
+              src={project.mainImage}
+              alt="project presentation in different devices"
+            />
+          )}
+        </animated.section>
+        <SectionProjectInfoMain
+          technologyUsed={project.technologies}
+          role={project.role}
+          type={project.type}
+          duration={project.duration}
+        />
+        <SectionProjectContentMain caseStudy={caseStudy} />
+        <SectionPaginationMain
+          prevProject={project.prevProject}
+          nextProject={project.nextProject}
+        />
+      </main>
+    </>
+  )
+}
 
 export default ProjectDetails

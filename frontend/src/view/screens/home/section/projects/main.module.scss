@@ -11,12 +11,15 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    margin-top: 20px;
 
     .category-info {
       display: flex;
       flex-direction: column;
       gap: 20px;
       width: calc(1400px - 820px - 40px);
+      position: sticky;
+      top: 150px;
 
       h2 {
         margin: 0;
@@ -129,6 +132,9 @@
       flex-wrap: wrap;
 
       .category-info {
+        position: relative;
+        top: 0;
+
         h3 {
           min-width: 0;
         }
