@@ -26,7 +26,7 @@ const SectionProjectsMain: React.FC<{
 }
 
 const Category: React.FC<{ category: CategoryProjectsTypes }> = ({ category }) => {
-  const [ref, inView] = useInView({ rootMargin: '-30% 0% -50%' })
+  const [ref, inView] = useInView({ rootMargin: '-40% 0% -50%' })
 
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
@@ -65,7 +65,7 @@ const Category: React.FC<{ category: CategoryProjectsTypes }> = ({ category }) =
 }
 
 const Project: React.FC<{ project: ProjectTypes }> = ({ project }) => {
-  const [ref, inView] = useInView({ rootMargin: '-20% 0% -50%' })
+  const [ref, inView] = useInView({ rootMargin: '0% 0% -50%' })
 
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
@@ -100,7 +100,7 @@ const Project: React.FC<{ project: ProjectTypes }> = ({ project }) => {
 }
 
 const ProjectGallery: React.FC<{ gallery: GalleryTypes; slug: string }> = ({ slug, gallery }) => {
-  const [ref, inView] = useInView({ rootMargin: '-20% 0% -50%' })
+  const [ref, inView] = useInView({ rootMargin: '0% 0% -50%' })
 
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
