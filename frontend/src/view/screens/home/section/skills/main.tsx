@@ -1,29 +1,29 @@
-import React, { RefObject, useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useMemo } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import cn from 'classnames'
+import { animated, useInView, useSpring, useSprings } from '@react-spring/web'
 
 import styles from './main.module.scss'
 import TechnologyTypes from '../../../../../api/technology/types'
-import { animated, useInView, useSpring, useSprings, useTrail } from '@react-spring/web'
 
 const SectionSkillsMain: React.FC<{
   skills: TechnologyTypes[]
 }> = ({ skills }) => {
-
   const [ref, inView] = useInView({ rootMargin: '0% 0% -50%' })
 
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
 
-  const [titleSprings, titleApi] = useSpring({
-    ...titleFromState
-  }, [titleFromState])
+  const [titleSprings, titleApi] = useSpring(
+    {
+      ...titleFromState,
+    },
+    [titleFromState],
+  )
 
-  const [skillsTrail, skillsTrailApi] = useSprings(skills.length, () => (
-    { x: 0, opacity: 1 }
-  ), [])
+  const [skillsTrail, skillsTrailApi] = useSprings(skills.length, () => ({ x: 0, opacity: 1 }), [])
 
   useEffect(() => {
     if (inView) {
@@ -36,35 +36,30 @@ const SectionSkillsMain: React.FC<{
         to: titleFromState,
       })
     }
-  }, [inView])
+  }, [inView, titleApi, titleFromState, titleToState])
 
   useEffect(() => {
     if (skills.length > 1) {
       if (inView) {
         skillsTrailApi.start({
           from: { x: 0, opacity: 1 },
-          to: [
-            { x: -2000 },
-            { x: -4000 },
-            { x: -2000 },
-            { x: 0 },
-          ],
+          to: [{ x: -2000 }, { x: -4000 }, { x: -2000 }, { x: 0 }],
           config: {
-            duration: 30000
+            duration: 30000,
           },
-          loop: true
+          loop: true,
         })
       } else {
         skillsTrailApi.start({
           from: { opacity: 1 },
           to: { opacity: 0 },
           config: {
-            duration: 500
+            duration: 500,
           },
         })
       }
     }
-  }, [skills, inView])
+  }, [skills, inView, skillsTrailApi])
 
   return (
     <section ref={ref} className={styles['skills-section']}>
@@ -77,21 +72,26 @@ const SectionSkillsMain: React.FC<{
         </animated.p>
       </div>
       <section>
-        {[1, 2, 3].map(() => (
-          <div style={{ gridTemplateColumns: `repeat(${skills.length % 2 === 0 ? (skills.length / 2) : skills.length}, 1fr)` }} className={styles['skills-container']}>
-            {skillsTrail
-              .map((style, i) => {
-                return (
-                  <animated.div
-                    style={style}
-                    key={skills[i].id}
-                    className={cn(styles['skill-pill'], { [styles.featured]: skills[i].featured })}
-                  >
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                    <p>{skills[i].name}</p>
-                  </animated.div>
-                )
-              })}
+        {[1, 2, 3].map((key) => (
+          <div
+            key={key}
+            style={{
+              gridTemplateColumns: `repeat(${
+                skills.length % 2 === 0 ? skills.length / 2 : skills.length
+              }, 1fr)`,
+            }}
+            className={styles['skills-container']}
+          >
+            {skillsTrail.map((style, i) => (
+              <animated.div
+                style={style}
+                key={skills[i].id}
+                className={cn(styles['skill-pill'], { [styles.featured]: skills[i].featured })}
+              >
+                <FontAwesomeIcon icon={faCheckCircle} />
+                <p>{skills[i].name}</p>
+              </animated.div>
+            ))}
           </div>
         ))}
       </section>

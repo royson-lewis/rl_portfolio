@@ -1,15 +1,15 @@
 import React, { useEffect, useMemo } from 'react'
 
 import Image from 'next/image'
+import { animated, useSpring, easings, useChain, useSpringRef, useInView } from '@react-spring/web'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import styles from './main.module.scss'
 import MouseScrollIcon from '../projects/assets/mouse-scroll-icon.svg'
 import Profile1 from './assets/profile-1.png'
 import Profile2 from './assets/profile-2.png'
 import ButtonMain from '../../../components/button/main'
-import { animated, useSpring, easings, useChain, useSpringRef, useInView } from '@react-spring/web'
-import { faDownload } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export interface ExperienceTypes {
   title: string
@@ -20,23 +20,25 @@ export interface ExperienceTypes {
   }
 }
 
-const experiences:ExperienceTypes[] = [
+const experiences: ExperienceTypes[] = [
   {
-    title: "Software Engineer & UI/UX Designer at AITrade",
-    description: "Fermentum suspendisse felis pellentesque nulla netus. Odio condimentum netus in diam ut sed maecenas. Facilisi ut ultricies natoque morbi nisl. Nulla aliquam morbimattis penatibus diam, fermentum dictum sed fames.",
+    title: 'Software Engineer & UI/UX Designer at AITrade',
+    description:
+      'Fermentum suspendisse felis pellentesque nulla netus. Odio condimentum netus in diam ut sed maecenas. Facilisi ut ultricies natoque morbi nisl. Nulla aliquam morbimattis penatibus diam, fermentum dictum sed fames.',
     date: {
       from: 2020,
-      to: "Present"
-    }
+      to: 'Present',
+    },
   },
   {
-    title: "Freelance Software Developer",
-    description: "Fermentum suspendisse felis pellentesque nulla netus. Odio condimentum netus in diam ut sed maecenas. Facilisi ut ultricies natoque morbi nisl. Nulla aliquam morbimattis penatibus diam, fermentum dictum sed fames.",
+    title: 'Freelance Software Developer',
+    description:
+      'Fermentum suspendisse felis pellentesque nulla netus. Odio condimentum netus in diam ut sed maecenas. Facilisi ut ultricies natoque morbi nisl. Nulla aliquam morbimattis penatibus diam, fermentum dictum sed fames.',
     date: {
       from: 2019,
-      to: 2020
-    }
-  }
+      to: 2020,
+    },
+  },
 ]
 
 const AboutMain = () => {
@@ -48,7 +50,7 @@ const AboutMain = () => {
     ref: titleRef,
     delay: 500,
     from: titleFromState,
-    to: titleToState
+    to: titleToState,
   })
 
   const scrollRef = useSpringRef()
@@ -57,14 +59,14 @@ const AboutMain = () => {
     from: { y: 0, opacity: 0 },
     to: [
       { y: 50, opacity: 0 },
-      { y: 0, opacity: 1 }
+      { y: 0, opacity: 1 },
     ],
     config: {
-      easing: easings.easeInCubic
+      easing: easings.easeInCubic,
     },
     loop: {
-      delay: 500
-    }
+      delay: 500,
+    },
   })
 
   useChain([titleRef, scrollRef])
@@ -75,7 +77,11 @@ const AboutMain = () => {
       <main className={styles['about-page']}>
         <section className={styles['hero-section']}>
           <animated.h3 style={titleSprings}>About Me</animated.h3>
-          <AnimatedImage style={scrollSprings} src={MouseScrollIcon} alt="scroll mouse to view more" />
+          <AnimatedImage
+            style={scrollSprings}
+            src={MouseScrollIcon}
+            alt="scroll mouse to view more"
+          />
         </section>
         <section className={styles['about-body']}>
           <animated.div style={titleSprings} className={styles['about-image-container']}>
@@ -91,13 +97,9 @@ const AboutMain = () => {
           <div className={styles['about-experience']}>
             <h3>Experience</h3>
             <div className={styles['experience-container']}>
-              {
-                experiences.map((experience) => {
-                  return (
-                    <Experience key={experience.title} experience={experience} />
-                  )
-                })
-              }
+              {experiences.map((experience) => (
+                <Experience key={experience.title} experience={experience} />
+              ))}
             </div>
           </div>
           <ButtonMain className="no-border">
@@ -111,16 +113,19 @@ const AboutMain = () => {
 }
 
 const Experience: React.FC<{
-  experience: ExperienceTypes 
+  experience: ExperienceTypes
 }> = ({ experience }) => {
   const [ref, inView] = useInView({ rootMargin: '0% 0% -20%' })
 
   const titleFromState = useMemo(() => ({ x: 100, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ x: 0, opacity: 1 }), [])
 
-  const [titleSprings, titleApi] = useSpring({
-    ...titleFromState
-  }, [titleFromState])
+  const [titleSprings, titleApi] = useSpring(
+    {
+      ...titleFromState,
+    },
+    [titleFromState],
+  )
 
   useEffect(() => {
     if (inView) {
@@ -133,7 +138,7 @@ const Experience: React.FC<{
         to: titleFromState,
       })
     }
-  }, [inView])
+  }, [inView, titleApi, titleFromState, titleToState])
 
   return (
     <div ref={ref} className={styles.experience}>
@@ -141,9 +146,7 @@ const Experience: React.FC<{
       <animated.h5 style={titleSprings}>
         {`${experience.date?.from} - ${experience.date?.to}`}
       </animated.h5>
-      <animated.p style={titleSprings}>
-        {experience.description}
-      </animated.p>
+      <animated.p style={titleSprings}>{experience.description}</animated.p>
     </div>
   )
 }

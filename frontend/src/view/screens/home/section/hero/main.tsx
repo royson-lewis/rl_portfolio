@@ -1,13 +1,13 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faDribbble } from '@fortawesome/free-brands-svg-icons'
+import { animated, useInView, useIsomorphicLayoutEffect, useSpring } from '@react-spring/web'
 
 import styles from './main.module.scss'
 import HeroEllipse from '../../assets/hero-ellipse.svg'
 import ButtonMain from '../../../../../components/button/main'
-import { animated, useInView, useIsomorphicLayoutEffect, useSpring, useSprings } from '@react-spring/web'
 
 const SectionHeroMain = () => {
   const [initialLoad, setInitialLoad] = useState(true)
@@ -19,13 +19,13 @@ const SectionHeroMain = () => {
 
   const [titleSprings, titleApi] = useSpring(titleFromState, [titleFromState])
 
-  const socialFromState = useMemo(() => ({ transform: "scale(0)"}), [])
-  const socialToState = useMemo(() => ([{ transform: "scale(1)"}]), [])
+  const socialFromState = useMemo(() => ({ transform: 'scale(0)' }), [])
+  const socialToState = useMemo(() => [{ transform: 'scale(1)' }], [])
 
   const [socialSprings, socialApi] = useSpring(socialFromState, [socialFromState])
 
-  const ellipseFromState = useMemo(() => ({ transform: "scale(1) rotate(10deg)"}), [])
-  const ellipseToState = useMemo(() => ([{ transform: "scale(1) rotate(0deg)"}]), [])
+  const ellipseFromState = useMemo(() => ({ transform: 'scale(1) rotate(10deg)' }), [])
+  const ellipseToState = useMemo(() => [{ transform: 'scale(1) rotate(0deg)' }], [])
 
   const [ellipseSprings, ellipseApi] = useSpring(ellipseFromState, [ellipseFromState])
 
@@ -82,7 +82,7 @@ const SectionHeroMain = () => {
         alt="Hero ellipse"
       />
       <div className={styles['hero-info']}>
-        <animated.h2 style={titleSprings}> 
+        <animated.h2 style={titleSprings}>
           Hi, I&apos;m <strong>Royson Lewis</strong>
         </animated.h2>
         <animated.h3 style={titleSprings}>
@@ -100,7 +100,9 @@ const SectionHeroMain = () => {
             <FontAwesomeIcon icon={faDribbble} />
           </animated.span>
         </div>
-        <AnimatedButton style={titleSprings} className="no-border">View Resume</AnimatedButton>
+        <AnimatedButton style={titleSprings} className="no-border">
+          View Resume
+        </AnimatedButton>
       </div>
     </section>
   )

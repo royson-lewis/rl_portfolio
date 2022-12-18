@@ -129,10 +129,19 @@
   }
 }
 
+@media only screen and (max-width: 1650px) {
+  .about-page {
+    .about-body {
+      overflow: hidden;
+    }
+  }
+}
+
 @media only screen and (max-width: 1450px) {
   .about-page {
     .about-body {
-      width: 90%;
+      width: 100%;
+      padding: 50px;
 
       .about-image-container {
         height: 100%;
@@ -142,15 +151,26 @@
         margin-bottom: 100px;
       }
 
-      .about-experience {
-        margin-bottom: 100px;
-        flex-wrap: wrap;
-        gap: 40px;
-      }
-
       & > button {
         font-weight: 800;
         margin-bottom: 150px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .about-page {
+    .about-body {
+      .about-experience {
+        flex-direction: column;
+        margin-bottom: 100px;
+        gap: 40px;
+
+        h3 {
+          position: relative;
+          top: 0;
+        }
       }
     }
   }

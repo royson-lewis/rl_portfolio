@@ -132,6 +132,9 @@
       flex-wrap: wrap;
 
       .category-info {
+        position: relative;
+        top: 0;
+
         h3 {
           min-width: 0;
         }

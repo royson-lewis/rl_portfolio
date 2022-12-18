@@ -1,29 +1,28 @@
 import React, { useEffect, useMemo } from 'react'
 
 import Image from 'next/image'
+import { useInView, animated, useSpring } from '@react-spring/web'
 
 import styles from './main.module.scss'
 import LinkMain from '../../../../../components/link/main'
 import uris from '../../../../../config/uri'
-import ProjectTypes, { CategoryProjectsTypes, GalleryTypes } from '../../../../../api/projects/types'
-import { useInView, animated, useSpring, useSprings } from '@react-spring/web'
+import ProjectTypes, {
+  CategoryProjectsTypes,
+  GalleryTypes,
+} from '../../../../../api/projects/types'
 
 const SectionProjectsMain: React.FC<{
   categoryProjects: CategoryProjectsTypes[]
-}> = ({ categoryProjects }) => {
-  return (
-    <section id="projects" className={styles['projects-section']}>
-      {categoryProjects?.map((category) => {
-        if (category.projects.length > 0) {
-          return (
-            <Category category={category} key={category.id} />
-          )
-        }
-        return null
-      })}
-    </section>
-  )
-}
+}> = ({ categoryProjects }) => (
+  <section id="projects" className={styles['projects-section']}>
+    {categoryProjects?.map((category) => {
+      if (category.projects.length > 0) {
+        return <Category category={category} key={category.id} />
+      }
+      return null
+    })}
+  </section>
+)
 
 const Category: React.FC<{ category: CategoryProjectsTypes }> = ({ category }) => {
   const [ref, inView] = useInView({ rootMargin: '-40% 0% -50%' })
@@ -31,9 +30,12 @@ const Category: React.FC<{ category: CategoryProjectsTypes }> = ({ category }) =
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
 
-  const [titleSprings, titleApi] = useSpring({
-    ...titleFromState
-  }, [titleFromState])
+  const [titleSprings, titleApi] = useSpring(
+    {
+      ...titleFromState,
+    },
+    [titleFromState],
+  )
 
   useEffect(() => {
     if (inView) {
@@ -46,7 +48,7 @@ const Category: React.FC<{ category: CategoryProjectsTypes }> = ({ category }) =
         to: titleFromState,
       })
     }
-  }, [inView])
+  }, [inView, titleApi, titleFromState, titleToState])
 
   return (
     <div ref={ref} key={category.id} className={styles['project-category']}>
@@ -56,8 +58,8 @@ const Category: React.FC<{ category: CategoryProjectsTypes }> = ({ category }) =
         <animated.p style={titleSprings}>{category.description}</animated.p>
       </div>
       <div className={styles['category-gallery']}>
-        {category.projects?.map((project, i) => (
-          <Project project={project} key={i} />
+        {category.projects?.map((project) => (
+          <Project project={project} key={project.id} />
         ))}
       </div>
     </div>
@@ -70,9 +72,12 @@ const Project: React.FC<{ project: ProjectTypes }> = ({ project }) => {
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
 
-  const [titleSprings, titleApi] = useSpring({
-    ...titleFromState
-  }, [titleFromState])
+  const [titleSprings, titleApi] = useSpring(
+    {
+      ...titleFromState,
+    },
+    [titleFromState],
+  )
 
   useEffect(() => {
     if (inView) {
@@ -85,7 +90,7 @@ const Project: React.FC<{ project: ProjectTypes }> = ({ project }) => {
         to: titleFromState,
       })
     }
-  }, [inView])
+  }, [inView, titleApi, titleFromState, titleToState])
 
   return (
     <div ref={ref} key={project.id} className={styles['category-project']}>
@@ -105,9 +110,12 @@ const ProjectGallery: React.FC<{ gallery: GalleryTypes; slug: string }> = ({ slu
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
 
-  const [titleSprings, titleApi] = useSpring({
-    ...titleFromState
-  }, [titleFromState])
+  const [titleSprings, titleApi] = useSpring(
+    {
+      ...titleFromState,
+    },
+    [titleFromState],
+  )
 
   useEffect(() => {
     if (inView) {
@@ -120,13 +128,19 @@ const ProjectGallery: React.FC<{ gallery: GalleryTypes; slug: string }> = ({ slu
         to: titleFromState,
       })
     }
-  }, [inView])
+  }, [inView, titleApi, titleFromState, titleToState])
 
   const AnimatedImage = animated(Image)
   return (
     <div ref={ref} className={styles['project-image-wrapper']}>
       <LinkMain to={`${uris.projects}/${slug}`}>
-        <AnimatedImage style={titleSprings} width="400" height="600" src={gallery.imgLink} alt={gallery.alt} />
+        <AnimatedImage
+          style={titleSprings}
+          width="400"
+          height="600"
+          src={gallery.imgLink}
+          alt={gallery.alt}
+        />
       </LinkMain>
     </div>
   )

@@ -10,9 +10,9 @@
     height: 500px;
 
     img {
-      width: auto;
+      width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
     }
   }
 }
@@ -26,6 +26,21 @@
 
       img {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .project-details-page {
+    .main-image {
+      margin: 10px auto 100px;
+      width: 90%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        object-fit: contain;
       }
     }
   }

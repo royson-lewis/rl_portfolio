@@ -2,13 +2,14 @@
 
 .hero-section {
   height: calc(100vh - 69px);
-  top: -30px;
+  top: -70px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: 900px;
   max-height: 1000px;
+  overflow-y: hidden;
 
   .hero-ellipse {
     width: 1400px;
@@ -43,7 +44,7 @@
       line-height: 122%;
       text-align: center;
       letter-spacing: -0.01em;
-      
+
       .developer-container {
         display: flex;
         align-items: center;
@@ -110,15 +111,18 @@
     }
 
     .hero-info {
-      margin-top: -120px;
+      margin-top: -80px;
     }
   }
 }
 
 @media only screen and (max-width: 1400px) {
   .hero-section {
+    top: -20px;
+
     .hero-ellipse {
-      width: 900px;
+      max-width: 900px;
+      width: 100%;
       top: -0%;
       left: -10px;
     }

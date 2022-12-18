@@ -3,21 +3,24 @@ import React, { useEffect, useMemo } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faDribbble, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import { useInView, animated, useSpring } from '@react-spring/web'
 
 import styles from './main.module.scss'
 import LogoMain from '../../../widgets/logo/main'
 import LinkMain from '../../../../components/link/main'
-import { useInView, animated, useSpring } from '@react-spring/web'
 
 const FooterMain = () => {
-  const [ref, inView] = useInView({ rootMargin: '0% 0% -50%' })
+  const [ref, inView] = useInView({ rootMargin: '0% 0% -60%' })
 
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
 
-  const [titleSprings, titleApi] = useSpring({
-    ...titleFromState
-  }, [titleFromState])
+  const [titleSprings, titleApi] = useSpring(
+    {
+      ...titleFromState,
+    },
+    [titleFromState],
+  )
 
   useEffect(() => {
     if (inView) {
@@ -30,7 +33,7 @@ const FooterMain = () => {
         to: titleFromState,
       })
     }
-  }, [inView])
+  }, [inView, titleApi, titleFromState, titleToState])
 
   const AnimatedLink = animated(LinkMain)
   return (

@@ -1,7 +1,7 @@
 @import '../../../../layout/styles/variables/style';
 
 .skills-section {
-  margin: 100px auto 200px;
+  margin: 200px auto 250px;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -45,11 +45,12 @@
   & > section {
     display: flex;
     gap: 30px;
+
     .skills-container {
       display: grid;
       flex-wrap: wrap;
       gap: 30px;
-  
+
       .skill-pill {
         display: flex;
         justify-content: center;
@@ -58,14 +59,14 @@
         width: 220px;
         background-color: rgb(33 47 85 / 7%);
         border-radius: 293px;
-  
+
         svg {
           width: 30px;
           height: 30px;
           margin-right: 10px;
           color: $secondary-color;
         }
-  
+
         p {
           margin: 0;
           font-weight: 800;
@@ -73,10 +74,10 @@
           line-height: 122%;
           letter-spacing: -0.01em;
         }
-  
+
         &.featured {
           background-color: rgb(237 113 113 / 8%);
-  
+
           svg {
             color: $primary-color;
           }
@@ -108,9 +109,35 @@
         width: 100%;
       }
     }
+  }
+}
 
-    .skills-container {
-      gap: 30px;
+@media only screen and (max-width: 450px) {
+  .skills-section {
+    padding: 0 20px;
+
+    & > section {
+      gap: 20px;
+
+      .skills-container {
+        gap: 20px;
+
+        .skill-pill {
+          padding: 15px;
+          margin: 0;
+          width: 180px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+          }
+
+          p {
+            font-size: 20px;
+          }
+        }
+      }
     }
   }
 }
