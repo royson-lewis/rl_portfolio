@@ -6,6 +6,8 @@ import { Router } from 'next/router'
 import actionTypes from './actions'
 import { RootState } from '../../pages/_app.page'
 
+import LoaderMain from 'view/widgets/loader/main'
+
 const PageLoadProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   const dispatch = useDispatch()
 
@@ -28,12 +30,7 @@ const PageLoadProvider: React.FC<PropsWithChildren<{}>> = ({ children }) => {
     }
   }, [dispatch])
 
-  return (
-    <>
-      {loading && <p>Loading page...</p>}
-      {children}
-    </>
-  )
+  return <LoaderMain loading={loading}>{children}</LoaderMain>
 }
 
 export default PageLoadProvider
