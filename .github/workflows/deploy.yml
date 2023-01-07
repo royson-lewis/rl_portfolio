@@ -13,9 +13,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
+      - run: make env
       - run: cd frontend && yarn install
       - run: cd frontend && yarn build
       - run: cd frontend && yarn serve
       - run: ls -a
-  
   
