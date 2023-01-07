@@ -6,6 +6,12 @@ env:
 	cp ./frontend/src/config/parameters/local.env ./frontend/.env
 	cp ./backend/src/config/parameters/local.env ./backend/.env
 
+env-production:
+	rm -rf ./frontend/.env > /dev/null 2>&1
+	rm -rf ./backend/.env > /dev/null 2>&1
+	cp ./frontend/src/config/parameters/local.env ./frontend/.env
+	cp ./backend/src/config/parameters/local.env ./backend/.env
+
 up: down
 	docker-compose -f docker-compose.yml up -d --remove-orphans
 
