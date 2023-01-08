@@ -15,7 +15,14 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           make build
-          docker ps
+          docker images
+          echo "$secrets.DOCKER_PASSWORD" | docker login -u "lewisroysonj" --password-stdin
+          docker tag portfolio_backend:latest lewisroysonj/portfolio:backend
+          docker tag portfolio_frontend:latest lewisroysonj/portfolio:frontend
+          docker tag mysql:8.0.27 lewisroysonj/portfolio:mysql
+          docker push lewisroysonj/portfolio:frontend
+          docker push lewisroysonj/portfolio:backend
+          docker push lewisroysonj/portfolio:mysql
 
       - name: execute remote ssh commands using password
         uses: ./
