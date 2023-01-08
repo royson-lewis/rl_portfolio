@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Login to DockerHub Registry
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "lewisroysonj" --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}"
           
       - name: execute remote ssh commands using password
         uses: ./
