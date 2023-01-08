@@ -15,8 +15,6 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           make build
-          docker tag backend:tagname lewisroysonj/portfolio:tagname
-          docker push lewisroysonj/portfolio:tagname
           docker ps
 
       - name: execute remote ssh commands using password
