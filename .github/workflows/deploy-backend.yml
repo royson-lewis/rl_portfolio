@@ -16,7 +16,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and Push Docker Image
         run: |
-          echo $DOCKER_PASSWORD | docker login -T -u "lewisroysonj" --password-stdin
+          echo $DOCKER_PASSWORD | docker login -u "lewisroysonj" --password-stdin
 
       - name: execute remote ssh commands using password
         uses: ./
