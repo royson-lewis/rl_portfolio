@@ -1,3 +1,5 @@
+name: Deploy to EC2
+
 on:
   push:
     branches:
@@ -6,16 +8,17 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Production
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         
-      - name: test checkout
+      - name: Build and Push Docker Image
         run: |
-          ls
-          whoami
+          make build
+          docker build -t my-app .
+          docker tag backend:tagname lewisroysonj/portfolio:tagname
+          docker push lewisroysonj/portfolio:tagname
+          docker ps
 
       - name: execute remote ssh commands using password
         uses: ./
