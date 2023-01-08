@@ -12,14 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         
+        env:
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and Push Docker Image
         run: |
-          echo ${{ secrets.DOCKER_PASSWORD }} | docker login -T -u "lewisroysonj" --password-stdin
+          echo $DOCKER_PASSWORD | docker login -T -u "lewisroysonj" --password-stdin
 
       - name: execute remote ssh commands using password
         uses: ./
-        env:
-          TEST: "Test"
+
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
