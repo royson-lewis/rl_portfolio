@@ -14,8 +14,6 @@ jobs:
       
       - name: Login to DockerHub Registry
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u "lewisroysonj" --password-stdin
-        
-      - name: Build and Push Docker Image
           
       - name: execute remote ssh commands using password
         uses: ./
