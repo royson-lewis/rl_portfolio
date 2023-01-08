@@ -15,7 +15,6 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           make build
-          docker build -t my-app .
           docker tag backend:tagname lewisroysonj/portfolio:tagname
           docker push lewisroysonj/portfolio:tagname
           docker ps
