@@ -58,11 +58,11 @@ build: down timeout
 	make down
 
 package-frontend:
-	docker-compose -f docker-compose.yml exec frontend sh -c \
+	docker-compose -f docker-compose.yml exec -T frontend sh -c \
 	"yarn install"
 
 package-backend:
-	docker-compose -f docker-compose.yml exec backend sh -c \
+	docker-compose -f docker-compose.yml exec -T backend sh -c \
 	"yarn install"
 
 owner:
