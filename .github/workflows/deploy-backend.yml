@@ -14,7 +14,6 @@ jobs:
         
       - name: Build and Push Docker Image
         run: |
-          echo "$secrets.DOCKER_PASSWORD"
           echo ${{ secrets.DOCKER_PASSWORD }}
 
       - name: execute remote ssh commands using password
