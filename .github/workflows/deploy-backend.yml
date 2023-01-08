@@ -11,13 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Login to DockerHub Registry
+        run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u "lewisroysonj" --password-stdin
         
-        env:
-          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and Push Docker Image
-        run: |
-          echo "$DOCKER_PASSWORD"
-          docker login -u "lewisroysonj" --password-stdin
           
       - name: execute remote ssh commands using password
         uses: ./
