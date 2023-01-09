@@ -1,0 +1,9 @@
+make build-production
+make up-production
+
+make bundle-backend
+make serve-backend
+
+make bundle-frontend
+make serve-frontend
+

@@ -1,13 +1,23 @@
 version: "3.9"
 
 services:
+  reverse-proxy:
+    image: jwilder/nginx-proxy:latest
+    container_name: reverse-proxy
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    depends_on:
+      - frontend
+    links:
+      - frontend
+      - backend
+    restart: always
+
   frontend:
     build:
       context: frontend
-      dockerfile: dockerfile.dev
-    ports:
-      - "5000:5000"
-      - "5001:5001"
+      dockerfile: dockerfile
+    container_name: frontend
     volumes:
       - ./frontend:/code
     networks:
@@ -18,10 +28,10 @@ services:
   backend:
     build:
       context: backend
-      dockerfile: dockerfile.dev
-    ports:
-      - "8000:8000"
-    container_name: portfolio_backend
+      dockerfile: dockerfile
+    container_name: backend
+    env_file:
+      - ./backend/.env
     volumes:
       - ./backend:/code
     networks:
@@ -33,6 +43,7 @@ services:
   mysql:
     image: mysql:8.0.27
     restart: always
+    container_name: mysql
     volumes:
       - db-data:/var/lib/mysql
     ports:

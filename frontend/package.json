@@ -17,7 +17,7 @@
     "start:all": "(cd ../backend && yarn start) && yarn start",
     "build": "env-cmd -f .env next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "serve": "next start -p 5001",
+    "serve": "next start -p 5000",
     "eslint": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
     "stylelint": "stylelint --fix 'src/**/*.{scss,less}'",
     "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,scss}' --write",

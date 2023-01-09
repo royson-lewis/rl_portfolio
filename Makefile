@@ -15,6 +15,9 @@ env-production:
 up: down
 	docker-compose -f docker-compose.yml up -d --remove-orphans
 
+up-production: down
+	docker-compose -f docker-compose.prod.yml up --remove-orphans
+
 start-frontend:
 	docker-compose -f docker-compose.yml exec frontend sh -c \
     	"yarn start"
@@ -50,8 +53,18 @@ ssh-frontend: timeout
 ssh-backend: timeout
 	docker-compose -f docker-compose.yml exec backend sh
 
+ssh-nginx: timeout
+	docker-compose -f docker-compose.prod.yml exec nginx sh
+
 build: down timeout
 	docker-compose -f docker-compose.yml build
+	docker-compose up -d --remove-orphans
+	make package-frontend
+	make package-backend
+	make down
+
+build-production: down timeout
+	docker-compose -f docker-compose.prod.yml build
 	docker-compose up -d --remove-orphans
 	make package-frontend
 	make package-backend
@@ -79,8 +92,12 @@ log:
 	sleep 1
 	docker-compose -f docker-compose.yml logs -f
 
-serve:
-	docker-compose -f docker-compose.yml exec frontend sh -c \
+serve-frontend:
+	docker-compose -f docker-compose.prod.yml exec -d frontend sh -c \
+	"yarn serve"
+
+serve-backend:
+	docker-compose -f docker-compose.prod.yml exec -d backend sh -c \
 	"yarn serve"
 
 bundle-frontend:
