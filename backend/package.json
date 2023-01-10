@@ -9,7 +9,7 @@
     "start:debug": "nest start --debug --watch",
     "build": "nest build",
     "prettier": "prettier --write \"src/**/*.ts\"",
-    "serve": "node dist/main",
+    "serve": "env-cmd node dist/main",
     "eslint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
     "typescript": "tsc --noEmit",
     "typeorm": "env-cmd typeorm-ts-node-esm",
