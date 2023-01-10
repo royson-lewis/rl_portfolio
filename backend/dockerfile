@@ -7,4 +7,7 @@ COPY yarn.lock /code/yarn.lock
 
 COPY . /code
 
-CMD ["tail", "-f", "/dev/null"]
+RUN yarn install
+RUN yarn build
+
+CMD ["yarn", "serve"]

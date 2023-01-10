@@ -13,10 +13,10 @@ env-production:
 	cp ./backend/src/config/parameters/local.env ./backend/.env
 
 up: down
-	docker-compose -f docker-compose.yml up -d --remove-orphans
+	docker-compose -f docker-compose.yml up -d
 
 up-production: down
-	docker-compose -f docker-compose.prod.yml up --remove-orphans
+	docker-compose -f docker-compose.prod.yml up
 
 start-frontend:
 	docker-compose -f docker-compose.yml exec frontend sh -c \
@@ -48,13 +48,13 @@ lint-backend:
  	 "yarn eslint && yarn prettier && yarn typescript && ANALYZE=true yarn build"
 
 ssh-frontend: timeout
-	docker-compose -f docker-compose.yml exec frontend sh
+	docker-compose -f docker-compose.prod.yml exec frontend sh
 
 ssh-backend: timeout
-	docker-compose -f docker-compose.yml exec backend sh
+	docker-compose -f docker-compose.prod.yml exec backend sh
 
 ssh-nginx: timeout
-	docker-compose -f docker-compose.prod.yml exec nginx sh
+	docker-compose -f docker-compose.prod.yml exec reverse-proxy sh
 
 build: down timeout
 	docker-compose -f docker-compose.yml build

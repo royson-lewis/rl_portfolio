@@ -7,4 +7,6 @@ COPY yarn.lock /code/yarn.lock
 
 COPY . /code
 
+RUN yarn install
+
 CMD ["tail", "-f", "/dev/null"]

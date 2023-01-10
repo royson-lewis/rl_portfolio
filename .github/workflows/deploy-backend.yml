@@ -8,6 +8,9 @@ on:
 
 env:
   AWS_REGION: ap-south-1
+  ECS_SERVICE: rl_portfolio
+  ECS_CLUSTER: rl_portfolio
+  ECS_TASK_DEFINITION: .github/workflows/task-definition.json
   
 jobs:
   build:
