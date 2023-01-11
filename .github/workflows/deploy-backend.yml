@@ -32,16 +32,20 @@ jobs:
           role-duration-seconds: 3000
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Retrieve AWS Auth Token
+        run: |
+          aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 596051128564.dkr.ecr.ap-south-1.amazonaws.com
+          
       - name: Build Images
         run: |
-            make build-production
-            docker images
+          make build-production
+          docker images
       
       - name: Tag Images
         run: |
-            docker tag portfolio_backend:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
+          docker tag portfolio_backend:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
             
       - name: Push Images
         run: |
-            docker push 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
+          docker push 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
           
