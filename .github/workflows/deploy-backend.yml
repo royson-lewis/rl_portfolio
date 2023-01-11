@@ -46,7 +46,7 @@ jobs:
         run: |
           docker tag portfolio_backend:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
           docker tag portfolio_frontend:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
-          docker tag portfolio_reverse_proxy:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
+          docker tag portfolio_reverse-proxy:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
 
       - name: Push Images
         run: |
