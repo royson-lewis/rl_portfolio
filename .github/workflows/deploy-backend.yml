@@ -35,6 +35,7 @@ jobs:
       - name: Build Images
         run: |
             make build-production
+            docker images
       
       - name: Tag Images
         run: |
