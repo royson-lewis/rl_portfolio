@@ -34,11 +34,11 @@ jobs:
 
       - name: Build Images
         run: |
-            docker build -t rl_portfolio_backend .
+            make build-production
       
       - name: Tag Images
         run: |
-            docker tag rl_portfolio_backend:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
+            docker tag portfolio_backend:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
             
       - name: Push Images
         run: |
