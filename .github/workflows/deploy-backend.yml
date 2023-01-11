@@ -9,6 +9,7 @@ on:
 env:
   AWS_REGION: ap-south-1
   AWS_ROLE: arn:aws:iam::596051128564:role/rl_portfolio_github_actions
+  CONTAINER_REGISTRY_URL: 596051128564.dkr.ecr.ap-south-1.amazonaws.com
   ECS_SERVICE: rl_portfolio
   ECS_CLUSTER: rl_portfolio
   ECS_TASK_DEFINITION: .github/workflows/task-definition.json
@@ -32,9 +33,9 @@ jobs:
           role-duration-seconds: 3000
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Retrieve AWS Auth Token
+      - name: Retrieve AWS Auth Token for ECR
         run: |
-          aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 596051128564.dkr.ecr.ap-south-1.amazonaws.com
+          aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.CONTAINER_REGISTRY_URL }}
           
       - name: Build Images
         run: |
@@ -43,9 +44,13 @@ jobs:
       
       - name: Tag Images
         run: |
-          docker tag portfolio_backend:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
-            
+          docker tag portfolio_backend:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
+          docker tag portfolio_frontend:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
+          docker tag portfolio_reverse_proxy:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
+
       - name: Push Images
         run: |
-          docker push 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
+          docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
+          docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
+          docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
           
