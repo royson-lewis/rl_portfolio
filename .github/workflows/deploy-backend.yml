@@ -19,7 +19,7 @@ permissions:
   
 jobs:
   build:
-    name: Build Images
+    name: Build and Push Images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -31,4 +31,16 @@ jobs:
           role-to-assume: ${{ env.AWS_ROLE }}
           role-duration-seconds: 3000
           aws-region: ${{ env.AWS_REGION }}
+
+      - name: Build Images
+        run: |
+            docker build -t rl_portfolio_backend .
+      
+      - name: Tag Images
+        run: |
+            docker tag rl_portfolio_backend:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
+            
+      - name: Push Images
+        run: |
+            docker push 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
           
