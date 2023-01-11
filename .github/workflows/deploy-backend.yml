@@ -53,4 +53,10 @@ jobs:
           docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
           docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
           docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
-          
+  
+  bundle-projects:
+    name: Bundle Frontend and Backend Projects
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: docker images
