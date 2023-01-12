@@ -18,6 +18,8 @@ services:
       - backend
     ports:
       - 5000:5000
+    volumes:
+      - ./frontend/.env:/code/.env
 
   backend:
     build:
@@ -27,6 +29,8 @@ services:
       - mysql
     ports:
       - 8000:8000
+    volumes:
+      - ./backend/.env:/code/.env
 
   mysql:
     image: mysql:8.0.27
