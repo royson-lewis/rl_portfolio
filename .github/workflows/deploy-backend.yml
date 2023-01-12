@@ -58,7 +58,8 @@ jobs:
         run: |
           ls
           make up-production
+          make migration-run
           make bundle-frontend
-          
+
           ls -a
   

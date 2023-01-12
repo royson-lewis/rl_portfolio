@@ -36,3 +36,11 @@ make serve-frontend
 ap-south-1
 
 aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 596051128564.dkr.ecr.ap-south-1.amazonaws.com
+
+docker tag portfolio_backend:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
+docker tag portfolio_frontend:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_frontend:latest
+docker tag portfolio_reverse-proxy:latest 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_reverse_proxy:latest
+
+docker push 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
+docker push 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_frontend:latest
+docker push 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_reverse_proxy:latest
