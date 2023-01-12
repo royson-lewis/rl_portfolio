@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   reverse-proxy:
-    image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_reverse-proxy:latest
+    image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_reverse_proxy:latest
     ports:
       - 80:80
     depends_on:
