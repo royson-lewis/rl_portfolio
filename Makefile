@@ -16,7 +16,7 @@ up: down
 	docker-compose -f docker-compose.yml up -d
 
 up-production: down
-	docker-compose -f docker-compose.prod-remote.yml up
+	docker-compose -f docker-compose.prod-remote.yml up -d
 
 start-frontend:
 	docker-compose -f docker-compose.yml exec frontend sh -c \
