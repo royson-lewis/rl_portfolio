@@ -56,13 +56,8 @@ jobs:
       
       - name: Pull Images
         run: |   
-          docker build ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
-          docker build ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
-          docker build ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
-
+          docker pull ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
           docker run ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
-          docker run ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
-          docker run ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
 
       - name: Bundle Frontend Project
         run: |
