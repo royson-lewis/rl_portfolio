@@ -7,6 +7,6 @@ COPY yarn.lock /code/yarn.lock
 
 COPY . /code
 
-RUN yarn install
+RUN cp src/config/parameters/production.env .env
 
 CMD ["tail", "-f", "/dev/null"]

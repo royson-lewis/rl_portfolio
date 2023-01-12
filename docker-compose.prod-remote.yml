@@ -2,27 +2,21 @@ version: "3.9"
 
 services:
   reverse-proxy:
-    build:
-      context: nginx
-      dockerfile: dockerfile
+    image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_reverse-proxy:latest
     ports:
       - 80:80
     depends_on:
       - frontend
 
   frontend:
-    build:
-      context: frontend
-      dockerfile: dockerfile
+    image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_frontend:latest
     depends_on:
       - backend
     ports:
       - 5000:5000
 
   backend:
-    build:
-      context: backend
-      dockerfile: dockerfile
+    image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
     depends_on:
       - mysql
     ports:

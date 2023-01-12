@@ -7,3 +7,32 @@ make serve-backend
 make bundle-frontend
 make serve-frontend
 
+[[  Requirements  ]]
+
+
+// pipeline
+-> Connect to Container Registry and aws instance
+-> Build production docker images
+-> Push built images to docker hub
+-> Build frontend and backend projects
+-> Copy build folders to ec2 /dependencies folder
+
+// ec2
+<< Requirements >>
+==> frontend
+    -> build folder
+    -> node modules 
+    -> repo with docker compose and makefile
+
+<< Commands >>
+-> Pull git repo
+-> Pull built images from docker hub
+-> Run pulled docker images
+-> Copy build folders from /dependencies to corresponding project folders
+-> Install yarn dependencies for frontend
+-> Copy env files from parameters to frontend project root
+-> Run make serve-frontend
+
+ap-south-1
+
+aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 596051128564.dkr.ecr.ap-south-1.amazonaws.com

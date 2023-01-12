@@ -65,10 +65,6 @@ build: down timeout
 
 build-production: down timeout
 	docker-compose -f docker-compose.prod.yml build
-	docker-compose up -d --remove-orphans
-	make package-frontend
-	make package-backend
-	make down
 
 package-frontend:
 	docker-compose -f docker-compose.yml exec -T frontend sh -c \
@@ -93,7 +89,7 @@ log:
 	docker-compose -f docker-compose.yml logs -f
 
 serve-frontend:
-	docker-compose -f docker-compose.prod.yml exec -d frontend sh -c \
+	docker-compose -f docker-compose.prod.yml exec frontend sh -c \
 	"yarn serve"
 
 serve-backend:
