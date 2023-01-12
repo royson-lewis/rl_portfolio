@@ -62,4 +62,6 @@ jobs:
           make bundle-frontend
 
           ls -a
+          cd frontend
+          ls -a
   

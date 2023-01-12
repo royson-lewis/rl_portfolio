@@ -114,7 +114,7 @@ migration-create:
   "yarn run migration:create src/database/migrations/$(name)"
 
 migration-run:
-	docker-compose -f docker-compose.yml exec backend sh -c \
+	docker-compose -f docker-compose.yml exec -T backend sh -c \
 	"yarn run migration:run"
 
 migration-revert:
