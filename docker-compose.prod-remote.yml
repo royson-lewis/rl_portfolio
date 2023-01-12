@@ -15,7 +15,7 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - ./frontend:/code
+      - ./frontend/.next:/code/.next
 
   backend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
@@ -23,8 +23,6 @@ services:
       - mysql
     ports:
       - 8000:8000
-    volumes:
-      - ./backend:/code
 
   mysql:
     image: mysql:8.0.27
