@@ -11,7 +11,10 @@ env-production:
 	rm -rf ./backend/.env > /dev/null 2>&1
 	cp ./frontend/src/config/parameters/local.env ./frontend/.env
 	cp ./backend/src/config/parameters/local.env ./backend/.env
-	echo DB_PASSWORD=${{ secrets.RL_PORTFOLIO_DB_PROD_PASSWORD }} >> ./backend/src/config/parameters/production.env
+	echo TEST=$$(whoami) >> ./backend/src/config/parameters/production.env
+	echo DB_PASSWORD=$$(secrets.RL_PORTFOLIO_DB_PROD_PASSWORD) >> ./backend/src/config/parameters/production.env
+	echo DB_PASSWORD=$(secrets.RL_PORTFOLIO_DB_PROD_PASSWORD) >> ./backend/src/config/parameters/production.env
+	echo DB_PASSWORD=${secrets.RL_PORTFOLIO_DB_PROD_PASSWORD} >> ./backend/src/config/parameters/production.env
 
 up: down
 	docker-compose -f docker-compose.yml up -d
@@ -21,7 +24,7 @@ up-production: down
 
 ceck-env:
 	docker-compose -f docker-compose.yml exec -T backend sh -c \
-    	"cat .env"
+    	"cat src/config/parameters/production.env"
 
 start-frontend:
 	docker-compose -f docker-compose.yml exec frontend sh -c \
