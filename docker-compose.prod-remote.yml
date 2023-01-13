@@ -8,7 +8,7 @@ services:
       - 80:80
     depends_on:
       - frontend
-
+    
   frontend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_frontend:latest
     restart: always
@@ -22,22 +22,8 @@ services:
   backend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
     restart: always
-    depends_on:
-      - mysql
     ports:
       - 8000:8000
-
-  mysql:
-    image: mysql:8.0.27
-    restart: always
-    container_name: mysql
-    volumes:
-      - db-data:/var/lib/mysql
-    ports:
-      - 3306:3306
-    environment:
-      MYSQL_ROOT_PASSWORD: rl01111998
-      MYSQL_DATABASE: database
 
 volumes:
   back-notused:

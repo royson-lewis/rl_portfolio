@@ -37,22 +37,23 @@ jobs:
         run: |
           aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.CONTAINER_REGISTRY_URL }}
           
-#       - name: Build Images
-#         run: |
-#           make build-production
-#           docker images
+      - name: Build Images
+        run: |
+          make env-production
+          make build-production
+          docker images
       
-#       - name: Tag Images
-#         run: |
-#           docker tag portfolio_backend:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
-#           docker tag portfolio_frontend:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
-#           docker tag portfolio_reverse-proxy:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
+      - name: Tag Images
+        run: |
+          docker tag portfolio_backend:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
+          docker tag portfolio_frontend:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
+          docker tag portfolio_reverse-proxy:latest ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
 
-#       - name: Push Images
-#         run: |
-#           docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
-#           docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
-#           docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
+      - name: Push Images
+        run: |
+          docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_backend:latest
+          docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
+          docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
       
       - name: Bundle Frontend Project
         run: |

@@ -11,6 +11,7 @@ env-production:
 	rm -rf ./backend/.env > /dev/null 2>&1
 	cp ./frontend/src/config/parameters/local.env ./frontend/.env
 	cp ./backend/src/config/parameters/local.env ./backend/.env
+	echo DB_PASSWORD=${{ secrets.API_KEY }} >> ./backend/src/config/parameters/local.env
 
 up: down
 	docker-compose -f docker-compose.yml up -d
