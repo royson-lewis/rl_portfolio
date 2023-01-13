@@ -3,6 +3,7 @@ version: "3.9"
 services:
   reverse-proxy:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_reverse_proxy:latest
+    restart: always
     ports:
       - 80:80
     depends_on:
@@ -10,6 +11,7 @@ services:
 
   frontend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_frontend:latest
+    restart: always
     depends_on:
       - backend
     ports:
@@ -19,6 +21,7 @@ services:
 
   backend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
+    restart: always
     depends_on:
       - mysql
     ports:
