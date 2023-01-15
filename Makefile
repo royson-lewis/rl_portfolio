@@ -93,7 +93,7 @@ log:
 	docker-compose -f docker-compose.yml logs -f
 
 serve-frontend:
-	docker-compose -f docker-compose.prod.yml exec frontend sh -c \
+	docker-compose -f docker-compose.prod.yml exec -T frontend sh -c \
 	"yarn serve"
 
 serve-backend:
