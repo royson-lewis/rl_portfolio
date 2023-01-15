@@ -59,25 +59,24 @@ jobs:
       #     docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
       #     docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
       
-      - name: Bundle Frontend Project
-        run: |
-          ls
-          make up-production
-          make migration-run
-          make bundle-frontend
+      # - name: Bundle Frontend Project
+      #   run: |
+      #     ls
+      #     make up-production
+      #     make migration-run
+      #     make bundle-frontend
 
-      - name: Push Bundled Project Folder to S3 Bucket
-        run: |
-          ls -a
-          aws s3 cp frontend/.next s3://${{ env.AWS_S3_BUCKET_NAME }}/.next --recursive
+      # - name: Push Bundled Project Folder to S3 Bucket
+      #   run: |
+      #     ls -a
+      #     aws s3 cp frontend/.next s3://${{ env.AWS_S3_BUCKET_NAME }}/.next --recursive
 
       - name: SSH into EC2 Instance
         run: |
           echo "$AWS_EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME} '
-            ls -a
             git clone git@github.com:royson-lewis/rl_portfolio.git &&
-            cd /rl_portfolio &&
+            cd rl_portfolio &&
             git checkout main &&
             git fetch --all &&
             git reset --hard origin/main &&
