@@ -75,7 +75,7 @@ jobs:
         run: |
           echo "$AWS_EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME} '
-            rm -rf rl_portfolio &&
+            sudo rm -rf rl_portfolio &&
             git clone git@github.com:royson-lewis/rl_portfolio.git &&
             cd rl_portfolio &&
             git checkout main &&
