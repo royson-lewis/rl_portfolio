@@ -39,7 +39,8 @@ jobs:
           
       - name: Build Images
         run: |
-          make env-production
+          echo DB_PASSWORD=$$ >> ./backend/src/config/parameters/production.env
+          make ceck-env
           make build-production
           docker images
       
