@@ -10,9 +10,10 @@ env:
   AWS_REGION: ap-south-1
   AWS_ROLE: arn:aws:iam::596051128564:role/rl_portfolio_github_actions
   CONTAINER_REGISTRY_URL: 596051128564.dkr.ecr.ap-south-1.amazonaws.com
-  ECS_SERVICE: rl_portfolio
-  ECS_CLUSTER: rl_portfolio
-  ECS_TASK_DEFINITION: .github/workflows/task-definition.json
+  AWS_S3_BUCKET_NAME: rl-portfolio
+  AWS_EC2_PRIVATE_KEY: ${{ secrets.AWS_EC2_PRIVATE_KEY }}
+  AWS_EC2_HOSTNAME: ${{ secrets.AWS_EC2_HOSTNAME }}
+  AWS_EC2_USERNAME: ${{ secrets.AWS_EC2_USERNAME }}
 
 permissions:
   id-token: write # required to use OIDC authentication
@@ -58,16 +59,31 @@ jobs:
       #     docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_frontend:latest
       #     docker push ${{ env.CONTAINER_REGISTRY_URL }}/rl_portfolio_reverse_proxy:latest
       
-      # - name: Bundle Frontend Project
-      #   run: |
-      #     ls
-      #     make up-production
-      #     make migration-run
-      #     make bundle-frontend
+      - name: Bundle Frontend Project
+        run: |
+          ls
+          make up-production
+          make migration-run
+          make bundle-frontend
 
-      - name: Push Bundled Project Folder to S3
+      - name: Push Bundled Project Folder to S3 Bucket
         run: |
           ls -a
-          aws s3 cp frontend/src s3://rl-portfolio/src --recursive
+          aws s3 cp frontend/.next s3://${{ env.AWS_S3_BUCKET_NAME }}/.next --recursive
+
+      - name: SSH into EC2 Instance
+        run: |
+          echo "$AWS_EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME} '
+            ls -a
+            git clone git@github.com:royson-lewis/rl_portfolio.git &&
+            cd /rl_portfolio &&
+            git checkout main &&
+            git fetch --all &&
+            git reset --hard origin/main &&
+            git pull origin/main &&
+            make up-production
+          '
+
 
       
