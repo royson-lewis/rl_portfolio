@@ -79,6 +79,7 @@ jobs:
             git clone git@github.com:royson-lewis/rl_portfolio.git &&
             cd rl_portfolio &&
             git checkout main &&
+            aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.CONTAINER_REGISTRY_URL }} &&
             make up-production
           '
 
