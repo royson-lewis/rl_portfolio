@@ -8,7 +8,7 @@ services:
       - 80:80
     depends_on:
       - frontend
-    
+
   frontend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_frontend:latest
     restart: always
@@ -16,17 +16,12 @@ services:
       - backend
     ports:
       - 5000:5000
-    volumes:
-      - ./frontend:/code
-      
+
   backend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
     restart: always
     ports:
       - 8000:8000
-    volumes:
-      - ./backend:/code
 
 volumes:
   back-notused:
-  db-data:
