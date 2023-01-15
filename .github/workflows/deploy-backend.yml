@@ -65,11 +65,9 @@ jobs:
           make migration-run
           make bundle-frontend
 
-          cd frontend
-          ls -a
-
       - name: Push Bundled Project Folder to S3
         run: |
-          aws s3api put-object --bucket rl-portfolio --key .next --body .next
+          ls -a
+          aws s3api put-object --bucket rl-portfolio --key .next --body ./frontend/.next
 
       
