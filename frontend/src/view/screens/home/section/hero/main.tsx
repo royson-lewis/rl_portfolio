@@ -83,7 +83,7 @@ const SectionHeroMain = () => {
       />
       <div className={styles['hero-info']}>
         <animated.h2 style={titleSprings}>
-          Hi, I&apos;m <strong>Royson Lewis</strong>
+          Hi, I&apos;m <strong>Royson Lewis successfully deployed using CICD</strong>
         </animated.h2>
         <animated.h3 style={titleSprings}>
           Software Developer<span>,</span>
