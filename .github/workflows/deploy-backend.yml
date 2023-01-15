@@ -85,8 +85,7 @@ jobs:
             sudo aws s3 cp s3://${{ env.AWS_S3_BUCKET_NAME }}/.next ./frontend/.next --recursive &&
             cd frontend && ls -a &&
             cd ../ &&
-            make serve-frontend &&
-            curl localhost
+            make serve-frontend
           '
 
 
