@@ -23,8 +23,7 @@ up-production: down
 	docker-compose -f docker-compose.prod-remote.yml up -d
 
 ceck-env:
-	docker-compose -f docker-compose.yml exec -T backend sh -c \
-    	"cat src/config/parameters/production.env"
+	cat backend/src/config/parameters/production.env
 
 start-frontend:
 	docker-compose -f docker-compose.yml exec frontend sh -c \
