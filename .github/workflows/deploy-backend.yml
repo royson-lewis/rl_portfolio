@@ -83,7 +83,8 @@ jobs:
             make up-production &&
             ls -a &&
             sudo aws s3 cp s3://${{ env.AWS_S3_BUCKET_NAME }}/.next ./frontend/.next --recursive &&
-            ls -a
+            cd frontend && ls -a &&
+            make serve-frontend
           '
 
 
