@@ -16,12 +16,16 @@ services:
       - backend
     ports:
       - 5000:5000
+    volumes:
+      - ./frontend/.next:/code/.next
 
   backend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_backend:latest
     restart: always
     ports:
       - 8000:8000
+    volumes:
+      - ./backend/dist:/backend/dist
 
 volumes:
   back-notused:
