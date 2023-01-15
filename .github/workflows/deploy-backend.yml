@@ -36,10 +36,13 @@ jobs:
       - name: Retrieve AWS Auth Token for ECR
         run: |
           aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.CONTAINER_REGISTRY_URL }}
-          
-      - name: Build Images
+      
+      - name: Pass Secret Envs
         run: |
           echo DB_PASSWORD=${{ secrets.RL_PORTFOLIO_DB_PROD_PASSWORD }} >> ./backend/src/config/parameters/production.env
+
+      - name: Build Images
+        run: |
           make build-production
           docker images
       
