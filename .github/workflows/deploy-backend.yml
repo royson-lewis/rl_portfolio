@@ -68,6 +68,6 @@ jobs:
       - name: Push Bundled Project Folder to S3
         run: |
           ls -a
-          aws s3api put-object --bucket rl-portfolio --key ./frontend/src --body ./frontend/src
+          aws cp frontend/src s3://rl-portfolio/src --recursive
 
       
