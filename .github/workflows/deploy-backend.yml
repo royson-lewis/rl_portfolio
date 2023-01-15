@@ -81,6 +81,8 @@ jobs:
             git checkout main &&
             aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.CONTAINER_REGISTRY_URL }} &&
             make up-production &&
+            ls -a &&
+            aws s3 cp s3://${{ env.AWS_S3_BUCKET_NAME }}/.next ./frontend/.next --recursive &&
             ls -a
           '
 
