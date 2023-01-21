@@ -83,9 +83,7 @@ owner:
 	chmod -R 777 .
 
 destroy: down
-	docker volume prune -f
-	docker image rm -f $(docker image ls -q)
-	docker container rm -f $(docker container ls -qa)
+	docker system prune -a -f
 
 log:
 	docker-compose -f docker-compose.yml ps
