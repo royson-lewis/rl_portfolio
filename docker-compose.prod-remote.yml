@@ -6,6 +6,7 @@ services:
     restart: always
     ports:
       - 80:80
+      - 8000:8000
     depends_on:
       - frontend
 
