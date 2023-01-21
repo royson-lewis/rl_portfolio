@@ -80,6 +80,7 @@ jobs:
             cd rl_portfolio &&
             git checkout main &&
             aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.CONTAINER_REGISTRY_URL }} &&
+            docker image rm -f $(docker image ls -q) &&
             make up-production &&
             ls -a &&
             sudo aws s3 cp s3://${{ env.AWS_S3_BUCKET_NAME }}/.next ./frontend/.next --recursive &&
@@ -87,6 +88,7 @@ jobs:
             cd ../ &&
             make serve-frontend
           '
+
 
 
       
