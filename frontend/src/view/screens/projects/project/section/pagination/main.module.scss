@@ -38,5 +38,13 @@
     margin: 0 auto 50px;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    .pagination-link {
+      font-size: 18px;
+
+      svg {
+        width: 16px;
+      }
+    }
   }
 }

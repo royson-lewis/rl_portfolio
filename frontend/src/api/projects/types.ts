@@ -5,7 +5,9 @@ export default interface ProjectTypes {
   name: string
   slug: string
   mainImage: string
-  description: string
+  description?: string
+  logo: string
+  brandPrimaryColor: string
   type: string
   role: string
   duration: string

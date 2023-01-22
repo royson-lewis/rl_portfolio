@@ -13,7 +13,9 @@ export class ProjectCaseStudy {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @OneToOne(() => Project, (project) => project.caseStudy)
+  @OneToOne(() => Project, (project) => project.caseStudy, {
+    cascade: true
+  })
   @JoinColumn()
   project: Project;
 

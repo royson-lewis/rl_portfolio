@@ -11,7 +11,8 @@ const SectionProjectInfoMain: React.FC<{
   type: string
   duration: string
   technologyUsed: Array<TechnologyTypes>
-}> = ({ role, duration, technologyUsed, type }) => {
+  brandColor: string
+}> = ({ role, duration, technologyUsed, type, brandColor }) => {
   const [ref, inView] = useInView({ rootMargin: '0% 0% -20%' })
 
   const titleFromState = useMemo(() => ({ y: 60, opacity: 0 }), [])
@@ -43,15 +44,15 @@ const SectionProjectInfoMain: React.FC<{
       <section className={styles['info-sections-container']}>
         <animated.div style={titleSprings} className={styles['info-section']}>
           <h4>Project Type</h4>
-          <h5>{type}</h5>
+          <h5 style={{ color: brandColor }}>{type}</h5>
         </animated.div>
         <animated.div style={titleSprings} className={styles['info-section']}>
           <h4>My Role</h4>
-          <h5>{role}</h5>
+          <h5 style={{ color: brandColor }}>{role}</h5>
         </animated.div>
         <animated.div style={titleSprings} className={styles['info-section']}>
           <h4>Duration</h4>
-          <h5>{duration}</h5>
+          <h5 style={{ color: brandColor }}>{duration}</h5>
         </animated.div>
         <animated.div style={titleSprings} className={styles['info-section']}>
           <h4>Technology Used</h4>

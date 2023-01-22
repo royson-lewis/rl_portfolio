@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 150px auto;
+  margin: 150px auto 40px;
   width: 1400px;
   gap: 23px;
 
@@ -80,11 +80,11 @@
 
 @media only screen and (max-width: 780px) {
   .project-info-section {
-    margin: 100px auto;
+    margin: 40px auto 40px;
     gap: 10px;
 
     h3 {
-      font-size: 38px;
+      font-size: 28px;
     }
 
     .info-sections-container {
