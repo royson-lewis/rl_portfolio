@@ -6,7 +6,7 @@ export class ProjectCaseSection {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: true })
   title: string;
 
   @Column({ nullable: true, type: 'longtext' })

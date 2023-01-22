@@ -26,6 +26,14 @@ export class CreateProjectDto {
 
   @IsString()
   @IsNotEmpty()
+  logo: string;
+
+  @IsString()
+  @IsNotEmpty()
+  brandPrimaryColor: string;
+
+  @IsString()
+  @IsNotEmpty()
   type: string;
 
   @IsString()
@@ -63,8 +71,8 @@ export class UpdateCaseStudyDto {
 
 export class CaseSectionDTO {
   @IsString()
-  @IsNotEmpty()
-  title: string;
+  @IsOptional()
+  title?: string;
 
   @IsString()
   @IsOptional()

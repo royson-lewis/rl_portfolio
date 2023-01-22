@@ -8,7 +8,7 @@ const nextConfig = {
   trailingSlash: true,
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
   images: {
-    domains: ["cdn.dribbble.com"],
+    domains: ["cdn.dribbble.com", "rl-portfolio.s3.ap-south-1.amazonaws.com"],
   },
 }
 

@@ -12,7 +12,7 @@ env-production:
 	cp ./frontend/src/config/parameters/production.env ./frontend/.env
 	cp ./backend/src/config/parameters/production.env ./backend/.env
 
-up: down
+up: env down
 	docker-compose -f docker-compose.yml up -d
 
 up-production: down

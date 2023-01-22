@@ -12,6 +12,7 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 20px;
+    gap: 120px;
 
     .category-info {
       display: flex;
@@ -67,9 +68,11 @@
         .project-images {
           display: flex;
           gap: 20px;
+          flex-wrap: wrap;
+          justify-content: space-between;
 
           .project-image-wrapper {
-            width: 400px;
+            width: 720px;
             height: 500px;
             border-radius: 18px;
             overflow: hidden;
@@ -77,7 +80,7 @@
             img {
               height: 100%;
               width: 100%;
-              object-fit: cover;
+              object-fit: fill;
             }
           }
         }

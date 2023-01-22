@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 
-import Image from 'next/image'
 import { easings, useChain, useSpring, useSpringRef, animated } from '@react-spring/web'
 
 import MouseScrollIcon from '../../../assets/mouse-scroll-icon.svg'
@@ -8,9 +7,10 @@ import styles from './main.module.scss'
 
 const SectionHeroMain: React.FC<{
   name: string
-  description: string
+  description?: string
+  logo: string
   category: string
-}> = ({ name, description, category }) => {
+}> = ({ name, description, category, logo }) => {
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
 
@@ -40,13 +40,13 @@ const SectionHeroMain: React.FC<{
 
   useChain([titleRef, scrollRef])
 
-  const AnimatedImage = animated(Image)
   return (
     <section className={styles['hero-section']}>
+      <animated.img className={styles['project-logo']} alt="project logo" width="175" height="29" src={logo} style={titleSprings} />
       <animated.h3 style={titleSprings}>{name}</animated.h3>
       <animated.p style={titleSprings}>{description}</animated.p>
       <animated.h4 style={titleSprings}>{category}</animated.h4>
-      <AnimatedImage style={scrollSprings} src={MouseScrollIcon} alt="scroll mouse to view more" />
+      <animated.img src={MouseScrollIcon.src} alt="Mouse scroll Icon" style={scrollSprings} />
     </section>
   )
 }
