@@ -1,0 +1,10 @@
+[Unit]
+Description=Run startup commands
+
+[Service]
+Type=simple
+User=ec2-user
+ExecStart=/usr/bin/make serve-frontend
+WorkingDirectory=/home/ec2-user/rl_portfolio
+
+[Install]
