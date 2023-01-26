@@ -87,9 +87,13 @@ jobs:
             # cd frontend && ls -a &&
             # cd ../ &&
             # make serve-frontend
-            cd rl_portfolio
-            git pull origin main
-            sudo cp deployment/config/startup.service /etc/systemd/system/startup.service
+            cd rl_portfolio &&
+            git pull origin main &&
+            sudo rm /etc/systemd/system/startup.service && 
+            sudo cp deployment/config/startup.service /etc/systemd/system/startup.service &&
+            sudo systemctl daemon-reload &&
+            sudo systemctl enable startup.service &&
+            sudo systemctl status nginx
           '
 
 

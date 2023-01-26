@@ -8,3 +8,4 @@ ExecStart=/usr/bin/make serve-frontend
 WorkingDirectory=/home/ec2-user/rl_portfolio
 
 [Install]
+WantedBy=multi-user.target
