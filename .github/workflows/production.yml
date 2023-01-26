@@ -87,8 +87,8 @@ jobs:
             # cd frontend && ls -a &&
             # cd ../ &&
             # make serve-frontend
-            git pull origin main
             cd rl_portfolio
+            git pull origin main
             sudo cp deployment/config/startup.service /etc/systemd/system/startup.service
           '
 
