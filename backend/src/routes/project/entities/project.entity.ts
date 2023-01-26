@@ -33,6 +33,12 @@ export class Project implements IProject {
 
   @Column({ nullable: true })
   description?: string;
+  
+  @Column()
+  logo: string;
+
+  @Column()
+  brandPrimaryColor: string;
 
   @ManyToOne(() => ProjectCategory, (category) => category.projects)
   category: ProjectCategory;

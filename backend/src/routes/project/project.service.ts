@@ -179,7 +179,7 @@ export class ProjectService {
     } else {
       throw new HttpException(
         'No case study found for this project',
-        HttpStatus.NO_CONTENT,
+        HttpStatus.BAD_REQUEST,
       );
     }
   }

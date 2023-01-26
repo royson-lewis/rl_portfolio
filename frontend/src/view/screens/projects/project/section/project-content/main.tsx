@@ -19,7 +19,7 @@ const SectionProjectContentMain: React.FC<{
 const Content: React.FC<{
   content: CaseSectionTypes
 }> = ({ content }) => {
-  const [ref, inView] = useInView({ rootMargin: '0% 0% -20%' })
+  const [ref, inView] = useInView({ rootMargin: '20% 0% 0%' })
 
   const titleFromState = useMemo(() => ({ y: 60, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
@@ -47,14 +47,14 @@ const Content: React.FC<{
   const AnimatedImage = animated(Image)
   return (
     <section ref={ref} key={content.id} className={styles['project-content-section']}>
-      <animated.h3 style={titleSprings}>{content.title}</animated.h3>
+      {content.title && <animated.h3 style={titleSprings}>{content.title}</animated.h3>}
       {content.description && <animated.p style={titleSprings}>{content.description}</animated.p>}
       {content.mainImage && (
         <div className={styles['content-dynamic-section']}>
           <AnimatedImage
             style={titleSprings}
-            width={1200}
-            height={1200}
+            width={2400}
+            height={2400}
             alt={content.title}
             src={content.mainImage}
           />

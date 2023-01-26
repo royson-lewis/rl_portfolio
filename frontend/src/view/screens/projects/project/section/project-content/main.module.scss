@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 150px auto;
+  margin: 37px auto;
   width: 1400px;
   gap: 57px;
 
@@ -15,6 +15,8 @@
     line-height: 122%;
     letter-spacing: -0.01em;
     text-align: center;
+    margin-top: 80px;
+    margin-bottom: 0;
   }
 
   p {
@@ -26,7 +28,7 @@
   }
 
   .content-dynamic-section {
-    width: 90%;
+    width: 100%;
 
     img {
       object-fit: contain;
@@ -44,11 +46,12 @@
 
 @media only screen and (max-width: 780px) {
   .project-content-section {
-    margin: 100px auto;
+    margin: 24px auto;
     gap: 40px;
 
     h3 {
-      font-size: 38px;
+      font-size: 28px;
+      margin-top: 30px;
     }
 
     p {

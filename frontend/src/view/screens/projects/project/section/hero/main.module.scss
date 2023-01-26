@@ -8,7 +8,7 @@
   position: relative;
   min-height: 600px;
   flex-direction: column;
-  gap: 23px;
+  gap: 30px;
 
   h3 {
     font-weight: 800;
@@ -21,7 +21,8 @@
 
   p {
     font-weight: 400;
-    font-size: 28px;
+    font-size: 24px;
+    width: 50%;
     line-height: 137.1%;
     margin: 0;
     text-align: center;
@@ -36,6 +37,10 @@
     margin: 0;
     text-transform: capitalize;
   }
+
+  img {
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (max-width: 780px) {
@@ -49,6 +54,7 @@
 
     p {
       font-size: 22px;
+      width: 90%;
     }
 
     h4 {
@@ -57,6 +63,10 @@
 
     img {
       width: 25px;
+    }
+
+    .project-logo {
+      width: 100%;
     }
   }
 }

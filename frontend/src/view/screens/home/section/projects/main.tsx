@@ -130,19 +130,17 @@ const ProjectGallery: React.FC<{ gallery: GalleryTypes; slug: string }> = ({ slu
     }
   }, [inView, titleApi, titleFromState, titleToState])
 
-  const AnimatedImage = animated(Image)
   return (
-    <div ref={ref} className={styles['project-image-wrapper']}>
+    <animated.div style={titleSprings} ref={ref} className={styles['project-image-wrapper']}>
       <LinkMain to={`${uris.projects}/${slug}`}>
-        <AnimatedImage
-          style={titleSprings}
-          width="400"
-          height="600"
+        <Image
+          width="2720"
+          height="2500"
           src={gallery.imgLink}
           alt={gallery.alt}
         />
       </LinkMain>
-    </div>
+    </animated.div>
   )
 }
 

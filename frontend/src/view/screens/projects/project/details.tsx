@@ -30,12 +30,13 @@ const ProjectDetails: React.FC<{
           category={project.category?.name}
           name={project.name}
           description={project.description}
+          logo={project.logo}
         />
         <animated.section style={titleSprings} className={styles['main-image']}>
           {project.mainImage && (
             <Image
               priority
-              width={900}
+              width={1400}
               height={900}
               src={project.mainImage}
               alt="project presentation in different devices"
@@ -46,6 +47,7 @@ const ProjectDetails: React.FC<{
           technologyUsed={project.technologies}
           role={project.role}
           type={project.type}
+          brandColor={project.brandPrimaryColor}
           duration={project.duration}
         />
         <SectionProjectContentMain caseStudy={caseStudy} />
