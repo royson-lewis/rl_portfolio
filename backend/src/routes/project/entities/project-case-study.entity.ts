@@ -14,7 +14,7 @@ export class ProjectCaseStudy {
   id: number;
 
   @OneToOne(() => Project, (project) => project.caseStudy, {
-    cascade: true
+    cascade: true,
   })
   @JoinColumn()
   project: Project;

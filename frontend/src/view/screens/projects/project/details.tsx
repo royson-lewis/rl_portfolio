@@ -31,6 +31,8 @@ const ProjectDetails: React.FC<{
           name={project.name}
           description={project.description}
           logo={project.logo}
+          brandPrimaryColor={project.brandPrimaryColor}
+          link={project.link}
         />
         <animated.section style={titleSprings} className={styles['main-image']}>
           {project.mainImage && (

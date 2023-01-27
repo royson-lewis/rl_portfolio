@@ -1,10 +1,10 @@
 default: env up start-frontend
 
 env:
-	rm -rf ./frontend/.env > /dev/null 2>&1
-	rm -rf ./backend/.env > /dev/null 2>&1
-	cp ./frontend/src/config/parameters/local.env ./frontend/.env
-	cp ./backend/src/config/parameters/local.env ./backend/.env
+	# rm -rf ./frontend/.env > /dev/null 2>&1
+	# rm -rf ./backend/.env > /dev/null 2>&1
+	# cp ./frontend/src/config/parameters/local.env ./frontend/.env
+	# cp ./backend/src/config/parameters/local.env ./backend/.env
 
 env-production:
 	rm -rf ./frontend/.env > /dev/null 2>&1
