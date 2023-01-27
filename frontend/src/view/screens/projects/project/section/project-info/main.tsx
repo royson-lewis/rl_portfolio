@@ -11,7 +11,7 @@ const SectionProjectInfoMain: React.FC<{
   type: string
   duration: string
   technologyUsed: Array<TechnologyTypes>
-  brandColor: string
+  brandColor?: string
 }> = ({ role, duration, technologyUsed, type, brandColor }) => {
   const [ref, inView] = useInView({ rootMargin: '0% 0% -20%' })
 

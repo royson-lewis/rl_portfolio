@@ -66,10 +66,6 @@ const SectionSkillsMain: React.FC<{
       <div className={styles['skills-header']}>
         <animated.h2 style={titleSprings}>Skills</animated.h2>
         <animated.h3 style={titleSprings}>Languages & Technologies</animated.h3>
-        <animated.p style={titleSprings}>
-          Aliquam vitae in molestie elit faucibus nulla. Et nisl fames adipiscing placerat aliquet
-          pulvinar tellus dictum sagittis. Mattis orci, et egestas purus quisque.
-        </animated.p>
       </div>
       <section>
         {[1, 2, 3].map((key) => (

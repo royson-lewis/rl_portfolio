@@ -41,12 +41,18 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: GetStaticPropsContext) {
-  const res = await MainAPIClient.get(`projects/${params?.slug}`)
-  const caseStudyRes = await MainAPIClient.get(`projects/${params?.slug}/case-study`)
+  const res = await MainAPIClient.get(`projects/${params?.slug}`).catch((err) => {
+    console.error(err)
+  })
+  const caseStudyRes = await MainAPIClient.get(`projects/${params?.slug}/case-study`).catch(
+    (err) => {
+      console.error(err)
+    },
+  )
   return {
     props: {
-      project: res.data?.data,
-      caseStudy: caseStudyRes.data?.data || {},
+      project: res?.data?.data,
+      caseStudy: caseStudyRes?.data?.data || {},
     },
   }
 }

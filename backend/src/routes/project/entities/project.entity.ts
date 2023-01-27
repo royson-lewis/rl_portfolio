@@ -33,7 +33,10 @@ export class Project implements IProject {
 
   @Column({ nullable: true })
   description?: string;
-  
+
+  @Column({ nullable: true })
+  link?: string;
+
   @Column()
   logo: string;
 

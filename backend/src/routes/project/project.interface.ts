@@ -9,6 +9,8 @@ export interface IProject {
   slug: string;
   mainImage: string;
   description?: string;
+  link?: string;
+  brandPrimaryColor?: string;
   category: ProjectCategory;
   type: string;
   role: string;

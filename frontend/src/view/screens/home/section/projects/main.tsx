@@ -105,7 +105,7 @@ const Project: React.FC<{ project: ProjectTypes }> = ({ project }) => {
 }
 
 const ProjectGallery: React.FC<{ gallery: GalleryTypes; slug: string }> = ({ slug, gallery }) => {
-  const [ref, inView] = useInView({ rootMargin: '0% 0% -50%' })
+  const [ref, inView] = useInView({ rootMargin: '20% 0% -20%' })
 
   const titleFromState = useMemo(() => ({ y: 50, opacity: 0 }), [])
   const titleToState = useMemo(() => ({ y: 0, opacity: 1 }), [])
@@ -132,13 +132,10 @@ const ProjectGallery: React.FC<{ gallery: GalleryTypes; slug: string }> = ({ slu
 
   return (
     <animated.div style={titleSprings} ref={ref} className={styles['project-image-wrapper']}>
+      <p>View Project Details</p>
+      <div />
       <LinkMain to={`${uris.projects}/${slug}`}>
-        <Image
-          width="2720"
-          height="2500"
-          src={gallery.imgLink}
-          alt={gallery.alt}
-        />
+        <Image width="2720" height="2500" src={gallery.imgLink} alt={gallery.alt} />
       </LinkMain>
     </animated.div>
   )

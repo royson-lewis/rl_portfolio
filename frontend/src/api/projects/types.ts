@@ -7,11 +7,12 @@ export default interface ProjectTypes {
   mainImage: string
   description?: string
   logo: string
-  brandPrimaryColor: string
+  brandPrimaryColor?: string
   type: string
   role: string
   duration: string
   createTime: Date
+  link?: string
   gallery?: Array<GalleryTypes>
 }
 

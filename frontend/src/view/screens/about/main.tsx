@@ -22,9 +22,8 @@ export interface ExperienceTypes {
 
 const experiences: ExperienceTypes[] = [
   {
-    title: 'Software Engineer & UI/UX Designer at AITrade',
-    description:
-      'Fermentum suspendisse felis pellentesque nulla netus. Odio condimentum netus in diam ut sed maecenas. Facilisi ut ultricies natoque morbi nisl. Nulla aliquam morbimattis penatibus diam, fermentum dictum sed fames.',
+    title: 'Frontend Team Lead, Software Engineer & UI/UX Designer at AI Invest, Inc',
+    description: `Working as a front-end team lead, software developer and UI/UX designer at AI Invest, responsible for leading the front-end development team, creating and designing user-friendly software applications and interfaces, mentoring team members and ensuring that all the deliverables meet company's standards.`,
     date: {
       from: 2020,
       to: 'Present',
@@ -33,7 +32,7 @@ const experiences: ExperienceTypes[] = [
   {
     title: 'Freelance Software Developer',
     description:
-      'Fermentum suspendisse felis pellentesque nulla netus. Odio condimentum netus in diam ut sed maecenas. Facilisi ut ultricies natoque morbi nisl. Nulla aliquam morbimattis penatibus diam, fermentum dictum sed fames.',
+      'I have worked as a freelance web developer, successfully designing and developing custom websites and web applications for local and international clients using technologies like HTML, CSS, JavaScript, React, Node.js. etc',
     date: {
       from: 2019,
       to: 2020,
