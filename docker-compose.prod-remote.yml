@@ -6,9 +6,12 @@ services:
     restart: always
     ports:
       - 80:80
-      - 8000:8000
+      - 443:443
     depends_on:
       - frontend
+    volumes:
+      - ./nginx/configs/default.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt:/etc/letsencrypt
 
   frontend:
     image: 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_frontend:latest

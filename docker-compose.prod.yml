@@ -2,13 +2,15 @@ version: "3.9"
 
 services:
   reverse-proxy:
-    build:
-      context: nginx
-      dockerfile: dockerfile
+    image: nginx
     ports:
       - 80:80
+      - 443:443
     depends_on:
       - frontend
+    volumes:
+      - ./nginx/configs/default.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt:/etc/letsencrypt
 
   frontend:
     build:
@@ -16,16 +18,11 @@ services:
       dockerfile: dockerfile
     depends_on:
       - backend
-    ports:
-      - 5000:5000
 
   backend:
     build:
       context: backend
       dockerfile: dockerfile
-    ports:
-      - 8000:8000
 
 volumes:
   back-notused:
-  db-data:
