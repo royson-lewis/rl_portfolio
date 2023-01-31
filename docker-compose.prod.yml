@@ -37,7 +37,7 @@ services:
       - web-root:/var/www/html
     depends_on:
       - webserver
-    command: certonly --webroot --webroot-path=/var/www/html/ --email admin@roysonlewis.com --agree-tos --no-eff-email --force-renewal -d roysonlewis.com  -d www.roysonlewis.com
+    command: certonly --webroot --webroot-path=/var/www/html/ --email hello@roysonlewis.com --agree-tos --no-eff-email --force-renewal -d roysonlewis.com  -d www.roysonlewis.com
 
 volumes:
   certbot-etc:
