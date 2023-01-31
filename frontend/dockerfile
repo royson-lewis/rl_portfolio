@@ -1,3 +1,5 @@
 FROM 596051128564.dkr.ecr.ap-south-1.amazonaws.com/rl_portfolio_frontend:latest
 
-CMD ["yarn", "serve"]
+RUN yarn serve
+
+CMD ["tail", "-f", "/dev/null"]
