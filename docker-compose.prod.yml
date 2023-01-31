@@ -1,32 +1,52 @@
 version: "3.9"
 
 services:
-  webserver:
-    image: nginx:latest
-    restart: always
-    ports:
-      - 80:80
-      - 443:443
-    depends_on:
-      - frontend
-    volumes:
-      - ./nginx/conf/:/etc/nginx/conf.d/:ro
-      - ./certbot/www/:/var/www/certbot/:ro
-
-  certbot:
-    image: certbot/certbot:latest
-    command: certonly --webroot --webroot-path /var/www/certbot/ -d roysonlewis.com -d wwww.roysonlewis.com
-    volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
-    depends_on:
-      - webserver
-
   frontend:
+    container_name: frontend
+    restart: always
     build:
       context: frontend
       dockerfile: dockerfile
+    networks:
+      - rl_network
+
+  webserver:
+    image: nginx:latest
+    container_name: webserver
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - frontend
+    volumes:
+      - web-root:/var/www/html
+      - ./nginx/conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+    networks:
+      - rl_network
+
+  certbot:
+    image: certbot/certbot:latest
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    depends_on:
+      - webserver
+    command: certonly --webroot --webroot-path=/var/www/html/ --email admin@roysonlewis.com --agree-tos --no-eff-email --staging -d roysonlewis.com  -d wwww.roysonlewis.com
 
 volumes:
-  back-notused:
+  certbot-etc:
+  certbot-var:
+  web-root:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/rl_projects/
+      o: bind
 
+networks:
+  rl_network:
+    driver: bridge
