@@ -1,16 +1,24 @@
 version: "3.9"
 
 services:
-  reverse-proxy:
-    image: nginx
+  webserver:
+    image: nginx:latest
+    restart: always
     ports:
       - 80:80
       - 443:443
     depends_on:
       - frontend
     volumes:
-      - ./nginx/configs/default.conf:/etc/nginx/conf.d/default.conf
-      - /etc/letsencrypt:/etc/letsencrypt
+      - ./nginx/conf/:/etc/nginx/conf.d/:ro
+      - ./certbot/www/:/var/www/certbot/:ro
+
+  certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+    depends_on:
+      - webserver
 
   frontend:
     build:
