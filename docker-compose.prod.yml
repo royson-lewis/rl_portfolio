@@ -44,7 +44,7 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/rl_projects/
+      device: /home/ec2-user/rl_portfolio/frontend
       o: bind
 
 networks:
