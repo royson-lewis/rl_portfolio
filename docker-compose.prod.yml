@@ -16,6 +16,7 @@ services:
     restart: always
     ports:
       - 80:80
+      - 443:443
     depends_on:
       - frontend
     volumes:
@@ -23,6 +24,7 @@ services:
       - ./nginx/conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
+      - dhparam:/etc/ssl/certs
     networks:
       - rl_network
 
@@ -44,7 +46,13 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/ec2-user/rl_portfolio/frontend
+      device: /home/ec2-user/rl_portfolio/frontend/
+      o: bind
+  dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/ec2-user/rl_portfolio/dhparam/
       o: bind
 
 networks:
