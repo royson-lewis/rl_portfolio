@@ -85,6 +85,7 @@ jobs:
             echo DB_PASSWORD=${{ secrets.RL_PORTFOLIO_DB_PROD_PASSWORD }} >> ./backend/src/config/parameters/production.env &&
 
             # Copy SSL certificates to project
+            sudo mkdir ./nginx/certs &&
             sudo cp -r /etc/ssl/roysonlewis.com ./nginx/certs/roysonlewis.com &&
 
             # Copy bundled project from s3 bucket and start the frontend website
