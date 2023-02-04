@@ -52,7 +52,7 @@ jobs:
           docker images
           make up-production
 
-      - name: Save Docker image 1
+      - name: Save Frontend Docker Container Image
         uses: actions/cache@v2
         with:
           path: /var/lib/docker
@@ -70,7 +70,7 @@ jobs:
         run: |
           ls -a
           echo "$AWS_EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
-          rsync -avz -e "ssh -i private_key" ./frontend/.next ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME}:~/frontend_bundle/.next
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no -i private_key" ./frontend/.next ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME}:~/frontend_bundle/.next
 
       - name: SSH into EC2 Instance and Run Deployment Script
         run: |
