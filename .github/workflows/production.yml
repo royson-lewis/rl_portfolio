@@ -70,7 +70,7 @@ jobs:
         run: |
           ls -a
           echo "$AWS_EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
-          rsync -avz -e "ssh -o StrictHostKeyChecking=no -i private_key" ./frontend/.next ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME}:~/frontend_bundle/.next
+          rsync -avz -e "ssh -o StrictHostKeyChecking=no -i private_key" ./frontend/.next ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME}:~/.next
 
       - name: SSH into EC2 Instance and Run Deployment Script
         run: |
