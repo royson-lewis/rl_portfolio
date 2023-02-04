@@ -48,11 +48,11 @@ jobs:
         run: |
           make migration-run
 
-      - name: Bundle Frontend Projects
+      - name: Bundle Frontend Project
         run: |
           make bundle-frontend
 
-      - name: Push Bundled Project Folder to S3 Bucket
+      - name: Copy Bundled Project folder to the server
         run: |
           ls -a
           rsync -avz -e "ssh -i private_key" ./frontend/.next ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME}:~/frontend_bundle/.next

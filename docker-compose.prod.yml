@@ -23,9 +23,8 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./frontend/node_modules:/code/node_modules
       - ./frontend/.next:/code/.next
-      
+
   backend:
     build:
       context: backend
