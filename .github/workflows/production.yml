@@ -88,7 +88,7 @@ jobs:
             sudo cp -r /etc/ssl/roysonlewis.com ./nginx/certs/roysonlewis.com &&
 
             # Copy bundled project from s3 bucket and start the frontend website
-            sudo cp -r ~/frontend_bundle/.next ./frontend/.next &&
+            sudo cp -r ~/.next ./frontend/.next &&
 
             # Build and start docker containers
             make build-production &&
