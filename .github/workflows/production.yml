@@ -38,12 +38,26 @@ jobs:
         run: |
           echo DB_PASSWORD=${{ secrets.RL_PORTFOLIO_DB_PROD_PASSWORD }} >> ./backend/src/config/parameters/production.env
 
+      - name: Restore Frontend Docker Container Image
+        uses: actions/cache@v2
+        with:
+          path: /var/lib/docker
+          key: ${{ runner.os }}-docker-frontend-${{ hashFiles('**/frontend/dockerfile') }}
+          restore-keys: |
+            ${{ runner.os }}-docker-frontend-  
+
       - name: Build and Start Docker Containers
         run: |
           make build-production
           docker images
           make up-production
-      
+
+      - name: Save Docker image 1
+        uses: actions/cache@v2
+        with:
+          path: /var/lib/docker
+          key: ${{ runner.os }}-docker-frontend-${{ hashFiles('**/frontend/dockerfile') }}
+
       - name: Run DB Migrations
         run: |
           make migration-run
@@ -55,11 +69,11 @@ jobs:
       - name: Copy Bundled Project folder to the server
         run: |
           ls -a
+          echo "$AWS_EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
           rsync -avz -e "ssh -i private_key" ./frontend/.next ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME}:~/frontend_bundle/.next
 
       - name: SSH into EC2 Instance and Run Deployment Script
         run: |
-          echo "$AWS_EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${AWS_EC2_USERNAME}@${AWS_EC2_HOSTNAME} '
             # Checkout project repo
             sudo rm -rf rl_portfolio &&
