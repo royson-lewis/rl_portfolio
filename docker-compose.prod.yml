@@ -24,15 +24,12 @@ services:
       - backend
     volumes:
       - ./frontend/.next:/code/.next
-      - ./frontend:/code
 
   backend:
     build:
       context: backend
       dockerfile: dockerfile
     restart: always
-    volumes:
-      - ./backend:/code
 
 volumes:
   back-notused:
