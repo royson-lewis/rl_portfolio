@@ -15,7 +15,7 @@ env-production:
 up: env down
 	docker-compose -f docker-compose.yml up -d
 
-up-production: env-production down
+up-production: down
 	docker-compose -f docker-compose.prod.yml up -d
 
 ceck-env:
