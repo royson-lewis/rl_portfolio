@@ -99,7 +99,7 @@ serve-backend:
 	"yarn serve"
 
 bundle-frontend:
-	docker-compose -f docker-compose.prod-remote.yml exec -T frontend sh -c \
+	docker-compose -f docker-compose.prod.yml exec -T frontend sh -c \
 	"yarn build"
 
 bundle-backend:
