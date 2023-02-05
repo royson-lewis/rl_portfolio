@@ -58,7 +58,6 @@ const SectionHeroMain: React.FC<{
         key={logo}
         style={titleSprings}
       />
-      <animated.h3 style={titleSprings}>{name}</animated.h3>
       <animated.p style={titleSprings}>{description}</animated.p>
       <animated.h4 style={titleSprings}>{category}</animated.h4>
       {link && (
@@ -74,7 +73,12 @@ const SectionHeroMain: React.FC<{
           <FontAwesomeIcon icon={faArrowUp} />
         </AnimatedLink>
       )}
-      <AnimatedImage key={name} src={MouseScrollIcon.src} alt="Mouse scroll Icon" style={scrollSprings} />
+      <AnimatedImage
+        key={name}
+        src={MouseScrollIcon.src}
+        alt="Mouse scroll Icon"
+        style={scrollSprings}
+      />
     </section>
   )
 }

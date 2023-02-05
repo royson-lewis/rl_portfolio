@@ -42,7 +42,12 @@ const HeaderMobile = () => {
         <button type="button" onClick={() => setOpenMenu(!openMenu)} aria-label="menu">
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <Offcanvas placement="end" show={openMenu} onHide={() => setOpenMenu(false)}>
+        <Offcanvas
+          restoreFocus={false}
+          placement="end"
+          show={openMenu}
+          onHide={() => setOpenMenu(false)}
+        >
           <Offcanvas.Header closeButton>
             <LogoMain />
           </Offcanvas.Header>

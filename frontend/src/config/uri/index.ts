@@ -3,7 +3,7 @@ const uris = {
   homeProjects: '/#projects',
   projects: '/projects',
   about: '/about',
-  contact: '#contact',
+  contact: '/#contact',
 }
 
 export default uris
