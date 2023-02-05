@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo } from 'react'
 
-import Image from 'next/image'
 import { useInView, animated, useSpring } from '@react-spring/web'
 
 import styles from './main.module.scss'
 import { CaseSectionTypes, CaseStudyTypes } from '../../../../../../api/projects/types'
+import ImageMain from 'components/image/main'
 
 const SectionProjectContentMain: React.FC<{
   caseStudy: CaseStudyTypes
@@ -44,7 +44,7 @@ const Content: React.FC<{
     }
   }, [inView, titleApi, titleFromState, titleToState])
 
-  const AnimatedImage = animated(Image)
+  const AnimatedImage = animated(ImageMain)
   return (
     <section ref={ref} key={content.id} className={styles['project-content-section']}>
       {content.title && <animated.h3 style={titleSprings}>{content.title}</animated.h3>}
@@ -52,9 +52,9 @@ const Content: React.FC<{
       {content.mainImage && (
         <div className={styles['content-dynamic-section']}>
           <AnimatedImage
+            skeletonHeight={800}
+            key={content.mainImage} 
             style={titleSprings}
-            width={2400}
-            height={2400}
             alt={content.title}
             src={content.mainImage}
           />

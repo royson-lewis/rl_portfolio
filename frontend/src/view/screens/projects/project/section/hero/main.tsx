@@ -8,6 +8,7 @@ import MouseScrollIcon from '../../../assets/mouse-scroll-icon.svg'
 import styles from './main.module.scss'
 
 import LinkMain from 'components/link/main'
+import ImageMain from 'components/image/main'
 
 const SectionHeroMain: React.FC<{
   name: string
@@ -47,14 +48,14 @@ const SectionHeroMain: React.FC<{
   useChain([titleRef, scrollRef])
 
   const AnimatedLink = animated(LinkMain)
+  const AnimatedImage = animated(ImageMain)
   return (
     <section className={styles['hero-section']}>
-      <animated.img
+      <AnimatedImage
         className={styles['project-logo']}
         alt="project logo"
-        width="175"
-        height="29"
         src={logo}
+        key={logo}
         style={titleSprings}
       />
       <animated.h3 style={titleSprings}>{name}</animated.h3>
@@ -73,7 +74,7 @@ const SectionHeroMain: React.FC<{
           <FontAwesomeIcon icon={faArrowUp} />
         </AnimatedLink>
       )}
-      <animated.img src={MouseScrollIcon.src} alt="Mouse scroll Icon" style={scrollSprings} />
+      <AnimatedImage key={name} src={MouseScrollIcon.src} alt="Mouse scroll Icon" style={scrollSprings} />
     </section>
   )
 }

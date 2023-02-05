@@ -15,8 +15,8 @@ env-production:
 up: env down
 	docker-compose -f docker-compose.yml up -d
 
-up-production: down
-	docker-compose -f docker-compose.prod.yml up -d
+up-production: env-production down
+	docker-compose -f docker-compose.prod.yml up
 
 ceck-env:
 	docker-compose -f docker-compose.yml exec -T backend sh -c \

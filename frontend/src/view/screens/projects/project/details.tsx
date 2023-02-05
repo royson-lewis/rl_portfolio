@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 
-import Image from 'next/image'
 import { useSpring, animated } from '@react-spring/web'
 
 import styles from './details.module.scss'
@@ -9,6 +8,7 @@ import SectionProjectInfoMain from './section/project-info/main'
 import SectionProjectContentMain from './section/project-content/main'
 import SectionPaginationMain from './section/pagination/main'
 import { CaseStudyTypes, ProjectBySlugTypes } from '../../../../api/projects/types'
+import ImageMain from 'components/image/main'
 
 const ProjectDetails: React.FC<{
   project: ProjectBySlugTypes
@@ -36,10 +36,8 @@ const ProjectDetails: React.FC<{
         />
         <animated.section style={titleSprings} className={styles['main-image']}>
           {project.mainImage && (
-            <Image
-              priority
-              width={1400}
-              height={900}
+            <ImageMain
+              key={project.mainImage}
               src={project.mainImage}
               alt="project presentation in different devices"
             />

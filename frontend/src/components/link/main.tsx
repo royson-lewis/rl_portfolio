@@ -101,6 +101,8 @@ const LinkMain: React.FC<PropsWithChildren<LinkMainTypes>> = ({
         href={to || '#'}
         role="link"
         tabIndex={0}
+        scroll={false}
+        onClick={() => window.scrollTo(0, 0)}
       >
         {children}
       </Link>

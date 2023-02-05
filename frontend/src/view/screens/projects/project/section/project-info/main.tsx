@@ -1,10 +1,10 @@
 import React, { useEffect, useMemo } from 'react'
 
-import Image from 'next/image'
 import { useInView, animated, useSpring } from '@react-spring/web'
 
 import styles from './main.module.scss'
 import TechnologyTypes from '../../../../../../api/technology/types'
+import ImageMain from 'components/image/main'
 
 const SectionProjectInfoMain: React.FC<{
   role: string
@@ -59,7 +59,7 @@ const SectionProjectInfoMain: React.FC<{
           <div className={styles['technology-container']}>
             {technologyUsed?.map((tech) => (
               <span key={tech.id}>
-                <Image height={50} width={50} src={tech.logo} alt={tech.name} />
+                <ImageMain src={tech.logo} alt={tech.name} />
               </span>
             ))}
           </div>
