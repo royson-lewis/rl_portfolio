@@ -7,7 +7,8 @@ import { animated, useInView, useIsomorphicLayoutEffect, useSpring } from '@reac
 
 import styles from './main.module.scss'
 import HeroEllipse from '../../assets/hero-ellipse.svg'
-import ButtonMain from '../../../../../components/button/main'
+
+import LinkMain from 'components/link/main'
 
 const SectionHeroMain = () => {
   const [initialLoad, setInitialLoad] = useState(true)
@@ -70,7 +71,7 @@ const SectionHeroMain = () => {
   }, [inView, initialLoad])
 
   const AnimatedImage = animated(Image)
-  const AnimatedButton = animated(ButtonMain)
+  const AnimatedLink = animated(LinkMain)
   return (
     <section ref={ref} className={styles['hero-section']}>
       <AnimatedImage
@@ -90,19 +91,38 @@ const SectionHeroMain = () => {
         </animated.h3>
         <animated.h3 style={titleSprings}>UI Designer</animated.h3>
         <div className={styles['social-container']}>
-          <animated.span style={socialSprings} className={styles['icon-wrapper']}>
+          <AnimatedLink
+            external
+            href={process.env.NEXT_PUBLIC_GITHUB_PROFILE}
+            style={socialSprings}
+            className={styles['icon-wrapper']}
+          >
             <FontAwesomeIcon icon={faGithub} />
-          </animated.span>
-          <animated.span style={socialSprings} className={styles['icon-wrapper']}>
+          </AnimatedLink>
+          <AnimatedLink
+            external
+            href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE}
+            style={socialSprings}
+            className={styles['icon-wrapper']}
+          >
             <FontAwesomeIcon icon={faLinkedin} />
-          </animated.span>
-          <animated.span style={socialSprings} className={styles['icon-wrapper']}>
+          </AnimatedLink>
+          <AnimatedLink
+            external
+            href={process.env.NEXT_PUBLIC_DRIBBBLE_PROFILE}
+            style={socialSprings}
+            className={styles['icon-wrapper']}
+          >
             <FontAwesomeIcon icon={faDribbble} />
-          </animated.span>
+          </AnimatedLink>
         </div>
-        <AnimatedButton style={titleSprings} className="no-border">
+        <AnimatedLink
+          external
+          href={`${process.env.NEXT_PUBLIC_RESUME_LINK}.pdf`}
+          style={titleSprings}
+        >
           View Resume
-        </AnimatedButton>
+        </AnimatedLink>
       </div>
     </section>
   )

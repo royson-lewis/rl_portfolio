@@ -4,6 +4,7 @@ import { useInView, animated, useSpring } from '@react-spring/web'
 
 import styles from './main.module.scss'
 import { CaseSectionTypes, CaseStudyTypes } from '../../../../../../api/projects/types'
+
 import ImageMain from 'components/image/main'
 
 const SectionProjectContentMain: React.FC<{
@@ -53,7 +54,7 @@ const Content: React.FC<{
         <div className={styles['content-dynamic-section']}>
           <AnimatedImage
             skeletonHeight={800}
-            key={content.mainImage} 
+            key={content.mainImage}
             style={titleSprings}
             alt={content.title}
             src={content.mainImage}

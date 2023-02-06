@@ -8,6 +8,7 @@ import SectionProjectInfoMain from './section/project-info/main'
 import SectionProjectContentMain from './section/project-content/main'
 import SectionPaginationMain from './section/pagination/main'
 import { CaseStudyTypes, ProjectBySlugTypes } from '../../../../api/projects/types'
+
 import ImageMain from 'components/image/main'
 
 const ProjectDetails: React.FC<{

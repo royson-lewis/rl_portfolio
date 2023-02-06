@@ -55,6 +55,10 @@
   img {
     margin-bottom: 10px;
   }
+
+  .project-logo {
+    width: 350px;
+  }
 }
 
 @media only screen and (max-width: 780px) {
@@ -80,7 +84,7 @@
     }
 
     .project-logo {
-      width: 100%;
+      width: 250px;
     }
   }
 }

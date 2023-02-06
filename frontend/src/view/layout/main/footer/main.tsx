@@ -42,33 +42,33 @@ const FooterMain = () => {
         <section ref={ref} id="contact" className={styles['footer-contact']}>
           <animated.h4 style={titleSprings}>Contact</animated.h4>
           <animated.h5 style={titleSprings}>Get in touch</animated.h5>
-          <AnimatedLink style={titleSprings} external href="mailto:hello@roysonlewis.com">
+          <AnimatedLink style={titleSprings} external href={process.env.NEXT_PUBLIC_EMAIL_TO}>
             hello@roysonlewis.com
             <FontAwesomeIcon icon={faArrowUp} />
           </AnimatedLink>
           <animated.div style={titleSprings} className={styles['social-contacts']}>
-            <LinkMain external href="#">
-              <FontAwesomeIcon icon={faLinkedin} />
-            </LinkMain>
-            <LinkMain external href="#">
+            <LinkMain external href={process.env.NEXT_PUBLIC_TWITTER_DM}>
               <FontAwesomeIcon icon={faTwitter} />
+            </LinkMain>
+            <LinkMain external href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE}>
+              <FontAwesomeIcon icon={faLinkedin} />
             </LinkMain>
           </animated.div>
         </section>
         <section className={styles['footer-bottom']}>
           <LogoMain lightIcon />
           <div className={styles['company-info']}>
-            <p>&copy; Royson Lewis 2022</p>
+            <p>&copy; Royson Lewis 2023</p>
             <p>v{process.env.NEXT_PUBLIC_VERSION || '1.0.0'}</p>
           </div>
           <div className={styles['social-links']}>
-            <LinkMain external href="#">
+            <LinkMain external href={process.env.NEXT_PUBLIC_GITHUB_PROFILE}>
               <FontAwesomeIcon icon={faGithub} />
             </LinkMain>
-            <LinkMain external href="#">
+            <LinkMain external href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE}>
               <FontAwesomeIcon icon={faLinkedin} />
             </LinkMain>
-            <LinkMain external href="#">
+            <LinkMain external href={process.env.NEXT_PUBLIC_DRIBBBLE_PROFILE}>
               <FontAwesomeIcon icon={faDribbble} />
             </LinkMain>
           </div>

@@ -9,7 +9,8 @@ import styles from './main.module.scss'
 import MouseScrollIcon from '../projects/assets/mouse-scroll-icon.svg'
 import Profile1 from './assets/profile-1.png'
 import Profile2 from './assets/profile-2.png'
-import ButtonMain from '../../../components/button/main'
+
+import LinkMain from 'components/link/main'
 
 export interface ExperienceTypes {
   title: string
@@ -101,10 +102,10 @@ const AboutMain = () => {
               ))}
             </div>
           </div>
-          <ButtonMain className="no-border">
+          <LinkMain external href={process.env.NEXT_PUBLIC_RESUME_LINK} className="no-border">
             Download Resume
             <FontAwesomeIcon icon={faDownload} />
-          </ButtonMain>
+          </LinkMain>
         </section>
       </main>
     </>

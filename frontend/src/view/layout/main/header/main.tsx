@@ -42,7 +42,12 @@ const HeaderMobile = () => {
         <button type="button" onClick={() => setOpenMenu(!openMenu)} aria-label="menu">
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <Offcanvas placement="end" show={openMenu} onHide={() => setOpenMenu(false)}>
+        <Offcanvas
+          restoreFocus={false}
+          placement="end"
+          show={openMenu}
+          onHide={() => setOpenMenu(false)}
+        >
           <Offcanvas.Header closeButton>
             <LogoMain />
           </Offcanvas.Header>
@@ -92,7 +97,7 @@ const NavMail = () => (
   <nav className={styles['nav-mail']}>
     <ul className={cn(styles['link-list'])}>
       <li className={styles.mail}>
-        <LinkMain href="mailto:hello@roysonlewis.com" external>
+        <LinkMain href={process.env.NEXT_PUBLIC_EMAIL_TO} external>
           hello@roysonlewis.com
           <FontAwesomeIcon icon={faArrowUp} />
         </LinkMain>

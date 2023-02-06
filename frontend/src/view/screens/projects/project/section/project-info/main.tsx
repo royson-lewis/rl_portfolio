@@ -4,6 +4,7 @@ import { useInView, animated, useSpring } from '@react-spring/web'
 
 import styles from './main.module.scss'
 import TechnologyTypes from '../../../../../../api/technology/types'
+
 import ImageMain from 'components/image/main'
 
 const SectionProjectInfoMain: React.FC<{
