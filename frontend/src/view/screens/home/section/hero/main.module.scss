@@ -60,13 +60,14 @@
       }
     }
 
-    button {
+    & > a {
       font-weight: 800;
       font-size: 28px;
       line-height: 41px;
       text-align: center;
       color: $primary-color !important;
       text-decoration: none;
+      margin-top: 25px;
     }
 
     .social-container {
@@ -75,7 +76,7 @@
       gap: 32px;
       margin-top: 30px;
 
-      span {
+      a {
         width: 65px;
         height: 65px;
         display: flex;

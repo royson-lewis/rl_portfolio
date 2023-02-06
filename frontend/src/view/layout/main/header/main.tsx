@@ -97,7 +97,7 @@ const NavMail = () => (
   <nav className={styles['nav-mail']}>
     <ul className={cn(styles['link-list'])}>
       <li className={styles.mail}>
-        <LinkMain href="mailto:hello@roysonlewis.com" external>
+        <LinkMain href={process.env.NEXT_PUBLIC_EMAIL_TO} external>
           hello@roysonlewis.com
           <FontAwesomeIcon icon={faArrowUp} />
         </LinkMain>
